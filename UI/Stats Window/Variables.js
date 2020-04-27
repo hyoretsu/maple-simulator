@@ -1,0 +1,1 @@
+var StatsScript = '<script>showStats()</script>'
