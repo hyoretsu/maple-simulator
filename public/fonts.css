@@ -1,0 +1,6 @@
+@font-face {
+ font-family: '';
+ font-style: normal;
+ font-weight: 400;
+ src: url('/fonts/.woff2') format('woff2'), url('/fonts/.woff') format('woff'), url('/fonts/.ttf') format('truetype');
+}
