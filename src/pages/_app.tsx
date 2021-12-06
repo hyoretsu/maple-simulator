@@ -8,7 +8,6 @@ import appPackageJson from '../../package.json';
 import { siteName as site_name } from './_document';
 
 import '@public/global.css';
-import '@public/fonts.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
  const { homepage: url } = appPackageJson;
@@ -17,20 +16,17 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
  return (
   <>
    <DefaultSeo
-    additionalMetaTags={[{ property: 'og:locale:alternate', content: 'pt_BR' }]}
     defaultTitle={site_name}
     facebook={{ appId: String(process.env.NEXT_PUBLIC_FACEBOOK_APP_ID) }}
-    languageAlternates={[{ hrefLang: 'pt-BR', href: `${url}/pt` }]}
     openGraph={{
      images: [
       {
-       url: `${url}/images/opengraph.png`,
+       url: `${url}/images/opengraph.jpg`,
        width: 1200,
        height: 627,
        alt: site_name,
       },
      ],
-     // locale: 'en_US',
      site_name,
      type: 'website',
      url: url + pathname,

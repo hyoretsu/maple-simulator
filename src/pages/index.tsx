@@ -6,11 +6,7 @@ import { siteName as title } from './_document';
 const Homepage: React.FC = () => {
  const { description } = appPackageJson;
 
- return (
-  <>
-   <NextSeo description={description} openGraph={{ description, title }} />
-  </>
- );
+ return <NextSeo description={description} openGraph={{ description, title }} />;
 };
 
 export default Homepage;

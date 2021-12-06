@@ -1,26 +1,19 @@
 {
- "name": "ReactJS Template",
- "short_name": "React Template",
- "description": "A boilerplate for Next.js",
+ "name": "Maple Simulator",
+ "short_name": "Maple Sim",
+ "description": "A project that aims to simulate various aspects of MapleStory on your browser",
  "orientation": "portrait",
  "display": "standalone",
  "categories": ["personalization"],
  "lang": "en-US",
  "dir": "ltr",
- "background_color": "#ffffff",
- "theme_color": "#ffffff",
+ "background_color": "#b4e114",
+ "theme_color": "#b4e114",
  "shortcuts": [
   {
    "name": "Homepage",
    "url": "/",
    "description": "Initial page"
-  }
- ],
- "screenshots": [
-  {
-   "src": "",
-   "sizes": "1280x720",
-   "type": "image/webp"
   }
  ],
  "icons": [
@@ -68,29 +61,6 @@
    "src": "/favicons/android-chrome-512x512.png",
    "sizes": "512x512",
    "type": "image/png"
-  }
- ],
- "prefer_related_applications": true,
- "related_applications": [
-  {
-   "platform": "chrome_web_store",
-   "url": "https://chrome.google.com/webstore/detail/",
-   "id": ""
-  },
-  {
-   "platform": "itunes",
-   "url": "https://itunes.apple.com/app/",
-   "id": ""
-  },
-  {
-   "platform": "play",
-   "url": "https://play.google.com/store/apps/details?id=",
-   "id": ""
-  },
-  {
-   "platform": "windows",
-   "url": "https://www.microsoft.com/p/",
-   "id": ""
   }
  ]
 }

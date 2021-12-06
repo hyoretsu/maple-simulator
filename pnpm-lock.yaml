@@ -35,7 +35,6 @@ specifiers:
   next: ^12.0.7
   next-seo: ^4.28.1
   next-sitemap: ^1.6.203
-  polished: ^4.1.3
   prettier: ^2.5.1
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -53,7 +52,6 @@ dependencies:
   axios: 0.24.0
   next: 12.0.7_08e041ced5dbc85933fef7a25e63a057
   next-seo: 4.28.1_d837ce8f3acb2f60f8b7454672a9bcea
-  polished: 4.1.3
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-icons: 4.3.1_react@17.0.2
@@ -7281,13 +7279,6 @@ packages:
   /pn/1.1.0:
     resolution: {integrity: sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==}
     dev: true
-
-  /polished/4.1.3:
-    resolution: {integrity: sha512-ocPAcVBUOryJEKe0z2KLd1l9EBa1r5mSwlKpExmrLzsnIzJo4axsoU9O2BjOTkDGDT4mZ0WFE5XKTlR3nLnZOA==}
-    engines: {node: '>=10'}
-    dependencies:
-      '@babel/runtime': 7.16.5
-    dev: false
 
   /posix-character-classes/0.1.1:
     resolution: {integrity: sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=}

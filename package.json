@@ -1,23 +1,23 @@
 {
- "name": "reactjs-template",
- "version": "2.4.0",
- "private": true,
- "description": "A boilerplate for Next.js",
+ "name": "maple-simulator",
+ "version": "1.0.0",
+ "description": "A project that aims to simulate various aspects of MapleStory on your browser",
  "keywords": [
-  "boilerplate",
+  "maplestory",
+  "nexon",
   "next",
   "react",
-  "template",
+  "simulator",
   "typescript"
  ],
- "homepage": "https://reactjs-template.vercel.app",
+ "homepage": "https://maple-simulator.vercel.app",
  "bugs": {
-  "url": "https://github.com/hyoretsu/reactjs-template/issues",
+  "url": "https://github.com/hyoretsu/maple-simulator/issues",
   "email": "hyoretsu@gmail.com"
  },
  "repository": {
   "type": "git",
-  "url": "https://github.com/hyoretsu/reactjs-template.git"
+  "url": "https://github.com/hyoretsu/maple-simulator.git"
  },
  "license": "MIT",
  "author": {
@@ -25,13 +25,6 @@
   "email": "hyoretsu@gmail.com",
   "url": "https://www.linkedin.com/in/aranleite"
  },
- "contributors": [
-  {
-   "name": "",
-   "email": "",
-   "url": ""
-  }
- ],
  "scripts": {
   "build": "next build",
   "dev": "NODE_OPTIONS='--inspect' node server.js",
@@ -51,7 +44,6 @@
   "axios": "^0.24.0",
   "next": "^12.0.7",
   "next-seo": "^4.28.1",
-  "polished": "^4.1.3",
   "react": "^17.0.2",
   "react-dom": "^17.0.2",
   "react-icons": "^4.3.1",
