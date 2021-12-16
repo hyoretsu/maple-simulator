@@ -6,8 +6,10 @@
 }
 
 body {
- font: 16px sans-serif;
+ font-family: Arial;
+ color: #a8a8a8;
  -webkit-font-smoothing: antialiased;
+ background-color: #000;
 }
 
 #__next {
