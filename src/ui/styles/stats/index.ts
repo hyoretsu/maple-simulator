@@ -35,6 +35,14 @@ export const Frame = styled.div`
   right: 4%;
   top: 2%;
   width: 4%;
+
+  &:hover:not(:active) {
+   filter: drop-shadow(0 0 2px #d2d4b8);
+  }
+
+  &:active {
+   color: #b9b9b9;
+  }
  }
 `;
 
@@ -108,15 +116,10 @@ export const Info = styled.div<InfoProps>`
   }
  }
 
- > svg {
-  color: #ddd;
-  width: 6%;
-  background: linear-gradient(#d0d0d0, #969696);
-  border-radius: 2px;
-  padding: 1%;
+ button {
   position: absolute;
   right: 2%;
-  bottom: 17%;
+  bottom: 19%;
  }
 `;
 
@@ -151,15 +154,48 @@ export const AbilityPoint = styled.section`
   }
  }
 
+ @keyframes button_idle {
+  to {
+   box-shadow: inset 0 0 8px 6px #e8eeca;
+  }
+ }
+
  button {
   margin: 3% 4%;
   padding: 3% 4%;
+  background: linear-gradient(#d7fc00, #88bf00);
   border-radius: 4px;
-  background: linear-gradient(#ededed, #9d9d9d);
   font-size: 0.55em;
   color: #e8e8e8;
+  position: relative;
   font-stretch: condensed;
   text-shadow: 0 0 4px #000;
+
+  &:not(:disabled) {
+   &:before {
+    content: '';
+    border: 1px solid #89ab43;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 94%;
+   }
+  }
+
+  &:not(:hover, :disabled) {
+   animation: button_idle 0.7s infinite;
+  }
+
+  &:active {
+   background: linear-gradient(#88bf00, #d7fc00);
+   animation: none;
+  }
+
+  &:disabled {
+   background: linear-gradient(#ededed, #9d9d9d);
+  }
  }
 `;
 
@@ -200,5 +236,9 @@ export const SubTab = styled.button<SubTabProps>`
  &:not(:first-of-type) > svg {
   transform: rotate(${({ isOpen }) => (isOpen ? -90 : 90)}deg);
   right: 2%;
+ }
+
+ &:active {
+  background: linear-gradient(#88bf00, #d7fc00);
  }
 `;

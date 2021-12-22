@@ -1,9 +1,10 @@
 import { NextSeo } from 'next-seo';
 import { useEffect, useState } from 'react';
 
+import LevelButton from '@components/LevelButton';
+
 import Arrow from '@assets/Arrow.svg';
 import CloseButton from '@assets/CloseButton.svg';
-import LevelButton from '@assets/LevelButton.svg';
 
 import { Frame, Background, Info, AbilityPoint, Tabs, SubTab } from '@styles/stats';
 
@@ -102,14 +103,14 @@ const Stats: React.FC = () => {
        <span>
         {hp} / {hp}
        </span>
-       <LevelButton />
+       <LevelButton disabled={!ap} />
       </Info>
       <Info stat>
        <span>MP</span>
        <span>
         {mp} / {mp}
        </span>
-       <LevelButton />
+       <LevelButton disabled={!ap} />
       </Info>
      </div>
      <AbilityPoint>
@@ -117,28 +118,30 @@ const Stats: React.FC = () => {
        <span>Ability Point</span>
        <span>{ap}</span>
       </div>
-      <button type="button">Auto-assign</button>
+      <button type="button" disabled={!ap}>
+       Auto-assign
+      </button>
      </AbilityPoint>
      <div>
       <Info stat>
        <span>STR</span>
        <span>{str}</span>
-       <LevelButton />
+       <LevelButton disabled={!ap} />
       </Info>
       <Info stat>
        <span>DEX</span>
        <span>{dex}</span>
-       <LevelButton />
+       <LevelButton disabled={!ap} />
       </Info>
       <Info stat>
        <span>INT</span>
        <span>{int}</span>
-       <LevelButton />
+       <LevelButton disabled={!ap} />
       </Info>
       <Info stat>
        <span>LUK</span>
        <span>{luk}</span>
-       <LevelButton />
+       <LevelButton disabled={!ap} />
       </Info>
      </div>
      <Tabs>
