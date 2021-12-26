@@ -1,12 +1,14 @@
 import { NextSeo } from 'next-seo';
 import { useEffect, useState } from 'react';
 
+import CoreStatsInfo from '@components/CoreStatsInfo';
+import ExpBar from '@components/ExpBar';
 import LevelButton from '@components/LevelButton';
 
 import Arrow from '@assets/Arrow.svg';
 import CloseButton from '@assets/CloseButton.svg';
 
-import { Frame, Background, Info, AbilityPoint, Tabs, SubTab } from '@styles/stats';
+import { Frame, Background, Info, AbilityPoint, Tabs, SubTab, BottomBar } from '@styles/stats';
 
 const description =
  'Stats are the build of a character. There are four base stats in the game: Strength (STR), Dexterity (DEX), Intelligence (INT), and Luck (LUK).';
@@ -14,6 +16,8 @@ const title = 'Character Stats';
 
 interface CharInfo {
  name: string;
+ level: number;
+ exp: number;
  job: string;
  guild: string;
  fame: number;
@@ -30,6 +34,8 @@ interface CharInfo {
 
 const Stats: React.FC = () => {
  const [name, setName] = useState('Default');
+ const [level, setLevel] = useState(1);
+ const [exp, setExp] = useState(0);
  const [job, setJob] = useState('Beginner');
  const [guild, setGuild] = useState('');
  const [fame, setFame] = useState(0);
@@ -46,7 +52,7 @@ const Stats: React.FC = () => {
   if (storedInfo === null) {
    localStorage.setItem(
     '@MapleSimulator:char_info',
-    JSON.stringify({ name, job, guild, fame, stats: { hp, mp, ap, str, dex, int, luk } }),
+    JSON.stringify({ name, level, exp, job, guild, fame, stats: { hp, mp, ap, str, dex, int, luk } }),
    );
 
    return;
@@ -54,6 +60,8 @@ const Stats: React.FC = () => {
 
   const charInfo: CharInfo = JSON.parse(storedInfo);
   setName(charInfo.name);
+  setLevel(charInfo.level);
+  setExp(charInfo.exp);
   setJob(charInfo.job);
   setGuild(charInfo.guild);
   setFame(charInfo.fame);
@@ -156,6 +164,17 @@ const Stats: React.FC = () => {
      </Tabs>
     </Background>
    </Frame>
+   <BottomBar>
+    <CoreStatsInfo
+     name={name}
+     level={level}
+     stats={[
+      { stat: 'HP', value: hp },
+      { stat: 'MP', value: mp },
+     ]}
+    />
+    <ExpBar exp={exp} />
+   </BottomBar>
   </>
  );
 };

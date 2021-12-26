@@ -242,3 +242,12 @@ export const SubTab = styled.button<SubTabProps>`
   background: linear-gradient(#88bf00, #d7fc00);
  }
 `;
+
+export const BottomBar = styled.footer`
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+`;
