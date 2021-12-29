@@ -1,15 +1,15 @@
+import { useCharInfo, useCoreStats } from '@hooks/char';
+
 import { CharInfo, LevelName, CoreStatsDiv, StatBar } from './styles';
 
-interface CoreStatsInfoProps {
- name: string;
- level: number;
- stats: Array<{
-  stat: string;
-  value: number;
- }>;
-}
+const CoreStatsInfo: React.FC = () => {
+ const { name, level } = useCharInfo();
+ const { hp, mp } = useCoreStats();
+ const stats = [
+  { stat: 'HP', value: hp },
+  { stat: 'MP', value: mp },
+ ];
 
-const CoreStatsInfo: React.FC<CoreStatsInfoProps> = ({ name, level, stats }) => {
  return (
   <CharInfo>
    <LevelName>

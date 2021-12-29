@@ -4,6 +4,8 @@ import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { ReactElement } from 'react';
 
+import { CharProvider } from '@hooks/char';
+
 import appPackageJson from '../../package.json';
 import { siteName as site_name } from './_document';
 
@@ -14,7 +16,7 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
  const { pathname } = useRouter();
 
  return (
-  <>
+  <CharProvider>
    <DefaultSeo
     defaultTitle={site_name}
     facebook={{ appId: String(process.env.NEXT_PUBLIC_FACEBOOK_APP_ID) }}
@@ -39,7 +41,7 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
     }}
    />
    <Component {...pageProps} />
-  </>
+  </CharProvider>
  );
 };
 

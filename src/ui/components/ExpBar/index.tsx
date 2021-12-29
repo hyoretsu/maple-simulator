@@ -1,12 +1,10 @@
+import { useExp } from '@hooks/char';
 import range from '@utils/range';
 
 import { ExpBarDiv, Experience, ProgressBar, Marker } from './styles';
 
-interface ExpBarProps {
- exp: number;
-}
-
-const ExpBar: React.FC<ExpBarProps> = ({ exp }) => {
+const ExpBar: React.FC = () => {
+ const exp = useExp();
  const percentage = ((exp / 15) * 100).toFixed(2);
 
  return (
