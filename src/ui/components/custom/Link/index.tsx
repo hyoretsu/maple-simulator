@@ -7,7 +7,7 @@ type CustomLinkProps = {
  HTMLProps<HTMLAnchorElement>;
 
 const Link: React.FC<CustomLinkProps> = ({ children, as, href, replace, scroll, shallow, passHref, ...props }) => {
- if (href.includes('http') || href.includes('png')) {
+ if (href.includes('http') || href.includes('https') || href.includes('png')) {
   return (
    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
     {children}
