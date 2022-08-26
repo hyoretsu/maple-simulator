@@ -1,7 +1,7 @@
 /.vscode/
 !/.vscode/launch.json
-/tmp/
-!/tmp/.gitkeep
+**/tmp
+!.gitkeep
 *.log
 robots.txt
 sitemap.xml
