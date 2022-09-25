@@ -23,18 +23,19 @@ export const LevelName = styled.div`
         display: flex;
         margin: 0 19% 0 27%;
 
-        span {
+        input,
+        label {
             color: #d7b424;
             font-size: 0.7em;
             text-shadow: 0 0 4px #000;
+        }
 
-            &:not(:first-of-type) {
-                margin-left: auto;
-            }
+        input {
+            text-align: end;
         }
     }
 
-    > span {
+    > input {
         color: #fff;
         margin-left: 5%;
         font-size: 0.6em;

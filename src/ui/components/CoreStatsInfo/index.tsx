@@ -1,10 +1,14 @@
-import { useCharInfo, useCoreStats } from '@context/char';
+import Input from '@components/custom/Input';
+
+import { useCharInfo, useCoreStats, useFuncs } from '@context/char';
 
 import { CharInfo, LevelName, CoreStatsDiv, StatBar } from './styles';
 
 const CoreStatsInfo: React.FC = () => {
     const { name, level } = useCharInfo();
     const { hp, mp } = useCoreStats();
+    const { updateInfo } = useFuncs();
+
     const stats = [
         { stat: 'HP', value: hp },
         { stat: 'MP', value: mp },
@@ -14,10 +18,21 @@ const CoreStatsInfo: React.FC = () => {
         <CharInfo>
             <LevelName>
                 <div>
-                    <span>Lv.</span>
-                    <span>{level}</span>
+                    <label htmlFor="level">Lv.</label>
+                    <Input
+                        id="level"
+                        type="number"
+                        value={level}
+                        min={1}
+                        max={300}
+                        onChange={e => updateInfo('level', e.target.value)}
+                    />
                 </div>
-                <span>{name}</span>
+                <Input
+                    value={name}
+                    onChange={e => updateInfo('name', e.target.value)}
+                    maxLength={12}
+                />
             </LevelName>
             <CoreStatsDiv>
                 {stats.map(({ stat, value }) => (

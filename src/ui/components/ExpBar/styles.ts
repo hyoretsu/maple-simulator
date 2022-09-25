@@ -9,7 +9,6 @@ export const ExpBarDiv = styled.div`
     align-items: center;
     background-color: #444;
     color: #fff;
-    font-size: 0.6em;
     width: 100%;
 
     * {
@@ -18,18 +17,27 @@ export const ExpBarDiv = styled.div`
 
     > span {
         margin: 0 2px;
+        font-size: 0.6em;
     }
 `;
 
 export const Experience = styled.div`
-    display: flex;
     position: relative;
     flex: 1;
+`;
 
+export const ExpText = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    input,
     span {
-        display: block;
+        width: auto;
+        background-color: transparent;
+        color: #fff;
+        font-size: 0.6em;
         text-shadow: 0 0 4px #000;
-        margin: 0 auto;
     }
 `;
 

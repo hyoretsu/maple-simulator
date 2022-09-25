@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react';
 import { createContext, useContextSelector } from 'use-context-selector';
 
 type CoreStats = {
@@ -27,7 +27,13 @@ interface Char extends CharInfo {
     stats: CoreStats & CharStats;
 }
 
-const CharContext = createContext({} as Char);
+interface Helpers {
+    updateInfo: (info: string, value: string | number) => void;
+}
+
+type ContextData = Char & Helpers;
+
+const CharContext = createContext({} as ContextData);
 
 const CharProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const [charInfo, setCharInfo] = useState({
@@ -60,7 +66,35 @@ const CharProvider: React.FC<PropsWithChildren> = ({ children }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return <CharContext.Provider value={charInfo}>{children}</CharContext.Provider>;
+    const updateInfo = useCallback(
+        (info: string, value: any) => {
+            let updatedInfo;
+            if (info.includes('.')) {
+                const keys = info.split('.');
+                // @ts-ignore
+                const oldValues = charInfo[keys[0]];
+
+                updatedInfo = {
+                    ...charInfo,
+                    [keys[0]]: {
+                        ...oldValues,
+                        [keys[1]]: value,
+                    },
+                };
+            } else {
+                updatedInfo = { ...charInfo, [info]: value };
+            }
+
+            setCharInfo(updatedInfo);
+
+            localStorage.setItem('@MapleSimulator:char_info', JSON.stringify(updatedInfo));
+        },
+        [charInfo],
+    );
+
+    const contextData = useMemo(() => ({ ...charInfo, updateInfo }), [charInfo, updateInfo]);
+
+    return <CharContext.Provider value={contextData}>{children}</CharContext.Provider>;
 };
 
 const useCharInfo = (): CharInfo => {
@@ -115,4 +149,15 @@ const useStats = (): CharStats => {
     return context;
 };
 
-export { CharProvider, useCharInfo, useExp, useCoreStats, useStats };
+const useFuncs = (): Helpers => {
+    const context = useContextSelector(CharContext, char => ({
+        updateInfo: char.updateInfo,
+    }));
+    if (!context) {
+        throw new Error('useStats must be used within a CharProvider');
+    }
+
+    return context;
+};
+
+export { CharProvider, useCharInfo, useExp, useCoreStats, useStats, useFuncs };

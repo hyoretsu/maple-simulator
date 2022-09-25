@@ -15,7 +15,6 @@ const config: Config = {
     moduleFileExtensions: ['tsx', 'ts', 'js', 'json'],
     preset: 'ts-jest',
     roots: ['<rootDir>/src'],
-    setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
     testMatch: ['<rootDir>/src/__tests__/**/*.spec.{ts,tsx}'],
     transformIgnorePatterns: ['<rootDir>/node_modules/'],
 };

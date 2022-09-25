@@ -1,10 +1,10 @@
 import NextLink, { LinkProps } from 'next/link';
-import { ReactNode } from 'react';
+import { HTMLProps } from 'react';
 
-interface CustomLinkProps extends LinkProps {
-    children: ReactNode;
+type CustomLinkProps = {
     href: string;
-}
+} & LinkProps &
+    HTMLProps<HTMLAnchorElement>;
 
 const Link: React.FC<CustomLinkProps> = ({
     children,

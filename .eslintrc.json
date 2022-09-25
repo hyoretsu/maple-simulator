@@ -24,11 +24,11 @@
                     "module",
                     "/^@components/",
                     ["/^@context/", "/^@hooks/", "/^@utils/", "/^@api/"],
-                    "/^@assets/",
+                    ["/^@public/", "/^@assets/"],
                     "/^@styles/",
                     "/assets/",
                     ["/^@config/", "/^@entities/", "/^@modules/", "/^@shared/"],
-                    ["/^@public/", "parent", "sibling"]
+                    ["parent", "sibling"]
                 ],
                 "alphabetize": {
                     "order": "asc"
@@ -92,6 +92,10 @@
                         "ts": "never",
                         "tsx": "never"
                     }
+                ],
+                "jsx-a11y/label-has-associated-control": [
+                    "error",
+                    { "controlComponents": ["input", "Input"] }
                 ],
                 "react/function-component-definition": [
                     "error",

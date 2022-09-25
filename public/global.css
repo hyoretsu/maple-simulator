@@ -37,6 +37,17 @@ svg {
     border: none;
 }
 
+input {
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 button:disabled {
     cursor: default;
 }

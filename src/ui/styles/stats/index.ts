@@ -76,7 +76,8 @@ export const Info = styled.div<InfoProps>`
     ${({ isBig }) => !isBig && 'height: 90%;'}
     margin: auto;
 
-    > span:first-of-type {
+    > label,
+    > span {
         background: linear-gradient(#d7fc00, #88bf00);
         border: 1px solid #89ab43;
         border-right-width: 2px;
@@ -89,14 +90,21 @@ export const Info = styled.div<InfoProps>`
         color: #fff;
     }
 
-    > span:not(:first-of-type),
+    input,
+    select,
     > div {
+        width: 100%;
+        color: #a8a8a8;
         font-size: 0.7em;
         border: 2px solid #a8a8a8;
         border-radius: 0 4px 4px 0;
         border-left: none;
         flex: 1;
         padding-left: 2%;
+    }
+
+    select {
+        padding: 0;
     }
 
     > div {
