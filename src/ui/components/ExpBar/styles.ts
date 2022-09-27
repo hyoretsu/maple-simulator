@@ -7,6 +7,7 @@ interface ExperienceProps {
 export const ExpBarDiv = styled.div`
     display: flex;
     align-items: center;
+    z-index: -2;
 
     width: 100%;
     color: #fff;
@@ -48,6 +49,7 @@ export const ProgressBar = styled.i<ExperienceProps>`
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: -1;
 
     width: ${({ progress }) => progress}%;
     background: linear-gradient(#d4e20e, #ac0);
