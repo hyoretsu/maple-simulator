@@ -7,11 +7,13 @@ interface StatBarProps {
 export const CharInfo = styled.div`
     display: grid;
     grid-template-rows: 1fr 2fr;
-    background-color: #444;
-    margin-bottom: 0.5vh;
-    border-radius: 4px;
+
     width: 158px;
     height: 52px;
+    background-color: #444;
+
+    margin-bottom: 0.5vh;
+    border-radius: 4px;
 `;
 
 export const LevelName = styled.div`
@@ -21,6 +23,7 @@ export const LevelName = styled.div`
 
     div {
         display: flex;
+
         margin: 0 19% 0 27%;
 
         input,
@@ -37,17 +40,20 @@ export const LevelName = styled.div`
 
     > input {
         color: #fff;
-        margin-left: 5%;
         font-size: 0.6em;
+
+        margin-left: 5%;
     }
 `;
 
 export const CoreStatsDiv = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
+
     background: linear-gradient(#fff, #cdcdcd 60%);
-    border-radius: 4px;
+
     margin: 0 1%;
+    border-radius: 4px;
 
     > div {
         display: grid;
@@ -58,14 +64,17 @@ export const CoreStatsDiv = styled.div`
             color: #838383;
             font-size: 0.5em;
             font-weight: 700;
-            margin: auto 13%;
             text-transform: uppercase;
+
+            margin: auto 13%;
         }
     }
 `;
 
 export const StatBar = styled.div<StatBarProps>`
     display: flex;
+
+    height: 74%;
     background: ${({ stat }) => {
         const prefix = 'linear-gradient(90deg,';
         const suffix = '90%)';
@@ -79,12 +88,13 @@ export const StatBar = styled.div<StatBarProps>`
                 return '';
         }
     }};
+
     border-radius: 4px;
-    height: 74%;
 
     span {
         color: #fff;
         font-size: 0.6em;
+
         margin: auto;
     }
 `;

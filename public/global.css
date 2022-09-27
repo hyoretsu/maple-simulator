@@ -6,22 +6,23 @@
 }
 
 body {
-    font-family: Arial;
     color: #a8a8a8;
-    -webkit-font-smoothing: antialiased;
     background-color: #000;
+    font-family: Arial;
+    -webkit-font-smoothing: antialiased;
 }
 
 #__next {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     height: 100vh;
 }
 
 p {
-    hyphens: auto;
     text-align: justify;
+    hyphens: auto;
 }
 
 a {
@@ -31,15 +32,17 @@ a {
 button,
 img,
 svg {
-    cursor: pointer;
     background: transparent;
+    cursor: pointer;
+
     border: none;
 }
 
 input {
-    background: transparent;
-    border: none;
     width: 100%;
+    background: transparent;
+
+    border: none;
 }
 
 input::-webkit-outer-spin-button,
