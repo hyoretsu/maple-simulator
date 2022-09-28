@@ -2,7 +2,102 @@
     "equips": {
         "1172000": {
             "name": "Roro the Familiar Manager",
+            "attackSpeed": 0,
+            "enhancements": 0,
+            "req": {
+                "dex": 0,
+                "int": 0,
+                "job": "",
+                "level": 0,
+                "luk": 0,
+                "str": 0
+            },
+            "stats": {
+                "att": 0
+            },
+            "type": "",
+            "category": "",
             "height": 36,
+            "width": 30
+        },
+        "1302000": {
+            "name": "Sword",
+            "attackSpeed": 4,
+            "enhancements": 7,
+            "req": {
+                "dex": 0,
+                "int": 0,
+                "job": "",
+                "level": 0,
+                "luk": 0,
+                "str": 0
+            },
+            "stats": {
+                "att": 15
+            },
+            "type": "Weapon",
+            "category": "One-handed Sword",
+            "height": 31,
+            "width": 30
+        },
+        "1312004": {
+            "name": "Hand Axe",
+            "attackSpeed": 6,
+            "enhancements": 7,
+            "req": {
+                "dex": 0,
+                "int": 0,
+                "job": "",
+                "level": 0,
+                "luk": 0,
+                "str": 0
+            },
+            "stats": {
+                "att": 15
+            },
+            "type": "Weapon",
+            "category": "One-handed Axe",
+            "height": 30,
+            "width": 32
+        },
+        "1312005": {
+            "name": "Fireman's Axe",
+            "attackSpeed": 5,
+            "enhancements": 7,
+            "req": {
+                "dex": 0,
+                "int": 0,
+                "job": "Warrior",
+                "level": 30,
+                "luk": 0,
+                "str": 95
+            },
+            "stats": {
+                "att": 47
+            },
+            "type": "Weapon",
+            "category": "One-handed Axe",
+            "height": 30,
+            "width": 32
+        },
+        "1322005": {
+            "name": "Wooden Club",
+            "attackSpeed": 5,
+            "enhancements": 7,
+            "req": {
+                "dex": 0,
+                "int": 0,
+                "job": "",
+                "level": 0,
+                "luk": 0,
+                "str": 0
+            },
+            "stats": {
+                "att": 15
+            },
+            "type": "Weapon",
+            "category": "One-handed Mace",
+            "height": 28,
             "width": 30
         }
     },
