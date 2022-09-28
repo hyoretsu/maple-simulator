@@ -73,18 +73,33 @@ export const EquipSlots = styled.div`
 `;
 
 export const Slot = styled.div<SlotProps>`
+    display: flex;
+    position: relative;
+
     width: 40px;
     height: 40px;
-    color: #ccc;
     background-color: ${({ background }) => background || 'transparent'};
-    font-size: 0.46em;
-    text-transform: uppercase;
 
     padding: 5%;
     border-radius: 4px;
 
     span {
-        font-size: 1.8em;
+        color: #ccc;
+        font-size: 0.46em;
+        text-transform: uppercase;
+
+        &:not(:last-of-type) {
+            align-self: flex-start;
+            position: absolute;
+        }
+
+        & + br + span {
+            top: 10px;
+        }
+    }
+
+    > span:last-of-type {
+        margin: auto !important;
     }
 
     & + & {

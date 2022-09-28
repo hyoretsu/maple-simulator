@@ -1,9 +1,12 @@
+import Image from 'next/image';
+
 import Button from '@components/Button';
 import Window from '@components/Window';
 
 import { useCharInfo } from '@context/char';
 
 import Arrow from '@assets/Arrow.svg';
+import data from '@public/data.json';
 
 import {
     Background,
@@ -30,62 +33,135 @@ const EquipmentInventory: React.FC = () => {
                 </TopBar>
                 <EquipSlots>
                     <div>
-                        <Slot background="#a98">Ring</Slot>
-                        <Slot background="#a98">Ring</Slot>
-                        <Slot background="#a98">Ring</Slot>
-                        <Slot background="#a98">Ring</Slot>
-                        <Slot background="#999">Pocket</Slot>
-                        <Slot background="#999">Book</Slot>
+                        <Slot background="#a98">
+                            <span>Ring</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#a98">
+                            <span>Ring</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#a98">
+                            <span>Ring</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#a98">
+                            <span>Ring</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#999">
+                            <span>Pocket</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#999">
+                            <span>Book</span>
+                            <Image
+                                src="/images/equips/1172000.png"
+                                alt="Book"
+                                width={data.equips['1172000'].width}
+                                height={data.equips['1172000'].height}
+                            />
+                        </Slot>
                     </div>
                     <div>
                         <Slot />
                         <Slot background="#8ab">
-                            Pendant
+                            <span>Pendant</span>
                             <br />
-                            <span>©</span>
+                            <span style={{ fontSize: '0.85em' }}>©</span>
+                            <Image />
                         </Slot>
-                        <Slot background="#8ab">Pendant</Slot>
-                        <Slot background="#666">Weapon</Slot>
-                        <Slot background="#999">Belt</Slot>
+                        <Slot background="#8ab">
+                            <span>Pendant</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#666">
+                            <span>Weapon</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#999">
+                            <span>Belt</span>
+                            <Image />
+                        </Slot>
                         <Slot />
                     </div>
                     <div>
-                        <Slot background="#999">Hat</Slot>
-                        <Slot background="#999">Face</Slot>
                         <Slot background="#999">
-                            Eye
-                            <br />
-                            Acc
+                            <span>Hat</span>
+                            <Image />
                         </Slot>
-                        <Slot background="#999">Top</Slot>
-                        <Slot background="#999">Bottom</Slot>
-                        <Slot background="#999">Shoes</Slot>
+                        <Slot background="#999">
+                            <span>Face</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#999">
+                            <span>Eye</span>
+                            <br />
+                            <span>Acc</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#999">
+                            <span>Top</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#999">
+                            <span>Bottom</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#999">
+                            <span>Shoes</span>
+                            <Image />
+                        </Slot>
                     </div>
                     <div>
                         <Slot />
                         <Slot />
                         <Slot background="#999">
-                            Ear
+                            <span>Ear</span>
                             <br />
-                            Acc
+                            <span>Acc</span>
+                            <Image />
                         </Slot>
                         <Slot background="#999" style={{ fontSize: '0.4em' }}>
-                            Shoulder
+                            <span>Shoulder</span>
+                            <Image />
                         </Slot>
-                        <Slot background="#999">Gloves</Slot>
-                        <Slot background="#889">Android</Slot>
+                        <Slot background="#999">
+                            <span>Gloves</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#889">
+                            <span>Android</span>
+                            <Image />
+                        </Slot>
                     </div>
                     <div>
-                        <Slot background="#8ab">Emblem</Slot>
-                        <Slot background="#8ab">Badge</Slot>
-                        <Slot background="#8ab">Medal</Slot>
-                        <Slot background="#666">
-                            Sub
-                            <br />
-                            Weapon
+                        <Slot background="#8ab">
+                            <span>Emblem</span>
+                            <Image />
                         </Slot>
-                        <Slot background="#999">Cape</Slot>
-                        <Slot background="#889">Heart</Slot>
+                        <Slot background="#8ab">
+                            <span>Badge</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#8ab">
+                            <span>Medal</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#666">
+                            <span>Sub</span>
+                            <br />
+                            <span>Weapon</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#999">
+                            <span>Cape</span>
+                            <Image />
+                        </Slot>
+                        <Slot background="#889">
+                            <span>Heart</span>
+                            <Image />
+                        </Slot>
                     </div>
                 </EquipSlots>
                 <BottomSection>
