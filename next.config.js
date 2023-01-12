@@ -13,7 +13,9 @@ module.exports = phase => {
             defaultLocale: 'en',
         },
         images: {
-            domains: [''],
+            loader: 'imgix',
+            path: 'https://maple-sim.s3.amazonaws.com/',
+            domains: ['maple-sim.s3.amazonaws.com'],
         },
         productionBrowserSourceMaps: true,
         reactStrictMode: true,

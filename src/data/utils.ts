@@ -1,4 +1,13 @@
 /**
+ * Fixes JSON serialization errors involving `BigInt`
+ */
+export const JsonFixBigInt = (json: Record<string, any>) => {
+    return JSON.parse(
+        JSON.stringify(json, (key, value) => (typeof value === "bigint" ? Number(value) : value)),
+    );
+};
+
+/**
  * When providing a single parameter, it acts like `random(max)`
  */
 export const random = (min: number, max = 0): number => {

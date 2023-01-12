@@ -18,12 +18,12 @@
         "noImplicitAny": true,
         "outDir": "./build",
         "paths": {
-            "@api": ["data/services/api"],
             "@assets/*": ["../public/images/*"],
             "@components/*": ["ui/components/*"],
             "@context/*": ["data/context/*"],
             "@hooks/*": ["data/hooks/*"],
             "@public/*": ["../public/*"],
+            "@services/*": ["data/services/*"],
             "@styles/*": ["ui/styles/*"],
             "@utils": ["data/utils.ts"]
         },

@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Experience" ALTER COLUMN "exp" SET DATA TYPE BIGINT;

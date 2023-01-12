@@ -1,12 +1,15 @@
+import { Equipment } from '@prisma/client';
 import Image from 'next/image';
+import { useMemo } from 'react';
 
 import Button from '@components/Button';
 import Window from '@components/Window';
 
+import api from '@services/api';
 import { useCharInfo } from '@context/char';
+import { useFetch } from '@hooks/index';
 
 import Arrow from '@assets/Arrow.svg';
-import data from '@public/data.json';
 
 import {
     Background,
@@ -21,6 +24,9 @@ import {
 
 const EquipmentInventory: React.FC = () => {
     const { job } = useCharInfo();
+
+    const { data } = useFetch('/equips/1172000', api);
+    const monsterBook = useMemo<Equipment>(() => data || ({} as Equipment), [data]);
 
     return (
         <Window title="Equipment Inventory" size={[232, 354]}>
@@ -56,10 +62,10 @@ const EquipmentInventory: React.FC = () => {
                         <Slot background="#999">
                             <span>Book</span>
                             <Image
-                                src="/images/equips/1172000.png"
+                                src={monsterBook.icon}
                                 alt="Book"
-                                width={data.equips['1172000'].width}
-                                height={data.equips['1172000'].height}
+                                width={monsterBook.iconWidth}
+                                height={monsterBook.iconHeight}
                             />
                         </Slot>
                     </div>

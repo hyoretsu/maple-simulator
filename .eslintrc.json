@@ -23,7 +23,7 @@
                 "groups": [
                     "module",
                     "/^@components/",
-                    ["/^@context/", "/^@hooks/", "/^@utils/", "/^@api/"],
+                    ["/^@context/", "/^@hooks/", "/^@services/", "/^@utils/"],
                     ["/^@public/", "/^@assets/"],
                     "/^@styles/",
                     "/assets/",
