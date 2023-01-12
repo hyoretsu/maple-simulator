@@ -10,7 +10,7 @@
         "test": "jest --coverage --watchAll false --passWithNoTests",
         "prepare": "husky install",
         "prisma:generate": "prisma generate --data-proxy",
-        "prisma:migrate-dev": "dotenv -c -- bash -c 'DATABASE_URL=$MIGRATE_DATABASE_URL prisma migrate dev --create-only'",
+        "prisma:migrate-dev": "dotenv -c -- bash -c 'DATABASE_URL=$MIGRATE_DATABASE_URL prisma migrate dev --create-only' && npm run prisma:generate",
         "prisma:migrate-deploy": "dotenv -c -- bash -c 'DATABASE_URL=$MIGRATE_DATABASE_URL prisma migrate deploy'"
     },
     "lint-staged": {
