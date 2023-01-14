@@ -13,8 +13,6 @@ module.exports = phase => {
             defaultLocale: 'en',
         },
         images: {
-            loader: 'imgix',
-            path: 'https://maple-sim.s3.amazonaws.com/',
             domains: ['maple-sim.s3.amazonaws.com'],
         },
         productionBrowserSourceMaps: true,

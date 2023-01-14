@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Window from '@components/Window';
+
 interface BackgroundProps {
     job: string;
 }
@@ -11,6 +13,40 @@ interface TabProps {
 interface SlotProps {
     background?: string;
 }
+
+export const EquipChooser = styled(Window).attrs({
+    title: '',
+    size: [400, 300],
+})`
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 32px;
+    z-index: 1;
+`;
+
+export const ScrollDiv = styled.div`
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+
+    overflow: auto;
+
+    padding-bottom: 4px;
+    margin-top: 20px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+`;
+
+export const EquipChooserSlot = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+`;
 
 export const Background = styled.div<BackgroundProps>`
     display: grid;
@@ -60,6 +96,7 @@ export const EquipSlots = styled.div`
     grid-template-columns: repeat(5, 1fr);
 
     background: url('/images/Equip/background.png') #ddd center no-repeat;
+    cursor: pointer;
 
     padding: 2%;
     margin: 2px;

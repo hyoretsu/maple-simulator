@@ -1,3 +1,4 @@
+import transformItem from 'data/utils/transformItem';
 import { NextApiRequest, NextApiResponse, PageConfig } from 'next';
 
 import upload from '@services/multer';
@@ -35,9 +36,9 @@ export default async function handler(req: NextApiRequest<Body>, res: NextApiRes
                 },
             });
 
-            res.json(equips);
+            res.json(equips.map(equip => transformItem(equip)));
             break;
-		}
+        }
         case 'POST': {
             const middleware = upload.single('icon');
 
@@ -66,12 +67,16 @@ export default async function handler(req: NextApiRequest<Body>, res: NextApiRes
                         stats: { create: JSON.parse(stats) },
                         ...rest,
                     },
+                    include: {
+                        req: true,
+                        stats: true,
+                    },
                 });
 
-                res.json(equip);
+                res.json(transformItem(equip));
             });
 
             break;
-		}
+        }
     }
 }

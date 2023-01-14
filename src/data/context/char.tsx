@@ -23,11 +23,17 @@ interface CharInfo {
     fame: number;
 }
 
+interface StoredEquip {
+    id: number;
+}
+
 interface Char extends CharInfo {
     stats: CoreStats & CharStats;
+    equips: Record<string, StoredEquip>;
 }
 
 interface Helpers {
+    updateEquips: (type: string, equipId: number) => void;
     updateInfo: (info: string, value: string | number) => void;
 }
 
@@ -51,6 +57,32 @@ const CharProvider: React.FC<PropsWithChildren> = ({ children }) => {
             dex: 4,
             int: 4,
             luk: 4,
+        },
+        equips: {
+            android: { id: 0 },
+            badge: { id: 0 },
+            belt: { id: 0 },
+            book: { id: 1172000 },
+            bottom: { id: 0 },
+            cape: { id: 0 },
+            earrings: { id: 0 },
+            emblem: { id: 0 },
+            eyeAcc: { id: 0 },
+            faceAcc: { id: 0 },
+            gloves: { id: 0 },
+            heart: { id: 0 },
+            medal: { id: 0 },
+            pendant1: { id: 0 },
+            pendant2: { id: 0 },
+            ring1: { id: 0 },
+            ring2: { id: 0 },
+            ring3: { id: 0 },
+            ring4: { id: 0 },
+            secondary: { id: 0 },
+            shoes: { id: 0 },
+            shoulder: { id: 0 },
+            top: { id: 0 },
+            weapon: { id: 0 },
         },
     });
 
@@ -92,7 +124,29 @@ const CharProvider: React.FC<PropsWithChildren> = ({ children }) => {
         [charInfo],
     );
 
-    const contextData = useMemo(() => ({ ...charInfo, updateInfo }), [charInfo, updateInfo]);
+    const updateEquips = useCallback(
+        (type: string, equipId: number) => {
+            if (type === 'Mechanical Heart') {
+                if (equipId !== charInfo.equips.heart.id) {
+                    updateInfo(`equips.heart`, { id: equipId });
+                }
+            } else {
+                type = type.toLowerCase();
+                type = type.replace(' accessory', 'Acc');
+
+                // @ts-ignore
+                if (equipId !== charInfo.equips[type].id) {
+                    updateInfo(`equips.${type}`, { id: equipId });
+                }
+            }
+        },
+        [charInfo.equips, updateInfo],
+    );
+
+    const contextData = useMemo(
+        () => ({ ...charInfo, updateEquips, updateInfo }),
+        [charInfo, updateEquips, updateInfo],
+    );
 
     return <CharContext.Provider value={contextData}>{children}</CharContext.Provider>;
 };
@@ -134,6 +188,15 @@ const useCoreStats = (): CoreStats => {
     return context;
 };
 
+const useEquips = () => {
+    const context = useContextSelector(CharContext, char => char.equips);
+    if (!context) {
+        throw new Error('useEquips must be used within a CharProvider');
+    }
+
+    return context;
+};
+
 const useStats = (): CharStats => {
     const context = useContextSelector(CharContext, char => ({
         ap: char.stats.ap,
@@ -152,6 +215,7 @@ const useStats = (): CharStats => {
 const useFuncs = (): Helpers => {
     const context = useContextSelector(CharContext, char => ({
         updateInfo: char.updateInfo,
+        updateEquips: char.updateEquips,
     }));
     if (!context) {
         throw new Error('useStats must be used within a CharProvider');
@@ -160,4 +224,4 @@ const useFuncs = (): Helpers => {
     return context;
 };
 
-export { CharProvider, useCharInfo, useExp, useCoreStats, useStats, useFuncs };
+export { CharProvider, useCharInfo, useExp, useCoreStats, useEquips, useStats, useFuncs };

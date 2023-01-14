@@ -1,18 +1,33 @@
-import useSWR from 'swr';
-import { AxiosInstance } from 'axios';
 import { Equipment } from '@prisma/client';
+import { AxiosInstance } from 'axios';
+import useSWR from 'swr';
 
 type APIMapping = {
     '/equips': Equipment[];
-    '/equips/1172000': Equipment;
+    '/equips/filter': Equipment[];
+    '/equips/find': Equipment | Equipment[];
     '/exp': Array<{ level: number; exp: number }>;
 };
 
-function useFetch<Data extends keyof APIMapping, Error = any>(url: Data, api: AxiosInstance) {
-    const reqInfo = useSWR<APIMapping[Data], Error>(url, async path => {
-        const { data } = await api.get(path);
+function useFetch<Data extends keyof APIMapping, Error = any>(
+    urlDeps: Data | [Data, any | any[]],
+    api: AxiosInstance,
+    body?: Record<string, any>,
+) {
+    const reqInfo = useSWR<APIMapping[Data], Error>(urlDeps, async path => {
+        let res;
 
-        return data;
+        if (typeof urlDeps !== 'string') {
+            [path] = urlDeps;
+        }
+
+        if (body) {
+            res = await api.post(path, body);
+        } else {
+            res = await api.get(path);
+        }
+
+        return res.data;
     });
 
     return reqInfo;

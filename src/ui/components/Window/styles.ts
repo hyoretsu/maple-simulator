@@ -26,7 +26,7 @@ export const Frame = styled.div`
         top: 2%;
         right: 4%;
 
-        width: 4%;
+        width: max(3%, 8px);
         color: #fff;
         filter: drop-shadow(0 1px 2px #000);
 

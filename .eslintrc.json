@@ -36,6 +36,8 @@
             }
         ],
         "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "no-constant-condition": "off",
+        "no-continue": "off",
         "no-param-reassign": "off",
         "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
         "no-unused-expressions": ["off", { "allowShortCircuit": true }],
@@ -46,7 +48,7 @@
             "error",
             {
                 "arrowParens": "avoid",
-                "printWidth": 100,
+                "printWidth": 110,
                 "singleQuote": true,
                 "tabWidth": 4,
                 "trailingComma": "all"
@@ -78,10 +80,7 @@
             "rules": {
                 "@next/next/no-img-element": "off",
                 "@typescript-eslint/ban-ts-comment": "off",
-                "@typescript-eslint/explicit-function-return-type": [
-                    "error",
-                    { "allowExpressions": true }
-                ],
+                "@typescript-eslint/explicit-function-return-type": "off",
                 "@typescript-eslint/no-explicit-any": "off",
                 "@typescript-eslint/no-unused-vars": "off",
                 "@typescript-eslint/no-use-before-define": ["error"],

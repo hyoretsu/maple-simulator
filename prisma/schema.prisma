@@ -12,6 +12,7 @@ model Equipment {
     name         String
     attackSpeed  Int?
     enhancements Int
+    bossReward   Boolean                @default(false)
     req          EquipmentRequirements?
     stats        EquipmentStats?
     type         String
