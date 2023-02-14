@@ -1,7 +1,7 @@
+import { JsonFixBigInt } from '@hyoretsu/shared.utils';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import { prisma } from '@services/prisma';
-import { JsonFixBigInt } from '@utils';
 
 interface Body {
     exp: number[];
@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest<Body>, res: NextApiRes
 
             res.json(JsonFixBigInt(exp));
             break;
-		}
+        }
         case 'POST':
             await prisma.experience.createMany({
                 data: req.body.exp.map((exp, index) => ({

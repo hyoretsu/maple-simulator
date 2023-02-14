@@ -1,8 +1,8 @@
-import transformItem from 'data/utils/transformItem';
 import { NextApiRequest, NextApiResponse, PageConfig } from 'next';
 
 import upload from '@services/multer';
 import { prisma } from '@services/prisma';
+import transformItem from '@utils/transformItem';
 
 interface Body {
     attackSpeed: string;

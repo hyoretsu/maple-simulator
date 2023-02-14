@@ -1,7 +1,7 @@
-import transformItem from 'data/utils/transformItem';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import { prisma } from '@services/prisma';
+import transformItem from '@utils/transformItem';
 
 interface Body {
     id: number | number[];
