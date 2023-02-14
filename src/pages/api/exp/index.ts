@@ -1,13 +1,14 @@
 import { JsonFixBigInt } from '@hyoretsu/shared.utils';
 import { NextApiRequest, NextApiResponse } from 'next';
+import * as yup from 'yup';
 
 import { prisma } from '@services/prisma';
 
-interface Body {
-    exp: number[];
-}
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+    const schema = yup.object({
+        exp: yup.array().of(yup.number().required()).required(),
+    });
 
-export default async function handler(req: NextApiRequest<Body>, res: NextApiResponse): Promise<void> {
     switch (req.method) {
         case 'GET': {
             const exp = await prisma.experience.findMany({
@@ -17,9 +18,11 @@ export default async function handler(req: NextApiRequest<Body>, res: NextApiRes
             res.json(JsonFixBigInt(exp));
             break;
         }
-        case 'POST':
+        case 'POST': {
+            const body = await schema.validate(req.body);
+
             await prisma.experience.createMany({
-                data: req.body.exp.map((exp, index) => ({
+                data: body.exp.map((exp, index) => ({
                     exp,
                     level: index + 1,
                 })),
@@ -28,5 +31,6 @@ export default async function handler(req: NextApiRequest<Body>, res: NextApiRes
 
             res.json({});
             break;
+        }
     }
 }

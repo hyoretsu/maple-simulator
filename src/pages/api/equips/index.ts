@@ -1,21 +1,9 @@
 import { NextApiRequest, NextApiResponse, PageConfig } from 'next';
+import * as yup from 'yup';
 
 import upload from '@services/multer';
 import { prisma } from '@services/prisma';
 import transformItem from '@utils/transformItem';
-
-interface Body {
-    attackSpeed: string;
-    category: string;
-    enhancements: string;
-    iconHeight: string;
-    iconWidth: string;
-    id: string;
-    name: string;
-    req: string;
-    stats: string;
-    type: string;
-}
 
 export const config: PageConfig = {
     api: {
@@ -23,7 +11,20 @@ export const config: PageConfig = {
     },
 };
 
-export default async function handler(req: NextApiRequest<Body>, res: NextApiResponse): Promise<void> {
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+    const schema = yup.object({
+        attackSpeed: yup.string().required(),
+        category: yup.string().required(),
+        enhancements: yup.string().required(),
+        iconHeight: yup.string().required(),
+        iconWidth: yup.string().required(),
+        id: yup.string().required(),
+        name: yup.string().required(),
+        req: yup.string().required(),
+        stats: yup.string().required(),
+        type: yup.string().required(),
+    });
+
     switch (req.method) {
         case 'GET': {
             const equips = await prisma.equipment.findMany({
@@ -53,7 +54,7 @@ export default async function handler(req: NextApiRequest<Body>, res: NextApiRes
                     req: requirements,
                     stats,
                     ...rest
-                } = req.body;
+                } = await schema.validate(req.body);
 
                 const equip = await prisma.equipment.create({
                     data: {

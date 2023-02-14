@@ -1,124 +1,119 @@
 {
-    "env": {
-        "es6": true
-    },
-    "extends": ["airbnb", "plugin:prettier/recommended", "prettier"],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parserOptions": {
-        "sourceType": "module"
-    },
-    "plugins": ["import", "import-helpers", "prettier"],
-    "rules": {
-        "default-case": "off",
-        "import/no-duplicates": "off",
-        "import/no-extraneous-dependencies": "off",
-        "import/prefer-default-export": "off",
-        "import-helpers/order-imports": [
-            "warn",
-            {
-                "newlinesBetween": "always",
-                "groups": [
-                    "module",
-                    "/^@components/",
-                    ["/^@context/", "/^@hooks/", "/^@services/", "/^@utils/"],
-                    ["/^@public/", "/^@assets/"],
-                    "/^@styles/",
-                    "/assets/",
-                    ["/^@config/", "/^@entities/", "/^@modules/", "/^@shared/"],
-                    ["parent", "sibling"]
-                ],
-                "alphabetize": {
-                    "order": "asc"
-                }
-            }
-        ],
-        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
-        "no-constant-condition": "off",
-        "no-continue": "off",
-        "no-param-reassign": "off",
-        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-        "no-unused-expressions": ["off", { "allowShortCircuit": true }],
-        "no-unused-vars": ["error", { "argsIgnorePattern": "^_|next" }],
-        "no-use-before-define": "off",
-        "prefer-destructuring": "warn",
-        "prettier/prettier": [
-            "error",
-            {
-                "arrowParens": "avoid",
-                "printWidth": 110,
-                "singleQuote": true,
-                "tabWidth": 4,
-                "trailingComma": "all"
-            }
-        ]
-    },
-    "overrides": [
-        {
-            "files": ["**/*.ts", "**/*.tsx"],
-            "env": {
-                "browser": true,
-                "es2021": true,
-                "jest": true
-            },
-            "extends": [
-                "plugin:@typescript-eslint/recommended",
-                "plugin:react/recommended",
-                "next",
-                "next/core-web-vitals"
-            ],
-            "parser": "@typescript-eslint/parser",
-            "parserOptions": {
-                "ecmaFeatures": {
-                    "jsx": true
-                },
-                "ecmaVersion": "latest"
-            },
-            "plugins": ["@typescript-eslint", "react", "react-hooks"],
-            "rules": {
-                "@next/next/no-img-element": "off",
-                "@typescript-eslint/ban-ts-comment": "off",
-                "@typescript-eslint/explicit-function-return-type": "off",
-                "@typescript-eslint/no-explicit-any": "off",
-                "@typescript-eslint/no-unused-vars": "off",
-                "@typescript-eslint/no-use-before-define": ["error"],
-                "import/extensions": [
-                    "error",
-                    "ignorePackages",
-                    {
-                        "ts": "never",
-                        "tsx": "never"
-                    }
-                ],
-                "jsx-a11y/label-has-associated-control": [
-                    "error",
-                    { "controlComponents": ["input", "Input"] }
-                ],
-                "react/function-component-definition": [
-                    "error",
-                    { "namedComponents": "arrow-function" }
-                ],
-                "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
-                "react/jsx-indent": "off",
-                "react/jsx-indent-props": "off",
-                "react/jsx-one-expression-per-line": "off",
-                "react/jsx-props-no-spreading": "off",
-                "react/no-unescaped-entities": "off",
-                "react/prop-types": "off",
-                "react/react-in-jsx-scope": "off",
-                "react-hooks/exhaustive-deps": "error",
-                "react-hooks/rules-of-hooks": "error"
-            },
-            "settings": {
-                "import/resolver": {
-                    "typescript": {}
-                },
-                "node": {
-                    "extensions": [".js", ".jsx", ".ts", ".tsx"]
-                }
-            }
-        }
-    ]
+	"env": {
+		"es6": true
+	},
+	"extends": ["airbnb", "plugin:prettier/recommended", "prettier"],
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"plugins": ["import", "import-helpers", "prettier"],
+	"rules": {
+		"default-case": "off",
+		"import/no-duplicates": "off",
+		"import/no-extraneous-dependencies": "off",
+		"import/prefer-default-export": "off",
+		"import-helpers/order-imports": [
+			"warn",
+			{
+				"newlinesBetween": "always",
+				"groups": [
+					"module",
+					"/^@components/",
+					["/^@context/", "/^@hooks/", "/^@services/", "/^@utils/"],
+					["/^@public/", "/^@assets/"],
+					"/^@styles/",
+					"/assets/",
+					["/^@config/", "/^@entities/", "/^@modules/", "/^@shared/"],
+					["parent", "sibling"]
+				],
+				"alphabetize": {
+					"order": "asc"
+				}
+			}
+		],
+		"lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+		"no-constant-condition": "off",
+		"no-continue": "off",
+		"no-param-reassign": "off",
+		"no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+		"no-unused-expressions": ["off", { "allowShortCircuit": true }],
+		"no-unused-vars": ["error", { "argsIgnorePattern": "^_|next" }],
+		"no-use-before-define": "off",
+		"prefer-const": ["error", { "destructuring": "all" }],
+		"prefer-destructuring": "warn",
+		"prettier/prettier": [
+			"error",
+			{
+				"arrowParens": "avoid",
+				"printWidth": 110,
+				"singleQuote": true,
+				"tabWidth": 4,
+				"trailingComma": "all"
+			}
+		]
+	},
+	"overrides": [
+		{
+			"files": ["**/*.ts", "**/*.tsx"],
+			"env": {
+				"browser": true,
+				"es2021": true,
+				"jest": true
+			},
+			"extends": [
+				"plugin:@typescript-eslint/recommended",
+				"plugin:react/recommended",
+				"next",
+				"next/core-web-vitals"
+			],
+			"parser": "@typescript-eslint/parser",
+			"parserOptions": {
+				"ecmaFeatures": {
+					"jsx": true
+				},
+				"ecmaVersion": "latest"
+			},
+			"plugins": ["@typescript-eslint", "react", "react-hooks"],
+			"rules": {
+				"@next/next/no-img-element": "off",
+				"@typescript-eslint/ban-ts-comment": "off",
+				"@typescript-eslint/explicit-function-return-type": "off",
+				"@typescript-eslint/no-explicit-any": "off",
+				"@typescript-eslint/no-unused-vars": "off",
+				"@typescript-eslint/no-use-before-define": ["error"],
+				"import/extensions": [
+					"error",
+					"ignorePackages",
+					{
+						"ts": "never",
+						"tsx": "never"
+					}
+				],
+				"jsx-a11y/label-has-associated-control": ["error", { "controlComponents": ["input", "Input"] }],
+				"react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
+				"react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+				"react/jsx-indent": "off",
+				"react/jsx-indent-props": "off",
+				"react/jsx-one-expression-per-line": "off",
+				"react/jsx-props-no-spreading": "off",
+				"react/no-unescaped-entities": "off",
+				"react/prop-types": "off",
+				"react/react-in-jsx-scope": "off",
+				"react-hooks/exhaustive-deps": "error",
+				"react-hooks/rules-of-hooks": "error"
+			},
+			"settings": {
+				"import/resolver": {
+					"typescript": {}
+				},
+				"node": {
+					"extensions": [".js", ".jsx", ".ts", ".tsx"]
+				}
+			}
+		}
+	]
 }

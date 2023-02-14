@@ -1,16 +1,24 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import * as yup from 'yup';
 
 import { prisma } from '@services/prisma';
 import transformItem from '@utils/transformItem';
 
-interface Body {
-    id: number | number[];
-}
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+    const schema = yup.object({
+        id: yup
+            .mixed<number | number[]>()
+            .when({
+                is: Array.isArray,
+                then: yup.array().of(yup.number()),
+                otherwise: yup.number(),
+            })
+            .required(),
+    });
 
-export default async function handler(req: NextApiRequest<Body>, res: NextApiResponse): Promise<void> {
     switch (req.method) {
         case 'POST': {
-            const { id } = req.body;
+            const { id } = await schema.validate(req.body);
 
             if (typeof id === 'number') {
                 const equip = await prisma.equipment.findUnique({

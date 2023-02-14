@@ -1,17 +1,18 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import * as yup from 'yup';
 
 import { prisma } from '@services/prisma';
 import transformItem from '@utils/transformItem';
 
-interface Body {
-    job: string;
-    type?: string;
-}
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
+    const schema = yup.object({
+        job: yup.string().required(),
+        type: yup.string(),
+    });
 
-export default async function handler(req: NextApiRequest<Body>, res: NextApiResponse): Promise<void> {
     switch (req.method) {
         case 'POST': {
-            let { job, type } = req.body;
+            let { job, type } = await schema.validate(req.body);
 
             if (job === 'Beginner') job = '';
 
