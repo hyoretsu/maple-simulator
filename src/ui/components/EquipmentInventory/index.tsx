@@ -1,3 +1,4 @@
+import { useFetch } from '@hyoretsu/shared.hooks';
 import { Equipment } from '@prisma/client';
 import Image from 'next/image';
 import { useMemo, useState } from 'react';
@@ -6,7 +7,6 @@ import Button from '@components/Button';
 import Window from '@components/Window';
 
 import { useCharInfo, useEquips, useFuncs } from '@context/char';
-import { useFetch } from '@hooks/index';
 import api from '@services/api';
 
 import Arrow from '@assets/Arrow.svg';

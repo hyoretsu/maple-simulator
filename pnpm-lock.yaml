@@ -4,6 +4,7 @@ specifiers:
   '@aws-sdk/abort-controller': ^3.226.0
   '@aws-sdk/client-s3': ^3.245.0
   '@babel/core': ^7.19.1
+  '@hyoretsu/shared.hooks': ^0.0.2
   '@hyoretsu/shared.utils': ^0.0.11
   '@next/env': ^12.3.1
   '@next/eslint-plugin-next': ^12.3.1
@@ -20,7 +21,7 @@ specifiers:
   '@types/styled-components': ^5.1.26
   '@typescript-eslint/eslint-plugin': ^5.38.0
   '@typescript-eslint/parser': ^5.38.0
-  axios: ^0.27.2
+  axios: ^1.3.3
   axios-mock-adapter: ^1.21.2
   dotenv-cli: ^6.0.0
   eslint: ^8.23.1
@@ -61,9 +62,10 @@ specifiers:
 dependencies:
   '@aws-sdk/abort-controller': 3.226.0
   '@aws-sdk/client-s3': 3.245.0
+  '@hyoretsu/shared.hooks': 0.0.2_biqbaboplfbrettd7655fr4n2y
   '@hyoretsu/shared.utils': 0.0.11
   '@prisma/client': 4.8.1_prisma@4.8.1
-  axios: 0.27.2
+  axios: 1.3.3
   image-size: 1.0.2
   multer: 1.4.5-lts.1
   multer-s3: 3.0.1_wejncgctuel2hm4jayheuys7am
@@ -95,7 +97,7 @@ devDependencies:
   '@types/styled-components': 5.1.26
   '@typescript-eslint/eslint-plugin': 5.38.0_wsb62dxj2oqwgas4kadjymcmry
   '@typescript-eslint/parser': 5.38.0_irgkl5vooow2ydyo6aokmferha
-  axios-mock-adapter: 1.21.2_axios@0.27.2
+  axios-mock-adapter: 1.21.2_axios@1.3.3
   dotenv-cli: 6.0.0
   eslint: 8.23.1
   eslint-config-airbnb: 19.0.4_4zstfqq5uopk5xuvotejlnl36y
@@ -2373,6 +2375,21 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@hyoretsu/shared.hooks/0.0.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha1-weH007hE4OU6LUTiyymyNl+ufg4=, tarball: '@hyoretsu/shared.hooks/-/@hyoretsu-shared.hooks-0.0.2.tgz'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0
+      react-dom: ^16.8.0 || ^17.0.0
+    dependencies:
+      axios: 1.3.0
+      core-js: 3.28.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      swr: 2.0.3_react@18.2.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /@hyoretsu/shared.utils/0.0.11:
     resolution: {integrity: sha1-nA85pU6iz0TGABh+cJoP/JUA+E0=, tarball: '@hyoretsu/shared.utils/-/@hyoretsu-shared.utils-0.0.11.tgz'}
     dev: false
@@ -3548,21 +3565,32 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /axios-mock-adapter/1.21.2_axios@0.27.2:
+  /axios-mock-adapter/1.21.2_axios@1.3.3:
     resolution: {integrity: sha512-jzyNxU3JzB2XVhplZboUcF0YDs7xuExzoRSHXPHr+UQajaGmcTqvkkUADgkVI2WkGlpZ1zZlMVdcTMU0ejV8zQ==}
     peerDependencies:
       axios: '>= 0.17.0'
     dependencies:
-      axios: 0.27.2
+      axios: 1.3.3
       fast-deep-equal: 3.1.3
       is-buffer: 2.0.5
     dev: true
 
-  /axios/0.27.2:
-    resolution: {integrity: sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==}
+  /axios/1.3.0:
+    resolution: {integrity: sha512-oCye5nHhTypzkdLIvF9SaHfr8UAquqCn1KY3j8vsrjeol8yohAdGxIpRPbF1bOLsx33HOAatdfMX1yzsj2cHwg==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /axios/1.3.3:
+    resolution: {integrity: sha512-eYq77dYIFS77AQlhzEL937yUBSepBfPIe8FcgEDN35vMNZKMrs81pgnyrQpwfy4NF4b4XWX1Zgx7yX+25w8QJA==}
+    dependencies:
+      follow-redirects: 1.15.2
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
 
@@ -3945,6 +3973,11 @@ packages:
     resolution: {integrity: sha512-ItD7YpW1cUB4jaqFLZXe1AXkyqIxz6GqPnsDV4uF4hVcWh/WAGIqSqw5p0/WdsILM0Xht9s3Koyw05R3K6RtiA==}
     requiresBuild: true
     dev: true
+
+  /core-js/3.28.0:
+    resolution: {integrity: sha512-GiZn9D4Z/rSYvTeg1ljAIsEqFm0LaN9gVtwDCrKL80zHtS31p9BAjmTxVqTQDMpwlMolJZOFntUG2uwyj7DAqw==}
+    requiresBuild: true
+    dev: false
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -6515,6 +6548,9 @@ packages:
     resolution: {integrity: sha512-IJUkICM5dP5znhCckHSv30Q4b5/JA5enCtkRHYaOVOAocnH/1BQEYTC5NMfT3AVl/iXKdr3aqQbQn9DxyWknwA==}
     dev: false
 
+  /proxy-from-env/1.1.0:
+    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
     engines: {node: '>=6'}
@@ -7061,6 +7097,16 @@ packages:
 
   /swr/2.0.0_react@18.2.0:
     resolution: {integrity: sha512-IhUx5yPkX+Fut3h0SqZycnaNLXLXsb2ECFq0Y29cxnK7d8r7auY2JWNbCW3IX+EqXUg3rwNJFlhrw5Ye/b6k7w==}
+    engines: {pnpm: '7'}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
+
+  /swr/2.0.3_react@18.2.0:
+    resolution: {integrity: sha512-sGvQDok/AHEWTPfhUWXEHBVEXmgGnuahyhmRQbjl9XBYxT/MSlAzvXEKQpyM++bMPaI52vcWS2HiKNaW7+9OFw==}
     engines: {pnpm: '7'}
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0

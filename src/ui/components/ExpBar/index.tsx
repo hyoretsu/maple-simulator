@@ -1,10 +1,10 @@
+import { useFetch } from '@hyoretsu/shared.hooks';
 import { range } from '@hyoretsu/shared.utils';
 import { useMemo } from 'react';
 
 import Input from '@components/custom/Input';
 
 import { useCharInfo, useExp, useFuncs } from '@context/char';
-import { useFetch } from '@hooks/index';
 import api from '@services/api';
 
 import { ExpBarDiv, Experience, ProgressBar, Marker, ExpText } from './styles';
