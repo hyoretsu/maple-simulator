@@ -1,0 +1,16 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"outDir": "./dist",
+		"paths": {
+			"@database/*": ["database/*"],
+			"@decorators/*": ["decorators/*"],
+			"@modules/*": ["modules/*"],
+			"@utils/*": ["utils/*"]
+		},
+		"target": "ES6",
+		"typeRoots": ["./node_modules/@types", "./src/data/@types"]
+	},
+	"include": ["src/**/*"]
+}

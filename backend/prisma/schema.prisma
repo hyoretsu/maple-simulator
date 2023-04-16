@@ -1,0 +1,60 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider  = "postgresql"
+    url       = env("DATABASE_URL")
+    directUrl = env("MIGRATE_DATABASE_URL")
+}
+
+model Equipment {
+    id           Int                    @id
+    name         String
+    attackSpeed  Int?
+    enhancements Int
+    req          EquipmentRequirements?
+    stats        EquipmentStats?
+    type         String
+    category     String?
+    icon         String
+    iconWidth    Int
+    iconHeight   Int
+}
+
+model EquipmentRequirements {
+    equipId Int       @id
+    equip   Equipment @relation(fields: [equipId], references: [id])
+    job     String    @default("")
+    level   Int       @default(0)
+    str     Int       @default(0)
+    dex     Int       @default(0)
+    int     Int       @default(0)
+    luk     Int       @default(0)
+}
+
+model EquipmentStats {
+    equipId Int       @id
+    equip   Equipment @relation(fields: [equipId], references: [id])
+    str     Int       @default(0)
+    dex     Int       @default(0)
+    int     Int       @default(0)
+    luk     Int       @default(0)
+    hp      Int       @default(0)
+    mp      Int       @default(0)
+    att     Int       @default(0)
+    matt    Int       @default(0)
+    def     Int       @default(0)
+    ied     Int       @default(0)
+    bossDmg Int       @default(0)
+    speed   Int       @default(0)
+    jump    Int       @default(0)
+}
+
+model Experience {
+    type  String
+    level Int
+    exp   BigInt
+
+    @@id([type, level])
+}
