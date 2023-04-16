@@ -1,17 +1,21 @@
 {
 	"name": "maple-simulator",
 	"private": true,
+	"workspaces": [
+		"backend",
+		"frontend"
+	],
 	"scripts": {
 		"prepare": "husky install"
 	},
 	"lint-staged": {
 		"backend/src/**/*.ts": [
 			"rome check --apply",
-			"pnpm -F backend test --bail"
+			"npm run -w backend test --bail"
 		],
 		"frontend/src/**/*.(ts|tsx)": [
 			"rome check --apply",
-			"pnpm -F frontend test --bail"
+			"npm run -w frontend test --bail"
 		]
 	},
 	"devDependencies": {

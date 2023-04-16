@@ -38,9 +38,9 @@ const bootstrap = async () => {
 	const document = SwaggerModule.createDocument(app, config);
 	SwaggerModule.setup("docs", app, document);
 
-	const port = process.env.APP_PORT || 3333;
+	const port = process.env.PORT || 3333;
 
-	await app.listen(port);
+	await app.listen(port, "0.0.0.0");
 
 	console.log(`Server started on port ${port}!`);
 };
