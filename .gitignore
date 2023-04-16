@@ -13,6 +13,5 @@
 # Test files
 **/coverage
 
-# typescript
+# Typescript
 *.tsbuildinfo
-**/next-env.d.ts
