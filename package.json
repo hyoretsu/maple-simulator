@@ -9,12 +9,13 @@
 		"prepare": "husky install"
 	},
 	"lint-staged": {
+		"**/*.(json|js|jsx|ts|tsx)": [
+			"rome check --apply"
+		],
 		"backend/src/**/*.ts": [
-			"rome check --apply",
 			"npm run -w backend test --bail"
 		],
 		"frontend/src/**/*.(ts|tsx)": [
-			"rome check --apply",
 			"npm run -w frontend test --bail"
 		]
 	},
