@@ -27,29 +27,21 @@ export default class EquipmentsController {
 	}
 
 	@Post()
-	async postEquips(
-		@File() body: CreateEquipmentDTO,
-	): Promise<CompleteEquipment> {
+	async postEquips(@File() body: CreateEquipmentDTO): Promise<CompleteEquipment> {
 		const equip = await this.createEquip.execute(body);
 
 		return equip;
 	}
 
 	@Post("filter")
-	async postFilterEquips(
-		@Body()
-		body: FilterEquipmentsDTO,
-	) {
+	async postFilterEquips(@Body() body: FilterEquipmentsDTO) {
 		const equips = await this.filterEquips.execute(body);
 
 		return equips;
 	}
 
 	@Post("find")
-	async postFindEquips(
-		@Body()
-		body: FindEquipmentDTO,
-	) {
+	async postFindEquips( @Body() body: FindEquipmentDTO) {
 		const equips = await this.findEquips.execute(body);
 
 		return equips;
