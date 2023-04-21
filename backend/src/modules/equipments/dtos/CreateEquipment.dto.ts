@@ -74,6 +74,7 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
         "Belt",
         "Book",
         "Cape",
+        "Dragon",
         "Earrings",
         "Emblem",
         "Eye Accessory",
@@ -81,6 +82,7 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
         "Gloves",
         "Hat",
         "Heart",
+        "Mechanic",
         "Medal",
         "Pendant",
         "Pocket",
@@ -89,6 +91,7 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
         "Shoes",
         "Shoulder",
         "Top",
+        "Totem",
         "Weapon",
     ])
 	type!: string;
