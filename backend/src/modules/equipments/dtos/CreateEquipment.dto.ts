@@ -73,6 +73,7 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
         "Badge",
         "Belt",
         "Book",
+        "Bottom",
         "Cape",
         "Dragon",
         "Earrings",
