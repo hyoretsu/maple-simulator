@@ -1,15 +1,6 @@
 import { EquipmentRequirements, EquipmentStats } from "@prisma/client";
 import { Type } from "class-transformer";
-import {
-	IsBoolean,
-	IsIn,
-	IsNotEmpty,
-	IsNotEmptyObject,
-	IsNumber,
-	IsString,
-	Min,
-	ValidateNested,
-} from "class-validator";
+import { IsBoolean, IsIn, IsNotEmpty, IsNumber, IsString, Min, ValidateNested } from "class-validator";
 
 import IsOptional from "@decorators/isOptional.decorator";
 import EquipmentRequirementDTO from "./EquipmentRequirement.dto";
@@ -57,15 +48,13 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
 	@IsNotEmpty()
 	name!: string;
 
-	@IsNotEmptyObject()
-    @ValidateNested()
+	@ValidateNested()
     @Type(() => EquipmentRequirementDTO)
-	req!: EquipmentRequirements;
+	req?: EquipmentRequirements;
 
-	@IsNotEmptyObject()
-    @ValidateNested()
+	@ValidateNested()
     @Type(() => EquipmentStatDTO)
-	stats!: EquipmentStats;
+	stats?: EquipmentStats;
 
 	@IsString()
     @IsIn([

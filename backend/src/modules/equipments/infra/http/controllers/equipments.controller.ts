@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from "@nestjs/common";
 
-import File from "@decorators/file.decorator";
+import Multipart from "@decorators/multipart.decorator";
 import CreateEquipmentDTO from "@modules/equipments/dtos/CreateEquipment.dto";
 import FindEquipmentDTO from "@modules/equipments/dtos/FindEquipment.dto";
 import { CompleteEquipment } from "@modules/equipments/repositories/equipments.repository";
@@ -27,10 +27,14 @@ export default class EquipmentsController {
 	}
 
 	@Post()
-	async postEquips(@File() body: CreateEquipmentDTO): Promise<CompleteEquipment> {
-		const equip = await this.createEquip.execute(body);
-
-		return equip;
+	async postEquips(
+		@Multipart({
+            fields: ["icon"],
+            validation: CreateEquipmentDTO
+        })
+		body: CreateEquipmentDTO,
+	): Promise<CompleteEquipment> {
+		return null as any;
 	}
 
 	@Post("filter")

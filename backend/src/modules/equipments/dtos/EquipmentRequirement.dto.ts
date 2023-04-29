@@ -4,27 +4,32 @@ import { IsNumber, IsString, Min } from "class-validator";
 import IsOptional from "@decorators/isOptional.decorator";
 
 export default class EquipmentRequirementDTO implements Partial<EquipmentRequirements> {
-	@IsNumber()
+	@IsOptional()
+    @IsNumber()
     @Min(0)
-	dex!: number;
+	dex?: number;
 
-	@IsNumber()
+	@IsOptional()
+    @IsNumber()
     @Min(0)
-	int!: number;
+	int?: number;
 
 	@IsOptional()
     @IsString()
 	job?: string;
 
-	@IsNumber()
+	@IsOptional()
+    @IsNumber()
     @Min(0)
-	level!: number;
+	level?: number;
 
-	@IsNumber()
+	@IsOptional()
+    @IsNumber()
     @Min(0)
-	luk!: number;
+	luk?: number;
 
-	@IsNumber()
+	@IsOptional()
+    @IsNumber()
     @Min(0)
-	str!: number;
+	str?: number;
 }
