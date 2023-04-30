@@ -1,11 +1,14 @@
 import { Injectable } from "@nestjs/common";
+import { EquipmentSet } from "@prisma/client";
 
 import PrismaService from "@database/prisma.service";
 
 import CreateEquipmentDTO from "@modules/equipments/dtos/CreateEquipment.dto";
 import EquipmentsRepository, {
 	CompleteEquipment,
+	CompleteSet,
 } from "@modules/equipments/repositories/equipments.repository";
+import CreateSetDTO from "@modules/equipments/dtos/CreateSet.dto";
 
 @Injectable()
 export default class PrismaEquipmentsRepository implements EquipmentsRepository {
@@ -20,6 +23,7 @@ export default class PrismaEquipmentsRepository implements EquipmentsRepository 
 			},
 			include: {
 				req: true,
+				set: true,
 				stats: true,
 			},
 		});
@@ -27,10 +31,27 @@ export default class PrismaEquipmentsRepository implements EquipmentsRepository 
 		return equip;
 	}
 
+	public async createSet({ bonuses, ...data }: CreateSetDTO): Promise<CompleteSet> {
+		const set = await this.prisma.equipmentSet.create({
+			data: {
+				...data,
+				bonuses: {
+					createMany: { data: bonuses },
+				},
+			},
+			include: {
+				bonuses: true,
+			},
+		});
+
+		return set;
+	}
+
 	public async findAll(): Promise<CompleteEquipment[]> {
 		const equips = await this.prisma.equipment.findMany({
 			include: {
 				req: true,
+				set: true,
 				stats: true,
 			},
 			orderBy: {
@@ -91,5 +112,17 @@ export default class PrismaEquipmentsRepository implements EquipmentsRepository 
 		});
 
 		return equips;
+	}
+
+	public async findSetById(id: number): Promise<EquipmentSet | null> {
+		const set = await this.prisma.equipmentSet.findUnique({ where: { id } });
+
+		return set;
+	}
+
+	public async findSetByName(name: string): Promise<EquipmentSet | null> {
+		const set = await this.prisma.equipmentSet.findUnique({ where: { name } });
+
+		return set;
 	}
 }

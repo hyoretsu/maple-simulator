@@ -1,8 +1,12 @@
-import EquipmentsRepository, { CompleteEquipment } from "../equipments.repository";
+import EquipmentsRepository, { CompleteEquipment, CompleteSet } from "../equipments.repository";
 import CreateEquipmentDTO from "../../dtos/CreateEquipment.dto";
+import CreateSetDTO from "@modules/equipments/dtos/CreateSet.dto";
+import { randomUUID } from "crypto";
+import { EquipmentSet } from "@prisma/client";
 
 export default class FakeEquipmentsRepository implements EquipmentsRepository {
 	private equips: CompleteEquipment[] = [];
+	private sets: CompleteSet[] = [];
 
 	public async create(data: CreateEquipmentDTO): Promise<CompleteEquipment> {
 		const equip = data as CompleteEquipment;
@@ -10,6 +14,21 @@ export default class FakeEquipmentsRepository implements EquipmentsRepository {
 		this.equips.push(equip);
 
 		return equip;
+	}
+
+	public async createSet({ bonuses, ...data }: CreateSetDTO): Promise<CompleteSet> {
+		const set = data as CompleteSet;
+		bonuses.forEach((bonus) => {
+			set.bonuses.push({
+				...bonus,
+				id: randomUUID(),
+				setId: set.id,
+			});
+		});
+
+		this.sets.push(set);
+
+		return set;
 	}
 
 	public async findAll(): Promise<CompleteEquipment[]> {
@@ -34,5 +53,17 @@ export default class FakeEquipmentsRepository implements EquipmentsRepository {
 		const equips = this.equips.filter((equip) => equip.req?.job === job || equip.req?.job === "");
 
 		return equips;
+	}
+
+	public async findSetById(id: number): Promise<EquipmentSet | null> {
+		const set = this.sets.find((set) => set.id === id) || null;
+
+		return set;
+	}
+
+	public async findSetByName(name: string): Promise<EquipmentSet | null> {
+		const set = this.sets.find((set) => set.name === name) || null;
+
+		return set;
 	}
 }

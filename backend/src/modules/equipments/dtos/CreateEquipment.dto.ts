@@ -52,6 +52,15 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
     @Type(() => EquipmentRequirementDTO)
 	req?: EquipmentRequirements;
 
+	@IsOptional()
+    @IsNumber()
+    @Min(0)
+	setId?: number;
+
+	@IsOptional()
+    @IsString()
+	setName?: string;
+
 	@ValidateNested()
     @Type(() => EquipmentStatDTO)
 	stats?: EquipmentStats;

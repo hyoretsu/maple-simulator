@@ -16,6 +16,8 @@ model Equipment {
     bossReward   Boolean                @default(false)
     req          EquipmentRequirements?
     stats        EquipmentStats?
+    setId        Int?
+    set          EquipmentSet?          @relation(fields: [setId], references: [id])
     type         String
     category     String?
     icon         String
@@ -32,6 +34,33 @@ model EquipmentRequirements {
     dex     Int       @default(0)
     int     Int       @default(0)
     luk     Int       @default(0)
+}
+
+model EquipmentSet {
+    id      Int                 @id
+    name    String              @unique
+    equips  Equipment[]
+    bonuses EquipmentSetBonus[]
+}
+
+model EquipmentSetBonus {
+    id       String       @id @default(uuid())
+    setId    Int
+    set      EquipmentSet @relation(fields: [setId], references: [id])
+    str      Int          @default(0)
+    dex      Int          @default(0)
+    int      Int          @default(0)
+    luk      Int          @default(0)
+    hp       Float        @default(0)
+    mp       Float        @default(0)
+    att      Int          @default(0)
+    matt     Int          @default(0)
+    def      Int          @default(0)
+    ied      Int          @default(0)
+    dmg      Int          @default(0)
+    bossDmg  Int          @default(0)
+    critRate Int          @default(0)
+    critDmg  Int          @default(0)
 }
 
 model EquipmentStats {

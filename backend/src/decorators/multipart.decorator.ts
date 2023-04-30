@@ -25,6 +25,7 @@ const handlers: Record<string, (file: MultipartFile) => Promise<void>> = {
 				accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
 				secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
 			},
+			region: "us-east-1",
 		});
 
 		const { filename: Key, mimetype: ContentType } = file;
@@ -96,17 +97,19 @@ const Multipart = createParamDecorator(
 		if (validation) {
 			const validationErrors = await validate(plainToInstance(validation, body));
 
-			throw new BadRequestException(
-				validationErrors.flatMap((error) => {
-					return error.children?.length
-						? error.children.flatMap((child) =>
-								Object.values(child.constraints as Record<string, string>).map(
-									(err) => `${error.property}.${err}`,
-								),
-						  )
-						: Object.values(error.constraints as Record<string, string>);
-				}),
-			);
+			if (validationErrors.length) {
+				throw new BadRequestException(
+					validationErrors.flatMap((error) => {
+						return error.children?.length
+							? error.children.flatMap((child) =>
+									Object.values(child.constraints as Record<string, string>).map(
+										(err) => `${error.property}.${err}`,
+									),
+							  )
+							: Object.values(error.constraints as Record<string, string>);
+					}),
+				);
+			}
 		}
 
 		// Save all files

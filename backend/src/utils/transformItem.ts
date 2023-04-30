@@ -1,10 +1,6 @@
-import { Prisma } from "@prisma/client";
+import { CompleteEquipment } from "@modules/equipments/repositories/equipments.repository";
 
-type Item = Prisma.EquipmentGetPayload<{
-	include: { req: true; stats: true };
-}>;
-
-const transformItem = (item: Item): Item => {
+const transformItem = (item: CompleteEquipment): CompleteEquipment => {
 	const { icon } = item;
 
 	return {
