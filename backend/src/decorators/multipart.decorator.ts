@@ -9,6 +9,7 @@ import { pipeline } from "stream/promises";
 
 type MultipartParams = {
 	fields?: string[];
+	optionalFields?: boolean | string[];
 	validation?: any;
 };
 
@@ -40,7 +41,7 @@ const handlers: Record<string, (file: MultipartFile) => Promise<void>> = {
 };
 
 const Multipart = createParamDecorator(
-	async ({ fields, validation }: MultipartParams, ctx: ExecutionContext) => {
+	async ({ fields, optionalFields, validation }: MultipartParams, ctx: ExecutionContext) => {
 		const localFields = [...(fields || [])];
 
 		const req: FastifyRequest = ctx.switchToHttp().getRequest();
@@ -85,7 +86,10 @@ const Multipart = createParamDecorator(
 			}
 		}
 
-		if (localFields.length !== 0) {
+		if (
+			localFields.length !== 0 &&
+			(Array.isArray(optionalFields) ? optionalFields.includes(localFields[0]) : !optionalFields)
+		) {
 			throw new BadRequestException("There are missing file fields.");
 		}
 
