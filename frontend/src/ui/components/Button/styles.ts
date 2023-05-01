@@ -6,31 +6,31 @@ interface Props {
 }
 
 export const Styling = styled.button<Props>`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 
-    color: #fff;
-    background: ${({ colors }) => `linear-gradient(${colors[0]}, ${colors[1]})`};
+	color: #fff;
+	background: ${({ colors }) => `linear-gradient(${colors[0]}, ${colors[1]})`};
 
-    border-width: 1px;
-    border-style: solid;
+	border-width: 1px;
+	border-style: solid;
 
-    span {
-        font-size: 0.55em;
-        text-shadow: 0 0 4px #000;
-        text-transform: uppercase;
+	span {
+		font-size: 0.55em;
+		text-shadow: 0 0 4px #000;
+		text-transform: uppercase;
 
-        margin: 0 auto;
-    }
+		margin: 0 auto;
+	}
 
-    > svg {
-        height: 30%;
-        margin-right: 2px;
-    }
+	> svg {
+		height: 30%;
+		margin-right: 2px;
+	}
 
-    &:active {
-        background: ${({ colors }) => `linear-gradient(${colors[1]}, ${colors[0]})`};
-    }
+	&:active {
+		background: ${({ colors }) => `linear-gradient(${colors[1]}, ${colors[0]})`};
+	}
 `;

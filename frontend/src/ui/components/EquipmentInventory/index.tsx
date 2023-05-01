@@ -1,6 +1,6 @@
 "use client";
 import { useFetch } from "@hyoretsu/react-hooks";
-import { Equipment } from "backend";
+import { Equipment } from "@prisma/client";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
@@ -33,36 +33,6 @@ const EquipmentInventory: React.FC = () => {
 
 	const [chooserEquipType, setChooserEquipType] = useState("");
 	const [isModalVisible, setModalVisible] = useState(false);
-
-	// Having 'equips' in the dependency array synchronizes/awaits changes
-	const { data } = useFetch(["/equips/find", equips], api, {
-		id: Object.values(equips).map((equip) => equip.id),
-	});
-	const usedEquips = useMemo<Record<string, Equipment | never>>(() => {
-		if (!data) return [];
-
-		const equipsObject = {};
-
-		(data as Equipment[]).forEach((equip) => {
-			if (equip.type === "Pendant" || equip.type === "Ring") {
-				Object.entries(equips)
-					.filter(([key]) => key.match(/pendant|ring\d/))
-					.forEach(([key, value]) => {
-						if (value.id === equip.id) Object.assign(equipsObject, { [key]: equip });
-					});
-			} else if (equip.type === "Eye Accessory" || equip.type === "Face Accessory") {
-				Object.assign(equipsObject, {
-					[equip.type.toLowerCase().replace(" accessory", "Acc")]: equip,
-				});
-			} else if (equip.type === "Mechanical Heart") {
-				Object.assign(equipsObject, { heart: equip });
-			} else {
-				Object.assign(equipsObject, { [equip.type.toLowerCase()]: equip });
-			}
-		});
-
-		return equipsObject;
-	}, [data, equips]);
 
 	const showChooser = (type: string) => {
 		setChooserEquipType(type);
@@ -133,10 +103,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Ring</span>
 							<Image
-								src={usedEquips.ring4?.icon}
-								alt={usedEquips.ring4?.name}
-								width={usedEquips.ring4?.iconWidth}
-								height={usedEquips.ring4?.iconHeight}
+								src={equips.ring4?.icon}
+								alt={equips.ring4?.name}
+								width={equips.ring4?.iconWidth}
+								height={equips.ring4?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -147,10 +117,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Ring</span>
 							<Image
-								src={usedEquips.ring3?.icon}
-								alt={usedEquips.ring3?.name}
-								width={usedEquips.ring3?.iconWidth}
-								height={usedEquips.ring3?.iconHeight}
+								src={equips.ring3?.icon}
+								alt={equips.ring3?.name}
+								width={equips.ring3?.iconWidth}
+								height={equips.ring3?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -161,10 +131,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Ring</span>
 							<Image
-								src={usedEquips.ring2?.icon}
-								alt={usedEquips.ring2?.name}
-								width={usedEquips.ring2?.iconWidth}
-								height={usedEquips.ring2?.iconHeight}
+								src={equips.ring2?.icon}
+								alt={equips.ring2?.name}
+								width={equips.ring2?.iconWidth}
+								height={equips.ring2?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -175,10 +145,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Ring</span>
 							<Image
-								src={usedEquips.ring1?.icon}
-								alt={usedEquips.ring1?.name}
-								width={usedEquips.ring1?.iconWidth}
-								height={usedEquips.ring1?.iconHeight}
+								src={equips.ring1?.icon}
+								alt={equips.ring1?.name}
+								width={equips.ring1?.iconWidth}
+								height={equips.ring1?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -189,19 +159,19 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Pocket</span>
 							<Image
-								src={usedEquips.pocket?.icon}
-								alt={usedEquips.pocket?.name}
-								width={usedEquips.pocket?.iconWidth}
-								height={usedEquips.pocket?.iconHeight}
+								src={equips.pocket?.icon}
+								alt={equips.pocket?.name}
+								width={equips.pocket?.iconWidth}
+								height={equips.pocket?.iconHeight}
 							/>
 						</Slot>
 						<Slot background="#999">
 							<span>Book</span>
 							<Image
-								src={usedEquips.book?.icon}
-								alt={usedEquips.book?.name}
-								width={usedEquips.book?.iconWidth}
-								height={usedEquips.book?.iconHeight}
+								src={equips.book?.icon}
+								alt={equips.book?.name}
+								width={equips.book?.iconWidth}
+								height={equips.book?.iconHeight}
 							/>
 						</Slot>
 					</div>
@@ -217,10 +187,10 @@ const EquipmentInventory: React.FC = () => {
 							<br />
 							<span style={{ fontSize: "0.85em" }}>©</span>
 							<Image
-								src={usedEquips.pendant2?.icon}
-								alt={usedEquips.pendant2?.name}
-								width={usedEquips.pendant2?.iconWidth}
-								height={usedEquips.pendant2?.iconHeight}
+								src={equips.pendant2?.icon}
+								alt={equips.pendant2?.name}
+								width={equips.pendant2?.iconWidth}
+								height={equips.pendant2?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -231,10 +201,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Pendant</span>
 							<Image
-								src={usedEquips.pendant1?.icon}
-								alt={usedEquips.pendant1?.name}
-								width={usedEquips.pendant1?.iconWidth}
-								height={usedEquips.pendant1?.iconHeight}
+								src={equips.pendant1?.icon}
+								alt={equips.pendant1?.name}
+								width={equips.pendant1?.iconWidth}
+								height={equips.pendant1?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -245,10 +215,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Weapon</span>
 							<Image
-								src={usedEquips.weapon?.icon}
-								alt={usedEquips.weapon?.name}
-								width={usedEquips.weapon?.iconWidth}
-								height={usedEquips.weapon?.iconHeight}
+								src={equips.weapon?.icon}
+								alt={equips.weapon?.name}
+								width={equips.weapon?.iconWidth}
+								height={equips.weapon?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -259,10 +229,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Belt</span>
 							<Image
-								src={usedEquips.belt?.icon}
-								alt={usedEquips.belt?.name}
-								width={usedEquips.belt?.iconWidth}
-								height={usedEquips.belt?.iconHeight}
+								src={equips.belt?.icon}
+								alt={equips.belt?.name}
+								width={equips.belt?.iconWidth}
+								height={equips.belt?.iconHeight}
 							/>
 						</Slot>
 						<Slot style={{ cursor: "default" }} />
@@ -276,10 +246,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Hat</span>
 							<Image
-								src={usedEquips.hat?.icon}
-								alt={usedEquips.hat?.name}
-								width={usedEquips.hat?.iconWidth}
-								height={usedEquips.hat?.iconHeight}
+								src={equips.hat?.icon}
+								alt={equips.hat?.name}
+								width={equips.hat?.iconWidth}
+								height={equips.hat?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -290,10 +260,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Face</span>
 							<Image
-								src={usedEquips.faceAcc?.icon}
-								alt={usedEquips.faceAcc?.name}
-								width={usedEquips.faceAcc?.iconWidth}
-								height={usedEquips.faceAcc?.iconHeight}
+								src={equips.faceAcc?.icon}
+								alt={equips.faceAcc?.name}
+								width={equips.faceAcc?.iconWidth}
+								height={equips.faceAcc?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -306,10 +276,10 @@ const EquipmentInventory: React.FC = () => {
 							<br />
 							<span>Acc</span>
 							<Image
-								src={usedEquips.eyeAcc?.icon}
-								alt={usedEquips.eyeAcc?.name}
-								width={usedEquips.eyeAcc?.iconWidth}
-								height={usedEquips.eyeAcc?.iconHeight}
+								src={equips.eyeAcc?.icon}
+								alt={equips.eyeAcc?.name}
+								width={equips.eyeAcc?.iconWidth}
+								height={equips.eyeAcc?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -320,10 +290,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Top</span>
 							<Image
-								src={usedEquips.top?.icon}
-								alt={usedEquips.top?.name}
-								width={usedEquips.top?.iconWidth}
-								height={usedEquips.top?.iconHeight}
+								src={equips.top?.icon}
+								alt={equips.top?.name}
+								width={equips.top?.iconWidth}
+								height={equips.top?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -334,10 +304,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Bottom</span>
 							<Image
-								src={usedEquips.bottom?.icon}
-								alt={usedEquips.bottom?.name}
-								width={usedEquips.bottom?.iconWidth}
-								height={usedEquips.bottom?.iconHeight}
+								src={equips.bottom?.icon}
+								alt={equips.bottom?.name}
+								width={equips.bottom?.iconWidth}
+								height={equips.bottom?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -348,10 +318,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Shoes</span>
 							<Image
-								src={usedEquips.shoes?.icon}
-								alt={usedEquips.shoes?.name}
-								width={usedEquips.shoes?.iconWidth}
-								height={usedEquips.shoes?.iconHeight}
+								src={equips.shoes?.icon}
+								alt={equips.shoes?.name}
+								width={equips.shoes?.iconWidth}
+								height={equips.shoes?.iconHeight}
 							/>
 						</Slot>
 					</div>
@@ -368,10 +338,10 @@ const EquipmentInventory: React.FC = () => {
 							<br />
 							<span>Acc</span>
 							<Image
-								src={usedEquips.earrings?.icon}
-								alt={usedEquips.earrings?.name}
-								width={usedEquips.earrings?.iconWidth}
-								height={usedEquips.earrings?.iconHeight}
+								src={equips.earrings?.icon}
+								alt={equips.earrings?.name}
+								width={equips.earrings?.iconWidth}
+								height={equips.earrings?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -383,10 +353,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Shoulder</span>
 							<Image
-								src={usedEquips.shoulder?.icon}
-								alt={usedEquips.shoulder?.name}
-								width={usedEquips.shoulder?.iconWidth}
-								height={usedEquips.shoulder?.iconHeight}
+								src={equips.shoulder?.icon}
+								alt={equips.shoulder?.name}
+								width={equips.shoulder?.iconWidth}
+								height={equips.shoulder?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -397,10 +367,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Gloves</span>
 							<Image
-								src={usedEquips.gloves?.icon}
-								alt={usedEquips.gloves?.name}
-								width={usedEquips.gloves?.iconWidth}
-								height={usedEquips.gloves?.iconHeight}
+								src={equips.gloves?.icon}
+								alt={equips.gloves?.name}
+								width={equips.gloves?.iconWidth}
+								height={equips.gloves?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -411,10 +381,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Android</span>
 							<Image
-								src={usedEquips.android?.icon}
-								alt={usedEquips.android?.name}
-								width={usedEquips.android?.iconWidth}
-								height={usedEquips.android?.iconHeight}
+								src={equips.android?.icon}
+								alt={equips.android?.name}
+								width={equips.android?.iconWidth}
+								height={equips.android?.iconHeight}
 							/>
 						</Slot>
 					</div>
@@ -427,10 +397,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Emblem</span>
 							<Image
-								src={usedEquips.emblem?.icon}
-								alt={usedEquips.emblem?.name}
-								width={usedEquips.emblem?.iconWidth}
-								height={usedEquips.emblem?.iconHeight}
+								src={equips.emblem?.icon}
+								alt={equips.emblem?.name}
+								width={equips.emblem?.iconWidth}
+								height={equips.emblem?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -441,10 +411,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Badge</span>
 							<Image
-								src={usedEquips.badge?.icon}
-								alt={usedEquips.badge?.name}
-								width={usedEquips.badge?.iconWidth}
-								height={usedEquips.badge?.iconHeight}
+								src={equips.badge?.icon}
+								alt={equips.badge?.name}
+								width={equips.badge?.iconWidth}
+								height={equips.badge?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -455,10 +425,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Medal</span>
 							<Image
-								src={usedEquips.medal?.icon}
-								alt={usedEquips.medal?.name}
-								width={usedEquips.medal?.iconWidth}
-								height={usedEquips.medal?.iconHeight}
+								src={equips.medal?.icon}
+								alt={equips.medal?.name}
+								width={equips.medal?.iconWidth}
+								height={equips.medal?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -471,10 +441,10 @@ const EquipmentInventory: React.FC = () => {
 							<br />
 							<span>Weapon</span>
 							<Image
-								src={usedEquips.secondary?.icon}
-								alt={usedEquips.secondary?.name}
-								width={usedEquips.secondary?.iconWidth}
-								height={usedEquips.secondary?.iconHeight}
+								src={equips.secondary?.icon}
+								alt={equips.secondary?.name}
+								width={equips.secondary?.iconWidth}
+								height={equips.secondary?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -485,10 +455,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Cape</span>
 							<Image
-								src={usedEquips.cape?.icon}
-								alt={usedEquips.cape?.name}
-								width={usedEquips.cape?.iconWidth}
-								height={usedEquips.cape?.iconHeight}
+								src={equips.cape?.icon}
+								alt={equips.cape?.name}
+								width={equips.cape?.iconWidth}
+								height={equips.cape?.iconHeight}
 							/>
 						</Slot>
 						<Slot
@@ -499,10 +469,10 @@ const EquipmentInventory: React.FC = () => {
 						>
 							<span>Heart</span>
 							<Image
-								src={usedEquips.heart?.icon}
-								alt={usedEquips.heart?.name}
-								width={usedEquips.heart?.iconWidth}
-								height={usedEquips.heart?.iconHeight}
+								src={equips.heart?.icon}
+								alt={equips.heart?.name}
+								width={equips.heart?.iconWidth}
+								height={equips.heart?.iconHeight}
 							/>
 						</Slot>
 					</div>

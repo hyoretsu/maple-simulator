@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 
 import CoreStatsInfo from "@components/CoreStatsInfo";
+import DetailedStats from "@components/DetailedStats";
 import EquipmentInventory from "@components/EquipmentInventory";
 import ExpBar from "@components/ExpBar";
 import Stats from "@components/Stats";
 
-import { BottomBar, Styling } from "@styles/index";
+import { BottomBar, StatsDiv, Styling } from "@styles/index";
 
 import { siteName as title } from "./layout";
 
@@ -25,7 +26,10 @@ const Homepage: React.FC = () => {
 		<>
 			<Styling>
 				<EquipmentInventory />
-				<Stats />
+				<StatsDiv>
+					<Stats />
+					<DetailedStats />
+				</StatsDiv>
 			</Styling>
 			<BottomBar>
 				<CoreStatsInfo />

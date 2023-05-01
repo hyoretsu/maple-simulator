@@ -6,96 +6,96 @@ interface StatBarProps {
 }
 
 export const CharInfo = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 2fr;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
 
-    width: 158px;
-    height: 52px;
-    background-color: #444;
+	width: 158px;
+	height: 52px;
+	background-color: #444;
 
-    margin-bottom: 0.5vh;
-    border-radius: 4px;
+	margin-bottom: 0.5vh;
+	border-radius: 4px;
 `;
 
 export const LevelName = styled.div`
-    display: grid;
-    align-items: center;
-    grid-template-columns: 2fr 3fr;
+	display: grid;
+	align-items: center;
+	grid-template-columns: 2fr 3fr;
 
-    div {
-        display: flex;
+	div {
+		display: flex;
 
-        margin: 0 19% 0 27%;
+		margin: 0 19% 0 27%;
 
-        input,
-        label {
-            color: #d7b424;
-            font-size: 0.7em;
-            text-shadow: 0 0 4px #000;
-        }
+		input,
+		label {
+			color: #d7b424;
+			font-size: 0.7em;
+			text-shadow: 0 0 4px #000;
+		}
 
-        input {
-            text-align: end;
-        }
-    }
+		input {
+			text-align: end;
+		}
+	}
 
-    > input {
-        color: #fff;
-        font-size: 0.6em;
+	> input {
+		color: #fff;
+		font-size: 0.6em;
 
-        margin-left: 5%;
-    }
+		margin-left: 5%;
+	}
 `;
 
 export const CoreStatsDiv = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 
-    background: linear-gradient(#fff, #cdcdcd 60%);
+	background: linear-gradient(#fff, #cdcdcd 60%);
 
-    margin: 0 1%;
-    border-radius: 4px;
+	margin: 0 1%;
+	border-radius: 4px;
 
-    > div {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 1fr 9fr 0.3fr;
+	> div {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 9fr 0.3fr;
 
-        > span {
-            color: #838383;
-            font-size: 0.5em;
-            font-weight: 700;
-            text-transform: uppercase;
+		> span {
+			color: #838383;
+			font-size: 0.5em;
+			font-weight: 700;
+			text-transform: uppercase;
 
-            margin: auto 13%;
-        }
-    }
+			margin: auto 13%;
+		}
+	}
 `;
 
 export const StatBar = styled.div<StatBarProps>`
-    display: flex;
+	display: flex;
 
-    height: 74%;
-    background: ${({ stat }) => {
-			const prefix = "linear-gradient(90deg,";
-			const suffix = "90%)";
+	height: 74%;
+	background: ${({ stat }) => {
+		const prefix = "linear-gradient(90deg,";
+		const suffix = "90%)";
 
-			switch (stat.toLowerCase()) {
-				case "hp":
-					return `${prefix} #f32c64, #f64c79 ${suffix}`;
-				case "mp":
-					return `${prefix} #11b2dd, #6de5fe ${suffix}`;
-				default:
-					return "";
-			}
-		}};
+		switch (stat.toLowerCase()) {
+			case "hp":
+				return `${prefix} #f32c64, #f64c79 ${suffix}`;
+			case "mp":
+				return `${prefix} #11b2dd, #6de5fe ${suffix}`;
+			default:
+				return "";
+		}
+	}};
 
-    border-radius: 4px;
+	border-radius: 4px;
 
-    span {
-        color: #fff;
-        font-size: 0.6em;
+	span {
+		color: #fff;
+		font-size: 0.6em;
 
-        margin: auto;
-    }
+		margin: auto;
+	}
 `;

@@ -1,1 +1,5 @@
-export type { CompleteEquipment as Equipment } from "../src/modules/equipments/repositories/equipments.repository";
+import { CompleteEquipment } from "../src/modules/equipments/repositories/equipments.repository";
+
+type Equipment = Required<CompleteEquipment>;
+
+export type { Equipment };

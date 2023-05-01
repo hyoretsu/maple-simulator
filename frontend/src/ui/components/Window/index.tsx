@@ -6,16 +6,25 @@ import { Frame } from "./styles";
 
 interface WindowProps extends HTMLAttributes<HTMLDivElement> {
 	children: React.ReactNode;
+	closeButton?: boolean;
 	onClose?: () => void;
 	size: [number, number];
-	title: string;
+	title?: string;
 }
 
-const Window: React.FC<WindowProps> = ({ children, onClose, size, title, style, ...rest }) => {
+const Window: React.FC<WindowProps> = ({
+	children,
+	closeButton = true,
+	onClose,
+	size,
+	title,
+	style,
+	...rest
+}) => {
 	return (
 		<Frame style={{ ...style, height: size[1], width: size[0] }} {...rest}>
 			{title && <span>{title}</span>}
-			<CloseButton onClick={onClose} />
+			{closeButton && <CloseButton onClick={onClose} />}
 			{children}
 		</Frame>
 	);
