@@ -1,16 +1,17 @@
 {
 	"name": "backend",
+	"private": true,
 	"types": "typings/index.d.ts",
 	"scripts": {
 		"build": "nest build",
 		"dev": "nest start --watch",
 		"prepare": "npm run prisma:generate",
 		"prisma:generate": "prisma generate --data-proxy",
-		"prisma:migrate-dev": "prisma migrate dev && npm run prisma:generate",
+		"prisma:migrate-dev": "prisma migrate dev && prisma generate",
 		"prisma:migrate-deploy": "prisma migrate deploy",
 		"start": "nest start",
 		"start:debug": "nest start --debug --watch",
-		"start:prod": "node dist/main",
+		"start:prod": "node dist/src/main",
 		"test": "jest"
 	},
 	"dependencies": {

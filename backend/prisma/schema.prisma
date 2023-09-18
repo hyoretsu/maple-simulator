@@ -8,6 +8,11 @@ datasource db {
     directUrl = env("MIGRATE_DATABASE_URL")
 }
 
+model Class {
+    id   String @id @default(uuid())
+    name String
+}
+
 model Equipment {
     id           Int                    @id
     name         String

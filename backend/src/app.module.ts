@@ -5,6 +5,7 @@ import { APP_INTERCEPTOR } from "@nestjs/core";
 import { redisStore } from "cache-manager-redis-yet";
 import type { RedisClientOptions } from "redis";
 
+import ClassesModule from "@modules/classes/classes.module";
 import EquipmentsModule from "@modules/equipments/equipments.module";
 import ExperienceModule from "@modules/experience/experience.module";
 
@@ -32,7 +33,7 @@ import ExperienceModule from "@modules/experience/experience.module";
           : [".env.development.local", ".env.development"]),
       ],
     }),
-    ...[EquipmentsModule, ExperienceModule],
+    ...[ClassesModule, EquipmentsModule, ExperienceModule],
   ],
   providers: [
     {
