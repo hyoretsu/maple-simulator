@@ -232,7 +232,7 @@ export const CharProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
 		const equipsObject = {};
 
-		(data as Equipment[]).forEach((equip) => {
+		(data as Equipment[]).forEach(equip => {
 			if (equip.type === "Pendant" || equip.type === "Ring") {
 				Object.entries(charInfo.equips)
 					.filter(([key]) => key.match(/pendant|ring\d/))
@@ -322,11 +322,11 @@ export const CharProvider: React.FC<PropsWithChildren> = ({ children }) => {
 		const mastery = classes[charInfo.job].mastery;
 		const statValue =
 			classes[charInfo.job].mainStat
-				.map((mainStat) => calculateStats(mainStat))
+				.map(mainStat => calculateStats(mainStat))
 				.reduce((sum, n) => sum + n, 0) *
 				4 +
 			classes[charInfo.job].secondaryStat
-				.map((secondaryStat) => calculateStats(secondaryStat))
+				.map(secondaryStat => calculateStats(secondaryStat))
 				.reduce((sum, n) => sum + n, 0);
 
 		const upperActualRange = Math.round(
@@ -472,7 +472,7 @@ export const CharProvider: React.FC<PropsWithChildren> = ({ children }) => {
 };
 
 export const useCharInfo = (): CharInfo => {
-	const context = useContextSelector(CharContext, (char) => ({
+	const context = useContextSelector(CharContext, char => ({
 		name: char.name,
 		level: char.level,
 		exp: char.exp,
@@ -488,7 +488,7 @@ export const useCharInfo = (): CharInfo => {
 };
 
 export const useExp = (): number => {
-	const context = useContextSelector(CharContext, (char) => char.exp);
+	const context = useContextSelector(CharContext, char => char.exp);
 	if (context === undefined) {
 		throw new Error("useExp must be used within a CharProvider");
 	}
@@ -497,7 +497,7 @@ export const useExp = (): number => {
 };
 
 export const useCoreStats = (): CoreStats => {
-	const context = useContextSelector(CharContext, (char) => ({
+	const context = useContextSelector(CharContext, char => ({
 		hp: char.stats.hp,
 		mp: char.stats.mp,
 	}));
@@ -509,7 +509,7 @@ export const useCoreStats = (): CoreStats => {
 };
 
 export const useEquips = () => {
-	const context = useContextSelector(CharContext, (char) => char.equips);
+	const context = useContextSelector(CharContext, char => char.equips);
 	if (!context) {
 		throw new Error("useEquips must be used within a CharProvider");
 	}
@@ -518,7 +518,7 @@ export const useEquips = () => {
 };
 
 export const useStats = () => {
-	const context = useContextSelector(CharContext, (char) => ({
+	const context = useContextSelector(CharContext, char => ({
 		ap: char.ap,
 		...char.stats,
 	}));
@@ -530,7 +530,7 @@ export const useStats = () => {
 };
 
 export const useFuncs = () => {
-	const context = useContextSelector(CharContext, (char) => ({
+	const context = useContextSelector(CharContext, char => ({
 		updateInfo: char.updateInfo,
 		updateEquips: char.updateEquips,
 	}));

@@ -10,6 +10,6 @@ export default class ListEquipments {
 	async execute(): Promise<CompleteEquipment[]> {
 		const equips = await this.equipmentsRepository.findAll();
 
-		return equips.map((equip) => transformItem(equip));
+		return equips.map(equip => transformItem(equip));
 	}
 }

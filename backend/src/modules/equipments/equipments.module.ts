@@ -16,8 +16,8 @@ import FindEquipments from "./services/FindEquipments.service";
 	providers: [
 		PrismaService,
 		{
-            provide: EquipmentsRepository,
-            useClass: PrismaEquipmentsRepository,
+			provide: EquipmentsRepository,
+			useClass: PrismaEquipmentsRepository,
 		},
 		...[CreateEquipment, CreateSet, FilterEquipments, FindEquipments, ListEquipments],
 	],

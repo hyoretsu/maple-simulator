@@ -32,9 +32,9 @@ export default class EquipmentsController {
 	@Post()
 	async postEquips(
 		@Multipart({
-            fields: ["icon"],
-            validation: CreateEquipmentDTO
-        })
+			fields: ["icon"],
+			validation: CreateEquipmentDTO,
+		})
 		body: CreateEquipmentDTO,
 	): Promise<CompleteEquipment> {
 		const equip = await this.createEquip.execute(body);
@@ -50,7 +50,7 @@ export default class EquipmentsController {
 	}
 
 	@Post("find")
-	async postFindEquips( @Body() body: FindEquipmentDTO) {
+	async postFindEquips(@Body() body: FindEquipmentDTO) {
 		const equips = await this.findEquips.execute(body);
 
 		return equips;

@@ -7,12 +7,12 @@ export default class CreateExperienceDTO {
 	exp!: number | number[];
 
 	@IsOptional()
-    @IsNumber()
-    @Min(1)
+	@IsNumber()
+	@Min(1)
 	level?: number;
 
 	@IsString()
-    @IsNotEmpty()
-    @IsIn(["Character"])
+	@IsNotEmpty()
+	@IsIn(["Character"])
 	type!: string;
 }

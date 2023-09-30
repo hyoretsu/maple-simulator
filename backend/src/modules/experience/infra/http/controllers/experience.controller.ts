@@ -10,7 +10,7 @@ export default class ExperienceController {
 	constructor(private createExperience: CreateExperience, private listExperience: ListExperience) {}
 
 	@Get()
-	async getExperience(@Query('type') type: string): Promise<Experience[]> {
+	async getExperience(@Query("type") type: string): Promise<Experience[]> {
 		const exp = await this.listExperience.execute(type);
 
 		return exp;

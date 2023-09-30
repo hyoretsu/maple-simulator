@@ -6,17 +6,17 @@ import EquipmentSetBonusDTO from "./EquipmentSetBonus.dto";
 
 export default class CreateSetDTO implements EquipmentSet {
 	@IsNumber()
-    @IsNotEmpty()
-    @Min(0)
+	@IsNotEmpty()
+	@Min(0)
 	id!: number;
 
 	@IsString()
-    @IsNotEmpty()
+	@IsNotEmpty()
 	name!: string;
 
 	@IsArray()
 	@ValidateNested({ each: true })
-    @ArrayMinSize(1)
-    @Type(() => EquipmentSetBonusDTO)
+	@ArrayMinSize(1)
+	@Type(() => EquipmentSetBonusDTO)
 	bonuses!: EquipmentSetBonus[];
 }

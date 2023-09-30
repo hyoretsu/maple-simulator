@@ -63,7 +63,7 @@ const EquipmentInventory: React.FC = () => {
 			{isModalVisible && (
 				<EquipChooser onClose={closeChooser}>
 					<ScrollDiv>
-						{chooserEquips.map((equip) => (
+						{chooserEquips.map(equip => (
 							<EquipChooserSlot key={equip.id}>
 								<button
 									type="button"

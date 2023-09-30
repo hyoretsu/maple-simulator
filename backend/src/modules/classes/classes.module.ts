@@ -12,8 +12,8 @@ import CreateClass from "./services/CreateClass.service";
 	providers: [
 		PrismaService,
 		{
-            provide: ClassesRepository,
-            useClass: PrismaClassesRepository,
+			provide: ClassesRepository,
+			useClass: PrismaClassesRepository,
 		},
 		...[CreateClass],
 	],

@@ -20,6 +20,6 @@ export default class FindEquipments {
 
 		const equips = await this.equipmentsRepository.findManyById(id);
 
-		return equips.map((equipment) => transformItem(equipment));
+		return equips.map(equipment => transformItem(equipment));
 	}
 }

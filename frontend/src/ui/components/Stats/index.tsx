@@ -23,17 +23,12 @@ const Stats: React.FC = () => {
 				<div>
 					<Info>
 						<label htmlFor="name">Name</label>
-						<Input
-							id="name"
-							value={name}
-							onChange={(e) => updateInfo("name", e.target.value)}
-							maxLength={12}
-						/>
+						<Input id="name" value={name} onChange={e => updateInfo("name", e.target.value)} maxLength={12} />
 					</Info>
 					<Info>
 						<label htmlFor="job">Job</label>
-						<select id="job" value={job} onChange={(e) => updateInfo("job", e.target.value)}>
-							{Object.keys(classes).map((job) => (
+						<select id="job" value={job} onChange={e => updateInfo("job", e.target.value)}>
+							{Object.keys(classes).map(job => (
 								<option key={job} value={job}>
 									{job}
 								</option>
@@ -46,7 +41,7 @@ const Stats: React.FC = () => {
 							id="guild"
 							placeholder="-"
 							value={guild}
-							onChange={(e) => updateInfo("guild", e.target.value)}
+							onChange={e => updateInfo("guild", e.target.value)}
 						/>
 					</Info>
 					<Info>
@@ -56,7 +51,7 @@ const Stats: React.FC = () => {
 							type="number"
 							maxLength={4}
 							value={fame}
-							onChange={(e) => updateInfo("fame", e.target.value)}
+							onChange={e => updateInfo("fame", e.target.value)}
 						/>
 					</Info>
 					<Info isBig>
@@ -74,7 +69,7 @@ const Stats: React.FC = () => {
 							value={hp}
 							min={50}
 							max={500000}
-							onChange={(e) => updateInfo("stats.hp", e.target.value)}
+							onChange={e => updateInfo("stats.hp", e.target.value)}
 						/>
 						<LevelButton disabled={!ap} />
 					</Info>
@@ -86,7 +81,7 @@ const Stats: React.FC = () => {
 							value={mp}
 							min={5}
 							max={500000}
-							onChange={(e) => updateInfo("stats.mp", e.target.value)}
+							onChange={e => updateInfo("stats.mp", e.target.value)}
 						/>
 						<LevelButton disabled={!ap} />
 					</Info>

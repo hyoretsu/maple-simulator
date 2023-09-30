@@ -3,10 +3,10 @@ import { IsNotEmpty, IsString } from "class-validator";
 
 export default class FilterEquipmentsDTO {
 	@IsString()
-    @IsNotEmpty()
+	@IsNotEmpty()
 	job!: string;
 
 	@IsOptional()
-    @IsString()
+	@IsString()
 	type?: string;
 }

@@ -10,12 +10,12 @@ export default class FilterEquipments {
 
 	public async execute({ job, type }: FilterEquipmentsDTO): Promise<CompleteEquipment[]> {
 		const equipsByJob = await this.equipmentsRepository.findManyByJob(job);
-		const equipsByJobAndType = equipsByJob.filter((equip) => equip.type === type);
+		const equipsByJobAndType = equipsByJob.filter(equip => equip.type === type);
 
 		if (type) {
-			return equipsByJobAndType.map((equip) => transformItem(equip));
+			return equipsByJobAndType.map(equip => transformItem(equip));
 		}
 
-		return equipsByJob.map((equip) => transformItem(equip));
+		return equipsByJob.map(equip => transformItem(equip));
 	}
 }

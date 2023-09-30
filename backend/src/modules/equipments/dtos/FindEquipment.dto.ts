@@ -2,6 +2,6 @@ import { IsNotEmpty, IsNumber } from "class-validator";
 
 export default class FindEquipmentDTO {
 	@IsNumber({}, { each: true })
-    @IsNotEmpty()
+	@IsNotEmpty()
 	id!: number | number[];
 }

@@ -9,11 +9,11 @@ import { CompleteEquipment } from "../repositories/equipments.repository";
 
 export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
 	@IsOptional()
-    @IsNumber()
+	@IsNumber()
 	attackSpeed?: number;
 
 	@IsOptional()
-    @IsBoolean()
+	@IsBoolean()
 	bossReward?: boolean;
 
 	@IsOptional()
@@ -22,25 +22,25 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
 
 	@IsOptional()
 	@IsNumber()
-    @Min(0)
+	@Min(0)
 	enhancements?: number;
 
 	@IsString()
-    @IsNotEmpty()
+	@IsNotEmpty()
 	icon!: string;
 
 	@IsNumber()
 	@IsNotEmpty()
-    @Min(1)
+	@Min(1)
 	iconHeight!: number;
 
 	@IsNumber()
 	@IsNotEmpty()
-    @Min(1)
+	@Min(1)
 	iconWidth!: number;
 
 	@IsNumber()
-    @Min(0)
+	@Min(0)
 	@IsNotEmpty()
 	id!: number;
 
@@ -49,49 +49,49 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
 	name!: string;
 
 	@ValidateNested()
-    @Type(() => EquipmentRequirementDTO)
+	@Type(() => EquipmentRequirementDTO)
 	req?: EquipmentRequirements;
 
 	@IsOptional()
-    @IsNumber()
-    @Min(0)
+	@IsNumber()
+	@Min(0)
 	setId?: number;
 
 	@IsOptional()
-    @IsString()
+	@IsString()
 	setName?: string;
 
 	@ValidateNested()
-    @Type(() => EquipmentStatDTO)
+	@Type(() => EquipmentStatDTO)
 	stats?: EquipmentStats;
 
 	@IsString()
-    @IsIn([
-        "Android",
-        "Badge",
-        "Belt",
-        "Book",
-        "Bottom",
-        "Cape",
-        "Dragon",
-        "Earrings",
-        "Emblem",
-        "Eye Accessory",
-        "Face Accessory",
-        "Gloves",
-        "Hat",
-        "Heart",
-        "Mechanic",
-        "Medal",
-        "Pendant",
-        "Pocket",
-        "Ring",
-        "Secondary",
-        "Shoes",
-        "Shoulder",
-        "Top",
-        "Totem",
-        "Weapon",
-    ])
+	@IsIn([
+		"Android",
+		"Badge",
+		"Belt",
+		"Book",
+		"Bottom",
+		"Cape",
+		"Dragon",
+		"Earrings",
+		"Emblem",
+		"Eye Accessory",
+		"Face Accessory",
+		"Gloves",
+		"Hat",
+		"Heart",
+		"Mechanic",
+		"Medal",
+		"Pendant",
+		"Pocket",
+		"Ring",
+		"Secondary",
+		"Shoes",
+		"Shoulder",
+		"Top",
+		"Totem",
+		"Weapon",
+	])
 	type!: string;
 }

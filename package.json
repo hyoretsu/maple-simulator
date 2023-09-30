@@ -10,19 +10,22 @@
 	},
 	"lint-staged": {
 		"**/*.(json|js|jsx|ts|tsx)": [
-			"rome check --apply"
+			"biome format --write"
 		],
+        "backend/prisma/schema.prisma": [
+            "pnpm -F backend prisma:migrate-deploy"
+        ],
 		"backend/src/**/*.ts": [
-			"npm run -w backend test --bail"
+			"pnpm -F backend test --bail"
 		],
 		"frontend/src/**/*.(ts|tsx)": [
-			"npm run -w frontend test --bail"
+			"pnpm -F frontend test --bail"
 		]
 	},
 	"devDependencies": {
+		"@biomejs/biome": "^1.2.2",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.1",
-		"rome": "^12.0.0",
 		"typescript": "^5.0.4"
 	}
 }

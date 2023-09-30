@@ -26,10 +26,10 @@ const CoreStatsInfo: React.FC = () => {
 						value={level}
 						min={1}
 						max={300}
-						onChange={(e) => updateInfo("level", e.target.value)}
+						onChange={e => updateInfo("level", e.target.value)}
 					/>
 				</div>
-				<Input value={name} onChange={(e) => updateInfo("name", e.target.value)} maxLength={12} />
+				<Input value={name} onChange={e => updateInfo("name", e.target.value)} maxLength={12} />
 			</LevelName>
 			<CoreStatsDiv>
 				{stats.map(({ stat, value }) => (

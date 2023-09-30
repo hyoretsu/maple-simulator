@@ -17,7 +17,7 @@ export default class ListExperience {
 			expList = await this.experienceRepository.findAll();
 		}
 
-		expList = expList.map((exp) => JsonFixBigInt(exp));
+		expList = expList.map(exp => JsonFixBigInt(exp));
 
 		return expList;
 	}

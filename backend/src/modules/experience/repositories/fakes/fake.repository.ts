@@ -31,6 +31,6 @@ export default class FakeExperienceRepository implements ExperienceRepository {
 	}
 
 	public async findManyByType(type: string): Promise<Experience[]> {
-		return this.exp.filter((exp) => exp.type === type);
+		return this.exp.filter(exp => exp.type === type);
 	}
 }
