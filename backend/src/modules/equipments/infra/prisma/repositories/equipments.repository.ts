@@ -14,21 +14,42 @@ import CreateSetDTO from "@modules/equipments/dtos/CreateSet.dto";
 export default class PrismaEquipmentsRepository implements EquipmentsRepository {
 	constructor(private prisma: PrismaService) {}
 
-	public async create({ req, stats, ...data }: Required<CreateEquipmentDTO>): Promise<CompleteEquipment> {
+	public async create({
+		icon: file,
+		iconHeight: height,
+		iconWidth: width,
+		req,
+		setId,
+		stats,
+		...data
+	}: Omit<CreateEquipmentDTO, "setName">): Promise<CompleteEquipment> {
 		const equip = await this.prisma.equipment.create({
 			data: {
 				...data,
 				req: { create: req },
+				set: {
+					connect: {
+						id: setId,
+					},
+				},
 				stats: { create: stats },
+				icon: {
+					create: {
+						file,
+						height,
+						width,
+					},
+				},
 			},
 			include: {
+				icon: true,
 				req: true,
 				set: true,
 				stats: true,
 			},
 		});
 
-		return equip;
+		return equip as CompleteEquipment;
 	}
 
 	public async createSet({ bonuses, ...data }: CreateSetDTO): Promise<CompleteSet> {
@@ -50,6 +71,7 @@ export default class PrismaEquipmentsRepository implements EquipmentsRepository 
 	public async findAll(): Promise<CompleteEquipment[]> {
 		const equips = await this.prisma.equipment.findMany({
 			include: {
+				icon: true,
 				req: true,
 				set: true,
 				stats: true,
@@ -68,7 +90,9 @@ export default class PrismaEquipmentsRepository implements EquipmentsRepository 
 				id,
 			},
 			include: {
+				icon: true,
 				req: true,
+				set: true,
 				stats: true,
 			},
 		});
@@ -82,7 +106,9 @@ export default class PrismaEquipmentsRepository implements EquipmentsRepository 
 				id: { in: id },
 			},
 			include: {
+				icon: true,
 				req: true,
+				set: true,
 				stats: true,
 			},
 			orderBy: {
@@ -103,7 +129,9 @@ export default class PrismaEquipmentsRepository implements EquipmentsRepository 
 				},
 			},
 			include: {
+				icon: true,
 				req: true,
+				set: true,
 				stats: true,
 			},
 			orderBy: {

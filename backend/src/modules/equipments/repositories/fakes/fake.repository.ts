@@ -2,14 +2,23 @@ import EquipmentsRepository, { CompleteEquipment, CompleteSet } from "../equipme
 import CreateEquipmentDTO from "../../dtos/CreateEquipment.dto";
 import CreateSetDTO from "@modules/equipments/dtos/CreateSet.dto";
 import { randomUUID } from "crypto";
-import { EquipmentSet } from "@prisma/client";
+import { EquipmentSet, Icon } from "@prisma/client";
 
 export default class FakeEquipmentsRepository implements EquipmentsRepository {
 	private equips: CompleteEquipment[] = [];
+	private icons: Icon[] = [];
 	private sets: CompleteSet[] = [];
 
-	public async create(data: CreateEquipmentDTO): Promise<CompleteEquipment> {
-		const equip = data as CompleteEquipment;
+	public async create({
+		icon: file,
+		iconHeight: height,
+		iconWidth: width,
+		...data
+	}: CreateEquipmentDTO): Promise<CompleteEquipment> {
+		const icon = { file, height, width, id: randomUUID() };
+		this.icons.push(icon);
+
+		const equip = { data, iconId: icon.id } as unknown as CompleteEquipment;
 
 		this.equips.push(equip);
 

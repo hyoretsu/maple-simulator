@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 
-import transformItem from "@utils/transformItem";
+import addIconUrl, { EntityWithIconUrl } from "@utils/addIconUrl";
 import CreateEquipmentDTO from "../dtos/CreateEquipment.dto";
 import EquipmentsRepository, { CompleteEquipment } from "../repositories/equipments.repository";
 import { EquipmentSet } from "@prisma/client";
@@ -9,7 +9,11 @@ import { EquipmentSet } from "@prisma/client";
 export default class CreateEquipment {
 	constructor(private equipmentsRepository: EquipmentsRepository) {}
 
-	async execute({ setId, setName, ...data }: CreateEquipmentDTO): Promise<CompleteEquipment> {
+	async execute({
+		setId,
+		setName,
+		...data
+	}: CreateEquipmentDTO): Promise<EntityWithIconUrl<CompleteEquipment>> {
 		let set: EquipmentSet | null = {} as EquipmentSet;
 		if (setName) {
 			set = await this.equipmentsRepository.findSetByName(setName);
@@ -20,6 +24,6 @@ export default class CreateEquipment {
 			setId: set?.id || setId,
 		});
 
-		return transformItem(equip);
+		return addIconUrl(equip);
 	}
 }

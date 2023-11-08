@@ -7,7 +7,7 @@ import EquipmentRequirementDTO from "./EquipmentRequirement.dto";
 import EquipmentStatDTO from "./EquipmentStat.dto";
 import { CompleteEquipment } from "../repositories/equipments.repository";
 
-export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
+export default class CreateEquipmentDTO implements Partial<Omit<CompleteEquipment, "icon">> {
 	@IsOptional()
 	@IsNumber()
 	attackSpeed?: number;
@@ -20,10 +20,10 @@ export default class CreateEquipmentDTO implements Partial<CompleteEquipment> {
 	@IsString()
 	category?: string;
 
-	@IsOptional()
+	@IsNotEmpty()
 	@IsNumber()
 	@Min(0)
-	enhancements?: number;
+	enhancements!: number;
 
 	@IsString()
 	@IsNotEmpty()

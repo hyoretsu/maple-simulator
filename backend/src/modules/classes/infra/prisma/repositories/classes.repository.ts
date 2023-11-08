@@ -17,4 +17,12 @@ export default class PrismaClassesRepository implements ClassesRepository {
 
 		return classes;
 	}
+
+	public async findByName(name: string): Promise<Class | null> {
+		const classes = await this.prisma.class.findFirst({
+			where: { name },
+		});
+
+		return classes;
+	}
 }

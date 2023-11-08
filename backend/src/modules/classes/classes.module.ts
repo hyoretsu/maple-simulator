@@ -6,6 +6,9 @@ import ClassesController from "./infra/http/controllers/classes.controller";
 import PrismaClassesRepository from "./infra/prisma/repositories/classes.repository";
 import ClassesRepository from "./repositories/classes.repository";
 import CreateClass from "./services/CreateClass.service";
+import CreateJob from "./services/CreateJob.service";
+import JobsRepository from "./repositories/jobs.repository";
+import PrismaJobsRepository from "./infra/prisma/repositories/jobs.repository";
 
 @Module({
 	controllers: [ClassesController],
@@ -15,7 +18,11 @@ import CreateClass from "./services/CreateClass.service";
 			provide: ClassesRepository,
 			useClass: PrismaClassesRepository,
 		},
-		...[CreateClass],
+		{
+			provide: JobsRepository,
+			useClass: PrismaJobsRepository,
+		},
+		...[CreateClass, CreateJob],
 	],
 })
 export default class ClassesModule {}

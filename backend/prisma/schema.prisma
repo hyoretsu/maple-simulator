@@ -5,12 +5,12 @@ generator client {
 datasource db {
     provider  = "postgresql"
     url       = env("DATABASE_URL")
-    directUrl = env("MIGRATE_DATABASE_URL")
 }
 
 model Class {
     id   String @id @default(uuid())
     name String
+    jobs Job[]
 }
 
 model Equipment {
@@ -25,9 +25,8 @@ model Equipment {
     set          EquipmentSet?          @relation(fields: [setId], references: [id])
     type         String
     category     String?
-    icon         String
-    iconWidth    Int
-    iconHeight   Int
+    iconId       String
+    icon         Icon                   @relation(fields: [iconId], references: [id])
 }
 
 model EquipmentRequirements {
@@ -92,4 +91,22 @@ model Experience {
     exp   BigInt
 
     @@id([type, level])
+}
+
+model Icon {
+    id      String      @id @default(uuid())
+    file    String
+    width   Int
+    height  Int
+    equips  Equipment[]
+    jobs    Job[]
+}
+
+model Job {
+    id      Int    @id
+    name    String
+    classId String
+    class   Class  @relation(fields: [classId], references: [id])
+    iconId  String
+    icon    Icon   @relation(fields: [iconId], references: [id])
 }

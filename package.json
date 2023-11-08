@@ -1,26 +1,15 @@
 {
 	"name": "maple-simulator",
 	"private": true,
-	"workspaces": [
-		"backend",
-		"frontend"
-	],
+	"workspaces": ["backend", "frontend"],
 	"scripts": {
 		"prepare": "husky install"
 	},
 	"lint-staged": {
-		"**/*.(json|js|jsx|ts|tsx)": [
-			"biome format --write"
-		],
-        "backend/prisma/schema.prisma": [
-            "pnpm -F backend prisma:migrate-deploy"
-        ],
-		"backend/src/**/*.ts": [
-			"pnpm -F backend test --bail"
-		],
-		"frontend/src/**/*.(ts|tsx)": [
-			"pnpm -F frontend test --bail"
-		]
+		"**/*.(json|js|jsx|ts|tsx)": ["biome format --write"],
+		"backend/prisma/schema.prisma": ["pnpm -F backend prisma:migrate"],
+		"backend/src/**/*.ts": ["pnpm -F backend test --bail"],
+		"frontend/src/**/*.(ts|tsx)": ["pnpm -F frontend test --bail"]
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.2.2",
