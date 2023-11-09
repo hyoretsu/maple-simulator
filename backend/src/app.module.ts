@@ -31,10 +31,14 @@ import ExperienceModule from "@modules/experience/experience.module";
 		...[ClassesModule, EquipmentsModule, ExperienceModule],
 	],
 	providers: [
-		{
-			provide: APP_INTERCEPTOR,
-			useClass: CacheInterceptor,
-		},
+		...(process.env.RAILWAY_ENVIRONMENT === "production"
+			? [
+					{
+						provide: APP_INTERCEPTOR,
+						useClass: CacheInterceptor,
+					},
+			  ]
+			: []),
 	],
 })
 export class AppModule {}
