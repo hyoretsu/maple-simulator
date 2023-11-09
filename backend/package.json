@@ -9,7 +9,7 @@
 		"prisma:migrate": "prisma migrate dev",
 		"start": "nest start",
 		"start:debug": "nest start --debug --watch",
-		"start:prod": "node dist/src/main",
+		"start:prod": "node dist/main",
 		"test": "jest"
 	},
 	"dependencies": {
