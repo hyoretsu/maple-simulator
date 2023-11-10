@@ -1,5 +1,5 @@
 import { CharProvider } from "@context/char";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { PropsWithChildren } from "react";
 
 import "@public/global.css";
@@ -15,10 +15,11 @@ export function generateMetadata(): Metadata {
 		appleWebApp: {
 			title: siteName,
 		},
+		metadataBase: new URL(url),
 		openGraph: {
 			images: [
 				{
-					url: `${url}/images/opengraph.jpg`,
+					url: "/images/opengraph.jpg",
 					width: 1200,
 					height: 627,
 					alt: siteName,
@@ -27,7 +28,6 @@ export function generateMetadata(): Metadata {
 			siteName,
 			type: "website",
 		},
-		themeColor: siteColor,
 		title: {
 			default: siteName,
 			template: `%s | ${siteName}`,
@@ -38,6 +38,10 @@ export function generateMetadata(): Metadata {
 		},
 	};
 }
+
+export const viewport: Viewport = {
+	themeColor: siteColor,
+};
 
 export default function RootLayout({ children }: PropsWithChildren) {
 	return (

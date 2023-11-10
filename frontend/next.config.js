@@ -9,9 +9,6 @@ module.exports = phase => {
 		eslint: {
 			ignoreDuringBuilds: true,
 		},
-		experimental: {
-			appDir: true,
-		},
 		i18n: {
 			locales: ["en", "pt"],
 			defaultLocale: "en",
