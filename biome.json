@@ -18,9 +18,13 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true,
+			"a11y": {
+				"useKeyWithClickEvents": "off"
+			},
 			"style": {
 				"noNonNullAssertion": "off",
-				"noParameterAssign": "warn"
+				"noParameterAssign": "warn",
+				"useSingleVarDeclarator": "off"
 			},
 			"suspicious": {
 				"noExplicitAny": "off"
