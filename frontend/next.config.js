@@ -3,9 +3,6 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 module.exports = phase => {
 	/** @type {import('next').NextConfig} */
 	const baseConf = {
-		compiler: {
-			styledComponents: true,
-		},
 		eslint: {
 			ignoreDuringBuilds: true,
 		},
@@ -13,11 +10,14 @@ module.exports = phase => {
 			locales: ["en", "pt"],
 			defaultLocale: "en",
 		},
-		images: {
-			domains: ["maple-sim.s3.amazonaws.com"],
-		},
 		productionBrowserSourceMaps: true,
 		reactStrictMode: true,
+		sassOptions: {
+			logger: {
+				warn: message => console.warn(message),
+				debug: message => console.log(message),
+			},
+		},
 		swcMinify: true,
 		typescript: {
 			ignoreBuildErrors: true,

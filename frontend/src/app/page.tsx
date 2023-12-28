@@ -1,14 +1,11 @@
+import CoreStatsInfo from "components/CoreStatsInfo";
+import DetailedStats from "components/DetailedStats";
+import EquipmentInventory from "components/EquipmentInventory";
+import ExpBar from "components/ExpBar";
+import Stats from "components/Stats";
 import { Metadata } from "next";
-
-import CoreStatsInfo from "@components/CoreStatsInfo";
-import DetailedStats from "@components/DetailedStats";
-import EquipmentInventory from "@components/EquipmentInventory";
-import ExpBar from "@components/ExpBar";
-import Stats from "@components/Stats";
-
-import { BottomBar, StatsDiv, Styling } from "@styles/index";
-
 import { siteName as title } from "./layout";
+import styles from "./styles.module.scss";
 
 const description = "A project that aims to simulate various aspects of MapleStory in your browser.";
 
@@ -21,22 +18,21 @@ export const metadata: Metadata = {
 	title,
 };
 
-const Homepage: React.FC = () => {
+export default function Homepage() {
 	return (
 		<>
-			<Styling>
+			<main className={styles.content}>
 				<EquipmentInventory />
-				<StatsDiv>
+				<div className={styles.stats}>
 					<Stats />
 					<DetailedStats />
-				</StatsDiv>
-			</Styling>
-			<BottomBar>
+				</div>
+			</main>
+
+			<footer className={styles.bottomBar}>
 				<CoreStatsInfo />
 				<ExpBar />
-			</BottomBar>
+			</footer>
 		</>
 	);
-};
-
-export default Homepage;
+}

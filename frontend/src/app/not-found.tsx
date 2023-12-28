@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { IoMdCloseCircleOutline } from "react-icons/io";
-
-import Container from "@styles/not-found";
+import styles from "./styles.module.scss";
 
 export const metadata: Metadata = {
 	robots: {
@@ -12,12 +11,10 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
 	return (
-		<>
-			<Container>
-				<IoMdCloseCircleOutline />
-				<span>Error 404</span>
-				<span>Not Found</span>
-			</Container>
-		</>
+		<div className={styles.notFound}>
+			<IoMdCloseCircleOutline />
+			<span>Error 404</span>
+			<span>Not Found</span>
+		</div>
 	);
 }

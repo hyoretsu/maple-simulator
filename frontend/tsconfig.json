@@ -27,16 +27,15 @@
         "noEmit": true,
         "outDir": "./build",
         "paths": {
-            "@assets/*": ["../public/images/*"],
-            "@components/*": ["ui/components/*"],
-            "@context/*": ["data/context/*"],
-            "@hooks/*": ["data/hooks/*"],
+            "@components/*": ["components/*"],
+            "@context/*": ["context/*"],
+            "@hooks/*": ["hooks/*"],
             "@public/*": ["../public/*"],
-            "@services/*": ["data/services/*"],
-            "@utils/*": ["data/utils/*"]
+            "@services/*": ["services/*"],
+            "@utils/*": ["utils/*"]
         },
         "target": "ES5",
-        "typeRoots": ["./node_modules/@types", "src/data/@types"],
+        "typeRoots": ["./node_modules/@types", "src/@types"],
         "plugins": [
             {
                 "name": "next"

@@ -1,44 +1,42 @@
-import { CharProvider } from "@context/char";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { CharProvider } from "context/char";
 import { Metadata, Viewport } from "next";
 import { PropsWithChildren } from "react";
-
-import "@public/global.css";
+import "./global.scss";
 
 const url = "https://maple-simulator.vercel.app";
 
 const siteColor = "#b4e114";
 export const siteName = "Maple Simulator";
 
-export function generateMetadata(): Metadata {
-	return {
-		applicationName: siteName,
-		appleWebApp: {
-			title: siteName,
-		},
-		metadataBase: new URL(url),
-		openGraph: {
-			images: [
-				{
-					url: "/images/opengraph.jpg",
-					width: 1200,
-					height: 627,
-					alt: siteName,
-				},
-			],
-			siteName,
-			type: "website",
-		},
-		title: {
-			default: siteName,
-			template: `%s | ${siteName}`,
-		},
-		twitter: {
-			card: "summary_large_image",
-			creator: `${process.env.NEXT_PUBLIC_SITE_CONTENT_CREATOR}` || "@hyoretsu",
-		},
-	};
-}
-
+export const metadata: Metadata = {
+	applicationName: siteName,
+	appleWebApp: {
+		title: siteName,
+	},
+	metadataBase: new URL(url),
+	openGraph: {
+		images: [
+			{
+				url: "/images/opengraph.jpg",
+				width: 1200,
+				height: 627,
+				alt: siteName,
+			},
+		],
+		siteName,
+		type: "website",
+	},
+	title: {
+		default: siteName,
+		template: `%s | ${siteName}`,
+	},
+	twitter: {
+		card: "summary_large_image",
+		creator: `${process.env.NEXT_PUBLIC_SITE_CONTENT_CREATOR}` || "@hyoretsu",
+	},
+};
 export const viewport: Viewport = {
 	themeColor: siteColor,
 };
@@ -59,30 +57,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				<link rel="manifest" href="/site.webmanifest" />
 			</head>
 			<body>
-				{/* <DefaultSeo
-				defaultTitle={site_name}
-				facebook={{ appId: String(process.env.NEXT_PUBLIC_FACEBOOK_APP_ID) }}
-				openGraph={{
-					images: [
-						{
-							url: `${url}/images/opengraph.jpg`,
-							width: 1200,
-							height: 627,
-							alt: site_name,
-						},
-					],
-					site_name,
-					type: "website",
-					url: url + pathname,
-				}}
-				titleTemplate={`%s | ${site_name}`}
-				twitter={{
-					cardType: "summary_large_image",
-					handle: `${process.env.NEXT_PUBLIC_SITE_CONTENT_CREATOR}` || "@hyoretsu",
-					site: `${process.env.NEXT_PUBLIC_SITE_OWNER}` || "@hyoretsu",
-				}}
-			/> */}
 				<CharProvider>{children}</CharProvider>
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
