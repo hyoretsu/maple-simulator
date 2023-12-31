@@ -15,26 +15,3 @@
         font-size: 2em;
     }
 }
-
-.content {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.stats {
-    display: flex;
-    align-items: flex-start;
-
-    > div {
-        margin: 0;
-    }
-}
-
-.bottomBar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}

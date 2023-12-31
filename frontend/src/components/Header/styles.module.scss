@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 0.5rem;
+    border-bottom: 2px solid #f07e00;
+    margin-bottom: 0.5rem;
+
+    nav {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 7rem;
+        gap: 0.25rem;
+
+        background-color: #fff;
+        border-radius: 0.5rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+            text-align: center;
+
+            padding: 0 0.5rem;
+            border-radius: 4px 4px 0 0;
+            border-style: solid;
+            border-width: 2px 2px 0;
+        }
+    }
+}

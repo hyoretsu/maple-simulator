@@ -6,19 +6,15 @@
 }
 
 body {
-    color: #a8a8a8;
-    background-color: #000;
-    font-family: Arial;
+    font-family: "Roboto Flex", sans-serif;
     -webkit-font-smoothing: antialiased;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
 }
 
 p {
-    text-align: justify;
     hyphens: auto;
 }
 
@@ -27,28 +23,27 @@ a {
 }
 
 button,
-img,
-svg {
-    background: transparent;
-    cursor: pointer;
-
+fieldset,
+input {
     border: none;
 }
 
-input {
-    width: 100%;
-    background: transparent;
+button {
+    cursor: pointer;
 
-    border: none;
-
-    ::-webkit-outer-spin-button,
-    ::-webkit-inner-spin-button {
-        -webkit-appearance: none;
+    &:disabled {
+        cursor: default;
     }
 }
 
-button:disabled {
-    cursor: default;
+input {
+    background: transparent;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 
 label {

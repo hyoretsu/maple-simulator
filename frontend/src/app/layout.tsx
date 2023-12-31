@@ -1,16 +1,17 @@
+import Header from "@components/Header";
+import { AccountProvider } from "@context/account";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { CharProvider } from "context/char";
-import { Metadata, Viewport } from "next";
 import { PropsWithChildren } from "react";
+import "./fonts";
 import "./global.scss";
 
 const url = "https://maple-simulator.vercel.app";
 
 const siteColor = "#b4e114";
-export const siteName = "Maple Simulator";
+const siteName = "Maple Simulator";
 
-export const metadata: Metadata = {
+export const metadata = {
 	applicationName: siteName,
 	appleWebApp: {
 		title: siteName,
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
 		creator: `${process.env.NEXT_PUBLIC_SITE_CONTENT_CREATOR}` || "@hyoretsu",
 	},
 };
-export const viewport: Viewport = {
+export const viewport = {
 	themeColor: siteColor,
 };
 
@@ -57,7 +58,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				<link rel="manifest" href="/site.webmanifest" />
 			</head>
 			<body>
-				<CharProvider>{children}</CharProvider>
+				<Header />
+
+				<AccountProvider>{children}</AccountProvider>
+
 				<Analytics />
 				<SpeedInsights />
 			</body>
