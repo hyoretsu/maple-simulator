@@ -154,11 +154,24 @@ export default function BossTable() {
 					);
 
 					let time = characterIncomeCrystals.totalTime;
-					const hours = Math.floor(time / 3600);
-					time -= hours * 3600;
-					const minutes = Math.floor(time / 60);
-					time -= minutes * 60;
-					const seconds = time;
+					const characterHours = Math.floor(time / 3600);
+					time -= characterHours * 3600;
+					const characterMinutes = Math.floor(time / 60);
+					time -= characterMinutes * 60;
+					const characterSeconds = time;
+
+					let accountSeconds = incomeCrystals.time[2] + characterSeconds;
+					let accountMinutes = incomeCrystals.time[1] + characterMinutes;
+					let accountHours = incomeCrystals.time[0] + characterHours;
+
+					if (accountSeconds >= 60) {
+						accountSeconds -= 60;
+						accountMinutes += 1;
+					}
+					if (accountMinutes >= 60) {
+						accountMinutes -= 60;
+						accountHours += 1;
+					}
 
 					Object.assign(incomeCrystals, {
 						...(characterIncomeCrystals.income && {
@@ -167,7 +180,7 @@ export default function BossTable() {
 								[id]: {
 									income: characterIncomeCrystals.income,
 									timedIncome: characterIncomeCrystals.timedIncome,
-									time: [hours, minutes, seconds],
+									time: [characterHours, characterMinutes, characterSeconds],
 									counted: characterIncomeCrystals.timedBosses,
 									notCounted: characterIncomeCrystals.crystals - characterIncomeCrystals.timedBosses,
 								},
@@ -175,11 +188,7 @@ export default function BossTable() {
 						}),
 						crystals: incomeCrystals.crystals + characterIncomeCrystals.crystals,
 						income: incomeCrystals.income + characterIncomeCrystals.income,
-						time: [
-							incomeCrystals.time[0] + hours,
-							incomeCrystals.time[1] + minutes,
-							incomeCrystals.time[2] + seconds,
-						],
+						time: [accountHours, accountMinutes, accountSeconds],
 						timedBosses: incomeCrystals.timedBosses + characterIncomeCrystals.timedBosses,
 						timedIncome: incomeCrystals.timedIncome + characterIncomeCrystals.timedIncome,
 						totalTime: incomeCrystals.totalTime + characterIncomeCrystals.totalTime,
