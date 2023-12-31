@@ -291,14 +291,16 @@ export default function BossTable() {
 													),
 												),
 											)
-											.toLowerCase()} in a WAP, `
+											.toLowerCase()} in a WAP`
 									: ""
 							}${
 								characterReport.counted
-									? `${characterReport.notCounted}/${
-											characterReport.notCounted + characterReport.counted
-									  } bosses not counted`
-									: `${characterReport.notCounted} bosses total`
+									? characterReport.notCounted
+										? `, ${characterReport.notCounted}/${
+												characterReport.notCounted + characterReport.counted
+										  } bosses not counted`
+										: ""
+									: `${characterReport.timedIncome ? ", " : ""}${characterReport.notCounted} bosses total`
 							}`}
 							)
 						</p>

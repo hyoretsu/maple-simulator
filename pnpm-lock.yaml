@@ -215,8 +215,6 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  types: {}
-
 packages:
 
   /@ampproject/remapping@2.2.1:
