@@ -29,11 +29,6 @@ interface Report {
 	totalTime: number;
 }
 
-const parsedBosses = Object.entries(bosses).map(([boss, difficulties]) => [
-	boss,
-	Object.entries(difficulties),
-]) as Array<[Bosses, Array<[BossDifficulties, { frequency: BossFrequency; price: number }]>]>;
-
 const difficultyColors = {
 	Chaos: ["#444444", "#222222"],
 	Easy: ["#999999", "#777777"],
@@ -46,8 +41,26 @@ const maxAmount = 180;
 
 const { format: formatNumber } = new Intl.NumberFormat();
 
+type ParsedBosses = Array<
+	[Bosses, Array<[BossDifficulties, { frequency: BossFrequency; price: number; requiredLevel: number }]>]
+>;
+
 export default function BossTable() {
 	const { characters, currentCharacter, setCurrentCharacterIndex, updateCharacter } = useCharacters();
+
+	const parsedBosses = useMemo<ParsedBosses>(() => {
+		const preParsedBosses = Object.entries(bosses).map(([boss, difficulties]) => [
+			boss,
+			Object.entries(difficulties),
+		]) as ParsedBosses;
+		if (!currentCharacter) {
+			return preParsedBosses;
+		}
+
+		return preParsedBosses.filter(
+			([_, [[__, { requiredLevel }]]]) => requiredLevel <= currentCharacter!.level,
+		);
+	}, [currentCharacter]);
 
 	const bossAvailability = useMemo<Record<string, boolean>>(() => {
 		if (!currentCharacter) return {};

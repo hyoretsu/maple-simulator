@@ -34,6 +34,7 @@ export const defaultAccount: Account = {
 
 export const defaultCharacter: Omit<Character, "id"> = {
 	bossingRoutine: {},
+	level: 1,
 	nickname: "Default",
 	world: "Kronos",
 };

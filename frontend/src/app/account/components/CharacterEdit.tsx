@@ -8,7 +8,7 @@ export interface CharacterEditProps {
 	character: Character;
 }
 
-export default function CharacterEdit({ character: { id, nickname, world } }: CharacterEditProps) {
+export default function CharacterEdit({ character: { id, level, nickname, world } }: CharacterEditProps) {
 	const { updateCharacter } = useCharacters();
 
 	return (
@@ -35,6 +35,18 @@ export default function CharacterEdit({ character: { id, nickname, world } }: Ch
 						</option>
 					))}
 				</select>
+			</fieldset>
+
+			<fieldset>
+				<label htmlFor="level">Level</label>
+				<Input
+					name="level"
+					type="number"
+					value={level}
+					min={1}
+					max={300}
+					onChange={e => updateCharacter(id, { level: Number(e.target.value) })}
+				/>
 			</fieldset>
 		</div>
 	);

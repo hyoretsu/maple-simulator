@@ -17,6 +17,7 @@ export interface BossingRoutine {
 }
 export interface Character {
 	id: string;
+	level: number;
 	nickname: string;
 	world: World;
 	bossingRoutine: BossingRoutine;
