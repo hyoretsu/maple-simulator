@@ -13,7 +13,7 @@ import {
 import { v4 as uuid } from "uuid";
 
 type CreateCharacter = (charInfo?: Partial<Omit<Character, "id">>) => Character;
-type UpdateAccount = (newAccountData: Partial<Pick<Account, "id" | "characters">>) => void;
+type UpdateAccount = (newAccountData: Partial<Pick<Account, "id">>) => void;
 type UpdateCharacter = (id: string, updatedCharacter: Partial<Character>) => void;
 
 interface AccountContext {
@@ -86,6 +86,26 @@ export function AccountProvider({ children }: PropsWithChildren) {
 	}, [account, currentCharacterIndex]);
 
 	useEffect(() => {
+		const storedCharacters = localStorage.getItem("@maple-simulator:characters");
+		let parsedCharacters: Array<string | Character> = [];
+		if (storedCharacters) {
+			parsedCharacters = JSON.parse(storedCharacters);
+
+			// Migration logic
+			if (typeof parsedCharacters[0] !== "string") {
+				const characterIds: string[] = [];
+
+				for (const character of parsedCharacters as Character[]) {
+					bumpCharacter(character);
+
+					localStorage.setItem(`@maple-simulator:character_${character.id}`, JSON.stringify(character));
+					characterIds.push(character.id);
+				}
+
+				localStorage.setItem("@maple-simulator:characters", JSON.stringify(characterIds));
+			}
+		}
+
 		setAccount(old => {
 			const storedAccount = copyObject(old);
 
@@ -94,29 +114,27 @@ export function AccountProvider({ children }: PropsWithChildren) {
 				Object.assign(storedAccount, { id: storedId });
 			}
 
-			const storedCharactersStr = localStorage.getItem("@maple-simulator:characters");
-			if (storedCharactersStr) {
-				const storedCharacters: Character[] = JSON.parse(storedCharactersStr);
-
+			const characters = parsedCharacters.reduce((arr, characterId) => {
 				let updated = false;
-				for (const character of storedCharacters) {
+
+				const characterStr = localStorage.getItem(`@maple-simulator:character_${characterId}`);
+				if (characterStr) {
+					const character = JSON.parse(characterStr);
 					updated ||= bumpCharacter(character);
+
+					if (updated) {
+						localStorage.setItem(`@maple-simulator:character_${characterId}`, JSON.stringify(character));
+					}
+
+					arr[arr.length] = character;
 				}
 
-				if (updated) {
-					localStorage.setItem("@maple-simulator:characters", JSON.stringify(storedCharacters));
-				}
+				return arr;
+			}, [] as Character[]);
 
-				Object.assign(storedAccount, {
-					characters: storedCharacters.sort(({ nickname: nick1 }, { nickname: nick2 }) => {
-						if (nick1 < nick2) return -1;
-
-						if (nick1 > nick2) return 1;
-
-						return 0;
-					}),
-				});
-			}
+			Object.assign(storedAccount, {
+				characters,
+			});
 
 			const storedCurrentCharacterId = localStorage.getItem("@maple-simulator:current_character");
 			if (storedCurrentCharacterId) {
@@ -149,7 +167,16 @@ export function AccountProvider({ children }: PropsWithChildren) {
 				const newAccount = copyObject(old);
 
 				newAccount.characters.push(newCharacter);
-				localStorage.setItem("@maple-simulator:characters", JSON.stringify(newAccount.characters));
+				localStorage.setItem(`@maple-simulator:character_${newCharacter.id}`, JSON.stringify(newCharacter));
+				localStorage.setItem(
+					"@maple-simulator:characters",
+					JSON.stringify(
+						newAccount.characters.reduce((arr, { id }) => {
+							arr[arr.length] = id;
+							return arr;
+						}, [] as string[]),
+					),
+				);
 
 				return newAccount;
 			});
@@ -159,18 +186,13 @@ export function AccountProvider({ children }: PropsWithChildren) {
 		[account],
 	);
 
-	const updateAccount = useCallback<UpdateAccount>(({ id, characters }) => {
+	const updateAccount = useCallback<UpdateAccount>(({ id }) => {
 		setAccount(old => {
 			const newAccount = copyObject(old);
 
 			if (id !== undefined) {
 				newAccount.id = id;
 				localStorage.setItem("@maple-simulator:account_id", id);
-			}
-			if (characters !== undefined) {
-				const newCharacters = characters.map(character => ({ ...defaultCharacter, ...character }));
-				newAccount.characters = newCharacters;
-				localStorage.setItem("@maple-simulator:characters", JSON.stringify(newCharacters));
 			}
 
 			return newAccount;
@@ -180,15 +202,10 @@ export function AccountProvider({ children }: PropsWithChildren) {
 	const updateCharacter = useCallback<UpdateCharacter>((id, updatedCharacter) => {
 		setAccount(old => {
 			const newAccount = copyObject(old);
+			const character = newAccount.characters.find(({ id: characterId }) => characterId === id) as Character;
 
-			for (const character of newAccount.characters) {
-				if (character.id === id) {
-					Object.assign(character, updatedCharacter);
-					break;
-				}
-			}
-
-			localStorage.setItem("@maple-simulator:characters", JSON.stringify(newAccount.characters));
+			Object.assign(character, updatedCharacter);
+			localStorage.setItem(`@maple-simulator:character_${character.id}`, JSON.stringify(character));
 
 			return newAccount;
 		});
