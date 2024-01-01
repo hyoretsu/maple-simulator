@@ -101,7 +101,7 @@ export default function BossTable() {
 
 			return availableObj;
 		}, {});
-	}, [currentCharacter]);
+	}, [currentCharacter, parsedBosses]);
 
 	const updateRoutine = (newBossData: Record<string, Record<string, number>>) => {
 		const newBossDataEntries = Object.entries(newBossData);
@@ -370,6 +370,7 @@ export default function BossTable() {
 													}
 
 													const runInfo = currentCharacter.bossingRoutine[difficultyBoss];
+													console.log(currentCharacter.bossingRoutine);
 
 													return (
 														<div key={difficulty} className={styles.bossDificulty}>
@@ -398,14 +399,14 @@ export default function BossTable() {
 																	<Input
 																		name="party-size"
 																		type="number"
-																		value={runInfo?.partySize || 0}
+																		value={runInfo?.partySize || ""}
+																		placeholder="0"
 																		min={0}
 																		max={6}
 																		onChange={e => {
 																			const updatedInfo = {
 																				partySize: Number(e.currentTarget.value),
 																			};
-																			e.currentTarget.value = updatedInfo.partySize.toString();
 
 																			if (!runInfo || updatedInfo.partySize === 0) {
 																				toggleBossClear(boss, difficulty, updatedInfo);
@@ -423,7 +424,8 @@ export default function BossTable() {
 
 																	<Input
 																		name="time"
-																		value={runInfo?.timeTaken || 0}
+																		value={runInfo?.timeTaken || ""}
+																		placeholder="0"
 																		onChange={e => {
 																			// Remove banned characters
 																			e.currentTarget.value = e.currentTarget.value.replace(/[^\dms]/g, "");
