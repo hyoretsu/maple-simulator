@@ -78,10 +78,6 @@
 		"Normal": { "price": 2592000, "frequency": "daily", "requiredLevel": 155 },
 		"Hard": { "price": 19012500, "frequency": "weekly", "requiredLevel": 175 }
 	},
-	"Mori Ranmaru": {
-		"Normal": { "price": 840500, "frequency": "daily", "requiredLevel": 120 },
-		"Hard": { "price": 2664500, "frequency": "daily", "requiredLevel": 180 }
-	},
 	"OMNI-CLN": {
 		"Normal": { "price": 1250000, "frequency": "daily", "requiredLevel": 180 }
 	},
@@ -100,6 +96,10 @@
 	},
 	"Princess No": {
 		"Normal": { "price": 16200000, "frequency": "weekly", "requiredLevel": 140 }
+	},
+	"Ranmaru": {
+		"Normal": { "price": 840500, "frequency": "daily", "requiredLevel": 120 },
+		"Hard": { "price": 2664500, "frequency": "daily", "requiredLevel": 180 }
 	},
 	"Vellum": {
 		"Normal": { "price": 968000, "frequency": "daily", "requiredLevel": 125 },

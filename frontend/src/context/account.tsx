@@ -48,6 +48,24 @@ const bumpCharacter = (character: Record<string, any>): boolean => {
 
 			changed = true;
 		}
+
+		if (Object.entries(character.bossingRoutine).length > 0) {
+			const normalRanmaru = character.bossingRoutine["Normal Mori Ranmaru"];
+			const hardRanmaru = character.bossingRoutine["Hard Mori Ranmaru"];
+
+			if (normalRanmaru) {
+				character.bossingRoutine["Normal Ranmaru"] = copyObject(normalRanmaru);
+				// biome-ignore lint/performance/noDelete: <explanation>
+				delete character.bossingRoutine["Normal Mori Ranmaru"];
+				changed = true;
+			}
+			if (hardRanmaru) {
+				character.bossingRoutine["Hard Ranmaru"] = copyObject(hardRanmaru);
+				// biome-ignore lint/performance/noDelete: <explanation>
+				delete character.bossingRoutine["Hard Mori Ranmaru"];
+				changed = true;
+			}
+		}
 	}
 
 	return changed;
