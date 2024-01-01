@@ -325,109 +325,126 @@ export default function BossTable() {
 								</div>
 
 								<div className={styles.bossDifficulties}>
-									{difficulties.map(([difficulty]) => {
-										const difficultyBoss = `${difficulty} ${boss}`;
+									{Object.entries(
+										difficulties.reduce((obj, [difficulty, { frequency }]) => {
+											if (!obj[frequency]) {
+												Object.assign(obj, { [frequency]: [] });
+											}
+											obj[frequency].push(difficulty);
 
-										const backgroundColors = difficultyColors[difficulty];
-										const background = `linear-gradient(to bottom, ${backgroundColors[0]}, ${backgroundColors[1]})`;
+											return obj;
+										}, {} as Record<BossFrequency, BossDifficulties[]>),
+									).map(([frequency, difficultyArr]) => (
+										<div>
+											<span>{frequency.slice(0, 1).toUpperCase() + frequency.slice(1)}</span>
 
-										let border = "";
-										let color = "";
+											<div>
+												{difficultyArr.map(difficulty => {
+													const difficultyBoss = `${difficulty} ${boss}`;
 
-										if (difficulty === "Chaos") {
-											border = "2px solid #ddbb88";
-											color = "#ddccaa";
-										} else if (difficulty === "Extreme") {
-											border = "2px solid #ee3355";
-											color = "#ee4444";
-										}
+													const backgroundColors = difficultyColors[difficulty];
+													const background = `linear-gradient(to bottom, ${backgroundColors[0]}, ${backgroundColors[1]})`;
 
-										const runInfo = currentCharacter.bossingRoutine[difficultyBoss];
+													let border = "";
+													let color = "";
 
-										return (
-											<div key={difficulty}>
-												<button
-													type="button"
-													onClick={() => toggleBossClear(boss, difficulty)}
-													style={{
-														"--background": background,
-														color,
-														...(border
-															? { border }
-															: {
-																	padding: "calc(0.25rem + 2px) 0",
-															  }),
-													}}
-												>
-													{difficulty}
+													if (difficulty === "Chaos") {
+														border = "2px solid #ddbb88";
+														color = "#ddccaa";
+													} else if (difficulty === "Extreme") {
+														border = "2px solid #ee3355";
+														color = "#ee4444";
+													}
 
-													{!!runInfo?.partySize && <Check />}
-												</button>
+													const runInfo = currentCharacter.bossingRoutine[difficultyBoss];
 
-												<div>
-													<div>
-														<label htmlFor="party-size">Party</label>
+													return (
+														<div key={difficulty} className={styles.bossDificulty}>
+															<button
+																type="button"
+																onClick={() => toggleBossClear(boss, difficulty)}
+																style={{
+																	"--background": background,
+																	color,
+																	...(border
+																		? { border }
+																		: {
+																				padding: "calc(0.25rem + 2px) 2px",
+																		  }),
+																}}
+															>
+																{difficulty}
 
-														<Input
-															name="party-size"
-															type="number"
-															value={runInfo?.partySize || 0}
-															min={0}
-															max={6}
-															onChange={e => {
-																const updatedInfo = {
-																	partySize: Number(e.currentTarget.value),
-																};
-																e.currentTarget.value = updatedInfo.partySize.toString();
+																{!!runInfo?.partySize && <Check />}
+															</button>
 
-																if (!runInfo || updatedInfo.partySize === 0) {
-																	toggleBossClear(boss, difficulty, updatedInfo);
-																} else {
-																	updateRoutine({
-																		[difficultyBoss]: updatedInfo,
-																	});
-																}
-															}}
-														/>
-													</div>
+															<div>
+																<div>
+																	<label htmlFor="party-size">Party</label>
 
-													<div>
-														<label htmlFor="time">Time</label>
+																	<Input
+																		name="party-size"
+																		type="number"
+																		value={runInfo?.partySize || 0}
+																		min={0}
+																		max={6}
+																		onChange={e => {
+																			const updatedInfo = {
+																				partySize: Number(e.currentTarget.value),
+																			};
+																			e.currentTarget.value = updatedInfo.partySize.toString();
 
-														<Input
-															name="time"
-															value={runInfo?.timeTaken || 0}
-															onChange={e => {
-																// Remove banned characters
-																e.currentTarget.value = e.currentTarget.value.replace(/[^\dms]/g, "");
+																			if (!runInfo || updatedInfo.partySize === 0) {
+																				toggleBossClear(boss, difficulty, updatedInfo);
+																			} else {
+																				updateRoutine({
+																					[difficultyBoss]: updatedInfo,
+																				});
+																			}
+																		}}
+																	/>
+																</div>
 
-																const [time, unit] = e.currentTarget.value.split(/(m|s)/g);
-																const updatedInfo = {
-																	timeTaken: Number(time) * (unit === "m" ? 60 : 1),
-																};
+																<div>
+																	<label htmlFor="time">Time</label>
 
-																if (!runInfo) {
-																	toggleBossClear(boss, difficulty, updatedInfo);
-																} else {
-																	updateRoutine({
-																		[difficultyBoss]: updatedInfo,
-																	});
-																}
-															}}
-														/>
-													</div>
-												</div>
+																	<Input
+																		name="time"
+																		value={runInfo?.timeTaken || 0}
+																		onChange={e => {
+																			// Remove banned characters
+																			e.currentTarget.value = e.currentTarget.value.replace(/[^\dms]/g, "");
+
+																			const [time, unit] = e.currentTarget.value.split(/(m|s)/g);
+																			const updatedInfo = {
+																				timeTaken: Number(time) * (unit === "m" ? 60 : 1),
+																			};
+
+																			if (!runInfo) {
+																				toggleBossClear(boss, difficulty, updatedInfo);
+																			} else {
+																				updateRoutine({
+																					[difficultyBoss]: updatedInfo,
+																				});
+																			}
+																		}}
+																	/>
+																</div>
+															</div>
+														</div>
+													);
+												})}
 											</div>
-										);
-									})}
+										</div>
+									))}
 								</div>
 							</section>
 						))}
 					</div>
 					<p>
 						Note: <b>Party</b> is the number of party members in your run and <b>Time</b> is the time taken to
-						complete (shows seconds but you may write "m"). Monthly bosses take up 1 crystal limit but only
-						count 1/4th of their value.
+						complete (shows seconds but you may write "m" for minutes and add the remaining seconds). Monthly
+						bosses take up 1 crystal limit but only count 1/4th of their value.
 					</p>
 
 					<div className={styles.report}>
