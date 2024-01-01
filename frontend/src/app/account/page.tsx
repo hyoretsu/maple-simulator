@@ -65,6 +65,13 @@ export default function Account() {
 				{currentCharacter && <CharacterEdit character={currentCharacter} />}
 			</main>
 
+			<footer className={styles.footer}>
+				<span>
+					Note: currently there's no character deletion function, but you can simply rename them. Everything
+					in the site is auto-saved, so don't worry about that.
+				</span>
+			</footer>
+
 			{error && <p style={{ margin: "0 auto" }}>Error: {error.toLowerCase()}</p>}
 
 			{accountIdModalShown && (
@@ -93,7 +100,7 @@ export default function Account() {
 					</p>
 
 					<p>
-						In fact,I have no way of checking if what you put in is valid or not. (which is why I may
+						In fact, I have no way of checking if what you put in is valid or not. (which is why I may
 						eventually discard it in favor of simply using an UUID)
 					</p>
 				</Modal>

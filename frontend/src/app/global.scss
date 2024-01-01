@@ -6,12 +6,12 @@
 }
 
 body {
-    font-family: "Roboto Flex", sans-serif;
-    -webkit-font-smoothing: antialiased;
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
+    min-height: 100vh;
+    font-family: "Roboto Flex", sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 p {
