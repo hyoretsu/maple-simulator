@@ -136,8 +136,8 @@ importers:
         specifier: ^5.0.8
         version: 5.0.8
       '@hyoretsu/react-components':
-        specifier: ^1.7.2
-        version: 1.7.2(@babel/core@7.23.3)(react-dom@18.2.0)(sass@1.69.5)
+        specifier: ^1.7.4
+        version: 1.7.4(@babel/core@7.23.3)(react-dom@18.2.0)(sass@1.69.5)
       '@hyoretsu/react-hooks':
         specifier: ^1.2.5
         version: 1.2.5
@@ -2484,8 +2484,8 @@ packages:
     resolution: {integrity: sha512-fI9bP8KoNloNhIky6vji/I52xuF9V43Pbdf0lQYIsDMjYFiSQ0RRNyBUFvnuws1Pv6DHy9rXZTdp8GEAqhq2eA==}
     dev: false
 
-  /@hyoretsu/react-components@1.7.2(@babel/core@7.23.3)(react-dom@18.2.0)(sass@1.69.5):
-    resolution: {integrity: sha512-Jm+pri/img2uQ1cTtvSkAAtGsUi78RNTfoqOhEiBrZKp4d0SZ7Q1DthtbpdX5RpDJbLS/KyGiOYx7QHwc1C3jw==}
+  /@hyoretsu/react-components@1.7.4(@babel/core@7.23.3)(react-dom@18.2.0)(sass@1.69.5):
+    resolution: {integrity: sha512-Psr9CktjWqq7O6ANTfdqMd8RZtujDvbfAoj631+sl6pPQGt8fkuNDKAeoaPHJY85fdN7psvJ4Ij0BYFqwF5h7A==}
     dependencies:
       '@hyoretsu/react-hooks': 1.2.5
       '@hyoretsu/utils': 1.8.0
