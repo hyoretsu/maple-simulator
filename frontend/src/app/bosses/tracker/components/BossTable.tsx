@@ -352,7 +352,11 @@ export default function BossTable() {
 													style={{
 														"--background": background,
 														color,
-														border,
+														...(border
+															? { border }
+															: {
+																	padding: "calc(0.25rem + 2px) 0",
+															  }),
 													}}
 												>
 													{difficulty}

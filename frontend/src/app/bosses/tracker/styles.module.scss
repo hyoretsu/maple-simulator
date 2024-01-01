@@ -64,10 +64,11 @@
         button {
             position: relative;
 
+            width: 5.5rem;
             color: #ffffff;
             background: var(--background);
 
-            padding: 0.25rem 1rem;
+            padding: 0.25rem 0;
             border-radius: 0.5rem;
 
             svg {
