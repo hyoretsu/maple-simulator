@@ -370,7 +370,6 @@ export default function BossTable() {
 													}
 
 													const runInfo = currentCharacter.bossingRoutine[difficultyBoss];
-													console.log(currentCharacter.bossingRoutine);
 
 													return (
 														<div key={difficulty} className={styles.bossDificulty}>

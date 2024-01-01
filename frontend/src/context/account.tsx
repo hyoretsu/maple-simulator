@@ -102,6 +102,7 @@ export function AccountProvider({ children }: PropsWithChildren) {
 					characterIds.push(character.id);
 				}
 
+				parsedCharacters = characterIds;
 				localStorage.setItem("@maple-simulator:characters", JSON.stringify(characterIds));
 			}
 		}
@@ -132,9 +133,7 @@ export function AccountProvider({ children }: PropsWithChildren) {
 				return arr;
 			}, [] as Character[]);
 
-			Object.assign(storedAccount, {
-				characters,
-			});
+			Object.assign(storedAccount, { characters });
 
 			const storedCurrentCharacterId = localStorage.getItem("@maple-simulator:current_character");
 			if (storedCurrentCharacterId) {

@@ -4,7 +4,8 @@
 	"scripts": {
 		"build": "next build",
 		"dev": "next dev",
-		"export": "next export"
+		"export": "next export",
+		"start": "next build && next start"
 	},
 	"dependencies": {
 		"@fontsource/roboto-flex": "^5.0.8",
