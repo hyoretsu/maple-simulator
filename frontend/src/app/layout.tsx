@@ -3,8 +3,8 @@ import { AccountProvider } from "@context/account";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { PropsWithChildren } from "react";
+import "./_global.scss";
 import "./fonts";
-import "./global.scss";
 
 const url = "https://maple-simulator.vercel.app";
 
