@@ -4,7 +4,7 @@ import { useCharacters } from "@context/account";
 import bosses from "@data/bosses.json";
 import { Input, Link } from "@hyoretsu/react-components";
 import copyObject from "@utils/copyObject";
-import { BossDifficulties, BossFrequency, Bosses } from "maple-simulator";
+import { BossDifficulties, BossFrequency, BossRunInfo, Bosses } from "maple-simulator";
 import Image from "next/image";
 import { useCallback, useMemo } from "react";
 import styles from "../styles.module.scss";
@@ -217,7 +217,7 @@ export default function BossTable() {
 	}, [currentCharacter, report]);
 
 	const toggleBossClear = useCallback(
-		(boss: Bosses, difficulty: BossDifficulties) => {
+		(boss: Bosses, difficulty: BossDifficulties, runInfo?: Partial<BossRunInfo>) => {
 			const difficultyBoss = `${difficulty} ${boss}`;
 
 			if (
@@ -237,6 +237,7 @@ export default function BossTable() {
 					: {
 							partySize: 1,
 							timeTaken: 0,
+							...runInfo,
 					  },
 			});
 		},
@@ -367,16 +368,21 @@ export default function BossTable() {
 															name="party-size"
 															type="number"
 															value={runInfo?.partySize || 0}
-															min={1}
+															min={0}
 															max={6}
 															onChange={e => {
-																if (!runInfo) return;
+																const updatedInfo = {
+																	partySize: Number(e.currentTarget.value),
+																};
+																e.currentTarget.value = updatedInfo.partySize.toString();
 
-																updateRoutine({
-																	[difficultyBoss]: {
-																		partySize: Number(e.currentTarget.value),
-																	},
-																});
+																if (!runInfo || updatedInfo.partySize === 0) {
+																	toggleBossClear(boss, difficulty, updatedInfo);
+																} else {
+																	updateRoutine({
+																		[difficultyBoss]: updatedInfo,
+																	});
+																}
 															}}
 														/>
 													</div>
@@ -388,17 +394,21 @@ export default function BossTable() {
 															name="time"
 															value={runInfo?.timeTaken || 0}
 															onChange={e => {
-																if (!runInfo) return;
-
 																// Remove banned characters
 																e.currentTarget.value = e.currentTarget.value.replace(/[^\dms]/g, "");
 
 																const [time, unit] = e.currentTarget.value.split(/(m|s)/g);
-																updateRoutine({
-																	[difficultyBoss]: {
-																		timeTaken: Number(time) * (unit === "m" ? 60 : 1),
-																	},
-																});
+																const updatedInfo = {
+																	timeTaken: Number(time) * (unit === "m" ? 60 : 1),
+																};
+
+																if (!runInfo) {
+																	toggleBossClear(boss, difficulty, updatedInfo);
+																} else {
+																	updateRoutine({
+																		[difficultyBoss]: updatedInfo,
+																	});
+																}
 															}}
 														/>
 													</div>

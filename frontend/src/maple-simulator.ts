@@ -6,15 +6,14 @@ export interface Account {
 }
 export type BossDifficulties = "Easy" | "Normal" | "Hard" | "Chaos" | "Extreme";
 export type BossFrequency = "daily" | "weekly" | "monthly";
+export interface BossRunInfo {
+	partySize: number;
+	/** In seconds. */
+	timeTaken: number;
+}
 export type Bosses = keyof typeof bosses;
 export interface BossingRoutine {
-	[boss: string]:
-		| {
-				partySize: number;
-				/** In seconds. */
-				timeTaken: number;
-		  }
-		| undefined;
+	[boss: string]: BossRunInfo | undefined;
 }
 export interface Character {
 	id: string;
