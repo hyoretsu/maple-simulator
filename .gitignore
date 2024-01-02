@@ -10,8 +10,12 @@
 **/.env
 **/.env*.local
 
+# Next.js
+.next
+
 # Test files
 **/coverage
 
-# Typescript
+# TypeScript
+next-env.d.ts
 *.tsbuildinfo
