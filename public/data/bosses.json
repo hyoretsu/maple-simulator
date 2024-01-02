@@ -31,15 +31,6 @@
 		"Normal": { "price": 52812500, "frequency": "weekly", "requiredLevel": 255 },
 		"Hard": { "price": 96800000, "frequency": "weekly", "requiredLevel": 255 }
 	},
-	"Hilla": {
-		"Normal": { "price": 800000, "frequency": "daily", "requiredLevel": 120 },
-		"Hard": { "price": 11250000, "frequency": "weekly", "requiredLevel": 170 }
-	},
-	"Horntail": {
-		"Easy": { "price": 882000, "frequency": "daily", "requiredLevel": 130 },
-		"Normal": { "price": 1012500, "frequency": "daily", "requiredLevel": 130 },
-		"Chaos": { "price": 1352000, "frequency": "daily", "requiredLevel": 135 }
-	},
 	"Gigatoad": {
 		"Normal": { "price": 882000, "frequency": "daily", "requiredLevel": 0 },
 		"Hard": { "price": 1153000, "frequency": "daily", "requiredLevel": 0 }
@@ -51,6 +42,15 @@
 	"Guardian Angel Slime": {
 		"Normal": { "price": 34322000, "frequency": "weekly", "requiredLevel": 210 },
 		"Chaos": { "price": 90312500, "frequency": "weekly", "requiredLevel": 210 }
+	},
+	"Hilla": {
+		"Normal": { "price": 800000, "frequency": "daily", "requiredLevel": 120 },
+		"Hard": { "price": 11250000, "frequency": "weekly", "requiredLevel": 170 }
+	},
+	"Horntail": {
+		"Easy": { "price": 882000, "frequency": "daily", "requiredLevel": 130 },
+		"Normal": { "price": 1012500, "frequency": "daily", "requiredLevel": 130 },
+		"Chaos": { "price": 1352000, "frequency": "daily", "requiredLevel": 135 }
 	},
 	"Kaling": {
 		"Easy": { "price": 165000000, "frequency": "weekly", "requiredLevel": 275 },
