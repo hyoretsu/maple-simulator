@@ -1,10 +1,20 @@
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
-module.exports = phase => {
+module.exports = async (phase, { defaultConfig }) => {
 	/** @type {import('next').NextConfig} */
 	const baseConf = {
 		eslint: {
 			ignoreDuringBuilds: true,
+		},
+		experimental: {
+			turbo: {
+				rules: {
+					"*.svg": {
+						loaders: ["@svgr/webpack"],
+						as: "*.js",
+					},
+				},
+			},
 		},
 		i18n: {
 			locales: ["en", "pt"],
@@ -24,8 +34,8 @@ module.exports = phase => {
 		},
 		webpack: (config, options) => {
 			config.module.rules.push({
-				test: /\.svg$/,
-				use: [{ loader: "@svgr/webpack" }],
+				test: /\.svg$/i,
+				use: ["@svgr/webpack"],
 			});
 
 			return config;
