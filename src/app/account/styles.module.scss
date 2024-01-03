@@ -43,9 +43,19 @@
 .characterEdit {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
+    column-gap: 1.5rem;
 
     margin-top: 1rem;
+
+    @media (max-width: 480px) {
+        fieldset {
+            width: auto;
+
+            > * {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .modal {

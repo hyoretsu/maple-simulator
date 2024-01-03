@@ -97,7 +97,7 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 									});
 								}}
 								style={{
-									width: `${String(level).split("").length}ch`,
+									width: "2ch",
 								}}
 							/>
 						</div>
@@ -125,7 +125,8 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 											});
 										}}
 										style={{
-											width: `${String(exp).split("").length}ch`,
+											textAlign: "center",
+											width: "4ch",
 										}}
 									/>
 									<span>/{info.cost.symbols[level]}</span>
