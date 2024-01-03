@@ -88,6 +88,9 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 								max={maxLevels[type]}
 								onChange={e => {
 									const newLevel = Number(e.currentTarget.value);
+									if (newLevel === level) {
+										return;
+									}
 
 									const safeReduceLevel = newLevel < level && exp < symbolInfo[type].cost.symbols[newLevel];
 
