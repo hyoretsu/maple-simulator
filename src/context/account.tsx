@@ -55,13 +55,13 @@ const bumpCharacter = (character: Record<string, any>): boolean => {
 	let changed = false;
 
 	for (const [prop, value] of Object.entries(defaultCharacter)) {
-		if (!character[prop]) {
-			character[prop] = value;
-
+		if (prop === "bossingRoutine" && !character.bossingRoutine) {
+			character.bossingRoutine = copyObject(value);
 			changed = true;
 		} else if (prop === "symbols") {
-			if (!character[prop]) {
+			if (!character.symbols) {
 				character.symbols = {};
+				changed = true;
 			}
 
 			if (character.level > 200) {
@@ -73,8 +73,7 @@ const bumpCharacter = (character: Record<string, any>): boolean => {
 
 				for (const [index, unlockLevel] of arcaneSymbolLevels.entries()) {
 					if (character.level >= unlockLevel && !character.symbols.Arcane[index]) {
-						character.symbols.Arcane[index] = defaultCharacter.symbols.Arcane;
-
+						character.symbols.Arcane[index] = copyObject(defaultCharacter.symbols.Arcane);
 						changed = true;
 					}
 				}
@@ -89,12 +88,14 @@ const bumpCharacter = (character: Record<string, any>): boolean => {
 
 				for (const [index, unlockLevel] of sacredSymbolLevels.entries()) {
 					if (character.level >= unlockLevel && !character.symbols.Sacred[index]) {
-						character.symbols.Sacred[index] = defaultCharacter.symbols.Sacred;
-
+						character.symbols.Sacred[index] = copyObject(defaultCharacter.symbols.Sacred);
 						changed = true;
 					}
 				}
 			}
+		} else if (!character[prop]) {
+			character[prop] = value;
+			changed = true;
 		}
 
 		if (Object.entries(character.bossingRoutine).length > 0) {
