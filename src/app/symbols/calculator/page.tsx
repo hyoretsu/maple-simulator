@@ -7,16 +7,22 @@ import arcaneSymbols from "@data/equips/arcane_force.json";
 import sacredSymbols from "@data/equips/sacred_force.json";
 import { SymbolType } from "maple-simulator";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import SymbolManager from "./components/SymbolManager";
 import SymbolReport from "./components/SymbolReport";
 import SymbolSelector from "./components/SymbolSelector";
 import styles from "./styles.module.scss";
 
-export default function BossesTracker() {
+export default function SymbolCalculator() {
 	const { currentCharacter } = useCharacters();
 
 	const [symbolType, setSymbolType] = useState<SymbolType>("Arcane");
+
+	useEffect(() => {
+		if (symbolType === "Sacred" && currentCharacter!.level < 260) {
+			setSymbolType("Arcane");
+		}
+	}, [currentCharacter, symbolType]);
 
 	const symbols = useMemo(() => {
 		switch (symbolType) {
