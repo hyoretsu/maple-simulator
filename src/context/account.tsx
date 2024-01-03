@@ -204,6 +204,18 @@ export function AccountProvider({ children }: PropsWithChildren) {
 				[] as Character[],
 			);
 
+			// Sort characters list alphabetically
+			parsedCharacters.sort((idA, idB) => {
+				const characterA = characters.find(character => character.id === idA);
+				const characterB = characters.find(character => character.id === idB);
+
+				const names = [characterA!.nickname, characterB!.nickname];
+				names.sort();
+
+				return names[0] === characterA!.nickname ? -1 : 1;
+			});
+			localStorage.setItem("@maple-simulator:characters", JSON.stringify(parsedCharacters));
+
 			Object.assign(storedAccount, { characters });
 
 			const storedCurrentCharacterId = localStorage.getItem("@maple-simulator:current_character");
