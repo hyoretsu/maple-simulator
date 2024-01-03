@@ -11,7 +11,7 @@ interface SymbolManagerProps {
 	type?: SymbolType;
 }
 
-const maxLevels = {
+export const maxSymbolLevels = {
 	Arcane: 20,
 	Sacred: 11,
 };
@@ -40,7 +40,7 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 				}
 
 				newSymbols[index].level = level;
-				if (level === maxLevels[type]) {
+				if (level === maxSymbolLevels[type]) {
 					exp = 0;
 				}
 			}
@@ -85,7 +85,7 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 								type="number"
 								value={level}
 								min={1}
-								max={maxLevels[type]}
+								max={maxSymbolLevels[type]}
 								onChange={e => {
 									const newLevel = Number(e.currentTarget.value);
 									if (newLevel === level) {

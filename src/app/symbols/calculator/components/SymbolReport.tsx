@@ -3,6 +3,7 @@ import symbolInfo from "@data/symbols.json";
 import { Equipment, SymbolType } from "maple-simulator";
 import { cloneElement, useMemo } from "react";
 import styles from "../styles.module.scss";
+import { maxSymbolLevels } from "./SymbolManager";
 
 interface SymbolReportProps {
 	symbols: Equipment[];
@@ -49,117 +50,129 @@ export default function SymbolReport({ symbols, type = "" as SymbolType }: Symbo
 
 	const { mesos: mesoCost, symbols: symbolCost } = useMemo(() => symbolInfo[type].cost, [type]);
 
+	const fullyMaxed =
+		currentCharacter.symbols[type].filter(symbol => symbol.level === maxSymbolLevels[type]).length ===
+		symbols.length;
+
 	return (
 		<section className={styles.symbolReport}>
-			{symbols.reduce(
-				(element, { id, name }, index) => {
-					const {
-						props: { children: [symbolDiv, timeDiv, expDiv, costDiv] },
-					} = element;
-					const regionName = name.split(": ")[1];
-					if (currentCharacter.level < symbolInfo[type].reqLevel[regionName]) {
-						return element;
-					}
+			{fullyMaxed ? (
+				<p>Congratulations, you've maxed all {type.toLowerCase()} symbols!</p>
+			) : (
+				symbols.reduce(
+					(element, { id, name }, index) => {
+						// If all symbols are maxed
 
-					const currentSymbol = currentCharacter.symbols[type][index];
-
-					const symbolCostEntries = Object.entries(symbolCost);
-					const nextLevelIndex = symbolCostEntries.findIndex(
-						([level]) => Number(level) === currentSymbol.level,
-					);
-
-					let cost: number | undefined;
-					let exp: number | undefined;
-					let days = 0;
-
-					if (nextLevelIndex !== -1) {
-						cost = Object.entries(mesoCost[regionName])
-							.slice(nextLevelIndex)
-							.reduce((sum, [_, price]) => sum + price, 0);
-						exp =
-							symbolCostEntries.slice(nextLevelIndex).reduce((sum, [_, exp]) => sum + exp, 0) -
-							currentSymbol.exp;
-
-						let remainingExp = exp;
-						let dailyGains = dailies[regionName];
-						const weeklyGains = weeklies[regionName] || 0;
-						if (regionName === "Vanishing Journey" && currentCharacter.level >= 205) {
-							dailyGains += 10;
+						const {
+							props: { children: [symbolDiv, timeDiv, expDiv, costDiv] },
+						} = element;
+						const regionName = name.split(": ")[1];
+						if (currentCharacter.level < symbolInfo[type].reqLevel[regionName]) {
+							return element;
 						}
-						if (regionName === "Chu Chu Island" && currentCharacter.level >= 215) {
-							dailyGains += 10;
-						}
-						const currentDate = new Date();
-						const incrementDate = (date: Date) => {
-							date.setUTCDate(date.getUTCDate() + 1);
-						};
-						incrementDate(currentDate);
 
-						while (true) {
-							remainingExp -= dailyGains;
-							// Sunday - weekly reset
-							if (currentDate.getUTCDay() === 1) {
-								remainingExp -= weeklyGains;
+						const currentSymbol = currentCharacter.symbols[type][index];
+
+						const symbolCostEntries = Object.entries(symbolCost);
+						const nextLevelIndex = symbolCostEntries.findIndex(
+							([level]) => Number(level) === currentSymbol.level,
+						);
+
+						let cost: number | undefined;
+						let exp: number | undefined;
+						let days = 0;
+
+						if (nextLevelIndex !== -1) {
+							cost = Object.entries(mesoCost[regionName])
+								.slice(nextLevelIndex)
+								.reduce((sum, [_, price]) => sum + price, 0);
+							exp =
+								symbolCostEntries.slice(nextLevelIndex).reduce((sum, [_, exp]) => sum + exp, 0) -
+								currentSymbol.exp;
+
+							let remainingExp = exp;
+							let dailyGains = dailies[regionName];
+							const weeklyGains = weeklies[regionName] || 0;
+							if (regionName === "Vanishing Journey" && currentCharacter.level >= 205) {
+								dailyGains += 10;
 							}
-
-							days += 1;
+							if (regionName === "Chu Chu Island" && currentCharacter.level >= 215) {
+								dailyGains += 10;
+							}
+							const currentDate = new Date();
+							const incrementDate = (date: Date) => {
+								date.setUTCDate(date.getUTCDate() + 1);
+							};
 							incrementDate(currentDate);
 
-							if (remainingExp <= 0) {
-								break;
+							while (true) {
+								remainingExp -= dailyGains;
+								// Sunday - weekly reset
+								if (currentDate.getUTCDay() === 1) {
+									remainingExp -= weeklyGains;
+								}
+
+								days += 1;
+								incrementDate(currentDate);
+
+								if (remainingExp <= 0) {
+									break;
+								}
 							}
 						}
-					}
 
-					return (
-						<>
-							{cloneElement(symbolDiv, {
-								children: [
-									...(Array.isArray(symbolDiv.props.children)
-										? symbolDiv.props.children
-										: [symbolDiv.props.children]),
-									<span key={id}>{name.split(": ")[1]}</span>,
-								],
-							})}
-							{cloneElement(timeDiv, {
-								children: [
-									...(Array.isArray(timeDiv.props.children)
-										? timeDiv.props.children
-										: [timeDiv.props.children]),
-									<span key={id}>{days ? `${days}` : "-"}</span>,
-								],
-							})}
-							{cloneElement(expDiv, {
-								children: [
-									...(Array.isArray(expDiv.props.children) ? expDiv.props.children : [expDiv.props.children]),
-									<span key={id}>{exp ? formatNumber(exp) : "-"}</span>,
-								],
-							})}
-							{cloneElement(costDiv, {
-								children: [
-									...(Array.isArray(costDiv.props.children)
-										? costDiv.props.children
-										: [costDiv.props.children]),
-									<span key={id}>{cost ? formatNumber(cost) : "-"}</span>,
-								],
-							})}
-						</>
-					);
-				},
-				<>
-					<div>
-						<span key="title">Area</span>
-					</div>
-					<div>
-						<span key="time">Time to max</span>
-					</div>
-					<div>
-						<span key="exp">Remaining EXP</span>
-					</div>
-					<div>
-						<span key="cost">Cost</span>
-					</div>
-				</>,
+						return (
+							<>
+								{cloneElement(symbolDiv, {
+									children: [
+										...(Array.isArray(symbolDiv.props.children)
+											? symbolDiv.props.children
+											: [symbolDiv.props.children]),
+										<span key={id}>{name.split(": ")[1]}</span>,
+									],
+								})}
+								{cloneElement(timeDiv, {
+									children: [
+										...(Array.isArray(timeDiv.props.children)
+											? timeDiv.props.children
+											: [timeDiv.props.children]),
+										<span key={id}>{days ? `${days}` : "-"}</span>,
+									],
+								})}
+								{cloneElement(expDiv, {
+									children: [
+										...(Array.isArray(expDiv.props.children)
+											? expDiv.props.children
+											: [expDiv.props.children]),
+										<span key={id}>{exp ? formatNumber(exp) : "-"}</span>,
+									],
+								})}
+								{cloneElement(costDiv, {
+									children: [
+										...(Array.isArray(costDiv.props.children)
+											? costDiv.props.children
+											: [costDiv.props.children]),
+										<span key={id}>{cost ? formatNumber(cost) : "-"}</span>,
+									],
+								})}
+							</>
+						);
+					},
+					<>
+						<div>
+							<span key="title">Area</span>
+						</div>
+						<div>
+							<span key="time">Time to max</span>
+						</div>
+						<div>
+							<span key="exp">Remaining EXP</span>
+						</div>
+						<div>
+							<span key="cost">Cost</span>
+						</div>
+					</>,
+				)
 			)}
 		</section>
 	);
