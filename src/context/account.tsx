@@ -1,6 +1,6 @@
 "use client";
 import copyObject from "@utils/copyObject";
-import { Account, BossingRoutine, Character, SymbolInfo } from "maple-simulator";
+import { Account, BossingRoutine, Character } from "maple-simulator";
 import {
 	PropsWithChildren,
 	createContext,
@@ -57,16 +57,17 @@ const bumpCharacter = (character: Character): boolean => {
 			changed = true;
 		} else if (prop === "symbols") {
 			if (!character.symbols) {
-				character.symbols = {} as SymbolInfo;
+				character.symbols = copyObject(defaultCharacter.symbols);
 				changed = true;
+			} else {
+				if (!character.symbols.Sacred) {
+					character.symbols.Sacred = copyObject(defaultCharacter.symbols.Sacred);
+					changed = true;
+				}
 			}
 
 			if (character.level >= 200) {
 				const arcaneSymbolLevels = [200, 210, 220, 225, 230, 235];
-
-				if (!character.symbols.Arcane) {
-					character.symbols.Arcane = [];
-				}
 
 				for (const [index, unlockLevel] of arcaneSymbolLevels.entries()) {
 					if (!character.symbols.Arcane[index] && character.level >= unlockLevel) {
@@ -91,10 +92,6 @@ const bumpCharacter = (character: Character): boolean => {
 
 			if (character.level >= 260) {
 				const sacredSymbolLevels = [260, 265, 270, 275, 280, 285];
-
-				if (!character.symbols.Sacred) {
-					character.symbols.Sacred = [];
-				}
 
 				for (const [index, unlockLevel] of sacredSymbolLevels.entries()) {
 					if (!character.symbols.Sacred[index] && character.level >= unlockLevel) {
