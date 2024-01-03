@@ -29,7 +29,7 @@ export default function Account() {
 					<Input
 						name="account-id"
 						value={account.id}
-						onChange={e => updateAccount({ id: e.target.value.toUpperCase() })}
+						onChange={e => updateAccount({ id: e.currentTarget.value.toUpperCase() })}
 					/>
 				</fieldset>
 
@@ -39,7 +39,7 @@ export default function Account() {
 						className={styles.characterSelector}
 						value={currentCharacter?.id}
 						onChange={e => {
-							if (e.target.value === "create") {
+							if (e.currentTarget.value === "create") {
 								try {
 									createCharacter();
 									setCurrentCharacterIndex(-1);
@@ -49,7 +49,9 @@ export default function Account() {
 									}
 								}
 							} else {
-								setCurrentCharacterIndex(account.characters.findIndex(({ id }) => id === e.target.value));
+								setCurrentCharacterIndex(
+									account.characters.findIndex(({ id }) => id === e.currentTarget.value),
+								);
 							}
 						}}
 					>
@@ -69,7 +71,7 @@ export default function Account() {
 			<Footer>
 				<span>
 					Note: currently there's no character deletion function, but you can simply rename them. Everything
-					in the site is auto-saved, so don't worry about that.
+					in the site is auto-saved on return/done, so don't worry about that.
 				</span>
 			</Footer>
 

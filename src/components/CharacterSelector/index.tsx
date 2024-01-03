@@ -13,7 +13,9 @@ export default function CharacterSelector() {
 			className={styles.characterSelector}
 			value={currentCharacter.nickname}
 			onChange={e => {
-				setCurrentCharacterIndex(characters.findIndex(character => character.nickname === e.target.value));
+				setCurrentCharacterIndex(
+					characters.findIndex(character => character.nickname === e.currentTarget.value),
+				);
 			}}
 		>
 			{characters.map(({ nickname }) => (

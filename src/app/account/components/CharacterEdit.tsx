@@ -18,7 +18,7 @@ export default function CharacterEdit({ character: { id, level, nickname, world 
 				<Input
 					name="nickname"
 					value={nickname}
-					onChange={e => updateCharacter(id, { nickname: e.target.value })}
+					onChange={e => updateCharacter(id, { nickname: e.currentTarget.value })}
 				/>
 			</fieldset>
 
@@ -27,7 +27,7 @@ export default function CharacterEdit({ character: { id, level, nickname, world 
 				<select
 					name="world"
 					value={world}
-					onChange={e => updateCharacter(id, { world: e.target.value as World })}
+					onChange={e => updateCharacter(id, { world: e.currentTarget.value as World })}
 				>
 					{worlds.map(worldName => (
 						<option key={worldName} value={worldName}>
@@ -45,7 +45,7 @@ export default function CharacterEdit({ character: { id, level, nickname, world 
 					value={level}
 					min={1}
 					max={300}
-					onChange={e => updateCharacter(id, { level: Number(e.target.value) })}
+					onChange={e => updateCharacter(id, { level: Number(e.currentTarget.value) })}
 				/>
 			</fieldset>
 		</div>
