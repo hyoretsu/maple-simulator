@@ -52,7 +52,7 @@ export default function SymbolReport({ symbols, type = "" as SymbolType }: Symbo
 	return (
 		<section className={styles.symbolReport}>
 			{symbols.reduce(
-				(element, { name }, index) => {
+				(element, { id, name }, index) => {
 					const {
 						props: { children: [symbolDiv, timeDiv, expDiv, costDiv] },
 					} = element;
@@ -118,7 +118,7 @@ export default function SymbolReport({ symbols, type = "" as SymbolType }: Symbo
 									...(Array.isArray(symbolDiv.props.children)
 										? symbolDiv.props.children
 										: [symbolDiv.props.children]),
-									<span>{name.split(": ")[1]}</span>,
+									<span key={id}>{name.split(": ")[1]}</span>,
 								],
 							})}
 							{cloneElement(timeDiv, {
@@ -126,13 +126,13 @@ export default function SymbolReport({ symbols, type = "" as SymbolType }: Symbo
 									...(Array.isArray(timeDiv.props.children)
 										? timeDiv.props.children
 										: [timeDiv.props.children]),
-									<span>{days ? `${days}` : "-"}</span>,
+									<span key={id}>{days ? `${days}` : "-"}</span>,
 								],
 							})}
 							{cloneElement(expDiv, {
 								children: [
 									...(Array.isArray(expDiv.props.children) ? expDiv.props.children : [expDiv.props.children]),
-									<span>{exp ? formatNumber(exp) : "-"}</span>,
+									<span key={id}>{exp ? formatNumber(exp) : "-"}</span>,
 								],
 							})}
 							{cloneElement(costDiv, {
@@ -140,7 +140,7 @@ export default function SymbolReport({ symbols, type = "" as SymbolType }: Symbo
 									...(Array.isArray(costDiv.props.children)
 										? costDiv.props.children
 										: [costDiv.props.children]),
-									<span>{cost ? formatNumber(cost) : "-"}</span>,
+									<span key={id}>{cost ? formatNumber(cost) : "-"}</span>,
 								],
 							})}
 						</>
@@ -148,54 +148,19 @@ export default function SymbolReport({ symbols, type = "" as SymbolType }: Symbo
 				},
 				<>
 					<div>
-						<span>Area</span>
+						<span key="title">Area</span>
 					</div>
 					<div>
-						<span>Time to max</span>
+						<span key="time">Time to max</span>
 					</div>
 					<div>
-						<span>Remaining EXP</span>
+						<span key="exp">Remaining EXP</span>
 					</div>
 					<div>
-						<span>Cost</span>
+						<span key="cost">Cost</span>
 					</div>
 				</>,
 			)}
-
-			{/* {symbols.map(({ name }, index) => {
-				const regionName = name.split(": ")[1];
-				if (currentCharacter.level < symbolInfo[type].reqLevel[regionName]) {
-					return;
-				}
-
-				const currentSymbol = currentCharacter.symbols[type][index];
-
-				const symbolCostEntries = Object.entries(symbolCost);
-				const nextLevelIndex = symbolCostEntries.findIndex(
-					([level]) => Number(level) === currentSymbol.level,
-				);
-
-				let cost: number | undefined;
-				let exp: number | undefined;
-
-				if (nextLevelIndex !== -1) {
-					cost = Object.entries(mesoCost[regionName])
-						.slice(nextLevelIndex)
-						.reduce((sum, [_, price]) => sum + price, 0);
-					exp =
-						symbolCostEntries.slice(nextLevelIndex).reduce((sum, [_, exp]) => sum + exp, 0) -
-						currentSymbol.exp;
-				}
-
-				return (
-					<div>
-						<span>{name}</span>
-						<span>Time</span>
-						<span>{exp && formatNumber(exp)}</span>
-						<span>{cost && formatNumber(cost)}</span>
-					</div>
-				);
-			})} */}
 		</section>
 	);
 }
