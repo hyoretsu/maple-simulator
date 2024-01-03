@@ -128,6 +128,7 @@ export function AccountProvider({ children }: PropsWithChildren) {
 		const character = account.characters.at(currentCharacterIndex);
 
 		if (character) {
+			bumpCharacter(character);
 			localStorage.setItem("@maple-simulator:current_character", character.id);
 		}
 
