@@ -36,6 +36,18 @@ export const defaultCharacter: Omit<Character, "id"> = {
 	bossingRoutine: {},
 	level: 1,
 	nickname: "Default",
+	symbols: {
+		Arcane: {
+			// @ts-ignore
+			level: 1,
+			exp: 1,
+		},
+		Sacred: {
+			// @ts-ignore
+			level: 1,
+			exp: 1,
+		},
+	},
 	world: "Kronos",
 };
 
@@ -47,6 +59,42 @@ const bumpCharacter = (character: Record<string, any>): boolean => {
 			character[prop] = value;
 
 			changed = true;
+		} else if (prop === "symbols") {
+			if (!character[prop]) {
+				character.symbols = {};
+			}
+
+			if (character.level > 200) {
+				const arcaneSymbolLevels = [200, 210, 220, 225, 230, 235];
+
+				if (!character.symbols.Arcane) {
+					character.symbols.Arcane = [];
+				}
+
+				for (const [index, unlockLevel] of arcaneSymbolLevels.entries()) {
+					if (character.level >= unlockLevel && !character.symbols.Arcane[index]) {
+						character.symbols.Arcane[index] = defaultCharacter.symbols.Arcane;
+
+						changed = true;
+					}
+				}
+			}
+
+			if (character.level > 260) {
+				const sacredSymbolLevels = [260, 265, 270, 275, 280, 285];
+
+				if (!character.symbols.Sacred) {
+					character.symbols.Sacred = [];
+				}
+
+				for (const [index, unlockLevel] of sacredSymbolLevels.entries()) {
+					if (character.level >= unlockLevel && !character.symbols.Sacred[index]) {
+						character.symbols.Sacred[index] = defaultCharacter.symbols.Sacred;
+
+						changed = true;
+					}
+				}
+			}
 		}
 
 		if (Object.entries(character.bossingRoutine).length > 0) {
@@ -91,7 +139,7 @@ export function AccountProvider({ children }: PropsWithChildren) {
 		if (storedCharacters) {
 			parsedCharacters = JSON.parse(storedCharacters);
 
-			// Migration logic
+			// Old character logic migration
 			if (typeof parsedCharacters[0] !== "string") {
 				const characterIds: string[] = [];
 

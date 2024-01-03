@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 
 const pages = [
 	{ name: "Boss Income Tracker", route: "/bosses/tracker" },
+	{ name: "Symbol Calculator", route: "/symbols/calculator" },
 	{ name: "Account", route: "/account" },
 ];
 

@@ -1,0 +1,93 @@
+[
+	{
+		"id": 1712000,
+		"name": "Arcane Symbol",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1712001,
+		"name": "Arcane Symbol: Vanishing Journey",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1712002,
+		"name": "Arcane Symbol: Chu Chu Island",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1712003,
+		"name": "Arcane Symbol: Lachelein",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1712004,
+		"name": "Arcane Symbol: Arcana",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1712005,
+		"name": "Arcane Symbol: Morass",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1712006,
+		"name": "Arcane Symbol: Esfera",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	}
+]

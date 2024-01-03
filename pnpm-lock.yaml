@@ -9,8 +9,8 @@ dependencies:
     specifier: ^5.0.8
     version: 5.0.8
   '@hyoretsu/react-components':
-    specifier: ^1.7.4
-    version: 1.7.4(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6)
+    specifier: ^1.7.5
+    version: 1.7.5(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6)
   '@hyoretsu/react-hooks':
     specifier: ^1.2.5
     version: 1.2.5
@@ -23,6 +23,9 @@ dependencies:
   '@vercel/speed-insights':
     specifier: ^1.0.2
     version: 1.0.2
+  date-fns:
+    specifier: ^3.0.6
+    version: 3.0.6
   next:
     specifier: ^14.0.4
     version: 14.0.4(@babel/core@7.23.7)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.6)
@@ -53,7 +56,7 @@ dependencies:
 
 devDependencies:
   '@biomejs/biome':
-    specifier: ^1.3.3
+    specifier: ^1.4.1
     version: 1.4.1
   '@next/env':
     specifier: ^14.0.4
@@ -1438,8 +1441,8 @@ packages:
     resolution: {integrity: sha512-fI9bP8KoNloNhIky6vji/I52xuF9V43Pbdf0lQYIsDMjYFiSQ0RRNyBUFvnuws1Pv6DHy9rXZTdp8GEAqhq2eA==}
     dev: false
 
-  /@hyoretsu/react-components@1.7.4(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6):
-    resolution: {integrity: sha512-Psr9CktjWqq7O6ANTfdqMd8RZtujDvbfAoj631+sl6pPQGt8fkuNDKAeoaPHJY85fdN7psvJ4Ij0BYFqwF5h7A==}
+  /@hyoretsu/react-components@1.7.5(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6):
+    resolution: {integrity: sha512-B4SN3GKgPr1G9Sx5g09KADCVOC6RWA8gfWwFKS0Qaf4Wnb3MUum6OEvsNXtxPG8IsM6dOZ8RqK4z0yyed6uMcQ==}
     dependencies:
       '@hyoretsu/react-hooks': 1.2.5
       '@hyoretsu/utils': 1.8.0
@@ -2257,6 +2260,10 @@ packages:
   /csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
     dev: true
+
+  /date-fns@3.0.6:
+    resolution: {integrity: sha512-W+G99rycpKMMF2/YD064b2lE7jJGUe+EjOES7Q8BIGY8sbNdbgcs9XFTZwvzc9Jx1f3k7LB7gZaZa7f8Agzljg==}
+    dev: false
 
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}

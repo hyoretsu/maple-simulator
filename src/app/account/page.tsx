@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@components/Footer";
 import { useAccount, useCharacters } from "@context/account";
 import { Input, Modal } from "@hyoretsu/react-components";
 import { useState } from "react";
@@ -65,12 +66,12 @@ export default function Account() {
 				{currentCharacter && <CharacterEdit character={currentCharacter} />}
 			</main>
 
-			<footer className={styles.footer}>
+			<Footer>
 				<span>
 					Note: currently there's no character deletion function, but you can simply rename them. Everything
 					in the site is auto-saved, so don't worry about that.
 				</span>
-			</footer>
+			</Footer>
 
 			{error && <p style={{ margin: "0 auto" }}>Error: {error.toLowerCase()}</p>}
 

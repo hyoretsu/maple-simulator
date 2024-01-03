@@ -10,7 +10,13 @@ body {
     flex-direction: column;
 
     min-height: 100vh;
+}
+
+body,
+input,
+select {
     font-family: "Roboto Flex", sans-serif;
+    font-size: 1rem;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -32,6 +38,7 @@ input {
 }
 
 button {
+    background: none;
     cursor: pointer;
 
     &:disabled {

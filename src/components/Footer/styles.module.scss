@@ -1,0 +1,13 @@
+.footer {
+    margin: auto auto 1rem;
+
+    @media (max-width: 480px) {
+        align-self: center;
+
+        max-width: 95%;
+
+        span {
+            text-align: center;
+        }
+    }
+}

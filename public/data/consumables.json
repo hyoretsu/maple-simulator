@@ -1,0 +1,18 @@
+[
+	{
+		"id": 2630512,
+		"name": "Arcane Symbol Selector Coupon",
+		"description": "#cDouble-click# to select an Arcane Symbol to receive from the regions you have completed.",
+		"icon": 2437750,
+		"maxAmount": 9999,
+		"tradable": true
+	},
+	{
+		"id": 2636153,
+		"name": "Sacred Symbol Selector Coupon",
+		"description": "#cDouble-click# to select a Sacred Symbol to receive from the regions you have completed.",
+		"icon": 2633336,
+		"maxAmount": 999,
+		"tradable": true
+	}
+]

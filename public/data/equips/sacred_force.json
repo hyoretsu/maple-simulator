@@ -1,0 +1,80 @@
+[
+	{
+		"id": 1713000,
+		"name": "Sacred Symbol: Cernium",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1713001,
+		"name": "Sacred Symbol: Arcus",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1713002,
+		"name": "Sacred Symbol: Odium",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1713003,
+		"name": "Sacred Symbol: Shangri-La",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1713004,
+		"name": "Sacred Symbol: Arteria",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	},
+	{
+		"id": 1713005,
+		"name": "Sacred Symbol: Carcion",
+		"description": "",
+		"requirements": {
+			"dex": 0,
+			"int": 0,
+			"job": null,
+			"level": 200,
+			"luk": 0,
+			"str": 0
+		}
+	}
+]

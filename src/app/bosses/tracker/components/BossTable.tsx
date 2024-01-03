@@ -2,7 +2,7 @@
 import Check from "@assets/check.svg";
 import { useCharacters } from "@context/account";
 import bosses from "@data/bosses.json";
-import { Input, Link } from "@hyoretsu/react-components";
+import { Input } from "@hyoretsu/react-components";
 import copyObject from "@utils/copyObject";
 import { BossDifficulties, BossFrequency, BossRunInfo, Bosses } from "maple-simulator";
 import Image from "next/image";
@@ -46,25 +46,23 @@ type ParsedBosses = Array<
 >;
 
 export default function BossTable() {
-	const { characters, currentCharacter, setCurrentCharacterIndex, updateCharacter } = useCharacters();
+	const { characters, currentCharacter, updateCharacter } = useCharacters();
+	if (!currentCharacter) {
+		return;
+	}
 
 	const parsedBosses = useMemo<ParsedBosses>(() => {
 		const preParsedBosses = Object.entries(bosses).map(([boss, difficulties]) => [
 			boss,
 			Object.entries(difficulties),
 		]) as ParsedBosses;
-		if (!currentCharacter) {
-			return preParsedBosses;
-		}
 
 		return preParsedBosses.filter(
-			([_, [[__, { requiredLevel }]]]) => requiredLevel <= currentCharacter!.level,
+			([_, [[__, { requiredLevel }]]]) => requiredLevel <= currentCharacter.level,
 		);
 	}, [currentCharacter]);
 
 	const bossAvailability = useMemo<Record<string, boolean>>(() => {
-		if (!currentCharacter) return {};
-
 		return parsedBosses.reduce((availableObj, [boss, difficulties]) => {
 			for (const [difficulty] of difficulties) {
 				const difficultyBoss = `${difficulty} ${boss}`;
@@ -109,7 +107,7 @@ export default function BossTable() {
 			throw new Error("You must update bossing routines one by one.");
 		}
 
-		const newRoutine = copyObject(currentCharacter!.bossingRoutine);
+		const newRoutine = copyObject(currentCharacter.bossingRoutine);
 		const [difficultyBoss, newData] = newBossDataEntries[0];
 
 		if (Object.entries(newData).length === 0) {
@@ -123,7 +121,7 @@ export default function BossTable() {
 			});
 		}
 
-		updateCharacter(currentCharacter!.id, {
+		updateCharacter(currentCharacter.id, {
 			bossingRoutine: newRoutine,
 		});
 	};
@@ -222,10 +220,6 @@ export default function BossTable() {
 		[characters],
 	);
 	const characterReport = useMemo(() => {
-		if (!currentCharacter) {
-			return undefined;
-		}
-
 		return report.characters[currentCharacter.id];
 	}, [currentCharacter, report]);
 
@@ -235,7 +229,7 @@ export default function BossTable() {
 
 			if (
 				!bossAvailability[difficultyBoss] ||
-				(!currentCharacter!.bossingRoutine[difficultyBoss] &&
+				(!currentCharacter.bossingRoutine[difficultyBoss] &&
 					report.crystals +
 						// @ts-ignore
 						(bosses[boss][difficulty].frequency === "daily" ? 7 : 1) >
@@ -245,7 +239,7 @@ export default function BossTable() {
 			}
 
 			updateRoutine({
-				[difficultyBoss]: currentCharacter!.bossingRoutine[difficultyBoss]
+				[difficultyBoss]: currentCharacter.bossingRoutine[difficultyBoss]
 					? {}
 					: {
 							partySize: 1,
@@ -259,231 +253,205 @@ export default function BossTable() {
 
 	return (
 		<>
-			{!currentCharacter ? (
-				<Link href="/account">
-					It seems like you don't have any characters created yet. Please go to the Account page (or click
-					here) and create at least one.
-				</Link>
-			) : (
-				<>
-					<select
-						className={styles.characterSelector}
-						value={currentCharacter.nickname}
-						onChange={e => {
-							setCurrentCharacterIndex(
-								characters.findIndex(character => character.nickname === e.target.value),
-							);
-						}}
-					>
-						{characters.map(({ nickname }) => (
-							<option key={nickname} value={nickname}>
-								{nickname}
-							</option>
-						))}
-					</select>
-					{!!characterReport && (
-						<p>
-							{formatNumber(characterReport.income)} (
-							{((characterReport.income / report.income) * 100).toFixed(2)}%) mesos
-							{characterReport.time.find(time => time > 0)
-								? characterReport.time.reduce((str, time, index) => {
-										const units = ["h", "m", "s"];
+			{!!characterReport && (
+				<p>
+					{formatNumber(characterReport.income)} (
+					{((characterReport.income / report.income) * 100).toFixed(2)}%) mesos
+					{characterReport.time.find(time => time > 0)
+						? characterReport.time.reduce((str, time, index) => {
+								const units = ["h", "m", "s"];
 
-										if (time > 0) {
-											str += `${time}${units[index]}`;
-										}
+								if (time > 0) {
+									str += `${time}${units[index]}`;
+								}
 
-										return str;
-								  }, " in ")
-								: ""}
-							<br />(
-							{`${
-								characterReport.timedIncome
-									? `${new Intl.NumberFormat([], {
-											notation: "compact",
-											minimumFractionDigits: 2,
-											maximumFractionDigits: 2,
-									  })
-											.format(
-												Number(
-													Math.round(
-														(characterReport.timedIncome /
-															((characterReport.time[0] * 60 + characterReport.time[1]) * 60 +
-																characterReport.time[2])) *
-															7200,
-													),
-												),
-											)
-											.toLowerCase()} in a WAP`
-									: ""
-							}${
-								characterReport.counted
-									? characterReport.notCounted
-										? `, ${characterReport.notCounted}/${
-												characterReport.notCounted + characterReport.counted
-										  } bosses not counted`
-										: ""
-									: `${characterReport.timedIncome ? ", " : ""}${characterReport.notCounted} bosses total`
-							}`}
-							)
-						</p>
-					)}
-
-					<div className={styles.bossTable}>
-						{parsedBosses.map(([boss, difficulties]) => (
-							<section key={boss}>
-								<div className={styles.bossIcon}>
-									<Image src={`/images/bosses/icons/${boss}.png`} alt="" width={48} height={56} />
-									<p>{boss}</p>
-								</div>
-
-								<div className={styles.bossDifficulties}>
-									{Object.entries(
-										difficulties.reduce(
-											(obj, [difficulty, { frequency }]) => {
-												if (!obj[frequency]) {
-													Object.assign(obj, { [frequency]: [] });
-												}
-												obj[frequency].push(difficulty);
-
-												return obj;
-											},
-											{} as Record<BossFrequency, BossDifficulties[]>,
+								return str;
+						  }, " in ")
+						: ""}
+					<br />(
+					{`${
+						characterReport.timedIncome
+							? `${new Intl.NumberFormat([], {
+									notation: "compact",
+									minimumFractionDigits: 2,
+									maximumFractionDigits: 2,
+							  })
+									.format(
+										Number(
+											Math.round(
+												(characterReport.timedIncome /
+													((characterReport.time[0] * 60 + characterReport.time[1]) * 60 +
+														characterReport.time[2])) *
+													7200,
+											),
 										),
-									).map(([frequency, difficultyArr]) => (
-										<div>
-											<span>{frequency.slice(0, 1).toUpperCase() + frequency.slice(1)}</span>
-
-											<div>
-												{difficultyArr.map(difficulty => {
-													const difficultyBoss = `${difficulty} ${boss}`;
-
-													const backgroundColors = difficultyColors[difficulty];
-													const background = `linear-gradient(to bottom, ${backgroundColors[0]}, ${backgroundColors[1]})`;
-
-													let border = "";
-													let color = "";
-
-													if (difficulty === "Chaos") {
-														border = "2px solid #ddbb88";
-														color = "#ddccaa";
-													} else if (difficulty === "Extreme") {
-														border = "2px solid #ee3355";
-														color = "#ee4444";
-													}
-
-													const runInfo = currentCharacter.bossingRoutine[difficultyBoss];
-
-													return (
-														<div key={difficulty} className={styles.bossDificulty}>
-															<button
-																type="button"
-																onClick={() => toggleBossClear(boss, difficulty)}
-																style={{
-																	"--background": background,
-																	color,
-																	...(border
-																		? { border }
-																		: {
-																				padding: "calc(0.25rem + 2px) 2px",
-																		  }),
-																}}
-															>
-																{difficulty}
-
-																{!!runInfo?.partySize && <Check />}
-															</button>
-
-															<div>
-																<div>
-																	<label htmlFor="party-size">Party</label>
-
-																	<Input
-																		name="party-size"
-																		type="number"
-																		value={runInfo?.partySize || ""}
-																		placeholder="0"
-																		min={0}
-																		max={6}
-																		onChange={e => {
-																			const updatedInfo = {
-																				partySize: Number(e.currentTarget.value),
-																			};
-
-																			if (!runInfo || updatedInfo.partySize === 0) {
-																				toggleBossClear(boss, difficulty, updatedInfo);
-																			} else {
-																				updateRoutine({
-																					[difficultyBoss]: updatedInfo,
-																				});
-																			}
-																		}}
-																	/>
-																</div>
-
-																<div>
-																	<label htmlFor="time">Time</label>
-
-																	<Input
-																		name="time"
-																		value={runInfo?.timeTaken || ""}
-																		placeholder="0"
-																		onChange={e => {
-																			// Remove banned characters
-																			e.currentTarget.value = e.currentTarget.value.replace(/[^\dms]/g, "");
-
-																			const [time, unit] = e.currentTarget.value.split(/(m|s)/g);
-																			const updatedInfo = {
-																				timeTaken: Number(time) * (unit === "m" ? 60 : 1),
-																			};
-
-																			if (!runInfo) {
-																				toggleBossClear(boss, difficulty, updatedInfo);
-																			} else {
-																				updateRoutine({
-																					[difficultyBoss]: updatedInfo,
-																				});
-																			}
-																		}}
-																	/>
-																</div>
-															</div>
-														</div>
-													);
-												})}
-											</div>
-										</div>
-									))}
-								</div>
-							</section>
-						))}
-					</div>
-					<p>
-						Note: <b>Party</b> is the number of party members in your run and <b>Time</b> is the time taken to
-						complete (shows seconds but you may write "m" for minutes and add the remaining seconds). Monthly
-						bosses take up 1 crystal limit but only count 1/4th of their value.
-					</p>
-
-					<div className={styles.report}>
-						<p>
-							Total: {formatNumber(report.income)} mesos/week ({report.crystals} crystals)
-						</p>
-						<p>
-							You are making a total of {formatNumber(report.timedIncome)} mesos in{" "}
-							{Math.round(report.time[0])}h
-							{Math.round(report.time[1])}m
-							{Math.round(report.time[2])}s among {report.timedBosses}{" "}
-							{report.timedBosses > 1 ? "bosses" : "boss"}.
-							<br />
-							For comparison, that's equal to{" "}
-							{formatNumber(Math.floor((report.timedIncome / (report.totalTime || 1)) * 7200))} mesos in 2
-							hours.
-							<br />
-							(a.k.a. WAP time, which usually yields an average of 1~1.2b)
-						</p>
-					</div>
-				</>
+									)
+									.toLowerCase()} in a WAP`
+							: ""
+					}${
+						characterReport.counted
+							? characterReport.notCounted
+								? `, ${characterReport.notCounted}/${
+										characterReport.notCounted + characterReport.counted
+								  } bosses not counted`
+								: `, ${characterReport.counted} bosses total`
+							: `${characterReport.timedIncome ? ", " : ""}${characterReport.notCounted} bosses total`
+					}`}
+					)
+				</p>
 			)}
+
+			<div className={styles.bossTable}>
+				{parsedBosses.map(([boss, difficulties]) => (
+					<section key={boss}>
+						<div className={styles.bossIcon}>
+							<Image src={`/images/bosses/icons/${boss}.png`} alt="" width={48} height={56} />
+							<p>{boss}</p>
+						</div>
+
+						<div className={styles.bossDifficulties}>
+							{Object.entries(
+								difficulties.reduce(
+									(obj, [difficulty, { frequency }]) => {
+										if (!obj[frequency]) {
+											Object.assign(obj, { [frequency]: [] });
+										}
+										obj[frequency].push(difficulty);
+
+										return obj;
+									},
+									{} as Record<BossFrequency, BossDifficulties[]>,
+								),
+							).map(([frequency, difficultyArr]) => (
+								<div>
+									<span>{frequency.slice(0, 1).toUpperCase() + frequency.slice(1)}</span>
+
+									<div>
+										{difficultyArr.map(difficulty => {
+											const difficultyBoss = `${difficulty} ${boss}`;
+
+											const backgroundColors = difficultyColors[difficulty];
+											const background = `linear-gradient(to bottom, ${backgroundColors[0]}, ${backgroundColors[1]})`;
+
+											let border = "";
+											let color = "";
+
+											if (difficulty === "Chaos") {
+												border = "2px solid #ddbb88";
+												color = "#ddccaa";
+											} else if (difficulty === "Extreme") {
+												border = "2px solid #ee3355";
+												color = "#ee4444";
+											}
+
+											const runInfo = currentCharacter.bossingRoutine[difficultyBoss];
+
+											return (
+												<div key={difficulty} className={styles.bossDificulty}>
+													<button
+														type="button"
+														onClick={() => toggleBossClear(boss, difficulty)}
+														style={{
+															"--background": background,
+															color,
+															...(border
+																? { border }
+																: {
+																		padding: "calc(0.25rem + 2px) 2px",
+																  }),
+														}}
+													>
+														{difficulty}
+
+														{!!runInfo?.partySize && <Check />}
+													</button>
+
+													<div>
+														<div>
+															<label htmlFor="party-size">Party</label>
+
+															<Input
+																name="party-size"
+																type="number"
+																value={runInfo?.partySize || ""}
+																placeholder="0"
+																min={0}
+																max={6}
+																onChange={e => {
+																	const updatedInfo = {
+																		partySize: Number(e.currentTarget.value),
+																	};
+
+																	if (!runInfo || updatedInfo.partySize === 0) {
+																		toggleBossClear(boss, difficulty, updatedInfo);
+																	} else {
+																		updateRoutine({
+																			[difficultyBoss]: updatedInfo,
+																		});
+																	}
+																}}
+															/>
+														</div>
+
+														<div>
+															<label htmlFor="time">Time</label>
+
+															<Input
+																name="time"
+																value={runInfo?.timeTaken || ""}
+																placeholder="0"
+																onChange={e => {
+																	// Remove banned characters
+																	e.currentTarget.value = e.currentTarget.value.replace(/[^\dms]/g, "");
+
+																	const [time, unit] = e.currentTarget.value.split(/(m|s)/g);
+																	const updatedInfo = {
+																		timeTaken: Number(time) * (unit === "m" ? 60 : 1),
+																	};
+
+																	if (!runInfo) {
+																		toggleBossClear(boss, difficulty, updatedInfo);
+																	} else {
+																		updateRoutine({
+																			[difficultyBoss]: updatedInfo,
+																		});
+																	}
+																}}
+															/>
+														</div>
+													</div>
+												</div>
+											);
+										})}
+									</div>
+								</div>
+							))}
+						</div>
+					</section>
+				))}
+			</div>
+			<p>
+				Note: <b>Party</b> is the number of party members in your run and <b>Time</b> is the time taken to
+				complete (shows seconds but you may write "m" for minutes and add the remaining seconds). Monthly
+				bosses take up 1 crystal limit but only count 1/4th of their value.
+			</p>
+
+			<div className={styles.report}>
+				<p>
+					Total: {formatNumber(report.income)} mesos/week ({report.crystals} crystals)
+				</p>
+				<p>
+					You are making a total of {formatNumber(report.timedIncome)} mesos in {Math.round(report.time[0])}h
+					{Math.round(report.time[1])}m
+					{Math.round(report.time[2])}s among {report.timedBosses}{" "}
+					{report.timedBosses > 1 ? "bosses" : "boss"}.
+					<br />
+					For comparison, that's equal to{" "}
+					{formatNumber(Math.floor((report.timedIncome / (report.totalTime || 1)) * 7200))} mesos in 2 hours.
+					<br />
+					(a.k.a. WAP time, which usually yields an average of 1~1.2b)
+				</p>
+			</div>
 		</>
 	);
 }
