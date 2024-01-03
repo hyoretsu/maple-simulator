@@ -1,6 +1,6 @@
 "use client";
 import copyObject from "@utils/copyObject";
-import { Account, Character } from "maple-simulator";
+import { Account, BossingRoutine, Character, SymbolInfo } from "maple-simulator";
 import {
 	PropsWithChildren,
 	createContext,
@@ -37,34 +37,31 @@ export const defaultCharacter: Omit<Character, "id"> = {
 	level: 1,
 	nickname: "Default",
 	symbols: {
-		Arcane: {
-			// @ts-ignore
-			level: 1,
-			exp: 1,
-		},
-		Sacred: {
-			// @ts-ignore
-			level: 1,
-			exp: 1,
-		},
+		Arcane: [],
+		Sacred: [],
 	},
 	world: "Kronos",
 };
 
-const bumpCharacter = (character: Record<string, any>): boolean => {
+const defaultSymbol = {
+	level: 1,
+	exp: 1,
+};
+
+const bumpCharacter = (character: Character): boolean => {
 	let changed = false;
 
 	for (const [prop, value] of Object.entries(defaultCharacter)) {
 		if (prop === "bossingRoutine" && !character.bossingRoutine) {
-			character.bossingRoutine = copyObject(value);
+			character.bossingRoutine = copyObject(value) as BossingRoutine;
 			changed = true;
 		} else if (prop === "symbols") {
 			if (!character.symbols) {
-				character.symbols = {};
+				character.symbols = {} as SymbolInfo;
 				changed = true;
 			}
 
-			if (character.level > 200) {
+			if (character.level >= 200) {
 				const arcaneSymbolLevels = [200, 210, 220, 225, 230, 235];
 
 				if (!character.symbols.Arcane) {
@@ -72,14 +69,27 @@ const bumpCharacter = (character: Record<string, any>): boolean => {
 				}
 
 				for (const [index, unlockLevel] of arcaneSymbolLevels.entries()) {
-					if (character.level >= unlockLevel && !character.symbols.Arcane[index]) {
-						character.symbols.Arcane[index] = copyObject(defaultCharacter.symbols.Arcane);
+					if (!character.symbols.Arcane[index] && character.level >= unlockLevel) {
+						character.symbols.Arcane[index] = copyObject(defaultSymbol);
 						changed = true;
 					}
 				}
+
+				const symbolDiff = arcaneSymbolLevels.length - character.symbols.Arcane.length;
+				for (const [index] of character.symbols.Arcane.toReversed().entries()) {
+					const unlockLevel = arcaneSymbolLevels.at(-1 - index - symbolDiff) as number;
+
+					if (character.level < unlockLevel) {
+						character.symbols.Arcane.splice(-1, 1);
+						changed = true;
+					}
+				}
+			} else if (character.symbols.Arcane) {
+				character.symbols.Arcane = copyObject(defaultCharacter.symbols.Arcane);
+				changed = true;
 			}
 
-			if (character.level > 260) {
+			if (character.level >= 260) {
 				const sacredSymbolLevels = [260, 265, 270, 275, 280, 285];
 
 				if (!character.symbols.Sacred) {
@@ -87,32 +97,41 @@ const bumpCharacter = (character: Record<string, any>): boolean => {
 				}
 
 				for (const [index, unlockLevel] of sacredSymbolLevels.entries()) {
-					if (character.level >= unlockLevel && !character.symbols.Sacred[index]) {
-						character.symbols.Sacred[index] = copyObject(defaultCharacter.symbols.Sacred);
+					if (!character.symbols.Sacred[index] && character.level >= unlockLevel) {
+						character.symbols.Sacred[index] = copyObject(defaultSymbol);
 						changed = true;
 					}
 				}
+
+				const symbolDiff = sacredSymbolLevels.length - character.symbols.Sacred.length;
+				for (const [index] of character.symbols.Sacred.toReversed().entries()) {
+					const unlockLevel = sacredSymbolLevels.at(-1 - index - symbolDiff) as number;
+
+					if (character.level < unlockLevel) {
+						character.symbols.Sacred.splice(-1, 1);
+						changed = true;
+					}
+				}
+			} else if (character.symbols.Sacred) {
+				character.symbols.Sacred = copyObject(defaultCharacter.symbols.Sacred);
+				changed = true;
 			}
+			// @ts-ignore
 		} else if (!character[prop]) {
+			// @ts-ignore
 			character[prop] = value;
 			changed = true;
 		}
 
 		if (Object.entries(character.bossingRoutine).length > 0) {
-			const normalRanmaru = character.bossingRoutine["Normal Mori Ranmaru"];
-			const hardRanmaru = character.bossingRoutine["Hard Mori Ranmaru"];
-
-			if (normalRanmaru) {
-				character.bossingRoutine["Normal Ranmaru"] = copyObject(normalRanmaru);
-				// biome-ignore lint/performance/noDelete: <explanation>
-				delete character.bossingRoutine["Normal Mori Ranmaru"];
-				changed = true;
-			}
-			if (hardRanmaru) {
-				character.bossingRoutine["Hard Ranmaru"] = copyObject(hardRanmaru);
-				// biome-ignore lint/performance/noDelete: <explanation>
-				delete character.bossingRoutine["Hard Mori Ranmaru"];
-				changed = true;
+			// Mori Ranmaru -> Ranmaru migration
+			for (const difficulty of ["Normal", "Hard"]) {
+				const ranmaru = character.bossingRoutine[`${difficulty} Mori Ranmaru`];
+				if (ranmaru) {
+					character.bossingRoutine[`${difficulty} Ranmaru`] = copyObject(ranmaru);
+					delete character.bossingRoutine[`${difficulty} Mori Ranmaru`];
+					changed = true;
+				}
 			}
 		}
 	}
@@ -128,7 +147,6 @@ export function AccountProvider({ children }: PropsWithChildren) {
 		const character = account.characters.at(currentCharacterIndex);
 
 		if (character) {
-			bumpCharacter(character);
 			localStorage.setItem("@maple-simulator:current_character", character.id);
 		}
 
@@ -260,6 +278,7 @@ export function AccountProvider({ children }: PropsWithChildren) {
 			const character = newAccount.characters.find(({ id: characterId }) => characterId === id) as Character;
 
 			Object.assign(character, updatedCharacter);
+			bumpCharacter(character);
 			localStorage.setItem(`@maple-simulator:character_${character.id}`, JSON.stringify(character));
 
 			return newAccount;

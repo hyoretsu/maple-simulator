@@ -35,14 +35,15 @@ export interface SymbolData {
 	level: number;
 	exp: number;
 }
+export interface SymbolInfo {
+	Arcane: SymbolData[];
+	Sacred: SymbolData[];
+}
 export interface Character {
 	id: string;
 	bossingRoutine: BossingRoutine;
 	level: number;
 	nickname: string;
-	symbols: {
-		Arcane: SymbolData[];
-		Sacred: SymbolData[];
-	};
+	symbols: SymbolInfo;
 	world: World;
 }
