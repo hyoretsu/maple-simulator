@@ -60,6 +60,11 @@ const bumpCharacter = (character: Character): boolean => {
 				character.symbols = copyObject(defaultCharacter.symbols);
 				changed = true;
 			} else {
+				if (!character.symbols.Arcane) {
+					character.symbols.Arcane = copyObject(defaultCharacter.symbols.Arcane);
+					changed = true;
+				}
+
 				if (!character.symbols.Sacred) {
 					character.symbols.Sacred = copyObject(defaultCharacter.symbols.Sacred);
 					changed = true;
