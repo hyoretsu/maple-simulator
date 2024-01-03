@@ -6,6 +6,11 @@
     border-bottom: 2px solid #f07e00;
     margin-bottom: 0.5rem;
 
+    @media (max-width: 480px) {
+        padding: 0.5rem 5% 0;
+        margin-right: -5%;
+    }
+
     nav {
         display: grid;
         grid-auto-flow: column;
@@ -14,6 +19,10 @@
 
         background-color: #fff;
         border-radius: 0.5rem;
+
+        @media (max-width: 480px) {
+            grid-auto-columns: 1fr;
+        }
 
         a {
             display: flex;

@@ -18,6 +18,10 @@
     }
 
     @media (max-width: 480px) {
+        align-self: center;
+
+        max-width: 90%;
+
         margin-bottom: 0.5rem;
     }
 }
@@ -40,34 +44,45 @@
 
 .symbolManager {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 
     margin-top: 2rem;
 
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 481px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.symbolInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    text-align: center;
+
+    padding: 1rem;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+
     > div {
         display: flex;
-        flex-direction: column;
-        align-items: center;
 
-        padding: 1rem;
-        border: 1px solid #000000;
-        border-radius: 0.75rem;
+        gap: 0.25rem;
+    }
 
+    @media (max-width: 480px) {
         > div {
-            display: flex;
-
-            gap: 0.25rem;
-
             + div {
-                @media (max-width: 480px) {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
-                    span:first-child {
-                        display: block;
-                    }
+                span:first-child {
+                    display: block;
                 }
             }
         }
@@ -94,6 +109,10 @@
             text-align: center;
 
             padding: 0.5rem;
+
+            @media (max-width: 480px) {
+                padding: 0.25rem;
+            }
 
             + span {
                 border-top: 1px solid #000000;

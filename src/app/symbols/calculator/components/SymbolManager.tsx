@@ -69,7 +69,7 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 				const { level, exp } = currentCharacter.symbols[type][index];
 
 				return (
-					<div>
+					<div className={styles.symbolInput}>
 						<h3>{regionName}</h3>
 						<Image
 							src={`/images/assets/${symbol.id}.png`}
