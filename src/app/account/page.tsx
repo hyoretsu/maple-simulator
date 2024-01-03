@@ -29,6 +29,7 @@ export default function Account() {
 					<Input
 						name="account-id"
 						value={account.id}
+						placeholder="Optional"
 						onChange={e => updateAccount({ id: e.currentTarget.value.toUpperCase() })}
 					/>
 				</fieldset>
