@@ -58,6 +58,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				<link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png" />
 				<link rel="mask-icon" href="/safari-pinned-tab.svg" color={siteColor} />
 				<link rel="manifest" href="/site.webmanifest" />
+
+				<Script
+					defer
+					src="https://us.umami.is/script.js"
+					data-website-id="dece1a1a-44a8-4d59-be7c-47995ee0a0af"
+				/>
 			</head>
 			<body>
 				<Header />
