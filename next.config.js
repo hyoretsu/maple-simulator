@@ -28,6 +28,7 @@ module.exports = async (phase, { defaultConfig }) => {
 				debug: message => console.log(message),
 			},
 		},
+		skipTrailingSlashRedirect: true,
 		swcMinify: true,
 		typescript: {
 			ignoreBuildErrors: true,
