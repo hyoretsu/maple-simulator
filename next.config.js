@@ -16,10 +16,6 @@ module.exports = async (phase, { defaultConfig }) => {
 				},
 			},
 		},
-		i18n: {
-			locales: ["en", "pt"],
-			defaultLocale: "en",
-		},
 		productionBrowserSourceMaps: true,
 		reactStrictMode: true,
 		sassOptions: {
