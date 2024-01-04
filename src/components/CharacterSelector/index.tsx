@@ -1,6 +1,5 @@
 "use client";
 import { useCharacters } from "@context/account";
-import styles from "./styles.module.scss";
 
 export default function CharacterSelector() {
 	const { characters, currentCharacter, setCurrentCharacterIndex } = useCharacters();
@@ -10,7 +9,6 @@ export default function CharacterSelector() {
 
 	return (
 		<select
-			className={styles.characterSelector}
 			value={currentCharacter.nickname}
 			onChange={e => {
 				setCurrentCharacterIndex(
