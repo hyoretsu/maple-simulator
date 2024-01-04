@@ -99,9 +99,6 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 										exp: safeReduceLevel ? (newLevel > 1 ? exp : 1) : 0,
 									});
 								}}
-								style={{
-									width: "2ch",
-								}}
 							/>
 						</div>
 
@@ -127,12 +124,8 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 												exp,
 											});
 										}}
-										style={{
-											textAlign: "center",
-											width: "4ch",
-										}}
 									/>
-									<span>/{info.cost.symbols[level]}</span>
+									<span>{info.cost.symbols[level]}</span>
 								</div>
 							)}
 						</div>
