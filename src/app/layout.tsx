@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { PropsWithChildren } from "react";
 import "./_global.scss";
+import WebVitals from "./components/WebVitals";
 import "./fonts";
 
 const url = "https://maple-simulator.vercel.app";
@@ -65,10 +66,14 @@ export default function RootLayout({ children }: PropsWithChildren) {
 
 				<Analytics />
 				<SpeedInsights />
-				<Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`} />
 				<Script id="google-analytics">
-					{`window.dataLayer=window.dataLayer||[];const gtag=()=>dataLayer.push(arguments);gtag("js",new Date());gtag("config",${process.env.GA_MEASUREMENT_ID});`}
+					{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",${process.env.GA_MEASUREMENT_ID},{page_path: window.location.pathname})`}
 				</Script>
+				<Script
+					strategy="afterInteractive"
+					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
+				/>
+				<WebVitals />
 			</body>
 		</html>
 	);
