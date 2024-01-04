@@ -27,8 +27,11 @@
 .symbolSelector {
     overflow: hidden;
 
+    color: #ffffff;
+    background-color: #000000;
+
     margin-top: 1rem;
-    border: 1px solid #000;
+    border: 1px solid #dddddd;
     border-radius: 1rem;
 
     button {
@@ -62,7 +65,7 @@
     gap: 0.5rem;
 
     padding: 1rem;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     border-radius: 0.75rem;
 
     > div {
@@ -73,7 +76,8 @@
 
         > input,
         span + div {
-            background-color: #dddddd;
+            color: #000000;
+            background-color: #acacac;
         }
 
         > input {
@@ -90,6 +94,7 @@
 
             input {
                 width: calc(4ch + 0.25rem);
+                color: #000000;
                 background-color: #ffffff;
                 text-align: center;
 
@@ -121,7 +126,7 @@
     display: grid;
     grid-template-columns: repeat(4, auto);
 
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     border-radius: 1rem;
     margin-top: 2rem;
 
@@ -134,7 +139,7 @@
         grid-auto-rows: 1fr;
 
         + div {
-            border-left: 1px solid #000000;
+            border-left: 1px solid #ffffff;
         }
 
         span {
@@ -147,7 +152,7 @@
             }
 
             + span {
-                border-top: 1px solid #000000;
+                border-top: 1px solid #ffffff;
             }
         }
     }

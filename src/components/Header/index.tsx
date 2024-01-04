@@ -24,8 +24,8 @@ export default function Header() {
 							href={route}
 							style={{
 								...(active
-									? { backgroundColor: "#ffaf0e", borderColor: "#e7884d" }
-									: { backgroundColor: "#999999", borderColor: "#858585" }),
+									? { backgroundColor: "#9d5300", borderColor: "#972500" }
+									: { backgroundColor: "#3b444a", borderColor: "#3b464c" }),
 							}}
 						>
 							{name}

@@ -5,16 +5,22 @@
     box-sizing: border-box;
 }
 
+html {
+    color-scheme: dark;
+}
+
 body {
     display: flex;
     flex-direction: column;
 
     min-height: 100vh;
+    background-color: #000;
 }
 
 body,
 input,
 select {
+    color: #ffffff;
     font-family: "Roboto Flex", sans-serif;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;

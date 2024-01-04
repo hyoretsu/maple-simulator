@@ -6,6 +6,7 @@ import styles from "../styles.module.scss";
 
 const selectedTypeStyles: CSSProperties = {
 	backgroundColor: "#dddddd",
+	color: "#000000",
 };
 
 interface SymbolSelectorProps {

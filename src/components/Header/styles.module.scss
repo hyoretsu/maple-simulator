@@ -3,7 +3,7 @@
     justify-content: center;
 
     padding-top: 0.5rem;
-    border-bottom: 2px solid #f07e00;
+    border-bottom: 2px solid #972500;
     margin-bottom: 0.5rem;
 
     @media (max-width: 480px) {
@@ -16,7 +16,6 @@
         grid-auto-columns: 7rem;
         gap: 0.25rem;
 
-        background-color: #fff;
         border-radius: 0.5rem;
 
         @media (max-width: 480px) {
@@ -28,7 +27,7 @@
             align-items: center;
             justify-content: center;
 
-            color: #fff;
+            color: #ffffff;
             text-align: center;
 
             padding: 0 0.5rem;
