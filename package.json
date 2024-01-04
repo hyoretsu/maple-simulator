@@ -6,12 +6,10 @@
 		"dev": "next dev --turbo",
 		"export": "next export",
 		"prepare": "husky install",
-		"start": "next build && next start"
+		"start": "next start"
 	},
 	"lint-staged": {
-		"**/*.(json|js|jsx|ts|tsx)": [
-			"biome format --write"
-		]
+		"**/*.(js|jsx|ts|tsx)": ["biome format --write"]
 	},
 	"dependencies": {
 		"@fontsource/roboto-flex": "^5.0.8",
