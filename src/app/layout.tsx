@@ -79,6 +79,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 					strategy="afterInteractive"
 					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
 				/>
+				{/* @ts-ignore */}
 				<WebVitals />
 			</body>
 		</html>
