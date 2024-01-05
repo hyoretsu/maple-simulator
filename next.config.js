@@ -16,14 +16,6 @@ module.exports = async (phase, { defaultConfig }) => {
 				},
 			},
 		},
-		images: {
-			remotePatterns: [
-				{
-					hostname: "d1jarb7xa67pb9.cloudfront.net",
-					protocol: "https",
-				},
-			],
-		},
 		output: "export",
 		productionBrowserSourceMaps: true,
 		reactStrictMode: true,
