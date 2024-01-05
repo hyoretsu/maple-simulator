@@ -13,6 +13,7 @@ import {
 import { v4 as uuid } from "uuid";
 
 type CreateCharacter = (charInfo?: Partial<Omit<Character, "id">>) => Character;
+type ImportAccount = (accountStr: string) => void;
 type UpdateAccount = (newAccountData: Partial<Pick<Account, "id">>) => void;
 type UpdateCharacter = (id: string, updatedCharacter: Partial<Character>) => void;
 
@@ -20,6 +21,7 @@ interface AccountContext {
 	account: Account;
 	createCharacter: CreateCharacter;
 	currentCharacter: Character | undefined;
+	importAccount: ImportAccount;
 	setCurrentCharacterIndex: (index: number) => void;
 	updateAccount: UpdateAccount;
 	updateCharacter: UpdateCharacter;
@@ -273,6 +275,30 @@ export function AccountProvider({ children }: PropsWithChildren) {
 		[account],
 	);
 
+	const importAccount = useCallback<ImportAccount>(accountStr => {
+		// Clean previous data
+		localStorage.clear();
+
+		const { id, characters } = JSON.parse(accountStr) as Account;
+		localStorage.setItem("@maple-simulator:account_id", id);
+
+		const characterIds = characters.reduce(
+			(arr, { id }) => {
+				arr[arr.length] = id;
+				return arr;
+			},
+			[] as string[],
+		);
+		localStorage.setItem("@maple-simulator:characters", JSON.stringify(characterIds));
+		localStorage.setItem("@maple-simulator:current_character", characterIds[0]);
+
+		for (const character of characters) {
+			localStorage.setItem(`@maple-simulator:character_${character.id}`, JSON.stringify(character));
+		}
+
+		window.location.reload();
+	}, []);
+
 	const updateAccount = useCallback<UpdateAccount>(({ id }) => {
 		setAccount(old => {
 			const newAccount = copyObject(old);
@@ -304,11 +330,12 @@ export function AccountProvider({ children }: PropsWithChildren) {
 			account,
 			createCharacter,
 			currentCharacter,
+			importAccount,
 			setCurrentCharacterIndex,
 			updateAccount,
 			updateCharacter,
 		};
-	}, [account, createCharacter, currentCharacter, updateAccount, updateCharacter]);
+	}, [account, createCharacter, currentCharacter, importAccount, updateAccount, updateCharacter]);
 
 	return <AccountContext.Provider value={accountData}>{children}</AccountContext.Provider>;
 }
@@ -319,16 +346,17 @@ class AccountError extends Error {
 	}
 }
 
-export const useAccount = (): Pick<AccountContext, "account" | "updateAccount"> => {
+export const useAccount = (): Pick<AccountContext, "account" | "importAccount" | "updateAccount"> => {
 	const context = useContext(AccountContext);
 	if (!context) {
 		throw new AccountError("useAccount");
 	}
 
-	const { account, updateAccount } = context;
+	const { account, importAccount, updateAccount } = context;
 
 	return {
 		account,
+		importAccount,
 		updateAccount,
 	};
 };

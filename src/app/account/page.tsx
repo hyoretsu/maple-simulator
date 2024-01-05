@@ -2,18 +2,32 @@
 import Footer from "@components/Footer";
 import { useAccount, useCharacters } from "@context/account";
 import { Input, Modal } from "@hyoretsu/react-components";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { BiSolidCopy } from "react-icons/bi";
+import { BsClipboard2Fill } from "react-icons/bs";
 import CharacterEdit from "./components/CharacterEdit";
 import styles from "./styles.module.scss";
 
 export default function Account() {
-	const { account, updateAccount } = useAccount();
+	const { account, importAccount, updateAccount } = useAccount();
 	const { createCharacter, currentCharacter, setCurrentCharacterIndex } = useCharacters();
 
+	const importAccountRef = useRef<HTMLInputElement>(null);
+	const [accountAction, setAccountAction] = useState("");
 	const [error, setError] = useState("");
+	const [exportedAccount, setExportedAccount] = useState("");
 
 	const [accountIdModalShown, showAccountIdModal] = useState(false);
+
+	const handleExportAccount = async () => {
+		await navigator.clipboard.writeText(exportedAccount);
+		setAccountAction("");
+		setExportedAccount("");
+	};
+	const handleImportAccount = async (accoutnStr?: string) => {
+		importAccount(accoutnStr || (await navigator.clipboard.readText()));
+	};
 
 	return (
 		<>
@@ -67,6 +81,41 @@ export default function Account() {
 				</fieldset>
 
 				{currentCharacter && <CharacterEdit character={currentCharacter} />}
+
+				{accountAction ? (
+					<div className={styles.export}>
+						<input
+							ref={importAccountRef}
+							value={exportedAccount}
+							onChange={e => setExportedAccount(e.currentTarget.value)}
+							onKeyUp={e => e.key === "Enter" && handleImportAccount(e.currentTarget.value)}
+						/>
+						{accountAction === "export" ? (
+							<BiSolidCopy title="Copy" onClick={handleExportAccount} />
+						) : (
+							<BsClipboard2Fill
+								title="Import (and paste)"
+								onClick={() => handleImportAccount(importAccountRef.current?.value)}
+							/>
+						)}
+					</div>
+				) : (
+					<div style={{ display: "flex", gap: "1rem" }}>
+						<button type="button" className={styles.export} onClick={() => setAccountAction("import")}>
+							Import Account
+						</button>
+						<button
+							type="button"
+							className={styles.export}
+							onClick={() => {
+								setAccountAction("export");
+								setExportedAccount(JSON.stringify(account));
+							}}
+						>
+							Export Account
+						</button>
+					</div>
+				)}
 			</main>
 
 			<Footer>
