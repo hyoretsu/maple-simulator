@@ -21,6 +21,9 @@
 			"a11y": {
 				"useKeyWithClickEvents": "off"
 			},
+			"security": {
+				"noDangerouslySetInnerHtml": "warn"
+			},
 			"style": {
 				"noNonNullAssertion": "off",
 				"noParameterAssign": "warn",

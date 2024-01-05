@@ -59,7 +59,13 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				<script
 					defer
 					data-domain="maple-simulator.hyoretsu.com"
-					src="https://plausible.hyoretsu.com/js/script.js"
+					src="https://plausible.hyoretsu.com/js/script.outbound-links.js"
+				/>
+				<script
+					dangerouslySetInnerHTML={{
+						__html:
+							"window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}",
+					}}
 				/>
 			</head>
 			<body>
@@ -67,6 +73,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 
 				<AccountProvider>{children}</AccountProvider>
 
+				{/* @ts-ignore */}
 				<WebVitals />
 			</body>
 		</html>

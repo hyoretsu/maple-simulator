@@ -49,6 +49,7 @@ export default function Account() {
 								try {
 									createCharacter();
 									setCurrentCharacterIndex(-1);
+									window.plausible("Character created");
 								} catch (e) {
 									if (e instanceof Error) {
 										setError(e.message);
