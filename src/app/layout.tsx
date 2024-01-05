@@ -1,6 +1,5 @@
 import Header from "@components/Header";
 import { AccountProvider } from "@context/account";
-import Script from "next/script";
 import { PropsWithChildren } from "react";
 import "./_global.scss";
 import WebVitals from "./components/WebVitals";
@@ -62,14 +61,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
 
 				<AccountProvider>{children}</AccountProvider>
 
-				<Script id="google-analytics">
-					{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config","${process.env.NEXT_PUBLIC_GA_ID}",{page_path: window.location.pathname})`}
-				</Script>
-				<Script
-					strategy="afterInteractive"
-					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-				/>
-				{/* @ts-ignore */}
 				<WebVitals />
 			</body>
 		</html>

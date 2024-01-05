@@ -2,6 +2,7 @@
 	"name": "Maple Simulator",
 	"short_name": "Maple Sim",
 	"description": "A project that aims to simulate various aspects of MapleStory on your browser",
+	"url": "https://maple-simulator.hyoretsu.com/",
 	"orientation": "portrait",
 	"display": "standalone",
 	"categories": ["personalization"],
