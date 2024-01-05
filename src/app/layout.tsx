@@ -1,5 +1,6 @@
 import Header from "@components/Header";
 import { AccountProvider } from "@context/account";
+import Script from "next/script";
 import { PropsWithChildren } from "react";
 import "./_global.scss";
 import WebVitals from "./components/WebVitals";
@@ -61,6 +62,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
 
 				<AccountProvider>{children}</AccountProvider>
 
+				<Script
+					defer
+					src="https://static.cloudflareinsights.com/beacon.min.js"
+					data-cf-beacon='{"token": "1b125b2b905e4168a480abb090ea86a3"}'
+				/>
 				<WebVitals />
 			</body>
 		</html>
