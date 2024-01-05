@@ -3,7 +3,6 @@ import { useCharacters } from "@context/account";
 import symbolInfo from "@data/symbols.json";
 import { Input } from "@hyoretsu/react-components";
 import { Equipment, SymbolData, SymbolType } from "maple-simulator";
-import Image from "next/image";
 import styles from "../styles.module.scss";
 
 interface SymbolManagerProps {
@@ -71,13 +70,7 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 				return (
 					<div className={styles.symbolInput} key={symbol.id}>
 						<h3>{regionName}</h3>
-						<Image
-							src={`/images/assets/${symbol.id}.png`}
-							alt={symbol.name}
-							title={symbol.description}
-							width={38}
-							height={38}
-						/>
+						<img src={`/images/assets/${symbol.id}.png`} alt={symbol.name} title={symbol.description} />
 
 						<div>
 							<span>Level</span>

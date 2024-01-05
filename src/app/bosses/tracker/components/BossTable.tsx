@@ -5,7 +5,6 @@ import bosses from "@data/bosses.json";
 import { Input } from "@hyoretsu/react-components";
 import copyObject from "@utils/copyObject";
 import { BossDifficulties, BossFrequency, BossRunInfo, Bosses } from "maple-simulator";
-import Image from "next/image";
 import { useCallback, useMemo } from "react";
 import styles from "../styles.module.scss";
 
@@ -305,7 +304,7 @@ export default function BossTable() {
 				{parsedBosses.map(([boss, difficulties]) => (
 					<section key={boss}>
 						<div className={styles.bossIcon}>
-							<Image src={`/images/bosses/icons/${boss}.png`} alt="" width={48} height={56} />
+							<img src={`/images/bosses/icons/${boss}.png`} alt="" />
 							<p>{boss}</p>
 						</div>
 

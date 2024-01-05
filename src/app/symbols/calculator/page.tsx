@@ -6,7 +6,6 @@ import { useCharacters } from "@context/account";
 import arcaneSymbols from "@data/equips/arcane_force.json";
 import sacredSymbols from "@data/equips/sacred_force.json";
 import { SymbolType } from "maple-simulator";
-import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import SymbolManager from "./components/SymbolManager";
 import SymbolReport from "./components/SymbolReport";
@@ -42,21 +41,9 @@ export default function SymbolCalculator() {
 		<>
 			<main className={styles.main}>
 				<h1>
-					<Image
-						src="/images/assets/2437750.png"
-						alt="Arcane Symbol Selector Coupon"
-						title="Arcane Symbol"
-						width={38}
-						height={38}
-					/>
+					<img src="/images/assets/2437750.png" alt="Arcane Symbol Selector Coupon" title="Arcane Symbol" />
 					/
-					<Image
-						src="/images/assets/2633336.png"
-						alt="Sacred Symbol Selector Coupon"
-						title="Sacred Symbol"
-						width={38}
-						height={38}
-					/>
+					<img src="/images/assets/2633336.png" alt="Sacred Symbol Selector Coupon" title="Sacred Symbol" />
 					Calculator
 				</h1>
 

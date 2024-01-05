@@ -20,8 +20,22 @@ module.exports = async (phase, { defaultConfig }) => {
 			locales: ["en", "pt"],
 			defaultLocale: "en",
 		},
+		images: {
+			remotePatterns: [
+				{
+					hostname: "d1jarb7xa67pb9.cloudfront.net",
+					protocol: "https",
+				},
+			],
+		},
 		productionBrowserSourceMaps: true,
 		reactStrictMode: true,
+		rewrites: () => [
+			{
+				source: "/images/:path*",
+				destination: "https://d1jarb7xa67pb9.cloudfront.net/images/:path*",
+			},
+		],
 		sassOptions: {
 			logger: {
 				warn: message => console.warn(message),
