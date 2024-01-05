@@ -2,10 +2,11 @@
 import Footer from "@components/Footer";
 import { useAccount, useCharacters } from "@context/account";
 import { Input, Modal } from "@hyoretsu/react-components";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { BiSolidCopy } from "react-icons/bi";
 import { BsClipboard2Fill } from "react-icons/bs";
+import { IoArrowBackOutline } from "react-icons/io5";
 import CharacterEdit from "./components/CharacterEdit";
 import styles from "./styles.module.scss";
 
@@ -13,21 +14,11 @@ export default function Account() {
 	const { account, importAccount, updateAccount } = useAccount();
 	const { createCharacter, currentCharacter, setCurrentCharacterIndex } = useCharacters();
 
-	const importAccountRef = useRef<HTMLInputElement>(null);
 	const [accountAction, setAccountAction] = useState("");
 	const [error, setError] = useState("");
 	const [exportedAccount, setExportedAccount] = useState("");
 
 	const [accountIdModalShown, showAccountIdModal] = useState(false);
-
-	const handleExportAccount = async () => {
-		await navigator.clipboard.writeText(exportedAccount);
-		setAccountAction("");
-		setExportedAccount("");
-	};
-	const handleImportAccount = async (accoutnStr?: string) => {
-		importAccount(accoutnStr || (await navigator.clipboard.readText()));
-	};
 
 	return (
 		<>
@@ -84,18 +75,30 @@ export default function Account() {
 
 				{accountAction ? (
 					<div className={styles.export}>
-						<input
-							ref={importAccountRef}
-							value={exportedAccount}
-							onChange={e => setExportedAccount(e.currentTarget.value)}
-							onKeyUp={e => e.key === "Enter" && handleImportAccount(e.currentTarget.value)}
+						<IoArrowBackOutline
+							title="Return"
+							onClick={() => {
+								setAccountAction("");
+								setExportedAccount("");
+							}}
 						/>
+
+						<input
+							value={exportedAccount}
+							onChange={e => accountAction === "import" && setExportedAccount(e.currentTarget.value)}
+							onKeyUp={e => {
+								if (e.key === "Enter" && accountAction === "import") {
+									importAccount(exportedAccount);
+								}
+							}}
+						/>
+
 						{accountAction === "export" ? (
-							<BiSolidCopy title="Copy" onClick={handleExportAccount} />
+							<BiSolidCopy title="Copy" onClick={() => navigator.clipboard.writeText(exportedAccount)} />
 						) : (
 							<BsClipboard2Fill
-								title="Import (and paste)"
-								onClick={() => handleImportAccount(importAccountRef.current?.value)}
+								title="Import (and paste if neccessary)"
+								onClick={async () => importAccount(exportedAccount || (await navigator.clipboard.readText()))}
 							/>
 						)}
 					</div>
