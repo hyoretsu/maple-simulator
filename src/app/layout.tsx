@@ -1,5 +1,6 @@
 import Header from "@components/Header";
 import { AccountProvider } from "@context/account";
+import Script from "next/script";
 import { PropsWithChildren } from "react";
 import "./_global.scss";
 import WebVitals from "./components/WebVitals";
@@ -55,6 +56,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				<link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png" />
 				<link rel="mask-icon" href="/safari-pinned-tab.svg" color={siteColor} />
 				<link rel="manifest" href="/site.webmanifest" />
+
+				<Script
+					defer
+					data-domain="maple-simulator.hyoretsu.com"
+					src="https://plausible.hyoretsu.com/js/script.js"
+				/>
 			</head>
 			<body>
 				<Header />
