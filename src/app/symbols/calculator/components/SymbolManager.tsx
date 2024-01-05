@@ -70,7 +70,7 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 				return (
 					<div className={styles.symbolInput} key={symbol.id}>
 						<h3>{regionName}</h3>
-						<img src={`/images/assets/${symbol.id}.png`} alt={symbol.name} title={symbol.description} />
+						<img src={`/images/assets/${symbol.id}.png`} alt="" title={symbol.description} />
 
 						<div>
 							<span>Level</span>
