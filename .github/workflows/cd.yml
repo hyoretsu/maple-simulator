@@ -37,8 +37,6 @@ jobs:
               run: pnpm i
 
             - name: 🚀 Build the app
-              env:
-                  NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
               run: pnpm build
 
             - name: Set up AWS CLI
