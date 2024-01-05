@@ -12,6 +12,7 @@
 
 # Next.js
 .next
+out/
 
 # Test files
 **/coverage

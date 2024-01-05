@@ -11,10 +11,7 @@ export default function BossesTracker() {
 	return (
 		<main className={styles.main}>
 			<h1>
-				<img
-					src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/items/intense_power_crystal.png`}
-					alt="Intense Power Crystal"
-				/>
+				<img src="/images/items/intense_power_crystal.png" alt="Intense Power Crystal" />
 				Tracker
 			</h1>
 
