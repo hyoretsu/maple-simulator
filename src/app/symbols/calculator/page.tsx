@@ -41,9 +41,17 @@ export default function SymbolCalculator() {
 		<>
 			<main className={styles.main}>
 				<h1>
-					<img src="/images/assets/2437750.png" alt="Arcane Symbol Selector Coupon" title="Arcane Symbol" />
+					<img
+						src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/assets/2437750.png`}
+						alt="Arcane Symbol Selector Coupon"
+						title="Arcane Symbol"
+					/>
 					/
-					<img src="/images/assets/2633336.png" alt="Sacred Symbol Selector Coupon" title="Sacred Symbol" />
+					<img
+						src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/assets/2633336.png`}
+						alt="Sacred Symbol Selector Coupon"
+						title="Sacred Symbol"
+					/>
 					Calculator
 				</h1>
 

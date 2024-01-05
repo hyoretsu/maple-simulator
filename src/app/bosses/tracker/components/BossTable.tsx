@@ -304,7 +304,7 @@ export default function BossTable() {
 				{parsedBosses.map(([boss, difficulties]) => (
 					<section key={boss}>
 						<div className={styles.bossIcon}>
-							<img src={`/images/bosses/icons/${boss}.png`} alt="" />
+							<img src={`${process.env.NEXT_PUBLIC_CDN_URL}/images/bosses/icons/${boss}.png`} alt="" />
 							<p>{boss}</p>
 						</div>
 
