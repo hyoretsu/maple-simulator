@@ -1,7 +1,5 @@
 import Header from "@components/Header";
 import { AccountProvider } from "@context/account";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { PropsWithChildren } from "react";
 import "./_global.scss";
@@ -58,20 +56,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				<link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png" />
 				<link rel="mask-icon" href="/safari-pinned-tab.svg" color={siteColor} />
 				<link rel="manifest" href="/site.webmanifest" />
-
-				<Script
-					defer
-					src="https://us.umami.is/script.js"
-					data-website-id="dece1a1a-44a8-4d59-be7c-47995ee0a0af"
-				/>
 			</head>
 			<body>
 				<Header />
 
 				<AccountProvider>{children}</AccountProvider>
 
-				<Analytics />
-				<SpeedInsights />
 				<Script id="google-analytics">
 					{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config","${process.env.NEXT_PUBLIC_GA_ID}",{page_path: window.location.pathname})`}
 				</Script>
