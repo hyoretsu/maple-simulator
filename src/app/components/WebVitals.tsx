@@ -1,13 +1,7 @@
 "use client";
 import { useReportWebVitals } from "next/web-vitals";
-import { useEffect } from "react";
-import { rum } from "../../lib/rum";
 
 export default function WebVitals() {
-	useEffect(() => {
-		rum.enable();
-	}, []);
-
 	useReportWebVitals(metric => {
 		// Console
 		// console.log(metric);
