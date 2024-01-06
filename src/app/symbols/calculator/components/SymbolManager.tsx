@@ -67,10 +67,18 @@ export default function SymbolManager({ symbols, type = "" as SymbolType }: Symb
 
 				const { level, exp } = currentCharacter.symbols[type][index];
 
+				const size = type === "Arcane" ? [34, 34] : [38, 38];
+
 				return (
 					<div className={styles.symbolInput} key={symbol.id}>
 						<h3>{regionName}</h3>
-						<img src={`/images/assets/${symbol.id}.png`} alt="" title={symbol.description} />
+						<img
+							src={`/images/assets/${symbol.id}.png`}
+							alt=""
+							title={symbol.description}
+							width={size[0]}
+							height={size[1]}
+						/>
 
 						<div>
 							<span>Level</span>

@@ -41,9 +41,9 @@ export default function SymbolCalculator() {
 		<>
 			<main className={styles.main}>
 				<h1>
-					<img src="/images/assets/2437750.png" alt="" title="Arcane Symbol" />
+					<img src="/images/assets/2437750.png" alt="" title="Arcane Symbol" width={34} height={34} />
 					/
-					<img src="/images/assets/2633336.png" alt="" title="Sacred Symbol" />
+					<img src="/images/assets/2633336.png" alt="" title="Sacred Symbol" width={37} height={38} />
 					Calculator
 				</h1>
 
