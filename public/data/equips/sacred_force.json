@@ -2,7 +2,7 @@
 	{
 		"id": 1713000,
 		"name": "Sacred Symbol: Cernium",
-		"description": "",
+		"description": "The Sacred Symbol of #cCernium# is filled with Sacred Power, which#c increases the main stat# of whoever possesses it. \n\rEquip this Sacred Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Sacred Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -15,7 +15,7 @@
 	{
 		"id": 1713001,
 		"name": "Sacred Symbol: Arcus",
-		"description": "",
+		"description": "The Sacred Symbol of #cArcus# is filled with Sacred Power, which#c increases the main stat# of whoever possesses it. \n\rEquip this Sacred Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Sacred Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -28,7 +28,7 @@
 	{
 		"id": 1713002,
 		"name": "Sacred Symbol: Odium",
-		"description": "",
+		"description": "The Sacred Symbol of #cOdium# is filled with Sacred Power, which#c increases the main stat# of whoever possesses it. \n\rEquip this Sacred Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Sacred Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -41,7 +41,7 @@
 	{
 		"id": 1713003,
 		"name": "Sacred Symbol: Shangri-La",
-		"description": "",
+		"description": "The Sacred Symbol of #cShangri-La# is filled with Sacred Power, which#c increases the main stat# of whoever possesses it. \n\rEquip this Sacred Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Sacred Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -54,7 +54,7 @@
 	{
 		"id": 1713004,
 		"name": "Sacred Symbol: Arteria",
-		"description": "",
+		"description": "The Sacred Symbol of #cArteria# is filled with Sacred Power, which#c increases the main stat# of whoever possesses it. \n\rEquip this Sacred Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Sacred Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -67,7 +67,7 @@
 	{
 		"id": 1713005,
 		"name": "Sacred Symbol: Carcion",
-		"description": "",
+		"description": "The Sacred Symbol of #cCarcion# is filled with Sacred Power, which#c increases the main stat# of whoever possesses it. \n\rEquip this Sacred Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Sacred Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,

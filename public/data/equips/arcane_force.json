@@ -15,7 +15,7 @@
 	{
 		"id": 1712001,
 		"name": "Arcane Symbol: Vanishing Journey",
-		"description": "",
+		"description": "The Arcane Symbol from the #cVanishing Journey# area. It contains Arcane Power that #cincreases the main stat# of whoever possesses it. \n\rEquip this Arcane Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Arcane Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -28,7 +28,7 @@
 	{
 		"id": 1712002,
 		"name": "Arcane Symbol: Chu Chu Island",
-		"description": "",
+		"description": "The Arcane Symbol from the #cChu Chu Island# area. It contains Arcane Power that #cincreases the main stat# of whoever possesses it. \n\rEquip this Arcane Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Arcane Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -41,7 +41,7 @@
 	{
 		"id": 1712003,
 		"name": "Arcane Symbol: Lachelein",
-		"description": "",
+		"description": "The Arcane Symbol from the #cLachelein# area. It contains Arcane Power that #cincreases the main stat# of whoever possesses it. \n\rEquip this Arcane Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Arcane Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -54,7 +54,7 @@
 	{
 		"id": 1712004,
 		"name": "Arcane Symbol: Arcana",
-		"description": "",
+		"description": "The Arcane Symbol of #cArcana#. It is filled with Arcane Power which #cincreases the main stat# of whoever possesses it. \n\rEquip this Arcane Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Arcane Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -67,7 +67,7 @@
 	{
 		"id": 1712005,
 		"name": "Arcane Symbol: Morass",
-		"description": "",
+		"description": "The Arcane Symbol of #cMorass#. It is filled with Arcane Power which #cincreases the main stat# of whoever possesses it. \n\rEquip this Arcane Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Arcane Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
@@ -80,7 +80,7 @@
 	{
 		"id": 1712006,
 		"name": "Arcane Symbol: Esfera",
-		"description": "",
+		"description": "The Arcane Symbol of #cEsfera# is filled with Arcane Power, which #cincreases the main stat# of whoever possesses it. \n\rEquip this Arcane Symbol and feed it duplicates from your inventory by #cdouble-clicking# them to grant it experience.\n\rStat boosts granted by the Arcane Symbol are not affected by % stat boosts.",
 		"requirements": {
 			"dex": 0,
 			"int": 0,
