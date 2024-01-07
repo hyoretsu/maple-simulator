@@ -1,5 +1,113 @@
 [
 	{
+		"id": 2048700,
+		"name": "Rebirth Flame Lv. 110",
+		"description": "Use on a piece of equipment to give it bonus stats.",
+		"description_reboot": "Use on a piece of equipment to give it bonus stats.",
+		"autodesc": "\r\n#cUse on equipment below Lv.110\r\nSuccess Rate: 100%\r\nRandom stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048701,
+		"name": "Rebirth Flame Lv. 120",
+		"description": "Use on a piece of equipment to give it bonus stats.",
+		"description_reboot": "Use on a piece of equipment to give it bonus stats.",
+		"autodesc": "\r\n#cAdds random stats to equipment below Lv.120\r\nSuccess Rate: 100%#"
+	},
+	{
+		"id": 2048702,
+		"name": "Rebirth Flame Lv. 130",
+		"description": "Use on a piece of equipment to give it bonus stats.",
+		"description_reboot": "Use on a piece of equipment to give it bonus stats.",
+		"autodesc": "\r\n#cUse on equipment below Lv.130\r\nSuccess Rate: 100%\r\nRandom stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048703,
+		"name": "Rebirth Flame Lv. 140",
+		"description": "Use on a piece of equipment to give it bonus stats.",
+		"description_reboot": "Use on a piece of equipment to give it bonus stats.",
+		"autodesc": "\r\n#cUse on equipment below Lv.140\r\nSuccess Rate: 100%\r\nRandom stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048704,
+		"name": "Rebirth Flame Lv. 150",
+		"description": "Use on a piece of equipment to give it bonus stats.",
+		"description_reboot": "Use on a piece of equipment to give it bonus stats.",
+		"autodesc": "\r\n#cUse on equipment below Lv.150\r\nSuccess Rate: 100%\r\nRandom stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048712,
+		"name": "Rebirth Flame Lv. 100",
+		"description": "Use on a piece of equipment to give it bonus stats.",
+		"description_reboot": "Use on a piece of equipment to give it bonus stats.",
+		"autodesc": "\r\n#cUse on equipment below Lv.100\r\nSuccess Rate: 100%\r\nRandom stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048716,
+		"name": "Powerful Rebirth Flame",
+		"description": "Use on equipment items to grant them a large bonus to random stats. If used on equipment that already has bonus stats, those bonus stats will be rerolled.",
+		"description_reboot": "Use on an equipment item to grant it bonus stats. The bonus stats are selected randomly, and will have higher values than are typical. If used on equipment that already has bonus stats, those bonus stats will be rerolled. ",
+		"autodesc": "\r\n#cCan be used on equipment.\r\nA high amount of random stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048717,
+		"name": "Eternal Rebirth Flame",
+		"description": "Use on equipment items for a chance to grant the max possible bonus to randomly selected stat values. If used on equipment that already has bonus stats, those bonus stats will be rerolled.",
+		"description_reboot": "Use on an equipment item to grant it bonus stats. The bonus stats are selected randomly, and have a chance of having the maximum values possible. If used on equipment that already has bonus stats, those bonus stats will be rerolled.",
+		"autodesc": "\r\n#cCan be used on equipment.#\r\n#cHas a chance to grant the maximum possible bonus to random stat values on the selected equipment.\r\n#"
+	},
+	{
+		"id": 2048718,
+		"name": "Critical Adventure Ring Rebirth Flame",
+		"description": "Use on a Critical Adventure Ring item to give it bonus stats. If the Rebirth Flame is used on equipment that already has bonus stats, then that item's bonus stats will be reselected.",
+		"autodesc": "\r\n#cCritical Adventure Ring only\r\nSuccess Rate: 100%\r\nRandom stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048719,
+		"name": "Pivotal Adventure Ring Rebirth Flame",
+		"description": "Use on a Pivotal Adventure Ring item to give it bonus stats. If the Rebirth Flame is used on equipment that already has bonus stats, then that item's bonus stats will be reselected.",
+		"autodesc": "\r\n#cPivotal Adventure Ring only\r\nSuccess Rate: 100%\r\nRandom stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048722,
+		"name": "Fierce Flame of Rebirth",
+		"description": "Use on a Boss Arena Emblem equipment item to give it bonus stats. If the Rebirth Flame is used on equipment that already has bonus stats, then that item's bonus stats will be reselected.",
+		"autodesc": "\r\n#cBoss Arena Emblem only\nSuccess Rate: 100%\r\nRandom Stats given to equipment\r\n#"
+	},
+	{
+		"id": 2048753,
+		"name": "Black Rebirth Flame",
+		"description": "Use this on equipment that already has bonus stats to reroll the bonus stats on the item. If used, it will reroll the bonus stats, and you can #cdecide whether or not to apply the rerolled bonus stats to the item#.",
+		"description_reboot": "If used on equipment that already has bonus stats, then that item's bonus stats will be rerolled. After the item's bonus stats are rerolled, you can #cdecide whether or not to apply those rerolled stats#.",
+		"autodesc": "\r\n#cCan be used on equipment.#\r\n#cHas a chance to grant the maximum possible bonus to random stat values on the selected equipment.\r\n#"
+	},
+	{
+		"id": 2048757,
+		"name": "Karma Eternal Rebirth Flame",
+		"description": "Use on #cuntradable# items for a chance to grant the max possible bonus to randomly selected stat values. If used on equipment that already has bonus stats, those bonus stats will be rerolled.",
+		"description_reboot": "Use on an#c untradable# item to grant it bonus stats. The bonus stats are selected randomly, and have a chance of having the maximum possible values. If used on a piece of equipment that already has bonus stats, those bonus stats will be rerolled.",
+		"autodesc": "\r\n#cCan be used on equipment.#\r\n#cHas a chance to grant the maximum possible bonus to random stat values on the selected equipment.\r\n#"
+	},
+	{
+		"id": 2048759,
+		"name": "Karma Powerful Rebirth Flame",
+		"description": "Use on #cuntradable# equipment items for a chance to grant large possible bonuses to randomly selected stat values. If used on equipment that already has bonus stats, those bonus stats will be rerolled.",
+		"description_reboot": "Use on an#c untradable# equipment item to grant it bonus stats. The bonus stats are selected randomly, and will have higher values than are typical. If used on equipment that already has bonus stats, those bonus stats will be rerolled.",
+		"autodesc": "\r\n#cGrants a large stat bonus to the selected equipment.\r\n#"
+	},
+	{
+		"id": 2048766,
+		"name": "Karma Black Rebirth Flame",
+		"description": "Use this on an #cuntradable# piece of equipment to reroll the bonus stats on the item. If used, it will reroll the bonus stats, and you can #cdecide whether or not to apply the rerolled bonus stats to the item.#",
+		"description_reboot": "If used on an #cuntradable# piece of equipment, then that item's bonus stats will be rerolled. After the item's bonus stats are rerolled, you can #cdecide whether or not to apply those rerolled stats#.",
+		"autodesc": "\r\n#cCan be used on equipment.#\r\n#cHas a chance to grant the maximum possible bonus to random stat values on the selected equipment.\r\n#"
+	},
+	{
+		"id": 2048779,
+		"name": "Lava Stone Rebirth Flame",
+		"description": "Use on an Ancient Slate Replica item to give it bonus stats. If the Rebirth Flame is used on equipment that already has bonus stats, then that item's bonus stats will be reselected.",
+		"autodesc": "\r\n#cAncient Slate Replica only\nSuccess Rate: 100%\r\nGives equipment powerful additional stats"
+	},
+	{
 		"id": 2630512,
 		"name": "Arcane Symbol Selector Coupon",
 		"description": "#cDouble-click# to select an Arcane Symbol to receive from the regions you have completed.",
