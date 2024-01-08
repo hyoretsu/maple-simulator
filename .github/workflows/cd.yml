@@ -47,7 +47,7 @@ jobs:
                   aws-region: us-east-1
 
             - name: Deploy to AWS S3
-              run: aws s3 sync ./out s3://maple-sim --delete
+              run: aws s3 sync ./out s3://maple-sim
 
             - name: Invalidate existing pages
               run: aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
