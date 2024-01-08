@@ -11,7 +11,7 @@ export default function BossesTracker() {
 	return (
 		<main className={styles.main}>
 			<h1>
-				<img src="/images/items/intense_power_crystal.png" alt="" width={48} height={56} />
+				<img src="/images/assets/4001886.png" alt="" width={32} height={38} />
 				Tracker
 			</h1>
 

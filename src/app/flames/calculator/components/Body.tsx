@@ -1,7 +1,7 @@
 "use client";
 import { useCharacters } from "@context/account";
 import classes from "@data/classes.json";
-import equips from "@data/equips.json";
+import equips from "@data/items/equips.json";
 import { Equipment, EquipmentType } from "maple-simulator";
 import { useMemo, useState } from "react";
 import styles from "../styles.module.scss";

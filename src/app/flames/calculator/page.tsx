@@ -1,7 +1,7 @@
 import CharacterGuard from "@components/CharacterGuard";
 import CharacterSelector from "@components/CharacterSelector";
 import Footer from "@components/Footer";
-import consumables from "@data/consumables.json";
+import consumables from "@data/items/consumables.json";
 import Body from "./components/Body";
 import styles from "./styles.module.scss";
 
