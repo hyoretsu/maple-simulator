@@ -22,11 +22,13 @@ export type EquipmentType =
 	| "Heart"
 	| "Medal"
 	| "Pendant"
+	| "Pocket"
 	| "Ring"
 	| "Secondary Weapon"
 	| "Shoes"
 	| "Shoulder"
 	| "Top"
+	| "Totem"
 	| "Weapon";
 export interface Job {
 	id: number;
@@ -106,11 +108,13 @@ export interface CharacterEquips {
 	Heart: CharacterEquip;
 	Medal: CharacterEquip;
 	Pendant: CharacterEquip[];
+	Pocket: CharacterEquip;
 	Ring: CharacterEquip[];
 	"Secondary Weapon": CharacterEquip;
 	Shoes: CharacterEquip;
 	Shoulder: CharacterEquip;
 	Top: CharacterEquip;
+	Totem: CharacterEquip[];
 	Weapon: CharacterEquip;
 }
 export interface Character {

@@ -1471,7 +1471,7 @@
 		"id": 1202287,
 		"name": "Ancient Slate Replica",
 		"description": "A totem made after the ancient slate found in the Island of Mirages. You can grant powerful bonus stats to it using #cLava Stone Rebirth Flame#.&\n- With Appreciation from the Maple Expedition Captain -",
-		"type": "Pocket",
+		"type": "Totem",
 		"requirements": {
 			"level": 200
 		}

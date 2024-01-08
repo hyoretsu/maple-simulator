@@ -108,13 +108,13 @@ export default function EquipDisplay({
 				onChange={e => {
 					const id = Number(e.currentTarget.value);
 
-					if (type === "Pendant") {
-						const newPendants = [...currentCharacter.equips.Pendant];
-						newPendants[index as number] = { id };
+					if (type === "Pendant" || type === "Totem") {
+						const newEquips = [...currentCharacter.equips[type]];
+						newEquips[index as number] = { id };
 
 						updateCharacter(currentCharacter.id, {
 							equips: {
-								Pendant: newPendants,
+								[type]: newEquips,
 							},
 						});
 					} else {

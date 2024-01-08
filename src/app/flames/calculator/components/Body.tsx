@@ -41,6 +41,10 @@ export default function Body() {
 				Object.assign(obj, {
 					[type]: equips
 						.filter(equipData => {
+							if (type === "Totem") {
+								return equipData.name === "Ancient Slate Replica";
+							}
+
 							const sameType = (isTop && equipData.type === "Overall") || equipData.type === type;
 							const belowLevel =
 								!equipData.requirements?.level || equipData.requirements.level <= currentCharacter.level;
@@ -89,7 +93,7 @@ export default function Body() {
 					if (Array.isArray(equip)) {
 						return equip.map((subEquip, index) => (
 							<EquipDisplay
-								key={`${type}${index}`}
+								key={`${type}-${index}`}
 								index={index}
 								type={type as EquipmentType}
 								equip={subEquip}

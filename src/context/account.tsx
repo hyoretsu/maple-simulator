@@ -57,11 +57,13 @@ export const defaultCharacter: Omit<Character, "id"> = {
 		Heart: null,
 		Medal: null,
 		Pendant: [null, null],
+		Pocket: null,
 		Ring: [null, null, null, null],
 		"Secondary Weapon": null,
 		Shoes: null,
 		Shoulder: null,
 		Top: null,
+		Totem: [null, null, null],
 		Weapon: null,
 	},
 	symbols: {
