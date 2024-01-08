@@ -60,7 +60,7 @@ const hpMpLimits = [
 export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps) {
 	const { currentCharacter, updateCharacter } = useCharacters();
 	if (!currentCharacter) {
-		return;
+		return <></>;
 	}
 
 	const [kannaModalVisible, showKannaModal] = useState(false);
@@ -133,7 +133,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 							<Input
 								type="number"
 								// @ts-ignore
-								value={equip?.flames?.[statName]}
+								value={equip?.flames?.[statName] || 0}
 								placeholder="0"
 								min={0}
 								max={statLimit}
@@ -153,7 +153,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 							<Input
 								type="number"
 								// @ts-ignore
-								value={equip?.flames?.[statName]}
+								value={equip?.flames?.[statName] || 0}
 								placeholder="0"
 								min={0}
 								max={statLimit}
@@ -173,7 +173,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 
 							<Input
 								type="number"
-								value={equip?.flames?.hp}
+								value={equip?.flames?.hp || 0}
 								placeholder="0"
 								min={0}
 								max={hpMpLimit}
@@ -188,7 +188,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 
 							<Input
 								type="number"
-								value={equip?.flames?.mp}
+								value={equip?.flames?.mp || 0}
 								placeholder="0"
 								min={0}
 								max={hpMpLimit}
@@ -203,7 +203,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 						<span>Attack Power</span>
 						<Input
 							type="number"
-							value={equip?.flames?.att}
+							value={equip?.flames?.att || 0}
 							placeholder="0"
 							min={0}
 							max={7}
@@ -215,7 +215,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 						<span>Magic Attack</span>
 						<Input
 							type="number"
-							value={equip?.flames?.mAtt}
+							value={equip?.flames?.mAtt || 0}
 							placeholder="0"
 							min={0}
 							max={7}
@@ -228,7 +228,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 					<span>All Stats</span>
 					<Input
 						type="number"
-						value={equip?.flames?.allStats}
+						value={equip?.flames?.allStats || 0}
 						placeholder="0"
 						min={0}
 						max={7}
