@@ -5,8 +5,9 @@
 !/.vscode/launch.json
 !.gitkeep
 *.log
-public/*
-!public/opengraph.jpg
+public/cwr.js
+public/images
+!public/images/opengraph.jpg
 
 # Env files
 **/.env

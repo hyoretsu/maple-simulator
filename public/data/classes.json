@@ -1,0 +1,345 @@
+[
+	{
+		"name": "Adele",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [15002, 15100, 15110, 15111, 15112]
+	},
+	{
+		"name": "Angelic Buster",
+		"branch": "Pirate",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [6001, 6500, 6510, 6511, 6512]
+	},
+	{
+		"name": "Aran",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [2000, 2100, 2110, 2111, 2112]
+	},
+	{
+		"name": "Ark",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [15001, 15500, 15510, 15511, 15512]
+	},
+	{
+		"name": "Battle Mage",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [3000, 3200, 3210, 3211, 3212]
+	},
+	{
+		"name": "Beast Tamer",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": []
+	},
+	{
+		"name": "Bishop",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [0, 200, 230, 231, 232]
+	},
+	{
+		"name": "Blaster",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [3000, 3700, 3710, 3711, 3712]
+	},
+	{
+		"name": "Blaze Wizard",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [1000, 1200, 1210, 1211, 1212]
+	},
+	{
+		"name": "Bowmaster",
+		"branch": "Bowman",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [0, 300, 310, 311, 312]
+	},
+	{
+		"name": "Buccaneer",
+		"branch": "Pirate",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [0, 500, 510, 511, 512]
+	},
+	{
+		"name": "Cadena",
+		"branch": "Thief",
+		"mainStat": ["LUK"],
+		"secondaryStat": ["STR", "DEX"],
+		"jobs": [6002, 6400, 6410, 6411, 6412]
+	},
+	{
+		"name": "Cannoneer",
+		"branch": "Pirate",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [0, 501, 530, 531, 532]
+	},
+	{
+		"name": "Corsair",
+		"branch": "Pirate",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [0, 500, 520, 521, 522]
+	},
+	{
+		"name": "Dark Knight",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [0, 100, 130, 131, 132]
+	},
+	{
+		"name": "Dawn Warrior",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [1000, 1100, 1110, 1111, 1112]
+	},
+	{
+		"name": "Demon Avenger",
+		"branch": "Warrior",
+		"mainStat": ["HP"],
+		"secondaryStat": ["STR"],
+		"jobs": [3001, 3101, 3120, 3121, 3122]
+	},
+	{
+		"name": "Demon Slayer",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [3001, 3100, 3110, 3111, 3112]
+	},
+	{
+		"name": "Dual Blade",
+		"branch": "Thief",
+		"mainStat": ["LUK"],
+		"secondaryStat": ["STR", "DEX"],
+		"jobs": [0, 400, 430, 431, 432, 433, 434]
+	},
+	{
+		"name": "Evan",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [2001, 2200, 2210, 2211, 2212]
+	},
+	{
+		"name": "Hayato",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [4001, 4100, 4110, 4111, 4112]
+	},
+	{
+		"name": "Hero",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [0, 100, 110, 111, 112]
+	},
+	{
+		"name": "Hoyoung",
+		"branch": "Thief",
+		"mainStat": ["LUK"],
+		"secondaryStat": ["DEX"],
+		"jobs": [16000, 16400, 16410, 16411, 164012]
+	},
+	{
+		"name": "Illium",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [15000, 15200, 15210, 15211, 15212]
+	},
+	{
+		"name": "Kain",
+		"branch": "Bowman",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [6003, 6300, 6310, 6311, 6312]
+	},
+	{
+		"name": "Kaiser",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [6000, 6100, 6110, 6111, 6112]
+	},
+	{
+		"name": "Kanna",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [4002, 4200, 4210, 4211, 4212]
+	},
+	{
+		"name": "Khali",
+		"branch": "Thief",
+		"mainStat": ["LUK"],
+		"secondaryStat": ["DEX"],
+		"jobs": [15003, 15400, 15410, 15411, 15412]
+	},
+	{
+		"name": "Kinesis",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [14000, 14200, 14210, 14211, 14212]
+	},
+	{
+		"name": "Lara",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [16001, 16200, 16210, 16211, 16212]
+	},
+	{
+		"name": "Luminous",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [2004, 2700, 2710, 2711, 2712]
+	},
+	{
+		"name": "Magician (Fire, Poison)",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [0, 200, 210, 211, 212]
+	},
+	{
+		"name": "Magician (Ice, Lightning)",
+		"branch": "Magician",
+		"mainStat": ["INT"],
+		"secondaryStat": ["LUK"],
+		"jobs": [0, 200, 220, 221, 222]
+	},
+	{
+		"name": "Marksman",
+		"branch": "Bowman",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [0, 300, 320, 321, 322]
+	},
+	{
+		"name": "Mechanic",
+		"branch": "Pirate",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [3000, 3500, 3510, 3511, 3512]
+	},
+	{
+		"name": "Mercedes",
+		"branch": "Bowman",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [2002, 2300, 2310, 2311, 2312]
+	},
+	{
+		"name": "Mihile",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [5000, 5100, 5110, 5111, 5112]
+	},
+	{
+		"name": "Night Lord",
+		"branch": "Thief",
+		"mainStat": ["LUK"],
+		"secondaryStat": ["DEX"],
+		"jobs": [0, 400, 410, 411, 412]
+	},
+	{
+		"name": "Night Walker",
+		"branch": "Thief",
+		"mainStat": ["LUK"],
+		"secondaryStat": ["DEX"],
+		"jobs": [1000, 1400, 1410, 1411, 1412]
+	},
+	{
+		"name": "Paladin",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [0, 100, 1120, 1121, 1122]
+	},
+	{
+		"name": "Pathfinder",
+		"branch": "Bowman",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [0, 301, 330, 331, 332]
+	},
+	{
+		"name": "Phantom",
+		"branch": "Thief",
+		"mainStat": ["LUK"],
+		"secondaryStat": ["DEX"],
+		"jobs": [2003, 2400, 2410, 2411, 2412]
+	},
+	{
+		"name": "Shade",
+		"branch": "Pirate",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [2005, 2500, 2510, 2511, 2512]
+	},
+	{
+		"name": "Shadower",
+		"branch": "Thief",
+		"mainStat": ["LUK"],
+		"secondaryStat": ["STR", "DEX"],
+		"jobs": [0, 400, 420, 421, 422]
+	},
+	{
+		"name": "Thunder Breaker",
+		"branch": "Pirate",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [1000, 1500, 1510, 1511, 1512]
+	},
+	{
+		"name": "Wild Hunter",
+		"branch": "Bowman",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [3000, 3300, 3310, 3311, 3312]
+	},
+	{
+		"name": "Wind Archer",
+		"branch": "Bowman",
+		"mainStat": ["DEX"],
+		"secondaryStat": ["STR"],
+		"jobs": [1000, 1300, 1310, 1311, 1312]
+	},
+	{
+		"name": "Xenon",
+		"branch": "Xenon",
+		"mainStat": ["STR", "DEX", "LUK"],
+		"secondaryStat": null,
+		"jobs": [3002, 3600, 3610, 3611, 3612]
+	},
+	{
+		"name": "Zero",
+		"branch": "Warrior",
+		"mainStat": ["STR"],
+		"secondaryStat": ["DEX"],
+		"jobs": [10000, 10100, 10110, 10111, 10112]
+	}
+]

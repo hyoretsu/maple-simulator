@@ -9,8 +9,8 @@ dependencies:
     specifier: ^5.0.8
     version: 5.0.8
   '@hyoretsu/react-components':
-    specifier: ^1.7.7
-    version: 1.7.7(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6)
+    specifier: ^1.7.8
+    version: 1.7.8(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6)
   '@hyoretsu/react-hooks':
     specifier: ^1.2.5
     version: 1.2.5
@@ -1411,8 +1411,8 @@ packages:
     resolution: {integrity: sha512-fI9bP8KoNloNhIky6vji/I52xuF9V43Pbdf0lQYIsDMjYFiSQ0RRNyBUFvnuws1Pv6DHy9rXZTdp8GEAqhq2eA==}
     dev: false
 
-  /@hyoretsu/react-components@1.7.7(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6):
-    resolution: {integrity: sha512-5N0hGn2Pl8jOVMHUDZI6J9mUbOAlb3EZDKq4gmLwlRQzN77LoCJ+Jm8UYuJ3wgUb+klBbAgm/zrmtdzipmBb+w==}
+  /@hyoretsu/react-components@1.7.8(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6):
+    resolution: {integrity: sha512-cgHAz6j0gp6TMUvloAT7jyPLILvfiVIOj4aDsGcf9aRmj3RdOXEg8p844zKmFzit68QuF/DdjyvJMbnefNb1oQ==}
     dependencies:
       '@hyoretsu/react-hooks': 1.2.5
       '@hyoretsu/utils': 1.8.0
@@ -1949,6 +1949,10 @@ packages:
 
   /caniuse-lite@1.0.30001572:
     resolution: {integrity: sha512-1Pbh5FLmn5y4+QhNyJE9j3/7dK44dGB83/ZMjv/qJk86TvDbjk0LosiZo0i0WB0Vx607qMX9jYrn1VLHCkN4rw==}
+
+  /caniuse-lite@1.0.30001576:
+    resolution: {integrity: sha512-ff5BdakGe2P3SQsMsiqmt1Lc8221NR1VzHj5jXN5vBny9A6fpze94HiVV/n7XRosOlsShJcvMv5mdnpjOGCEgg==}
+    dev: false
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -2493,7 +2497,7 @@ packages:
       '@next/env': 13.5.6
       '@swc/helpers': 0.5.2
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001572
+      caniuse-lite: 1.0.30001576
       postcss: 8.4.31
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)

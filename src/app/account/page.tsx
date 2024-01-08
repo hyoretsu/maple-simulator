@@ -1,12 +1,13 @@
 "use client";
 import Footer from "@components/Footer";
 import { useAccount, useCharacters } from "@context/account";
-import { Input, Modal } from "@hyoretsu/react-components";
+import { Input } from "@hyoretsu/react-components";
 import { useState } from "react";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { BiSolidCopy } from "react-icons/bi";
 import { BsClipboard2Fill } from "react-icons/bs";
 import { IoArrowBackOutline } from "react-icons/io5";
+import StyledModal from "../../components/StyledModal";
 import CharacterEdit from "./components/CharacterEdit";
 import styles from "./styles.module.scss";
 
@@ -132,7 +133,7 @@ export default function Account() {
 			{error && <p style={{ margin: "0 auto" }}>Error: {error.toLowerCase()}</p>}
 
 			{accountIdModalShown && (
-				<Modal className={styles.modal} onConfirm={() => showAccountIdModal(false)}>
+				<StyledModal onConfirm={() => showAccountIdModal(false)}>
 					<p>
 						First of all, this is entirely optional, you do not need to enter this in order to use any part of
 						the site. As for what I use it: well, nothing really. I just save it locally and don't need it for
@@ -160,7 +161,7 @@ export default function Account() {
 						In fact, I have no way of checking if what you put in is valid or not. (which is why I may
 						eventually discard it in favor of simply using an UUID)
 					</p>
-				</Modal>
+				</StyledModal>
 			)}
 		</>
 	);

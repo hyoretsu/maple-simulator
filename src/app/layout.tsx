@@ -43,14 +43,16 @@ export const viewport = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<head>
-				<script
-					dangerouslySetInnerHTML={{
-						__html:
-							"(function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.head.getElementsByTagName('script')[0]);})('cwr','66929798-1869-4254-91d1-7d140580c028','1.0.0','us-east-1','/cwr.js',{sessionSampleRate: 1,guestRoleArn: 'arn:aws:iam::182273057205:role/RUM-Monitor-us-east-1-182273057205-1291522254071-Unauth',identityPoolId: 'us-east-1:b17d3531-e799-4caa-b853-e11016b14bd6',endpoint: 'https://dataplane.rum.us-east-1.amazonaws.com',telemetries: ['performance','errors','http'],allowCookies: true,enableXRay: true});",
-					}}
-				/>
+				{process.env.NODE_ENV === "production" && (
+					<script
+						dangerouslySetInnerHTML={{
+							__html:
+								"(function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.head.getElementsByTagName('script')[0]);})('cwr','66929798-1869-4254-91d1-7d140580c028','1.0.0','us-east-1','/cwr.js',{sessionSampleRate: 1,guestRoleArn: 'arn:aws:iam::182273057205:role/RUM-Monitor-us-east-1-182273057205-1291522254071-Unauth',identityPoolId: 'us-east-1:b17d3531-e799-4caa-b853-e11016b14bd6',endpoint: 'https://dataplane.rum.us-east-1.amazonaws.com',telemetries: ['performance','errors','http'],allowCookies: true,enableXRay: true});",
+						}}
+					/>
+				)}
 				<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
 				<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
 				<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
@@ -62,32 +64,43 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				<link rel="mask-icon" href="/safari-pinned-tab.svg" color={siteColor} />
 				<link rel="manifest" href="/site.webmanifest" />
 
-				<script
-					defer
-					data-domain="maple-simulator.hyoretsu.com"
-					src="https://plausible.hyoretsu.com/js/script.outbound-links.js"
-				/>
-				<script
-					dangerouslySetInnerHTML={{
-						__html:
-							"window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}",
-					}}
-				/>
+				{process.env.NODE_ENV === "production" && (
+					<>
+						<script
+							defer
+							data-domain="maple-simulator.hyoretsu.com"
+							src="https://plausible.hyoretsu.com/js/script.outbound-links.js"
+						/>
+						<script
+							dangerouslySetInnerHTML={{
+								__html:
+									"window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}",
+							}}
+						/>
+					</>
+				)}
 			</head>
 			<body>
-				<script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
-				<script
-					id="google-analytics"
-					dangerouslySetInnerHTML={{
-						__html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config","${process.env.NEXT_PUBLIC_GA_ID}",{page_path: window.location.pathname})`,
-					}}
-				/>
+				{process.env.NODE_ENV === "production" && (
+					<>
+						<script
+							async
+							src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+						/>
+						<script
+							id="google-analytics"
+							dangerouslySetInnerHTML={{
+								__html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config","${process.env.NEXT_PUBLIC_GA_ID}",{page_path: window.location.pathname})`,
+							}}
+						/>
+					</>
+				)}
 
 				<Header />
 
 				<AccountProvider>{children}</AccountProvider>
 
-				<WebVitals />
+				{process.env.NODE_ENV === "production" && <WebVitals />}
 			</body>
 		</html>
 	);

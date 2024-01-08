@@ -1,0 +1,1487 @@
+[
+	{
+		"id": 1003797,
+		"name": "Royal Warrior Helm",
+		"type": "Hat",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1003798,
+		"name": "Royal Dunwitch Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1003799,
+		"name": "Royal Ranger Beret",
+		"type": "Hat",
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1003800,
+		"name": "Royal Assassin Hood",
+		"type": "Hat",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1003801,
+		"name": "Royal Wanderer Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Pirate",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004422,
+		"name": "AbsoLab Knight Helm",
+		"type": "Hat",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004423,
+		"name": "AbsoLab Mage Crown",
+		"type": "Hat",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004424,
+		"name": "AbsoLab Archer Hood",
+		"type": "Hat",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004425,
+		"name": "AbsoLab Bandit Cap",
+		"type": "Hat",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004426,
+		"name": "AbsoLab Pirate Fedora",
+		"type": "Hat",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004808,
+		"name": "Arcane Umbra Knight Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004809,
+		"name": "Arcane Umbra Mage Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004810,
+		"name": "Arcane Umbra Archer Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004811,
+		"name": "Arcane Umbra Thief Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1004812,
+		"name": "Arcane Umbra Pirate Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1005980,
+		"name": "Eternal Knight Helm",
+		"type": "Hat",
+		"requirements": {
+			"job": "Warrior",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1005981,
+		"name": "Eternal Mage Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Magician",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1005982,
+		"name": "Eternal Archer Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Bowman",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1005983,
+		"name": "Eternal Thief Bandana",
+		"type": "Hat",
+		"requirements": {
+			"job": "Thief",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1005984,
+		"name": "Eternal Pirate Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Pirate",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1012478,
+		"name": "Condensed Power Crystal",
+		"type": "Face Accessory",
+		"requirements": {
+			"level": 110
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1012632,
+		"name": "Berserked",
+		"type": "Face Accessory",
+		"requirements": {
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1012757,
+		"name": "Twilight Mark",
+		"type": "Face Accessory",
+		"requirements": {
+			"level": 140
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1022231,
+		"name": "Aquatic Letter Eye Accessory",
+		"type": "Eye Accessory",
+		"requirements": {
+			"level": 100
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1022232,
+		"name": "Black Bean Mark",
+		"type": "Eye Accessory",
+		"requirements": {
+			"level": 135
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1022277,
+		"name": "Papulatus Mark",
+		"type": "Eye Accessory",
+		"requirements": {
+			"level": 145
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1022278,
+		"name": "Magic Eyepatch",
+		"type": "Eye Accessory",
+		"requirements": {
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1032136,
+		"name": "Will o' the Wisps",
+		"type": "Earrings",
+		"requirements": {
+			"level": 130
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1032220,
+		"name": "Cracked Gollux Earrings",
+		"description": "Earrings made from bits of Gollux's core. They have a pulsing glow.",
+		"type": "Earrings",
+		"requirements": {
+			"level": 120
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1032221,
+		"name": "Solid Gollux Earrings",
+		"description": "Earrings made from bits of Gollux's core. They have a pulsing glow.",
+		"type": "Earrings",
+		"requirements": {
+			"level": 130
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1032222,
+		"name": "Reinforced Gollux Earrings",
+		"description": "Earrings made from bits of Gollux's core. They have a pulsing glow.",
+		"type": "Earrings",
+		"requirements": {
+			"level": 140
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1032223,
+		"name": "Superior Gollux Earrings",
+		"description": "Earrings made from bits of Gollux's core. They have a pulsing glow.",
+		"type": "Earrings",
+		"requirements": {
+			"level": 150
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1032241,
+		"name": "Dea Sidus Earring",
+		"type": "Earrings",
+		"requirements": {
+			"level": 130
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1032316,
+		"name": "Commanding Force Earring",
+		"type": "Earrings",
+		"requirements": {
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1032330,
+		"name": "Estella Earrings",
+		"type": "Earrings",
+		"requirements": {
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042254,
+		"name": "Eagle Eye Warrior Armor",
+		"type": "Top",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042255,
+		"name": "Eagle Eye Dunwitch Robe",
+		"type": "Top",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042256,
+		"name": "Eagle Eye Ranger Cowl",
+		"type": "Top",
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042257,
+		"name": "Eagle Eye Assassin Shirt",
+		"type": "Top",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042258,
+		"name": "Eagle Eye Wanderer Coat",
+		"type": "Top",
+		"requirements": {
+			"job": "Pirate",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042433,
+		"name": "Eternal Knight Armor",
+		"type": "Top",
+		"requirements": {
+			"job": "Warrior",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042434,
+		"name": "Eternal Mage Robe",
+		"type": "Top",
+		"requirements": {
+			"job": "Magician",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042435,
+		"name": "Eternal Archer Hood",
+		"type": "Top",
+		"requirements": {
+			"job": "Bowman",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042436,
+		"name": "Eternal Thief Shirt",
+		"type": "Top",
+		"requirements": {
+			"job": "Thief",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1042437,
+		"name": "Eternal Pirate Coat",
+		"type": "Top",
+		"requirements": {
+			"job": "Pirate",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1052882,
+		"name": "AbsoLab Knight Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1052887,
+		"name": "AbsoLab Mage Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1052888,
+		"name": "AbsoLab Archer Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1052889,
+		"name": "AbsoLab Bandit Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1052890,
+		"name": "AbsoLab Pirate Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1053063,
+		"name": "Arcane Umbra Knight Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1053064,
+		"name": "Arcane Umbra Mage Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1053065,
+		"name": "Arcane Umbra Archer Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1053066,
+		"name": "Arcane Umbra Thief Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1053067,
+		"name": "Arcane Umbra Pirate Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062165,
+		"name": "Trixter Warrior Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062166,
+		"name": "Trixter Dunwitch Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062167,
+		"name": "Trixter Ranger Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062168,
+		"name": "Trixter Assassin Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062169,
+		"name": "Trixter Wanderer Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Pirate",
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062285,
+		"name": "Eternal Knight Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Warrior",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062286,
+		"name": "Eternal Mage Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Magician",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062287,
+		"name": "Eternal Archer Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Bowman",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062288,
+		"name": "Eternal Thief Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Thief",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1062289,
+		"name": "Eternal Pirate Pants",
+		"type": "Bottom",
+		"requirements": {
+			"job": "Pirate",
+			"level": 250
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073030,
+		"name": "AbsoLab Knight Shoes",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073032,
+		"name": "AbsoLab Mage Shoes",
+		"icon": 1073030,
+		"type": "Shoes",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073033,
+		"name": "AbsoLab Archer Shoes",
+		"icon": 1073030,
+		"type": "Shoes",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073034,
+		"name": "AbsoLab Bandit Shoes",
+		"icon": 1073030,
+		"type": "Shoes",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073035,
+		"name": "AbsoLab Pirate Shoes",
+		"icon": 1073030,
+		"type": "Shoes",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073158,
+		"name": "Arcane Umbra Knight Shoes",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073159,
+		"name": "Arcane Umbra Mage Shoes",
+		"icon": 1073158,
+		"type": "Shoes",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073160,
+		"name": "Arcane Umbra Archer Shoes",
+		"icon": 1073158,
+		"type": "Shoes",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073161,
+		"name": "Arcane Umbra Thief Shoes",
+		"icon": 1073158,
+		"type": "Shoes",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1073162,
+		"name": "Arcane Umbra Pirate Shoes",
+		"icon": 1073158,
+		"type": "Shoes",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082636,
+		"name": "AbsoLab Knight Gloves",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082637,
+		"name": "AbsoLab Mage Gloves",
+		"icon": 1082636,
+		"type": "Gloves",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082638,
+		"name": "AbsoLab Archer Gloves",
+		"icon": 1082636,
+		"type": "Gloves",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082639,
+		"name": "AbsoLab Bandit Gloves",
+		"icon": 1082636,
+		"type": "Gloves",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082640,
+		"name": "AbsoLab Pirate Gloves",
+		"icon": 1082636,
+		"type": "Gloves",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082695,
+		"name": "Arcane Umbra Knight Gloves",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082696,
+		"name": "Arcane Umbra Mage Gloves",
+		"icon": 1082695,
+		"type": "Gloves",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082697,
+		"name": "Arcane Umbra Archer Gloves",
+		"icon": 1082695,
+		"type": "Gloves",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082698,
+		"name": "Arcane Umbra Thief Gloves",
+		"icon": 1082695,
+		"type": "Gloves",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1082699,
+		"name": "Arcane Umbra Pirate Gloves",
+		"icon": 1082695,
+		"type": "Gloves",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102775,
+		"name": "AbsoLab Knight Cape",
+		"type": "Cape",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102794,
+		"name": "AbsoLab Mage Cape",
+		"icon": 1102775,
+		"type": "Cape",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102795,
+		"name": "AbsoLab Archer Cape",
+		"icon": 1102775,
+		"type": "Cape",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102796,
+		"name": "AbsoLab Bandit Cape",
+		"icon": 1102775,
+		"type": "Cape",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102797,
+		"name": "AbsoLab Pirate Cape",
+		"icon": 1102775,
+		"type": "Cape",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102940,
+		"name": "Arcane Umbra Knight Cape",
+		"type": "Cape",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102941,
+		"name": "Arcane Umbra Mage Cape",
+		"icon": 1102940,
+		"type": "Cape",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102942,
+		"name": "Arcane Umbra Archer Cape",
+		"icon": 1102940,
+		"type": "Cape",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102943,
+		"name": "Arcane Umbra Thief Cape",
+		"icon": 1102940,
+		"type": "Cape",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1102944,
+		"name": "Arcane Umbra Pirate Cape",
+		"icon": 1102940,
+		"type": "Cape",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1113072,
+		"name": "Cracked Gollux Ring",
+		"description": "A ring made from bits of Gollux's core. ",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1113073,
+		"name": "Solid Gollux Ring",
+		"description": "A ring made from bits of Gollux's core. ",
+		"type": "Ring",
+		"requirements": {
+			"level": 130
+		}
+	},
+	{
+		"id": 1113074,
+		"name": "Reinforced Gollux Ring",
+		"description": "A ring made from bits of Gollux's core. ",
+		"type": "Ring",
+		"requirements": {
+			"level": 140
+		}
+	},
+	{
+		"id": 1113075,
+		"name": "Superior Gollux Ring",
+		"description": "A ring made from bits of Gollux's core. ",
+		"type": "Ring",
+		"requirements": {
+			"level": 150
+		}
+	},
+	{
+		"id": 1113149,
+		"name": "Silver Blossom Ring",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		}
+	},
+	{
+		"id": 1113282,
+		"name": "Noble Ifia's Ring",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1113313,
+		"name": "Guardian Angel Ring",
+		"description": "#cYou can use this special scroll to replace the Boss Accessory Set effect with the Dawn Boss Set effect by visiting Chief Slime of Ramuramu village.#",
+		"type": "Ring",
+		"requirements": {
+			"level": 160
+		}
+	},
+	{
+		"id": 1113316,
+		"name": "Dawn Guardian Angel Ring",
+		"icon": 1113313,
+		"type": "Ring",
+		"requirements": {
+			"level": 160
+		}
+	},
+	{
+		"id": 1122000,
+		"name": "Horntail Necklace",
+		"type": "Pendant",
+		"requirements": {
+			"level": 120
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1122076,
+		"name": "Chaos Horntail Necklace",
+		"type": "Pendant",
+		"requirements": {
+			"level": 120
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1122150,
+		"name": "Dominator Pendant",
+		"description": "A legendary necklace said to have been worn by Arkarium, one of the Black Mage's commanders.",
+		"type": "Pendant",
+		"requirements": {
+			"level": 140
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1122254,
+		"name": "Mechanator Pendant",
+		"type": "Pendant",
+		"requirements": {
+			"level": 120
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1122264,
+		"name": "Cracked Engraved Gollux Pendant",
+		"description": "A pendant engraved with Gollux's emblem. ",
+		"type": "Pendant",
+		"requirements": {
+			"level": 120
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1122265,
+		"name": "Solid Engraved Gollux Pendant",
+		"description": "A pendant engraved with Gollux's emblem. ",
+		"type": "Pendant",
+		"requirements": {
+			"level": 130
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1122266,
+		"name": "Reinforced Engraved Gollux Pendant",
+		"description": "A pendant engraved with Gollux's emblem. ",
+		"type": "Pendant",
+		"requirements": {
+			"level": 140
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1122267,
+		"name": "Superior Engraved Gollux Pendant",
+		"description": "A pendant engraved with Gollux's emblem. ",
+		"type": "Pendant",
+		"requirements": {
+			"level": 150
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1122430,
+		"name": "Source of Suffering",
+		"type": "Pendant",
+		"requirements": {
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1122443,
+		"name": "Daybreak Pendant",
+		"type": "Pendant",
+		"requirements": {
+			"level": 140
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1132243,
+		"name": "Cracked Engraved Gollux Belt",
+		"description": "A belt engraved with Gollux's emblem. ",
+		"type": "Belt",
+		"requirements": {
+			"level": 120
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1132244,
+		"name": "Solid Engraved Gollux Belt",
+		"description": "A belt engraved with Gollux's emblem. ",
+		"type": "Belt",
+		"requirements": {
+			"level": 130
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1132245,
+		"name": "Reinforced Engraved Gollux Belt",
+		"description": "A belt engraved with Gollux's emblem. ",
+		"type": "Belt",
+		"requirements": {
+			"level": 140
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1132246,
+		"name": "Superior Engraved Gollux Belt",
+		"description": "A belt engraved with Gollux's emblem. ",
+		"type": "Belt",
+		"requirements": {
+			"level": 150
+		},
+		"flameAdvantage": false
+	},
+	{
+		"id": 1132272,
+		"name": "Golden Clover Belt",
+		"type": "Belt",
+		"requirements": {
+			"level": 140
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1132296,
+		"name": "Enraged Zakum Belt",
+		"type": "Belt",
+		"requirements": {
+			"level": 150
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1132308,
+		"name": "Dreamy Belt",
+		"description": "It radiates with the power of nightmares.",
+		"type": "Belt",
+		"requirements": {
+			"level": 200
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1152170,
+		"name": "Royal Black Metal Shoulder",
+		"type": "Shoulder",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1152174,
+		"name": "AbsoLab Knight Shoulder",
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1152176,
+		"name": "AbsoLab Mage Shoulder",
+		"icon": 1152174,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		}
+	},
+	{
+		"id": 1152177,
+		"name": "AbsoLab Archer Shoulder",
+		"icon": 1152174,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		}
+	},
+	{
+		"id": 1152178,
+		"name": "AbsoLab Thief Shoulder",
+		"icon": 1152174,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		}
+	},
+	{
+		"id": 1152179,
+		"name": "AbsoLab Pirate Shoulder",
+		"icon": 1152174,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		}
+	},
+	{
+		"id": 1152196,
+		"name": "Arcane Umbra Knight Shoulder",
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1152197,
+		"name": "Arcane Umbra Mage Shoulder",
+		"icon": 1152196,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1152198,
+		"name": "Arcane Umbra Archer Shoulder",
+		"icon": 1152196,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1152199,
+		"name": "Arcane Umbra Thief Shoulder",
+		"icon": 1152196,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1152200,
+		"name": "Arcane Umbra Pirate Shoulder",
+		"icon": 1152196,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1152212,
+		"name": "Eternal Knight Shoulder",
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 250
+		}
+	},
+	{
+		"id": 1152213,
+		"name": "Eternal Mage Shoulder",
+		"icon": 1152212,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Magician",
+			"level": 250
+		}
+	},
+	{
+		"id": 1152214,
+		"name": "Eternal Archer Shoulder",
+		"icon": 1152212,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Bowman",
+			"level": 250
+		}
+	},
+	{
+		"id": 1152215,
+		"name": "Eternal Thief Shoulder",
+		"icon": 1152212,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Thief",
+			"level": 250
+		}
+	},
+	{
+		"id": 1152216,
+		"name": "Eternal Pirate Shoulder",
+		"icon": 1152212,
+		"type": "Shoulder",
+		"requirements": {
+			"job": "Pirate",
+			"level": 250
+		}
+	},
+	{
+		"id": 1162009,
+		"name": "Stone of Eternal Life",
+		"description": "Can only be equipped in the Pocket slot.",
+		"type": "Pocket",
+		"flameAdvantage": true
+	},
+	{
+		"id": 1162025,
+		"name": "Pink Holy Cup",
+		"type": "Pocket",
+		"requirements": {
+			"level": 140
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1162080,
+		"name": "Cursed Red Spellbook",
+		"description": "Can only be equipped in the Pocket slot.",
+		"type": "Pocket",
+		"requirements": {
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1162081,
+		"name": "Cursed Blue Spellbook",
+		"description": "Can only be equipped in the Pocket slot.",
+		"type": "Pocket",
+		"requirements": {
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1162082,
+		"name": "Cursed Green Spellbook",
+		"description": "Can only be equipped in the Pocket slot.",
+		"type": "Pocket",
+		"requirements": {
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1162083,
+		"name": "Cursed Yellow Spellbook",
+		"description": "Can only be equipped in the Pocket slot.",
+		"type": "Pocket",
+		"requirements": {
+			"level": 160
+		},
+		"flameAdvantage": true
+	},
+	{
+		"id": 1182087,
+		"name": "Crystal Ventus Badge",
+		"type": "Badge",
+		"requirements": {
+			"level": 130
+		}
+	},
+	{
+		"id": 1182285,
+		"name": "Genesis Badge",
+		"type": "Badge",
+		"requirements": {
+			"level": 200
+		}
+	},
+	{
+		"id": 1190555,
+		"name": "Mitra's Rage: Warrior",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1190556,
+		"name": "Mitra's Rage: Bowman",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1190557,
+		"name": "Mitra's Rage: Magician",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1190558,
+		"name": "Mitra's Rage: Thief",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1190559,
+		"name": "Mitra's Rage: Pirate",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1202287,
+		"name": "Ancient Slate Replica",
+		"description": "A totem made after the ancient slate found in the Island of Mirages. You can grant powerful bonus stats to it using #cLava Stone Rebirth Flame#.&\n- With Appreciation from the Maple Expedition Captain -",
+		"type": "Pocket",
+		"requirements": {
+			"level": 200
+		}
+	},
+	{
+		"id": 1672076,
+		"name": "Black Heart",
+		"type": "Heart",
+		"requirements": {
+			"level": 120
+		}
+	}
+]

@@ -1,3 +1,27 @@
+declare module "@data/equips/arcane_force.json" {
+	import { Equipment } from "maple-simulator";
+
+	const content: Equipment[];
+
+	export default content;
+}
+
+declare module "@data/equips/sacred_force.json" {
+	import { Equipment } from "maple-simulator";
+
+	const content: Equipment[];
+
+	export default content;
+}
+
+declare module "@data/classes.json" {
+	import { PlayableClass } from "maple-simulator";
+
+	const content: PlayableClass[];
+
+	export default content;
+}
+
 declare module "@data/symbols.json" {
 	interface SymbolInfo {
 		cost: {
@@ -15,18 +39,10 @@ declare module "@data/symbols.json" {
 	export default content;
 }
 
-declare module "@data/equips/arcane_force.json" {
-	import { Equipment } from "maple-simulator";
+declare module "@data/worlds.json" {
+	import { World } from "maple-simulator";
 
-	const content: Equipment[];
-
-	export default content;
-}
-
-declare module "@data/equips/sacred_force.json" {
-	import { Equipment } from "maple-simulator";
-
-	const content: Equipment[];
+	const content: World[];
 
 	export default content;
 }

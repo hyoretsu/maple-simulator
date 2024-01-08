@@ -1,4 +1,5 @@
 import { useCharacters } from "@context/account";
+import classes from "@data/classes.json";
 import worlds from "@data/worlds.json";
 import { Input } from "@hyoretsu/react-components";
 import { Character, World } from "maple-simulator";
@@ -8,7 +9,9 @@ export interface CharacterEditProps {
 	character: Character;
 }
 
-export default function CharacterEdit({ character: { id, level, nickname, world } }: CharacterEditProps) {
+export default function CharacterEdit({
+	character: { id, class: charClass, level, nickname, world },
+}: CharacterEditProps) {
 	const { updateCharacter } = useCharacters();
 
 	return (
@@ -47,6 +50,21 @@ export default function CharacterEdit({ character: { id, level, nickname, world 
 					max={300}
 					onChange={e => updateCharacter(id, { level: Number(e.currentTarget.value) })}
 				/>
+			</fieldset>
+
+			<fieldset>
+				<label htmlFor="class">Class</label>
+				<select
+					name="class"
+					value={charClass}
+					onChange={e => updateCharacter(id, { class: e.currentTarget.value as World })}
+				>
+					{classes.map(({ name }) => (
+						<option key={name} value={name}>
+							{name}
+						</option>
+					))}
+				</select>
 			</fieldset>
 		</div>
 	);

@@ -1,6 +1,6 @@
 "use client";
 import copyObject from "@utils/copyObject";
-import { Account, BossingRoutine, Character } from "maple-simulator";
+import { Account, BossingRoutine, Character, CharacterEquip, CharacterEquips } from "maple-simulator";
 import {
 	PropsWithChildren,
 	createContext,
@@ -15,7 +15,10 @@ import { v4 as uuid } from "uuid";
 type CreateCharacter = (charInfo?: Partial<Omit<Character, "id">>) => Character;
 type ImportAccount = (accountStr: string) => void;
 type UpdateAccount = (newAccountData: Partial<Pick<Account, "id">>) => void;
-type UpdateCharacter = (id: string, updatedCharacter: Partial<Character>) => void;
+type UpdateCharacter = (
+	id: string,
+	updatedCharacter: Partial<Omit<Character, "equips"> & { equips: Partial<CharacterEquips> }>,
+) => void;
 
 interface AccountContext {
 	account: Account;
@@ -36,8 +39,31 @@ export const defaultAccount: Account = {
 
 export const defaultCharacter: Omit<Character, "id"> = {
 	bossingRoutine: {},
+	class: "Dawn Warrior",
 	level: 1,
 	nickname: "Default",
+	equips: {
+		Android: null,
+		Badge: null,
+		Belt: null,
+		Bottom: null,
+		Cape: null,
+		Earrings: null,
+		Emblem: null,
+		"Eye Accessory": null,
+		"Face Accessory": null,
+		Gloves: null,
+		Hat: null,
+		Heart: null,
+		Medal: null,
+		Pendant: [null, null],
+		Ring: [null, null, null, null],
+		"Secondary Weapon": null,
+		Shoes: null,
+		Shoulder: null,
+		Top: null,
+		Weapon: null,
+	},
 	symbols: {
 		Arcane: [],
 		Sacred: [],
@@ -316,6 +342,35 @@ export function AccountProvider({ children }: PropsWithChildren) {
 		setAccount(old => {
 			const newAccount = copyObject(old);
 			const character = newAccount.characters.find(({ id: characterId }) => characterId === id) as Character;
+
+			if (updatedCharacter.equips) {
+				Object.values(updatedCharacter.equips).map(equipPre => {
+					const execute = (equip: CharacterEquip) => {
+						if (equip?.flames) {
+							for (const [stat, value] of Object.entries(equip.flames)) {
+								if (value === 0) {
+									// @ts-ignore
+									delete equip.flames[stat];
+								}
+							}
+						}
+					};
+
+					if (Array.isArray(equipPre)) {
+						for (const equip of equipPre) {
+							execute(equip);
+						}
+					} else {
+						execute(equipPre);
+					}
+
+					return equipPre;
+				});
+				updatedCharacter.equips = {
+					...copyObject(character.equips),
+					...copyObject(updatedCharacter.equips),
+				};
+			}
 
 			Object.assign(character, updatedCharacter);
 			bumpCharacter(character);

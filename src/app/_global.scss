@@ -52,7 +52,8 @@ button {
     }
 }
 
-input {
+input,
+select {
     background: transparent;
 
     &::-webkit-outer-spin-button,
@@ -60,6 +61,10 @@ input {
         -webkit-appearance: none;
         margin: 0;
     }
+}
+
+option {
+    background: #000;
 }
 
 label {

@@ -1,0 +1,19 @@
+.modal {
+    gap: 1rem;
+
+    background-color: #2b2b2b !important;
+    max-width: 30rem !important;
+
+    p {
+        line-height: 120%;
+        text-align: center;
+    }
+
+    button {
+        background-color: #259145 !important;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 85% !important;
+    }
+}
