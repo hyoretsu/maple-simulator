@@ -9,8 +9,8 @@ dependencies:
     specifier: ^5.0.8
     version: 5.0.8
   '@hyoretsu/react-components':
-    specifier: ^1.7.8
-    version: 1.7.8(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6)
+    specifier: ^1.7.9
+    version: 1.7.9(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6)
   '@hyoretsu/react-hooks':
     specifier: ^1.2.5
     version: 1.2.5
@@ -1411,8 +1411,8 @@ packages:
     resolution: {integrity: sha512-fI9bP8KoNloNhIky6vji/I52xuF9V43Pbdf0lQYIsDMjYFiSQ0RRNyBUFvnuws1Pv6DHy9rXZTdp8GEAqhq2eA==}
     dev: false
 
-  /@hyoretsu/react-components@1.7.8(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6):
-    resolution: {integrity: sha512-cgHAz6j0gp6TMUvloAT7jyPLILvfiVIOj4aDsGcf9aRmj3RdOXEg8p844zKmFzit68QuF/DdjyvJMbnefNb1oQ==}
+  /@hyoretsu/react-components@1.7.9(@babel/core@7.23.7)(react-dom@18.2.0)(sass@1.69.6):
+    resolution: {integrity: sha512-nxwHPjYaopIc7eTslcV16kfVdYyV6fHYGD1oQIzRheW1o+C/2N80yQctu6Klfl4FiglSTKORmpG8u0ldA+Fxpg==}
     dependencies:
       '@hyoretsu/react-hooks': 1.2.5
       '@hyoretsu/utils': 1.8.0
