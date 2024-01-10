@@ -146,7 +146,7 @@ export default function EquipDisplay({
 				onChange={() => {
 					selectEquip(old => {
 						const newValue = old === typeToSelect ? "" : typeToSelect;
-						if (newValue) {
+						if (newValue && window.innerWidth <= 480) {
 							window.scrollTo({ top: 0, behavior: "smooth" });
 						}
 
