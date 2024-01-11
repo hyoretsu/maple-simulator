@@ -149,12 +149,10 @@ export default function BossTable() {
 								income: incomeCrystals2.income + Math.floor(income * frequencyMult),
 							});
 							if (runInfo!.timeTaken > 0) {
-								const times = frequency === "daily" ? 7 : 1;
-
 								Object.assign(incomeCrystals2, {
-									timedBosses: incomeCrystals2.timedBosses + times,
-									timedIncome: incomeCrystals2.timedIncome + income * times,
-									totalTime: incomeCrystals2.totalTime + runInfo!.timeTaken * times,
+									timedBosses: incomeCrystals2.timedBosses + Math.ceil(frequencyMult),
+									timedIncome: incomeCrystals2.timedIncome + Math.floor(income * frequencyMult),
+									totalTime: incomeCrystals2.totalTime + runInfo!.timeTaken * frequencyMult,
 								});
 							}
 
