@@ -1,0 +1,48 @@
+.flameEditor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 0.5rem;
+
+    height: 13rem;
+
+    margin: 0 auto;
+
+    fieldset {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: #acacac;
+
+        padding: 0.25rem;
+        border-radius: 0.5rem;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+
+            cursor: pointer;
+
+            svg {
+                color: #000000;
+            }
+        }
+
+        span,
+        input {
+            color: #000000;
+        }
+
+        input {
+            width: calc(4ch + 0.5rem * 2);
+            background-color: #ffffff;
+
+            padding: 0.25rem 0.5rem;
+            margin-left: 0.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+    }
+}

@@ -1,26 +1,47 @@
 "use client";
 import { useCharacters } from "@context/account";
+import styles from "./styles.module.scss";
 
-export default function CharacterSelector() {
-	const { characters, currentCharacter, setCurrentCharacterIndex } = useCharacters();
+export interface CharacterSelectorProps {
+	allowCreation?: boolean;
+	name?: string;
+}
+
+export default function CharacterSelector({
+	allowCreation = false,
+	name = "character-selector",
+}: CharacterSelectorProps) {
+	const { characters, createCharacter, currentCharacter, setCurrentCharacterIndex } = useCharacters();
 	if (!currentCharacter) {
 		return;
 	}
 
 	return (
 		<select
-			value={currentCharacter.nickname}
+			name={name}
+			id="character-selector"
+			className={styles.characterSelector}
+			value={currentCharacter?.id}
 			onChange={e => {
-				setCurrentCharacterIndex(
-					characters.findIndex(character => character.nickname === e.currentTarget.value),
-				);
+				if (e.currentTarget.value === "create") {
+					try {
+						createCharacter();
+						setCurrentCharacterIndex(-1);
+					} catch (e) {
+						console.error(e);
+					}
+				} else {
+					setCurrentCharacterIndex(characters.findIndex(({ id }) => id === e.currentTarget.value));
+				}
 			}}
 		>
-			{characters.map(({ nickname }) => (
-				<option key={nickname} value={nickname}>
+			<option value="" hidden />
+			{characters.map(({ id, nickname }) => (
+				<option key={id} value={id}>
 					{nickname}
 				</option>
 			))}
+			{allowCreation && <option value="create">Create</option>}
 		</select>
 	);
 }

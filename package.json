@@ -3,15 +3,13 @@
 	"private": true,
 	"scripts": {
 		"build": "next build",
-		"dev": "next dev --turbo",
+		"dev": "next dev",
 		"export": "next export",
 		"prepare": "husky install",
 		"start": "next start"
 	},
 	"lint-staged": {
-		"**/*.(js|jsx|ts|tsx)": [
-			"biome format --write"
-		]
+		"**/*.(js|jsx|ts|tsx)": ["biome format --write"]
 	},
 	"dependencies": {
 		"@fontsource/roboto-flex": "^5.0.8",

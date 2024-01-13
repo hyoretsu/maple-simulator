@@ -1,4 +1,5 @@
 "use client";
+import CharacterSelector from "@components/CharacterSelector";
 import Footer from "@components/Footer";
 import { useAccount, useCharacters } from "@context/account";
 import { Input } from "@hyoretsu/react-components";
@@ -13,10 +14,9 @@ import styles from "./styles.module.scss";
 
 export default function Account() {
 	const { account, importAccount, updateAccount } = useAccount();
-	const { createCharacter, currentCharacter, setCurrentCharacterIndex } = useCharacters();
+	const { currentCharacter } = useCharacters();
 
 	const [accountAction, setAccountAction] = useState("");
-	const [error, setError] = useState("");
 	const [exportedAccount, setExportedAccount] = useState("");
 
 	const [accountIdModalShown, showAccountIdModal] = useState(false);
@@ -42,35 +42,7 @@ export default function Account() {
 
 				<fieldset>
 					<label htmlFor="world">Characters</label>
-					<select
-						className={styles.characterSelector}
-						value={currentCharacter?.id}
-						onChange={e => {
-							if (e.currentTarget.value === "create") {
-								try {
-									createCharacter();
-									setCurrentCharacterIndex(-1);
-									window.plausible("Character created");
-								} catch (e) {
-									if (e instanceof Error) {
-										setError(e.message);
-									}
-								}
-							} else {
-								setCurrentCharacterIndex(
-									account.characters.findIndex(({ id }) => id === e.currentTarget.value),
-								);
-							}
-						}}
-					>
-						<option value="" hidden />
-						{account.characters.map(({ id, nickname }) => (
-							<option key={id} value={id}>
-								{nickname}
-							</option>
-						))}
-						<option value="create">Create</option>
-					</select>
+					<CharacterSelector allowCreation />
 				</fieldset>
 
 				{currentCharacter && <CharacterEdit character={currentCharacter} />}
@@ -129,8 +101,6 @@ export default function Account() {
 					in the site is auto-saved on return/done, so don't worry about that.
 				</span>
 			</Footer>
-
-			{error && <p style={{ margin: "0 auto" }}>Error: {error.toLowerCase()}</p>}
 
 			{accountIdModalShown && (
 				<StyledModal onConfirm={() => showAccountIdModal(false)}>

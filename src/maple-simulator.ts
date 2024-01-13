@@ -77,7 +77,7 @@ export interface SymbolInfo {
 	Arcane: SymbolData[];
 	Sacred: SymbolData[];
 }
-export interface Flames {
+export interface FlameStats {
 	allStats?: number;
 	att?: number;
 	dex?: number;
@@ -90,7 +90,7 @@ export interface Flames {
 }
 export interface CharacterEquipment {
 	id: number;
-	flames?: Flames;
+	flames?: FlameStats;
 }
 export type CharacterEquip = CharacterEquipment | null;
 export interface CharacterEquips {

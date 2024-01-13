@@ -5,8 +5,8 @@ import styles from "./styles.module.scss";
 
 const pages = [
 	{ name: "Boss Income Tracker", route: "/bosses/tracker" },
-	{ name: "Flame Score Calculator", route: "/flames/calculator" },
 	{ name: "Symbol Calculator", route: "/symbols/calculator" },
+	{ name: "Characters", route: "/characters/equips" },
 	{ name: "Account", route: "/account" },
 ];
 

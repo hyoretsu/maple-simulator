@@ -3,14 +3,15 @@ import StyledModal from "@components/StyledModal";
 import { useCharacters } from "@context/account";
 import classes from "@data/classes.json";
 import { Input } from "@hyoretsu/react-components";
-import { CharacterEquipment, Equipment, PlayableClass } from "maple-simulator";
-import { HTMLAttributes, useMemo, useState } from "react";
+import { CharacterEquipment, Equipment, EquipmentType, PlayableClass } from "maple-simulator";
+import { useState } from "react";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
-import styles from "../styles.module.scss";
+import styles from "./styles.module.scss";
 
-export interface FlameEditorProps extends HTMLAttributes<HTMLDivElement> {
-	equips: Record<string, Equipment[]>;
-	selectedEquip: string;
+export interface FlameEditorProps {
+	equip?: Equipment;
+	index?: number;
+	type: EquipmentType;
 }
 
 const statLimits = [
@@ -57,7 +58,7 @@ const hpMpLimits = [
 	[0, 21],
 ];
 
-export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps) {
+export default function FlameEditor({ equip: equipData, type, index }: FlameEditorProps) {
 	const { currentCharacter, updateCharacter } = useCharacters();
 	if (!currentCharacter) {
 		return <></>;
@@ -65,32 +66,16 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 
 	const [kannaModalVisible, showKannaModal] = useState(false);
 
-	const [type, index] = selectedEquip.split("-");
-
-	const equip = useMemo<CharacterEquipment | null>(() => {
-		// @ts-ignore
-		const equipPre = currentCharacter.equips[type] as CharacterEquipment | CharacterEquipment[];
-
-		if (Array.isArray(equipPre)) {
-			return equipPre[Number(index)];
-		}
-
-		return equipPre;
-	}, [currentCharacter.equips, index, type]);
-	if (!equip) {
-		return (
-			<section className={styles.flameEditor}>
-				<p>Select an equip to edit its flame.</p>
-			</section>
-		);
-	}
-
 	const { branch, mainStat, secondaryStat } = classes.find(
 		givenClass => givenClass.name === currentCharacter.class,
 	) as PlayableClass;
-	const equipData = equips[type].find(equipData => equipData.id === equip?.id);
 	const statLimit = statLimits.find(([level]) => (equipData?.requirements.level || 0) >= level)![1];
 	const hpMpLimit = hpMpLimits.find(([level]) => (equipData?.requirements.level || 0) >= level)![1];
+
+	let equip = currentCharacter.equips[type] as CharacterEquipment;
+	if (Array.isArray(equip)) {
+		equip = equip[index as number];
+	}
 
 	const handleChange = (stat: string, value: number) => {
 		const newEquip: CharacterEquipment | CharacterEquipment[] = {
@@ -101,7 +86,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 			},
 		};
 
-		if (index) {
+		if (index !== undefined) {
 			// @ts-ignore
 			const newEquipsArr = [...currentCharacter.equips[type]];
 			newEquipsArr[Number(index)] = newEquip;
@@ -122,7 +107,7 @@ export default function FlameEditor({ equips, selectedEquip }: FlameEditorProps)
 
 	return (
 		<>
-			<section id="flame-editor" className={styles.flameEditor}>
+			<section className={styles.flameEditor}>
 				{mainStat.map(stat => {
 					const statName = stat.toLowerCase();
 

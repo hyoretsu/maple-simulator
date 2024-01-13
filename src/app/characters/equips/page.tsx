@@ -3,31 +3,15 @@ import { useCharacters } from "@context/account";
 import classes from "@data/classes.json";
 import equips from "@data/items/equips.json";
 import { Equipment, EquipmentType } from "maple-simulator";
-import { useMemo, useState } from "react";
-import styles from "../styles.module.scss";
-import EquipDisplay from "./EquipDisplay";
-import FlameEditor from "./FlameEditor";
+import { useMemo } from "react";
+import EquipDisplay from "./components/EquipDisplay";
+import styles from "./styles.module.scss";
 
-const nonFlamableEquipTypes = [
-	"Android",
-	"Badge",
-	"Emblem",
-	"Heart",
-	"Medal",
-	"Ring",
-	"Secondary Weapon",
-	"Shoulder",
-	// Todo: implement
-	"Weapon",
-];
-
-export default function Body() {
+export default function Equips() {
 	const { currentCharacter } = useCharacters();
 	if (!currentCharacter) {
 		return;
 	}
-
-	const [selectedEquip, selectEquip] = useState("");
 
 	const currentEquips = useMemo(() => {
 		return Object.entries(currentCharacter.equips);
@@ -77,43 +61,22 @@ export default function Body() {
 	}, [currentEquips, currentCharacter]);
 
 	return (
-		<div className={styles.body}>
-			<FlameEditor equips={filteredEquips} selectedEquip={selectedEquip} />
-
-			<section className={styles.equipManager}>
-				{currentEquips.map(([type, equip]) => {
-					if (
-						// Todo: implement
-						// !(currentCharacter.class === "Kanna" && type === "Secondary Weapon") &&
-						nonFlamableEquipTypes.includes(type)
-					) {
-						return <></>;
-					}
-
-					if (Array.isArray(equip)) {
-						return equip.map((subEquip, index) => (
-							<EquipDisplay
-								key={`${type}-${index}`}
-								index={index}
-								type={type as EquipmentType}
-								equip={subEquip}
-								equips={filteredEquips}
-								state={[selectedEquip, selectEquip]}
-							/>
-						));
-					}
-
-					return (
+		<section className={styles.equipManager}>
+			{currentEquips.map(([type, equip]) => {
+				if (Array.isArray(equip)) {
+					return equip.map((subEquip, index) => (
 						<EquipDisplay
-							key={type}
+							key={`${type}-${index}`}
+							index={index}
 							type={type as EquipmentType}
-							equip={equip}
+							equip={subEquip}
 							equips={filteredEquips}
-							state={[selectedEquip, selectEquip]}
 						/>
-					);
-				})}
-			</section>
-		</div>
+					));
+				}
+
+				return <EquipDisplay key={type} type={type as EquipmentType} equip={equip} equips={filteredEquips} />;
+			})}
+		</section>
 	);
 }

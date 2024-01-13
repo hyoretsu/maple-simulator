@@ -19,11 +19,16 @@ body {
 
 body,
 input,
-select {
+select,
+button {
     color: #ffffff;
     font-family: "Roboto Flex", sans-serif;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
+}
+
+option {
+    text-align-last: center;
 }
 
 b,
