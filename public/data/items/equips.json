@@ -1461,6 +1461,55 @@
 		}
 	},
 	{
+		"id": 1072737,
+		"name": "Nova Hyades Boots",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1072738,
+		"name": "Nova Hermes Boots",
+		"type": "Shoes",
+		"icon": 1072737,
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1072739,
+		"name": "Nova Charon Boots",
+		"type": "Shoes",
+		"icon": 1072737,
+		"requirements": {
+			"job": "Bowman",
+			"level": 110
+		}
+	},
+	{
+		"id": 1072740,
+		"name": "Nova Lycaon Boots",
+		"type": "Shoes",
+		"icon": 1072737,
+		"requirements": {
+			"job": "Thief",
+			"level": 110
+		}
+	},
+	{
+		"id": 1072741,
+		"name": "Nova Altair Boots",
+		"type": "Shoes",
+		"icon": 1072737,
+		"requirements": {
+			"job": "Pirate",
+			"level": 110
+		}
+	},
+	{
 		"id": 1072952,
 		"name": "Necromancer Warrior Shoes",
 		"type": "Shoes",
@@ -2322,6 +2371,55 @@
 		}
 	},
 	{
+		"id": 1102481,
+		"name": "Tyrant Hyades Cloak",
+		"type": "Cape",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1102482,
+		"name": "Tyrant Hermes Cloak",
+		"type": "Cape",
+		"icon": 1102481,
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		}
+	},
+	{
+		"id": 1102483,
+		"name": "Tyrant Charon Cloak",
+		"type": "Cape",
+		"icon": 1102481,
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		}
+	},
+	{
+		"id": 1102484,
+		"name": "Tyrant Lycaon Cloak",
+		"type": "Cape",
+		"icon": 1102481,
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		}
+	},
+	{
+		"id": 1102485,
+		"name": "Tyrant Altair Cloak",
+		"type": "Cape",
+		"icon": 1102481,
+		"requirements": {
+			"job": "Pirate",
+			"level": 150
+		}
+	},
+	{
 		"id": 1102562,
 		"name": "Onyx Maple Cape",
 		"type": "Cape",
@@ -2492,6 +2590,14 @@
 		}
 	},
 	{
+		"id": 1102871,
+		"name": "Enraged Zakum Cape",
+		"type": "Cape",
+		"requirements": {
+			"level": 150
+		}
+	},
+	{
 		"id": 1102940,
 		"name": "Arcane Umbra Knight Cape",
 		"type": "Cape",
@@ -2603,6 +2709,14 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 110
+		}
+	},
+	{
+		"id": 1113155,
+		"name": "Kanna's Treasure",
+		"type": "Ring",
+		"requirements": {
+			"level": 140
 		}
 	},
 	{
