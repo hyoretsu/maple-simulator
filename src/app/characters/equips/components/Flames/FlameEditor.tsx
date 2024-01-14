@@ -121,7 +121,7 @@ export default function FlameEditor({ equip: equipData, type, index }: FlameEdit
 								value={equip?.flames?.[statName] || ""}
 								placeholder="0"
 								min={0}
-								max={statLimit}
+								max={statName === "hp" ? hpMpLimit : statLimit}
 								onChange={e => handleChange(statName, Number(e.currentTarget.value))}
 							/>
 						</fieldset>

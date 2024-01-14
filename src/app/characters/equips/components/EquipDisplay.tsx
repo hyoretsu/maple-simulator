@@ -35,7 +35,13 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 			break;
 		case "Secondary Weapon":
 			// Todo: implement
-			if (currentCharacter.class !== "Kanna") {
+			// if (currentCharacter.class !== "Kanna") {
+			isFlammable = false;
+			// }
+
+			break;
+		case "Totem":
+			if (currentEquipData?.name !== "Ancient Slate Replica") {
 				isFlammable = false;
 			}
 

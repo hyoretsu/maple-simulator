@@ -1,5 +1,100 @@
 [
 	{
+		"id": 1002776,
+		"name": "Timeless Fennel",
+		"h1": "#cPuncture +1 Level\nDivine Charge +1 Level\nFinal Pact +1 Level\nOverswing +1 Level\nInfernal Concussion +1 Level\nRadiant Blast +1 Level\nInfinity Strike +1 Level\nNether Shield +1 Level#",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1002777,
+		"name": "Timeless Coral",
+		"h1": "#cMist Eruption + 1 Level\nFreezing Breath + 1 Level\nAdvanced Blessing + 1 Level\nFlame Wheel + 1 Level\nDark Genesis + 1 Level#\n#cMorning Star +1 Level#",
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1002778,
+		"name": "Timeless Rapido",
+		"h1": "#cSharp Eyes +1 Level\nAncient Warding +1 Level#",
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1002779,
+		"name": "Timeless Chive",
+		"h1": "#cShowdown Challenge +1 Level\nShadower Instinct +1 Level\nAria Amour +1 Level\nHypogram Field +1 Level#",
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1002780,
+		"name": "Timeless Conrad Henkel",
+		"h1": "#cSpeed Infusion +1 Level\nParrotargetting +1 Level\nBots 'n Tots: RM1 +1 Level\nPirate's Spirit +1 Level\nFinale Ribbon +1 Level\nHypogram Field +1 Level\nDeath Mark +1 Level#",
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1003154,
+		"name": "Marx Von Leon Helmet",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1003155,
+		"name": "Alma Von Leon Helmet",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1003156,
+		"name": "Fox Von Leon Helmet",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1003157,
+		"name": "Nox Von Leon Helmet",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1003158,
+		"name": "Cora Von Leon Helmet",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
 		"id": 1003797,
 		"name": "Royal Warrior Helm",
 		"type": "Hat",
@@ -48,6 +143,258 @@
 			"level": 150
 		},
 		"flameAdvantage": true
+	},
+	{
+		"id": 1003863,
+		"name": "Onyx Maple Hat",
+		"type": "Hat",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1004214,
+		"name": "Necromancer Warrior Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004215,
+		"name": "Necromancer Magician Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004216,
+		"name": "Necromancer Sentinel Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004217,
+		"name": "Necromancer Chaser Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004218,
+		"name": "Necromancer Skipper Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004219,
+		"name": "Eclectic Fennel",
+		"type": "Hat",
+		"icon": 1002776,
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004220,
+		"name": "Eclectic Coral",
+		"type": "Hat",
+		"icon": 1002777,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004221,
+		"name": "Eclectic Rapid",
+		"type": "Hat",
+		"icon": 1002778,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004222,
+		"name": "Eclectic Chive",
+		"type": "Hat",
+		"icon": 1002779,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004223,
+		"name": "Eclectic Conrad Henkel",
+		"type": "Hat",
+		"icon": 1002780,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1004224,
+		"name": "Muspell Warrior Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004225,
+		"name": "Muspell Magician Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004226,
+		"name": "Muspell Bowman Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004227,
+		"name": "Muspell Thief Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004228,
+		"name": "Muspell Pirate Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004229,
+		"name": "Pensalir Battle Helm",
+		"type": "Hat",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1004230,
+		"name": "Pensalir Mage Sallet",
+		"type": "Hat",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1004231,
+		"name": "Pensalir Sentinel Cap",
+		"type": "Hat",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1004232,
+		"name": "Pensalir Chaser Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1004233,
+		"name": "Pensalir Skipper Hat",
+		"type": "Hat",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1004234,
+		"name": "Royal Von Leon Warrior Helm",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004235,
+		"name": "Royal Von Leon Magician Helm",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004236,
+		"name": "Royal Von Leon Sentinel Helm",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004237,
+		"name": "Royal Von Leon Chaser Helm",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004238,
+		"name": "Royal Von Leon Skipper Helm",
+		"type": "Hat",
+		"icon": 1003154,
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
+	},
+	{
+		"id": 1004404,
+		"name": "Frozen Hat",
+		"type": "Hat",
+		"icon": 1003863,
+		"requirements": {
+			"level": 100
+		}
 	},
 	{
 		"id": 1004422,
@@ -200,6 +547,14 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1012438,
+		"name": "Sweetwater Tattoo",
+		"type": "Face Accessory",
+		"requirements": {
+			"level": 160
+		}
+	},
+	{
 		"id": 1012478,
 		"name": "Condensed Power Crystal",
 		"type": "Face Accessory",
@@ -225,6 +580,14 @@
 			"level": 140
 		},
 		"flameAdvantage": true
+	},
+	{
+		"id": 1022211,
+		"name": "Sweetwater Monocle",
+		"type": "Eye Accessory",
+		"requirements": {
+			"level": 160
+		}
 	},
 	{
 		"id": 1022231,
@@ -310,6 +673,14 @@
 			"level": 150
 		},
 		"flameAdvantage": false
+	},
+	{
+		"id": 1032224,
+		"name": "Sweetwater Earrings",
+		"type": "Earrings",
+		"requirements": {
+			"level": 160
+		}
 	},
 	{
 		"id": 1032241,
@@ -439,6 +810,348 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1052155,
+		"name": "Timeless Taragon",
+		"h1": "#cAdvanced Final Attack +1 Level\nHigh Paladin +1 Level\nDark Impale +1 Level\nHigh Defense +1 Level\nDark Metamorphosis +1 Level\nUnbreakable Will +1 Level\nNether Slice +1 Level#",
+		"type": "Overall",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052156,
+		"name": "Timeless Myst Blue",
+		"h1": "#cInfinity +1\nSoul Stone +1\nParty Shield +1#\n#cDark Crescendo +1#",
+		"type": "Overall",
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052157,
+		"name": "Timeless Evernew",
+		"h1": "#cIllusion Step +1 level\nAdvanced Final Attack +1 level\nLightning Edge +1 level#",
+		"type": "Overall",
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052158,
+		"name": "Timeless Prinsid",
+		"h1": "#cShadow Shifter +1 Level\nTempest +1 Level\nInstant Shock +1 Level#",
+		"type": "Overall",
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052159,
+		"name": "Timeless Burgunt",
+		"h1": "#cTyphoon Crush +1 Level\nJolly Roger +1 Level\nGiant Robot SG-88 +1 Level\nNautilus Strike +1 Level\nSoul Resonance +1 Level\nInstant Shock +1 Level\nSpirit Bond 4 +1 Level#",
+		"type": "Overall",
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052299,
+		"name": "Marx Von Leon Battle Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052300,
+		"name": "Alma Von Leon Battle Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052301,
+		"name": "Fox Von Leon Battle Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052302,
+		"name": "Nox Von Leon Battle Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052303,
+		"name": "Cora Von Leon Battle Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052612,
+		"name": "Onyx Maple Suit",
+		"type": "Overall",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1052784,
+		"name": "Necromancer Warrior Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052785,
+		"name": "Necromancer Magician Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052786,
+		"name": "Necromancer Sentinel Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052787,
+		"name": "Necromancer Chaser Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052788,
+		"name": "Necromancer Skipper Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052789,
+		"name": "Eclectic Taragon",
+		"type": "Overall",
+		"icon": 1052155,
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052790,
+		"name": "Eclectic Myst Blue",
+		"type": "Overall",
+		"icon": 1052156,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052791,
+		"name": "Eclectic Evernew",
+		"type": "Overall",
+		"icon": 1052157,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052792,
+		"name": "Eclectic Prinsid",
+		"type": "Overall",
+		"icon": 1052158,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052793,
+		"name": "Eclectic Burgunt",
+		"type": "Overall",
+		"icon": 1052159,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1052794,
+		"name": "Muspell Warrior Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052795,
+		"name": "Muspell Magician Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052796,
+		"name": "Muspell Bowman Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052797,
+		"name": "Muspell Thief Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052798,
+		"name": "Muspell Pirate Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052799,
+		"name": "Pensalir Battle Mail",
+		"type": "Overall",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1052800,
+		"name": "Pensalir Mage Robe",
+		"type": "Overall",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1052801,
+		"name": "Pensalir Sentinel Suit",
+		"type": "Overall",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1052802,
+		"name": "Pensalir Chaser Armor",
+		"type": "Overall",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1052803,
+		"name": "Pensalir Skipper Coat",
+		"type": "Overall",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1052804,
+		"name": "Royal Von Leon Warrior Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052805,
+		"name": "Royal Von Leon Mage Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052806,
+		"name": "Royal Von Leon Sentinel Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052807,
+		"name": "Royal Von Leon Chaser Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1052808,
+		"name": "Royal Von Leon Skipper Suit",
+		"type": "Overall",
+		"icon": 1052299,
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
+	},
+	{
 		"id": 1052882,
 		"name": "AbsoLab Knight Suit",
 		"type": "Overall",
@@ -487,6 +1200,15 @@
 			"level": 160
 		},
 		"flameAdvantage": true
+	},
+	{
+		"id": 1052893,
+		"name": "Frozen Suit",
+		"type": "Overall",
+		"icon": 1052612,
+		"requirements": {
+			"level": 100
+		}
 	},
 	{
 		"id": 1053063,
@@ -639,6 +1361,354 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1072355,
+		"name": "Timeless Grabbe",
+		"h1": "#cMagic Crash +1 Level\nBoss Reverse Combo +1 Level\nObsidian Skin +1 Level\nDragon Barrage +1 Level\nOverwhelming Power +1 Level#",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072356,
+		"name": "Timeless Cabatina",
+		"h1": "#cBig Bang +1 Level\nFlame Haze +1 Level\nFrozen Orb +1 Level#\n#cBlaze +1 Level#\nTwister Spin +1 Level#\n#cArcane Pitch +1 Level#",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072357,
+		"name": "Timeless Rontano",
+		"h1": "#cBinding Shot +1 Level\nArrow Illusion +1 Level\nSonic Roar +1 Level\nDual Bowguns Expert +1 Level#",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072358,
+		"name": "Timeless Moonsteed",
+		"h1": "#cDark Harmony +1 Level\nAssassinate +1 Level\nCane Expert +1 Level\nOffensive Matrix +1 Level#",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072359,
+		"name": "Timeless Faraon",
+		"h1": "#cDragon Strike +1 Level\nBrain Scrambler +1 Level\nLaser Blast +1 Level\nMega Monkey Magic +1 Level\nSoul Shooter Expert +1 Level\nOffensive Matrix +1 Level\nCritical Insight +1 Level#",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072471,
+		"name": "Marx Von Leon War Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072472,
+		"name": "Alma Von Leon War Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072473,
+		"name": "Fox Von Leon War Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072474,
+		"name": "Nox Von Leon War Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072475,
+		"name": "Cora Von Leon War Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072952,
+		"name": "Necromancer Warrior Shoes",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072953,
+		"name": "Necromancer Magician Shoes",
+		"type": "Shoes",
+		"icon": 1072952,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072954,
+		"name": "Necromancer Sentinel Shoes",
+		"type": "Shoes",
+		"icon": 1072952,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072955,
+		"name": "Necromancer Chaser Shoes",
+		"type": "Shoes",
+		"icon": 1072952,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072956,
+		"name": "Necromancer Skipper Shoes",
+		"type": "Shoes",
+		"icon": 1072952,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072957,
+		"name": "Eclectic Grabbe",
+		"type": "Shoes",
+		"icon": 1072355,
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072958,
+		"name": "Eclectic Cabatina",
+		"type": "Shoes",
+		"icon": 1072356,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072959,
+		"name": "Eclectic Rontano",
+		"type": "Shoes",
+		"icon": 1072357,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072960,
+		"name": "Eclectic Moonsteed",
+		"type": "Shoes",
+		"icon": 1072358,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072961,
+		"name": "Eclectic Faraon",
+		"type": "Shoes",
+		"icon": 1072359,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1072962,
+		"name": "Muspell Warrior Shoes",
+		"type": "Shoes",
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072963,
+		"name": "Muspell Magician Shoes",
+		"type": "Shoes",
+		"icon": 1072962,
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072964,
+		"name": "Muspell Bowman Shoes",
+		"type": "Shoes",
+		"icon": 1072962,
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072965,
+		"name": "Muspell Thief Shoes",
+		"type": "Shoes",
+		"icon": 1072962,
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072966,
+		"name": "Muspell Pirate Shoes",
+		"type": "Shoes",
+		"icon": 1072962,
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072967,
+		"name": "Pensalir Battle Boots",
+		"type": "Shoes",
+		"icon": 1072967,
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1072968,
+		"name": "Pensalir Mage Boots",
+		"type": "Shoes",
+		"icon": 1072967,
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1072969,
+		"name": "Pensalir Sentinel Boots",
+		"type": "Shoes",
+		"icon": 1072967,
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1072970,
+		"name": "Pensalir Chaser Boots",
+		"type": "Shoes",
+		"icon": 1072967,
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1072971,
+		"name": "Pensalir Skipper Boots",
+		"type": "Shoes",
+		"icon": 1072967,
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1072972,
+		"name": "Royal Von Leon Warrior Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072973,
+		"name": "Royal Von Leon Mage Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072974,
+		"name": "Royal Von Leon Sentinel Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072975,
+		"name": "Royal Von Leon Chaser Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1072976,
+		"name": "Royal Von Leon Skipper Boots",
+		"type": "Shoes",
+		"icon": 1072471,
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
+	},
+	{
 		"id": 1073030,
 		"name": "AbsoLab Knight Shoes",
 		"type": "Shoes",
@@ -745,6 +1815,353 @@
 			"level": 200
 		},
 		"flameAdvantage": true
+	},
+	{
+		"id": 1082234,
+		"name": "Timeless Bergamot",
+		"h1": "#cAdvanced Combo Attack +1 Level\nAdvanced Charge +1 Level\nRevenge of the Evil Eye +1 Level\nHigh Mastery +1 Level\nBarricade Mastery +1 Level\nSoul Asylum +1 Level\nBlade Burst +1 Level\nBlood Prison +1 Level#",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082235,
+		"name": "Timeless Hermosa",
+		"h1": "#cIfrit +1 Level\nElquines +1 Level\nBahamut +1 Level\nMagic Mastery +1 Level\nAdvanced Dark Aura +1 Level#",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082236,
+		"name": "Timeless Presto",
+		"h1": "#cBow Expert +1 Level\nCrossbow Expert +1 Level#nSpikes Royale +1 Level#",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082237,
+		"name": "Timeless Lubav",
+		"h1": "#cToxic Venom +1 Level\nPenombre +1 Level\nMecha Purge +1 Level#",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082238,
+		"name": "Timeless Charlston",
+		"h1": "#cBuccaneer Blast +1 Level\nEight-Legs Easton +1 Level\nExtreme Mech +1 Level\nCannon Barrage +1 Level\nStar Gazer +1 Level\nMecha Purge +1 Level\nSpirit Claw +1 Level#",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082285,
+		"name": "Marx Von Leon Gloves",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082286,
+		"name": "Alma Von Leon Gloves",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082287,
+		"name": "Fox Von Leon Gloves",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082288,
+		"name": "Nox Von Leon Gloves",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082289,
+		"name": "Cora Von Leon Gloves",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082593,
+		"name": "Necromancer Warrior Gloves",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082594,
+		"name": "Necromancer Magician Gloves",
+		"type": "Gloves",
+		"icon": 1082593,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082595,
+		"name": "Necromancer Sentinel Gloves",
+		"type": "Gloves",
+		"icon": 1082593,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082596,
+		"name": "Necromancer Chaser Gloves",
+		"type": "Gloves",
+		"icon": 1082593,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082597,
+		"name": "Necromancer Skipper Gloves",
+		"type": "Gloves",
+		"icon": 1082593,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082598,
+		"name": "Eclectic Bergamot",
+		"type": "Gloves",
+		"icon": 1082234,
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082599,
+		"name": "Eclectic Hermosa",
+		"type": "Gloves",
+		"icon": 1082235,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082600,
+		"name": "Eclectic Presto",
+		"type": "Gloves",
+		"icon": 1082236,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082601,
+		"name": "Eclectic Lubav",
+		"type": "Gloves",
+		"icon": 1082237,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082602,
+		"name": "Eclectic Charlston",
+		"type": "Gloves",
+		"icon": 1082238,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1082603,
+		"name": "Muspell Warrior Gloves",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082604,
+		"name": "Muspell Magician Gloves",
+		"type": "Gloves",
+		"icon": 1082603,
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082605,
+		"name": "Muspell Bowman Gloves",
+		"type": "Gloves",
+		"icon": 1082603,
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082606,
+		"name": "Muspell Thief Gloves",
+		"type": "Gloves",
+		"icon": 1082603,
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082607,
+		"name": "Muspell Pirate Gloves",
+		"type": "Gloves",
+		"icon": 1082603,
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082608,
+		"name": "Pensalir Battle Gloves",
+		"type": "Gloves",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1082609,
+		"name": "Pensalir Mage Gloves",
+		"type": "Gloves",
+		"icon": 1082608,
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1082610,
+		"name": "Pensalir Sentinel Gloves",
+		"type": "Gloves",
+		"icon": 1082608,
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1082611,
+		"name": "Pensalir Chaser Gloves",
+		"type": "Gloves",
+		"icon": 1082608,
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1082612,
+		"name": "Pensalir Skipper Gloves",
+		"type": "Gloves",
+		"icon": 1082608,
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1082613,
+		"name": "Royal Von Leon Warrior Hands",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082614,
+		"name": "Royal Von Leon Mage Hands",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082615,
+		"name": "Royal Von Leon Sentinel Hands",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082616,
+		"name": "Royal Von Leon Chaser Hands",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1082617,
+		"name": "Royal Von Leon Skipper Hands",
+		"type": "Gloves",
+		"icon": 1082285,
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
 	},
 	{
 		"id": 1082636,
@@ -855,6 +2272,163 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1102262,
+		"name": "Marx Von Leon Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Warrior",
+			"level": 120
+		}
+	},
+	{
+		"id": 1102263,
+		"name": "Alma Von Leon Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Magician",
+			"level": 120
+		}
+	},
+	{
+		"id": 1102264,
+		"name": "Fox Von Leon Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Bowman",
+			"level": 120
+		}
+	},
+	{
+		"id": 1102265,
+		"name": "Nox Von Leon Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Thief",
+			"level": 120
+		}
+	},
+	{
+		"id": 1102266,
+		"name": "Cora Von Leon Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Pirate",
+			"level": 120
+		}
+	},
+	{
+		"id": 1102562,
+		"name": "Onyx Maple Cape",
+		"type": "Cape",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1102713,
+		"name": "Royal Von Leon Warrior Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1102714,
+		"name": "Royal Von Leon Mage Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1102715,
+		"name": "Royal Von Leon Sentinel Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Bowman",
+			"level": 130
+		}
+	},
+	{
+		"id": 1102716,
+		"name": "Royal Von Leon Chaser Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1102717,
+		"name": "Royal Von Leon Skipper Cape",
+		"type": "Cape",
+		"icon": 1102262,
+		"requirements": {
+			"job": "Pirate",
+			"level": 130
+		}
+	},
+	{
+		"id": 1102718,
+		"name": "Pensalir Battle Cape",
+		"type": "Cape",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1102719,
+		"name": "Pensalir Mage Cape",
+		"type": "Cape",
+		"icon": 1102718,
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1102720,
+		"name": "Pensalir Sentinel Cape",
+		"type": "Cape",
+		"icon": 1102718,
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1102721,
+		"name": "Pensalir Chaser Cape",
+		"type": "Cape",
+		"icon": 1102718,
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1102722,
+		"name": "Pensalir Skipper Cape",
+		"type": "Cape",
+		"icon": 1102718,
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
 		"id": 1102775,
 		"name": "AbsoLab Knight Cape",
 		"type": "Cape",
@@ -907,6 +2481,15 @@
 			"level": 160
 		},
 		"flameAdvantage": true
+	},
+	{
+		"id": 1102799,
+		"name": "Frozen Cape",
+		"type": "Cape",
+		"icon": 1102562,
+		"requirements": {
+			"level": 100
+		}
 	},
 	{
 		"id": 1102940,
@@ -963,6 +2546,22 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1113055,
+		"name": "Meister Ring",
+		"type": "Ring",
+		"requirements": {
+			"level": 140
+		}
+	},
+	{
+		"id": 1113069,
+		"name": "Pivotal Adventure Ring",
+		"type": "Ring",
+		"requirements": {
+			"level": 130
+		}
+	},
+	{
 		"id": 1113072,
 		"name": "Cracked Gollux Ring",
 		"description": "A ring made from bits of Gollux's core. ",
@@ -1007,11 +2606,37 @@
 		}
 	},
 	{
+		"id": 1113172,
+		"name": "Grand Adventure Ring",
+		"type": "Ring",
+		"icon": 1113069,
+		"requirements": {
+			"level": 130
+		}
+	},
+	{
+		"id": 1113231,
+		"name": "Master Ring SS",
+		"description": "A ring made by combining 4 different magic Jewel Rings. Significantly increases all stats when equipped.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
 		"id": 1113282,
 		"name": "Noble Ifia's Ring",
 		"type": "Ring",
 		"requirements": {
 			"level": 120
+		}
+	},
+	{
+		"id": 1113306,
+		"name": "Endless Terror",
+		"type": "Ring",
+		"requirements": {
+			"level": 200
 		}
 	},
 	{
@@ -1030,6 +2655,213 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 160
+		}
+	},
+	{
+		"id": 1114300,
+		"name": "Vengeful Ring",
+		"description": "A ring fueled by a long-held grudge. It grows in power when fed #cVengeful Stones#.\r\nCan grant Potential and Bonus Potential.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114301,
+		"name": "Reboot Vengeful Ring",
+		"description": "A ring fueled by a long-held grudge.",
+		"type": "Ring",
+		"icon": 1114300,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114302,
+		"name": "Synergy Ring",
+		"description": "A ring that gradually becomes more powerful when united with more of its kind.\r\nStats change depending on  #chow many of your characters in this world have the ring equipped#. The ring may be equipped on #cup to 5 of your characters# on this world.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114303,
+		"name": "Cosmos Ring",
+		"description": "A ring that holds a universe within it. It grows in power when fed #cCosmic Atoms#.\r\nCan grant Potential and Bonus Potential.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114306,
+		"name": "Chaos Ring",
+		"description": "A ring of chaos, full of joys and sorrows. \r\nRight click the ring to #creset stats and Potential#. You can reset#c10 times a week#.\r\nThe reset count is #crecalculated# every Monday. The best possible result is Unique.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114307,
+		"name": "Tenebris Expedition Ring",
+		"description": "This ring has special powers and was made by the Alliance for the Tenebris Expedition while preparing for the final battle with the Black Mage.\r\nOnly the Tenebris Expedition Ring Enhancement Scroll can be used.\r\nCan grant Potential and Bonus Potential.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114308,
+		"name": "Reboot Tenebris Expedition Ring (Stage 1)",
+		"description": "This ring has special powers and was made by the Alliance for the Tenebris Expedition while preparing for the final battle with the Black Mage.",
+		"type": "Ring",
+		"icon": 1114307,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114309,
+		"name": "Reboot Tenebris Expedition Ring (Stage 2)",
+		"description": "This ring has special powers and was made by the Alliance for the Tenebris Expedition while preparing for the final battle with the Black Mage.",
+		"type": "Ring",
+		"icon": 1114307,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114310,
+		"name": "Reboot Tenebris Expedition Ring (Stage 3)",
+		"description": "This ring has special powers and was made by the Alliance for the Tenebris Expedition while preparing for the final battle with the Black Mage.",
+		"type": "Ring",
+		"icon": 1114307,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114311,
+		"name": "Reboot Tenebris Expedition Ring (Complete)",
+		"description": "This ring has special powers and was made by the Alliance for the Tenebris Expedition while preparing for the final battle with the Black Mage.",
+		"type": "Ring",
+		"icon": 1114307,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114312,
+		"name": "Adventure Deep Dark Critical Ring",
+		"type": "Ring",
+		"requirements": {
+			"level": 130
+		}
+	},
+	{
+		"id": 1114313,
+		"name": "Glory Guard Ring: Guardian",
+		"description": "A special ring granted to members of the Glory Guard who achieve the rank of Guardian.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114314,
+		"name": "Glory Guard Ring: Master",
+		"description": "A special ring granted to members of the Glory Guard who achieve the rank of Master.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114315,
+		"name": "Glory Guard Ring: Commander",
+		"description": "A special ring granted to members of the Glory Guard who achieve the rank of Commander.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114316,
+		"name": "Glory Guard Ring: Justicar",
+		"description": "A special ring granted to members of the Glory Guard who achieve the rank of Justicar.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114318,
+		"name": "Awake Ring",
+		"description": "This special ring comes from the Mountain of Awakening.\r\nOnly the Awake Ring Exclusive Enhancement Scroll can be used.\r\nCan grant Potential and Bonus Potential.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114319,
+		"name": "Reboot Awake Ring (Lv. 1)",
+		"description": "This special ring comes from the Mountain of Awakening.",
+		"type": "Ring",
+		"icon": 1114318,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114320,
+		"name": "Reboot Awake Ring (Lv. 2)",
+		"description": "This special ring comes from the Mountain of Awakening.",
+		"type": "Ring",
+		"icon": 1114318,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114321,
+		"name": "Reboot Awake Ring (Lv. 3)",
+		"description": "This special ring comes from the Mountain of Awakening.",
+		"type": "Ring",
+		"icon": 1114318,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114322,
+		"name": "Reboot Awake Ring (Lv. 4)",
+		"description": "This special ring comes from the Mountain of Awakening.",
+		"type": "Ring",
+		"icon": 1114318,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114323,
+		"name": "Reboot Cosmos Ring",
+		"description": "A ring that holds a universe within it. It grows in power when fed #cCosmic Atoms#.\r\nCan grant Potential.",
+		"type": "Ring",
+		"icon": 1114303,
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1114324,
+		"name": "Eternal Flame Ring",
+		"description": "A special ring, within which is embedded the power of an unrelenting flame.",
+		"type": "Ring",
+		"requirements": {
+			"level": 120
 		}
 	},
 	{
@@ -1108,6 +2940,14 @@
 			"level": 150
 		},
 		"flameAdvantage": false
+	},
+	{
+		"id": 1122269,
+		"name": "Sweetwater Pendant",
+		"type": "Pendant",
+		"requirements": {
+			"level": 160
+		}
 	},
 	{
 		"id": 1122430,
@@ -1423,6 +3263,38 @@
 		}
 	},
 	{
+		"id": 1182286,
+		"name": "Tot's Badge",
+		"type": "Badge",
+		"requirements": {
+			"level": 30
+		}
+	},
+	{
+		"id": 1190528,
+		"name": "Honor Roll Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1190541,
+		"name": "MapleStory Fest Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1190545,
+		"name": "MapleStory Fest 2019 Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
 		"id": 1190555,
 		"name": "Mitra's Rage: Warrior",
 		"type": "Emblem",
@@ -1468,6 +3340,138 @@
 		}
 	},
 	{
+		"id": 1202047,
+		"name": "Copper Doom Totem",
+		"description": "A copper totem filled with the dark energies of Doom's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202048,
+		"name": "Silver Doom Totem",
+		"description": "A silver totem filled with the dark energies of Doom's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202049,
+		"name": "Gold Doom Totem",
+		"description": "A golden totem filled with the dark energies of Doom's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202051,
+		"name": "Copper Avenger Totem",
+		"description": "A copper totem filled with the dark energies of Avenger's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202052,
+		"name": "Silver Avenger Totem",
+		"description": "A silver totem filled with the dark energies of Avenger's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202053,
+		"name": "Gold Avenger Totem",
+		"description": "A golden totem filled with the dark energies of Avenger's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202055,
+		"name": "Copper Hellia Totem",
+		"description": "A copper totem filled with the dark energies of Hellia's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202056,
+		"name": "Silver Hellia Totem",
+		"description": "A silver totem filled with the dark energies of Hellia's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202057,
+		"name": "Gold Hellia Totem",
+		"description": "A golden totem filled with the dark energies of Hellia's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202059,
+		"name": "Copper Grin Totem",
+		"description": "A copper totem filled with the dark energies of Grin's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202060,
+		"name": "Silver Grin Totem",
+		"description": "A silver totem filled with the dark energies of Grin's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202061,
+		"name": "Gold Grin Totem",
+		"description": "A golden totem filled with the dark energies of Grin's darkness.",
+		"type": "Totem"
+	},
+	{
+		"id": 1202237,
+		"name": "Beodog Figurine",
+		"type": "Totem",
+		"requirements": {
+			"level": 90
+		}
+	},
+	{
+		"id": 1202238,
+		"name": "Mansa Figurine",
+		"type": "Totem",
+		"requirements": {
+			"level": 90
+		}
+	},
+	{
+		"id": 1202239,
+		"name": "Adler Figurine",
+		"type": "Totem",
+		"requirements": {
+			"level": 90
+		}
+	},
+	{
+		"id": 1202240,
+		"name": "Billy Figurine",
+		"type": "Totem",
+		"requirements": {
+			"level": 90
+		}
+	},
+	{
+		"id": 1202248,
+		"name": "Dark Doom Totem",
+		"description": "A powerful dark totem filled with the dark energies of Doom's darkness.",
+		"type": "Totem",
+		"icon": 1202050
+	},
+	{
+		"id": 1202249,
+		"name": "Dark Avenger Totem",
+		"description": "A powerful dark totem filled with the dark energies of Avenger's darkness.",
+		"type": "Totem",
+		"icon": 1202054
+	},
+	{
+		"id": 1202250,
+		"name": "Dark Hellia Totem",
+		"description": "A powerful dark totem filled with the dark energies of Hellia's darkness.",
+		"type": "Totem",
+		"icon": 1202058
+	},
+	{
+		"id": 1202251,
+		"name": "Dark Grin Totem",
+		"description": "A powerful dark totem filled with the dark energies of Grin's darkness.",
+		"type": "Totem",
+		"icon": 1202062
+	},
+	{
 		"id": 1202287,
 		"name": "Ancient Slate Replica",
 		"description": "A totem made after the ancient slate found in the Island of Mirages. You can grant powerful bonus stats to it using #cLava Stone Rebirth Flame#.&\n- With Appreciation from the Maple Expedition Captain -",
@@ -1477,9 +3481,58 @@
 		}
 	},
 	{
+		"id": 1202305,
+		"name": "Guild Castle Blue Brooch",
+		"type": "Totem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1202306,
+		"name": "Guild Castle Red Brooch",
+		"type": "Totem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1202307,
+		"name": "Guild Castle Green Brooch",
+		"type": "Totem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1672073,
+		"name": "Fairy Heart",
+		"type": "Heart",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
 		"id": 1672076,
 		"name": "Black Heart",
 		"type": "Heart",
+		"requirements": {
+			"level": 120
+		}
+	},
+	{
+		"id": 1672078,
+		"name": "Wondroid Heart",
+		"type": "Heart",
+		"requirements": {
+			"level": 50
+		}
+	},
+	{
+		"id": 1672081,
+		"name": "Glimmering Wondroid Heart",
+		"type": "Heart",
+		"icon": 1672078,
 		"requirements": {
 			"level": 120
 		}
