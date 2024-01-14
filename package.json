@@ -9,12 +9,15 @@
 		"start": "next start"
 	},
 	"lint-staged": {
-		"**/*.(js|jsx|ts|tsx)": ["biome format --write"]
+		"**/*.(js|jsx|ts|tsx)": [
+			"biome format --write"
+		]
 	},
 	"dependencies": {
 		"@fontsource/roboto-flex": "^5.0.8",
 		"@hyoretsu/react-components": "^1.7.9",
 		"@hyoretsu/react-hooks": "^1.2.5",
+		"@hyoretsu/utils": "^1.8.0",
 		"next": "^14.0.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",

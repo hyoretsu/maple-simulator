@@ -3,6 +3,7 @@ import StyledModal from "@components/StyledModal";
 import { useCharacters } from "@context/account";
 import classes from "@data/classes.json";
 import { Input } from "@hyoretsu/react-components";
+import copyObject from "@utils/copyObject";
 import { CharacterEquipment, Equipment, EquipmentType, PlayableClass } from "maple-simulator";
 import { useState } from "react";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
@@ -74,12 +75,12 @@ export default function FlameEditor({ equip: equipData, type, index }: FlameEdit
 
 	let equip = currentCharacter.equips[type] as CharacterEquipment;
 	if (Array.isArray(equip)) {
-		equip = equip[index as number];
+		equip = equip[index!];
 	}
 
 	const handleChange = (stat: string, value: number) => {
 		const newEquip: CharacterEquipment | CharacterEquipment[] = {
-			id: equip!.id,
+			...copyObject(equip),
 			flames: {
 				...equip!.flames,
 				[stat]: value,

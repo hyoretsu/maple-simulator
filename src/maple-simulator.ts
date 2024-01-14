@@ -90,6 +90,7 @@ export interface FlameStats {
 }
 export interface CharacterEquipment {
 	id: number;
+	stars?: number;
 	flames?: FlameStats;
 }
 export type CharacterEquip = CharacterEquipment | null;

@@ -8,15 +8,6 @@
     border: 2px solid #ffffff;
     border-radius: 1rem;
 
-    > div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 40px;
-        height: 40px;
-    }
-
     select {
         width: 10rem;
     }
@@ -33,6 +24,15 @@
     }
 }
 
+.equipIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+}
+
 .equipSection {
     display: flex;
     flex-direction: column;
@@ -42,6 +42,7 @@
 
     border: 2px solid #ffffff;
     border-radius: 1rem;
+    margin-top: 0.5rem;
 
     button {
         width: 100%;
