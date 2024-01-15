@@ -37,6 +37,7 @@ export interface Job {
 export interface PlayableClass {
 	name: string;
 	branch: "Bowman" | "Magician" | "Pirate" | "Thief" | "Warrior" | "Xenon";
+	weapons: string[];
 	mainStat: [Stat | "HP"] | [Stat, Stat, Stat];
 	secondaryStat: [Stat] | [Stat, Stat] | null;
 	jobs: [number, number, number, number, number, number, number];
@@ -80,7 +81,9 @@ export interface SymbolInfo {
 export interface FlameStats {
 	allStats?: number;
 	att?: number;
+	bossDmg?: number;
 	dex?: number;
+	dmg?: number;
 	int?: number;
 	hp?: number;
 	mAtt?: number;

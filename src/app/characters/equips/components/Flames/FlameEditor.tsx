@@ -3,6 +3,7 @@ import StyledModal from "@components/StyledModal";
 import { useCharacters } from "@context/account";
 import classes from "@data/classes.json";
 import { Input } from "@hyoretsu/react-components";
+import { isEven } from "@hyoretsu/utils";
 import copyObject from "@utils/copyObject";
 import { CharacterEquipment, Equipment, EquipmentType, PlayableClass } from "maple-simulator";
 import { useState } from "react";
@@ -72,6 +73,8 @@ export default function FlameEditor({ equip: equipData, type, index }: FlameEdit
 	) as PlayableClass;
 	const statLimit = statLimits.find(([level]) => (equipData?.requirements.level || 0) >= level)![1];
 	const hpMpLimit = hpMpLimits.find(([level]) => (equipData?.requirements.level || 0) >= level)![1];
+	// Todo: implement dynamic ATT limit for weapons
+	const attLimit = type === "Weapon" ? 250 : 7;
 
 	let equip = currentCharacter.equips[type] as CharacterEquipment;
 	if (Array.isArray(equip)) {
@@ -192,7 +195,7 @@ export default function FlameEditor({ equip: equipData, type, index }: FlameEdit
 							value={equip?.flames?.att || ""}
 							placeholder="0"
 							min={0}
-							max={7}
+							max={attLimit}
 							onChange={e => handleChange("att", Number(e.currentTarget.value))}
 						/>
 					</fieldset>
@@ -204,7 +207,7 @@ export default function FlameEditor({ equip: equipData, type, index }: FlameEdit
 							value={equip?.flames?.mAtt || ""}
 							placeholder="0"
 							min={0}
-							max={7}
+							max={attLimit}
 							onChange={e => handleChange("mAtt", Number(e.currentTarget.value))}
 						/>
 					</fieldset>
@@ -221,6 +224,41 @@ export default function FlameEditor({ equip: equipData, type, index }: FlameEdit
 						onChange={e => handleChange("allStats", Number(e.currentTarget.value))}
 					/>
 				</fieldset>
+
+				{type === "Weapon" && (
+					<>
+						<fieldset>
+							<span>Damage</span>
+							<Input
+								type="number"
+								value={equip?.flames?.dmg || ""}
+								placeholder="0"
+								min={0}
+								max={7}
+								onChange={e => handleChange("dmg", Number(e.currentTarget.value))}
+							/>
+						</fieldset>
+
+						<fieldset>
+							<span>Boss Damage</span>
+							<Input
+								type="number"
+								value={equip?.flames?.bossDmg || ""}
+								placeholder="0"
+								min={0}
+								max={14}
+								onChange={e => {
+									const value = Number(e.currentTarget.value);
+									if (!isEven(value)) {
+										return;
+									}
+
+									handleChange("bossDmg", value);
+								}}
+							/>
+						</fieldset>
+					</>
+				)}
 			</section>
 
 			{kannaModalVisible && (

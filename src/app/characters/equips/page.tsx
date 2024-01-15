@@ -25,7 +25,15 @@ export default function Equips() {
 				Object.assign(obj, {
 					[type]: equips
 						.filter(equipData => {
-							const sameType = (isTop && equipData.type === "Overall") || equipData.type === type;
+							const characterClass = classes.find(givenClass => givenClass.name === currentCharacter.class)!;
+
+							let sameType: boolean;
+							if (type === "Weapon") {
+								sameType = characterClass.weapons.includes(equipData.type!);
+							} else {
+								sameType = (isTop && equipData.type === "Overall") || equipData.type === type;
+							}
+
 							const belowLevel =
 								!equipData.requirements?.level || equipData.requirements.level <= currentCharacter.level;
 
@@ -33,11 +41,11 @@ export default function Equips() {
 							if (!sameJob) {
 								if (currentCharacter.class === "Xenon") {
 									sameJob =
-										equipData.requirements?.job === "Thief" || equipData.requirements?.job === "Pirate";
+										equipData.requirements?.job === "Thief" ||
+										equipData.requirements?.job === "Pirate" ||
+										equipData.requirements?.job === "Xenon";
 								} else {
-									sameJob =
-										equipData.requirements?.job ===
-										classes.find(givenClass => givenClass.name === currentCharacter.class)!.branch;
+									sameJob = equipData.requirements?.job === characterClass.branch;
 								}
 							}
 

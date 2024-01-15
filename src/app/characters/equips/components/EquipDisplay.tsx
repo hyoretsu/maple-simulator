@@ -94,11 +94,9 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 
 			break;
 		}
-		// Todo: implement
-		case "Weapon": {
-			isFlammable = false;
+		// Weapon
+		default:
 			break;
-		}
 	}
 
 	const changeEquip = (id: number) => {

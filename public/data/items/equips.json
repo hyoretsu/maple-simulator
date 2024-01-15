@@ -3619,6 +3619,2221 @@
 		}
 	},
 	{
+		"id": 1212063,
+		"name": "Fafnir Mana Cradle",
+		"type": "Shining Rod",
+		"requirements": {
+			"job": "Magician",
+			"level": 15150
+		}
+	},
+	{
+		"id": 1212101,
+		"name": "Utgard Shining Rod",
+		"type": "Shining Rod",
+		"requirements": {
+			"job": "Magician",
+			"level": 14140
+		}
+	},
+	{
+		"id": 1212115,
+		"name": "AbsoLab Shining Rod",
+		"type": "Shining Rod",
+		"requirements": {
+			"job": "Magician",
+			"level": 16160
+		}
+	},
+	{
+		"id": 1212120,
+		"name": "Arcane Umbra Shining Rod",
+		"type": "Shining Rod",
+		"requirements": {
+			"job": "Magician",
+			"level": 20200
+		}
+	},
+	{
+		"id": 1212128,
+		"name": "Sealed Genesis Shining Rod",
+		"type": "Shining Rod",
+		"requirements": {
+			"job": "Magician",
+			"level": 20200
+		}
+	},
+	{
+		"id": 1212129,
+		"name": "Genesis Shining Rod",
+		"type": "Shining Rod",
+		"icon": 1212128,
+		"requirements": {
+			"job": "Magician",
+			"level": 20200
+		}
+	},
+	{
+		"id": 1213014,
+		"name": "Utgard Restraint",
+		"type": "Bladecaster",
+		"requirements": {
+			"job": "Warrior",
+			"level": 14140
+		}
+	},
+	{
+		"id": 1213016,
+		"name": "Fafnir Mercy",
+		"type": "Bladecaster",
+		"requirements": {
+			"job": "Warrior",
+			"level": 15150
+		}
+	},
+	{
+		"id": 1213017,
+		"name": "AbsoLab Bladecaster",
+		"type": "Bladecaster",
+		"requirements": {
+			"job": "Warrior",
+			"level": 16160
+		}
+	},
+	{
+		"id": 1213018,
+		"name": "Arcane Umbra Bladecaster",
+		"type": "Bladecaster",
+		"requirements": {
+			"job": "Warrior",
+			"level": 20200
+		}
+	},
+	{
+		"id": 1213021,
+		"name": "Sealed Genesis Bladecaster",
+		"type": "Bladecaster",
+		"requirements": {
+			"job": "Warrior",
+			"level": 20200
+		}
+	},
+	{
+		"id": 1213022,
+		"name": "Genesis Bladecaster",
+		"type": "Bladecaster",
+		"icon": 1213021,
+		"requirements": {
+			"job": "Warrior",
+			"level": 20200
+		}
+	},
+	{
+		"id": 1214014,
+		"name": "Utgard Whispershot",
+		"type": "Whispershot",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1214016,
+		"name": "Fafnir Nightchaser",
+		"type": "Whispershot",
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		}
+	},
+	{
+		"id": 1214017,
+		"name": "AbsoLab Whispershot",
+		"type": "Whispershot",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		}
+	},
+	{
+		"id": 1214018,
+		"name": "Arcane Umbra Whispershot",
+		"type": "Whispershot",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1214021,
+		"name": "Sealed Genesis Whispershot",
+		"type": "Whispershot",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1214022,
+		"name": "Genesis Whispershot",
+		"type": "Whispershot",
+		"icon": 1214021,
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1222058,
+		"name": "Fafnir Angelic Shooter",
+		"type": "Soul Shooter",
+		"requirements": {
+			"job": "Pirate",
+			"level": 150
+		}
+	},
+	{
+		"id": 1222095,
+		"name": "Utgard Dragon Soul",
+		"type": "Soul Shooter",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1222109,
+		"name": "AbsoLab Soul Shooter",
+		"type": "Soul Shooter",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		}
+	},
+	{
+		"id": 1222113,
+		"name": "Arcane Umbra Soul Shooter",
+		"type": "Soul Shooter",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1222121,
+		"name": "Sealed Genesis Soul Shooter",
+		"type": "Soul Shooter",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1222122,
+		"name": "Genesis Soul Shooter",
+		"type": "Soul Shooter",
+		"icon": 1222121,
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1232057,
+		"name": "Fafnir Death Bringer",
+		"type": "Desperado",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1232095,
+		"name": "Utgard Desperado",
+		"type": "Desperado",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1232109,
+		"name": "AbsoLab Desperado",
+		"type": "Desperado",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1232113,
+		"name": "Arcane Umbra Desperado",
+		"type": "Desperado",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1232121,
+		"name": "Sealed Genesis Desperado",
+		"type": "Desperado",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1232122,
+		"name": "Genesis Desperado",
+		"type": "Desperado",
+		"icon": 1232121,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1242060,
+		"name": "Fafnir Split Edge",
+		"description": "Root Abyss Set (Thief) exclusive weapon",
+		"type": "Whip Blade",
+		"requirements": {
+			"job": "Xenon",
+			"level": 150
+		}
+	},
+	{
+		"id": 1242061,
+		"name": "Fafnir Split Edge",
+		"description": "Root Abyss Set (Pirate) exclusive weapon",
+		"type": "Whip Blade",
+		"icon": 1242060,
+		"requirements": {
+			"job": "Xenon",
+			"level": 150
+		}
+	},
+	{
+		"id": 1242102,
+		"name": "Utgard Energy Chain",
+		"type": "Whip Blade",
+		"requirements": {
+			"job": "Xenon",
+			"level": 140
+		}
+	},
+	{
+		"id": 1242116,
+		"name": "AbsoLab Whip Blade",
+		"description": "AbsoLab Set (Pirate) exclusive weapon",
+		"type": "Whip Blade",
+		"requirements": {
+			"job": "Xenon",
+			"level": 160
+		}
+	},
+	{
+		"id": 1242120,
+		"name": "AbsoLab Whip Blade",
+		"description": "AbsoLab Set (Thief) exclusive weapon",
+		"type": "Whip Blade",
+		"icon": 1242116,
+		"requirements": {
+			"job": "Xenon",
+			"level": 160
+		}
+	},
+	{
+		"id": 1242121,
+		"name": "Arcane Umbra Energy Chain",
+		"description": "Arcane Umbra Set (Pirate) Exclusive Weapon",
+		"type": "Whip Blade",
+		"requirements": {
+			"job": "Xenon",
+			"level": 200
+		}
+	},
+	{
+		"id": 1242122,
+		"name": "Arcane Umbra Energy Chain",
+		"description": "Arcane Umbra Set (Thief) Exclusive Weapon",
+		"type": "Whip Blade",
+		"icon": 1242121,
+		"requirements": {
+			"job": "Xenon",
+			"level": 200
+		}
+	},
+	{
+		"id": 1242138,
+		"name": "Sealed Genesis Energy Chain",
+		"type": "Whip Blade",
+		"requirements": {
+			"job": "Xenon",
+			"level": 200
+		}
+	},
+	{
+		"id": 1242139,
+		"name": "Genesis Energy Chain",
+		"type": "Whip Blade",
+		"icon": 1242138,
+		"requirements": {
+			"job": "Xenon",
+			"level": 200
+		}
+	},
+	{
+		"id": 1242140,
+		"name": "Sealed Genesis Energy Chain",
+		"type": "Whip Blade",
+		"icon": 1242138,
+		"requirements": {
+			"job": "Xenon",
+			"level": 200
+		}
+	},
+	{
+		"id": 1242141,
+		"name": "Genesis Energy Chain",
+		"type": "Whip Blade",
+		"icon": 1242138,
+		"requirements": {
+			"job": "Xenon",
+			"level": 200
+		}
+	},
+	{
+		"id": 1252015,
+		"name": "Fafnir Scepter",
+		"type": "Beast Tamer Scepter",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		}
+	},
+	{
+		"id": 1252086,
+		"name": "Utgard Shining Stick",
+		"type": "Beast Tamer Scepter",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1252093,
+		"name": "AbsoLab Scepter",
+		"type": "Beast Tamer Scepter",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		}
+	},
+	{
+		"id": 1252098,
+		"name": "Arcane Umbra Scepter",
+		"type": "Beast Tamer Scepter",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1252105,
+		"name": "Sealed Genesis Scepter",
+		"type": "Beast Tamer Scepter",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1252106,
+		"name": "Genesis Scepter",
+		"type": "Beast Tamer Scepter",
+		"icon": 1252105,
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1262011,
+		"name": "Utgard Psy-limiter",
+		"type": "Psy-limiter",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1262016,
+		"name": "Fafnir Psy-limiter",
+		"type": "Psy-limiter",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		}
+	},
+	{
+		"id": 1262017,
+		"name": "AbsoLab Psy-limiter",
+		"type": "Psy-limiter",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		}
+	},
+	{
+		"id": 1262039,
+		"name": "Arcane Umbra Psy-limiter",
+		"type": "Psy-limiter",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1262050,
+		"name": "Sealed Genesis Psy-limiter",
+		"type": "Psy-limiter",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1262051,
+		"name": "Genesis Psy-limiter",
+		"type": "Psy-limiter",
+		"icon": 1262050,
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1272013,
+		"name": "Utgard Chain",
+		"type": "Chain",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1272015,
+		"name": "Fafnir Chain",
+		"type": "Chain",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		}
+	},
+	{
+		"id": 1272016,
+		"name": "AbsoLab Chain",
+		"type": "Chain",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		}
+	},
+	{
+		"id": 1272017,
+		"name": "Arcane Umbra Chain",
+		"type": "Chain",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1272039,
+		"name": "Sealed Genesis Chain",
+		"type": "Chain",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1272040,
+		"name": "Genesis Chain",
+		"type": "Chain",
+		"icon": 1272039,
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1282013,
+		"name": "Utgard Lucent Gauntlet",
+		"type": "Lucent Gauntlet",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1282015,
+		"name": "Fafnir Lucent Gauntlet",
+		"type": "Lucent Gauntlet",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		}
+	},
+	{
+		"id": 1282016,
+		"name": "AbsoLab Lucent Gauntlet",
+		"type": "Lucent Gauntlet",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		}
+	},
+	{
+		"id": 1282017,
+		"name": "Arcane Umbra Lucent Gauntlet",
+		"type": "Lucent Gauntlet",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1282039,
+		"name": "Sealed Genesis Lucent Gauntlet",
+		"type": "Lucent Gauntlet",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1282040,
+		"name": "Genesis Lucent Gauntlet",
+		"type": "Lucent Gauntlet",
+		"icon": 1282039,
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1292014,
+		"name": "Utgard Giant Ritual Fan",
+		"type": "Ritual Fan",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1292016,
+		"name": "Fafnir Dragon Ritual Fan",
+		"type": "Ritual Fan",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		}
+	},
+	{
+		"id": 1292017,
+		"name": "AbsoLab Monster Ritual Fan",
+		"type": "Ritual Fan",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		}
+	},
+	{
+		"id": 1292018,
+		"name": "Arcane Umbra Super Ritual Fan",
+		"type": "Ritual Fan",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1292021,
+		"name": "Sealed Genesis Ritual Fan",
+		"type": "Ritual Fan",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1292022,
+		"name": "Genesis Ritual Fan",
+		"type": "Ritual Fan",
+		"icon": 1292021,
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1302275,
+		"name": "Fafnir Mistilteinn",
+		"type": "One-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1302315,
+		"name": "Utgard Saber",
+		"type": "One-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1302333,
+		"name": "AbsoLab Saber",
+		"type": "One-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1302343,
+		"name": "Arcane Umbra Saber",
+		"type": "One-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1302354,
+		"name": "Sealed Genesis Saber",
+		"type": "One-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1302355,
+		"name": "Genesis Saber",
+		"type": "One-handed Sword",
+		"icon": 1302354,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1312153,
+		"name": "Fafnir Twin Cleaver",
+		"type": "One-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1312185,
+		"name": "Utgard Axe",
+		"type": "One-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1312199,
+		"name": "AbsoLab Axe",
+		"type": "One-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1312203,
+		"name": "Arcane Umbra Axe",
+		"type": "One-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1312212,
+		"name": "Sealed Genesis Axe",
+		"type": "One-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1312213,
+		"name": "Genesis Axe",
+		"type": "One-handed Axe",
+		"icon": 1312212,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1322203,
+		"name": "Fafnir Guardian Hammer",
+		"type": "One-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1322236,
+		"name": "Utgard Hair",
+		"type": "One-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1322250,
+		"name": "AbsoLab Bit Hammer",
+		"type": "One-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1322255,
+		"name": "Arcane Umbra Hammer",
+		"type": "One-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1322263,
+		"name": "Sealed Genesis Hammer",
+		"type": "One-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1322264,
+		"name": "Genesis Hammer",
+		"type": "One-handed Blunt Weapon",
+		"icon": 1322263,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1332225,
+		"name": "Fafnir Damascus",
+		"type": "Dagger",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		}
+	},
+	{
+		"id": 1332260,
+		"name": "Utgard Dagger",
+		"type": "Dagger",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1332274,
+		"name": "AbsoLab Blade Lord",
+		"type": "Dagger",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		}
+	},
+	{
+		"id": 1332279,
+		"name": "Arcane Umbra Dagger",
+		"type": "Dagger",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1332288,
+		"name": "Sealed Genesis Dagger",
+		"type": "Dagger",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1332289,
+		"name": "Genesis Dagger",
+		"type": "Dagger",
+		"icon": 1332288,
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1342082,
+		"name": "Fafnir Rapid Edge",
+		"type": "Katara",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		}
+	},
+	{
+		"id": 1342100,
+		"name": "Utgard Katara",
+		"type": "Katara",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1342101,
+		"name": "AbsoLab Katara",
+		"type": "Katara",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		}
+	},
+	{
+		"id": 1342104,
+		"name": "Arcane Umbra Katara",
+		"type": "Katara",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1362090,
+		"name": "Fafnir Ciel Claire",
+		"type": "Cane",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		}
+	},
+	{
+		"id": 1362121,
+		"name": "Utgard Cane",
+		"type": "Cane",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1362135,
+		"name": "AbsoLab Forked Cane",
+		"type": "Cane",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		}
+	},
+	{
+		"id": 1362140,
+		"name": "Arcane Umbra Cane",
+		"type": "Cane",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1362148,
+		"name": "Sealed Genesis Cane",
+		"type": "Cane",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1362149,
+		"name": "Genesis Cane",
+		"type": "Cane",
+		"icon": 1362148,
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1372177,
+		"name": "Fafnir Mana Taker",
+		"type": "Wand",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		}
+	},
+	{
+		"id": 1372207,
+		"name": "Utgard Wand",
+		"type": "Wand",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1372222,
+		"name": "AbsoLab Spellsong Wand",
+		"type": "Wand",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		}
+	},
+	{
+		"id": 1372228,
+		"name": "Arcane Umbra Wand",
+		"type": "Wand",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1372236,
+		"name": "Sealed Genesis Wand",
+		"type": "Wand",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1372237,
+		"name": "Genesis Wand",
+		"type": "Wand",
+		"icon": 1372236,
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1382208,
+		"name": "Fafnir Mana Crown",
+		"type": "Staff",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		}
+	},
+	{
+		"id": 1382245,
+		"name": "Utgard Staff",
+		"type": "Staff",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1382259,
+		"name": "AbsoLab Spellsong Staff",
+		"type": "Staff",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		}
+	},
+	{
+		"id": 1382265,
+		"name": "Arcane Umbra Staff",
+		"type": "Staff",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1382273,
+		"name": "Sealed Genesis Staff",
+		"type": "Staff",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1382274,
+		"name": "Genesis Staff",
+		"type": "Staff",
+		"icon": 1382273,
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1402196,
+		"name": "Fafnir Penitent Tears",
+		"type": "Two-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1402236,
+		"name": "Utgard Two-handed Sword",
+		"type": "Two-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1402251,
+		"name": "AbsoLab Broad Saber",
+		"type": "Two-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1402259,
+		"name": "Arcane Umbra Two-handed Sword",
+		"type": "Two-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1402267,
+		"name": "Sealed Genesis Two-handed Sword",
+		"type": "Two-handed Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1402268,
+		"name": "Genesis Two-handed Sword",
+		"type": "Two-handed Sword",
+		"icon": 1402267,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1404014,
+		"name": "Utgard Cetus",
+		"type": "Chakram",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1404016,
+		"name": "Fafnir Chakram",
+		"type": "Chakram",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		}
+	},
+	{
+		"id": 1404017,
+		"name": "AbsoLab Chakram",
+		"type": "Chakram",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		}
+	},
+	{
+		"id": 1404018,
+		"name": "Arcane Umbra Chakram",
+		"type": "Chakram",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1404021,
+		"name": "Sealed Genesis Eclipse",
+		"type": "Chakram",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1404022,
+		"name": "Genesis Eclipse",
+		"type": "Chakram",
+		"icon": 1404021,
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1412135,
+		"name": "Fafnir Battle Cleaver",
+		"type": "Two-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1412164,
+		"name": "Utgard Two-handed Axe",
+		"type": "Two-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1412177,
+		"name": "AbsoLab Broad Axe",
+		"type": "Two-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1412181,
+		"name": "Arcane Umbra Two-handed Axe",
+		"type": "Two-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1412188,
+		"name": "Sealed Genesis Two-handed Axe",
+		"type": "Two-handed Axe",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1412189,
+		"name": "Genesis Two-handed Axe",
+		"type": "Two-handed Axe",
+		"icon": 1412188,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1422140,
+		"name": "Fafnir Lightning Striker",
+		"type": "Two-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1422171,
+		"name": "Utgard Two-handed Hammer",
+		"type": "Two-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1422184,
+		"name": "AbsoLab Broad Hammer",
+		"type": "Two-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1422189,
+		"name": "Arcane Umbra Two-handed Hammer",
+		"type": "Two-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1422196,
+		"name": "Sealed Genesis Two-handed Hammer",
+		"type": "Two-handed Blunt Weapon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1422197,
+		"name": "Genesis Two-handed Hammer",
+		"type": "Two-handed Blunt Weapon",
+		"icon": 1422196,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1432167,
+		"name": "Fafnir Brionak",
+		"type": "Spear",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1432200,
+		"name": "Utgard Spear",
+		"type": "Spear",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1432214,
+		"name": "AbsoLab Piercing Spear",
+		"type": "Spear",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1432218,
+		"name": "Arcane Umbra Spear",
+		"type": "Spear",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1432226,
+		"name": "Sealed Genesis Spear",
+		"type": "Spear",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1432227,
+		"name": "Genesis Spear",
+		"type": "Spear",
+		"icon": 1432226,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1442223,
+		"name": "Fafnir Moon Glaive",
+		"type": "Polearm",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1442254,
+		"name": "Utgard Hellslayer",
+		"type": "Polearm",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1442268,
+		"name": "AbsoLab Hellslayer",
+		"type": "Polearm",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1442274,
+		"name": "Arcane Umbra Polearm",
+		"type": "Polearm",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1442284,
+		"name": "Sealed Genesis Polearm",
+		"type": "Polearm",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1442285,
+		"name": "Genesis Polearm",
+		"type": "Polearm",
+		"icon": 1442284,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1452205,
+		"name": "Fafnir Wind Chaser",
+		"type": "Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		}
+	},
+	{
+		"id": 1452238,
+		"name": "Utgard Bow",
+		"type": "Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1452252,
+		"name": "AbsoLab Sureshot Bow",
+		"type": "Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		}
+	},
+	{
+		"id": 1452257,
+		"name": "Arcane Umbra Bow",
+		"type": "Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1452265,
+		"name": "Sealed Genesis Bow",
+		"type": "Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1452266,
+		"name": "Genesis Bow",
+		"type": "Bow",
+		"icon": 1452265,
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1462193,
+		"name": "Fafnir Windwing Shooter",
+		"type": "Crossbow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		}
+	},
+	{
+		"id": 1462225,
+		"name": "Utgard Crossbow",
+		"type": "Crossbow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1462239,
+		"name": "AbsoLab Crossbow",
+		"type": "Crossbow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		}
+	},
+	{
+		"id": 1462243,
+		"name": "Arcane Umbra Crossbow",
+		"type": "Crossbow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1462251,
+		"name": "Sealed Genesis Crossbow",
+		"type": "Crossbow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1462252,
+		"name": "Genesis Crossbow",
+		"type": "Crossbow",
+		"icon": 1462251,
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1472214,
+		"name": "Fafnir Risk Holder",
+		"type": "Claw",
+		"requirements": {
+			"job": "Thief",
+			"level": 150
+		}
+	},
+	{
+		"id": 1472247,
+		"name": "Utgard Guards",
+		"type": "Claw",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1472261,
+		"name": "AbsoLab Revenge Guard",
+		"type": "Claw",
+		"requirements": {
+			"job": "Thief",
+			"level": 160
+		}
+	},
+	{
+		"id": 1472265,
+		"name": "Arcane Umbra Guards",
+		"type": "Claw",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1472274,
+		"name": "Sealed Genesis Guards",
+		"type": "Claw",
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1472275,
+		"name": "Genesis Guards",
+		"type": "Claw",
+		"icon": 1472274,
+		"requirements": {
+			"job": "Thief",
+			"level": 200
+		}
+	},
+	{
+		"id": 1482168,
+		"name": "Fafnir Perry Talon",
+		"type": "Knuckle",
+		"requirements": {
+			"job": "Pirate",
+			"level": 150
+		}
+	},
+	{
+		"id": 1482202,
+		"name": "Utgard Claw",
+		"type": "Knuckle",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1482216,
+		"name": "AbsoLab Blast Knuckle",
+		"type": "Knuckle",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		}
+	},
+	{
+		"id": 1482221,
+		"name": "Arcane Umbra Knuckle",
+		"type": "Knuckle",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1482231,
+		"name": "Sealed Genesis Claw",
+		"type": "Knuckle",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1482232,
+		"name": "Genesis Claw",
+		"type": "Knuckle",
+		"icon": 1482231,
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1492179,
+		"name": "Fafnir Zeliska",
+		"type": "Gun",
+		"requirements": {
+			"job": "Pirate",
+			"level": 150
+		}
+	},
+	{
+		"id": 1492212,
+		"name": "Utgard Pistol",
+		"type": "Gun",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1492231,
+		"name": "AbsoLab Point Gun",
+		"type": "Gun",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		}
+	},
+	{
+		"id": 1492235,
+		"name": "Arcane Umbra Pistol",
+		"type": "Gun",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1492244,
+		"name": "Sealed Genesis Pistol",
+		"type": "Gun",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1492245,
+		"name": "Genesis Pistol",
+		"type": "Gun",
+		"icon": 1492244,
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1522094,
+		"name": "Fafnir Dual Windwing",
+		"type": "Dual Bowguns",
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		}
+	},
+	{
+		"id": 1522124,
+		"name": "Utgard Dual Bowguns",
+		"type": "Dual Bowguns",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1522138,
+		"name": "AbsoLab Dual Bowguns",
+		"type": "Dual Bowguns",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		}
+	},
+	{
+		"id": 1522143,
+		"name": "Arcane Umbra Dual Bowguns",
+		"type": "Dual Bowguns",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1522151,
+		"name": "Sealed Genesis Dual Bowguns",
+		"type": "Dual Bowguns",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1522152,
+		"name": "Genesis Dual Bowguns",
+		"type": "Dual Bowguns",
+		"icon": 1522151,
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1532098,
+		"name": "Fafnir Lost Cannon",
+		"type": "Hand Cannon",
+		"requirements": {
+			"job": "Pirate",
+			"level": 150
+		}
+	},
+	{
+		"id": 1532130,
+		"name": "Utgard Siege Gun",
+		"type": "Hand Cannon",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1532144,
+		"name": "AbsoLab Blast Cannon",
+		"type": "Hand Cannon",
+		"requirements": {
+			"job": "Pirate",
+			"level": 160
+		}
+	},
+	{
+		"id": 1532150,
+		"name": "Arcane Umbra Siege Gun",
+		"type": "Hand Cannon",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1532156,
+		"name": "Sealed Genesis Siege Gun",
+		"type": "Hand Cannon",
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1532157,
+		"name": "Genesis Siege Gun",
+		"type": "Hand Cannon",
+		"icon": 1532156,
+		"requirements": {
+			"job": "Pirate",
+			"level": 200
+		}
+	},
+	{
+		"id": 1542063,
+		"name": "Fafnir Raven Katana",
+		"type": "Katana",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1542101,
+		"name": "Utgard Katana",
+		"type": "Katana",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1542108,
+		"name": "AbsoLab Katana",
+		"type": "Katana",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1542117,
+		"name": "Arcane Umbra Katana",
+		"type": "Katana",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1542127,
+		"name": "Sealed Genesis Katana",
+		"type": "Katana",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1542128,
+		"name": "Genesis Katana",
+		"type": "Katana",
+		"icon": 1542127,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1552063,
+		"name": "Fafnir Indigo Fan",
+		"type": "Fan",
+		"requirements": {
+			"job": "Magician",
+			"level": 150
+		}
+	},
+	{
+		"id": 1552102,
+		"name": "Utgard Fan",
+		"type": "Fan",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1552110,
+		"name": "AbsoLab Summoner",
+		"type": "Fan",
+		"requirements": {
+			"job": "Magician",
+			"level": 160
+		}
+	},
+	{
+		"id": 1552119,
+		"name": "Arcane Umbra Fan",
+		"type": "Fan",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1552129,
+		"name": "Sealed Genesis Fan",
+		"type": "Fan",
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1552130,
+		"name": "Genesis Fan",
+		"type": "Fan",
+		"icon": 1552129,
+		"requirements": {
+			"job": "Magician",
+			"level": 200
+		}
+	},
+	{
+		"id": 1562000,
+		"name": "Massive Shadow",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562001,
+		"name": "Lapis Type 1",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562002,
+		"name": "Lapis Type 2",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562003,
+		"name": "Lapis Type 3",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562004,
+		"name": "Lapis Type 4",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562005,
+		"name": "Lapis Type 5",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562006,
+		"name": "Lapis Type 6",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562007,
+		"name": "Lapis Type 7",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562008,
+		"name": "Lapis Type 8",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562009,
+		"name": "Lapis Type 9",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1562010,
+		"name": "Genesis Lapis",
+		"type": "Heavy Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1572000,
+		"name": "Sharp Shadow",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572001,
+		"name": "Lazuli Type 1",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572002,
+		"name": "Lazuli Type 2",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572003,
+		"name": "Lazuli Type 3",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572004,
+		"name": "Lazuli Type 4",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572005,
+		"name": "Lazuli Type 5",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572006,
+		"name": "Lazuli Type 6",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572007,
+		"name": "Lazuli Type 7",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572008,
+		"name": "Lazuli Type 8",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572009,
+		"name": "Lazuli Type 9",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 0
+		}
+	},
+	{
+		"id": 1572010,
+		"name": "Genesis Lazuli",
+		"type": "Long Sword",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1582011,
+		"name": "Utgard Hrimthurs",
+		"type": "Arm Cannon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1582016,
+		"name": "Fafnir Big Mountain",
+		"type": "Arm Cannon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 150
+		}
+	},
+	{
+		"id": 1582017,
+		"name": "AbsoLab Pile God",
+		"type": "Arm Cannon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 160
+		}
+	},
+	{
+		"id": 1582023,
+		"name": "Arcane Umbra Ellaha",
+		"type": "Arm Cannon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1582043,
+		"name": "Sealed Genesis Ellaha",
+		"type": "Arm Cannon",
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1582044,
+		"name": "Genesis Ellaha",
+		"type": "Arm Cannon",
+		"icon": 1582043,
+		"requirements": {
+			"job": "Warrior",
+			"level": 200
+		}
+	},
+	{
+		"id": 1592016,
+		"name": "Utgard Ancient Bow",
+		"type": "Ancient Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1592018,
+		"name": "Fafnir Ancient Bow",
+		"type": "Ancient Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 150
+		}
+	},
+	{
+		"id": 1592019,
+		"name": "AbsoLab Ancient Bow",
+		"type": "Ancient Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 160
+		}
+	},
+	{
+		"id": 1592020,
+		"name": "Arcane Umbra Ancient Bow",
+		"type": "Ancient Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1592021,
+		"name": "Sealed Genesis Ancient Bow",
+		"type": "Ancient Bow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
+		"id": 1592022,
+		"name": "Genesis Ancient Bow",
+		"type": "Ancient Bow",
+		"icon": 1592021,
+		"requirements": {
+			"job": "Bowman",
+			"level": 200
+		}
+	},
+	{
 		"id": 1672073,
 		"name": "Fairy Heart",
 		"type": "Heart",
