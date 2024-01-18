@@ -102,9 +102,11 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 	}
 
 	const changeEquip = (id: number) => {
+		const newEquip = !id ? null : { id };
+
 		if (type === "Ring" || type === "Totem" || type === "Pendant") {
 			const newEquips = [...currentCharacter.equips[type]];
-			newEquips[index as number] = { id };
+			newEquips[index as number] = newEquip;
 
 			updateCharacter(currentCharacter.id, {
 				equips: {
@@ -114,9 +116,7 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 		} else {
 			updateCharacter(currentCharacter.id, {
 				equips: {
-					[type]: {
-						id,
-					},
+					[type]: newEquip,
 				},
 			});
 		}
@@ -126,7 +126,7 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 		<div className={styles.equipDisplay} {...rest}>
 			<label htmlFor="equip">{type}</label>
 			<select name="equip" value={equip?.id || ""} onChange={e => changeEquip(Number(e.currentTarget.value))}>
-				<option value="" hidden />
+				<option value={0}>N/A</option>
 				{equips[type].map(({ id, name }) => {
 					return (
 						<option key={id} value={id}>
