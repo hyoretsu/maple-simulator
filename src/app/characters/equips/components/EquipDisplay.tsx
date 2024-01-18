@@ -56,6 +56,8 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 			break;
 		}
 		case "Ring": {
+			isFlammable = false;
+
 			const starWhitelist = [
 				"Cracked Gollux Ring",
 				"Dawn Guardian Angel Ring",
