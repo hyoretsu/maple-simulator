@@ -70,13 +70,14 @@ export default function Stars({ equipLevel = 0, index, type }: StarsProps) {
 	return (
 		<div className={styles.stars}>
 			{stars.map(star => (
-				<IoStar
-					key={star}
-					onClick={() => handleClick(star + 1)}
-					style={{
-						color: equip?.stars && equip.stars > star ? "#ffdd00" : "#ffffff",
-					}}
-				/>
+				<div key={star}>
+					<IoStar
+						onClick={() => handleClick(star + 1)}
+						style={{
+							color: equip?.stars && equip.stars > star ? "#ffdd00" : "#ffffff",
+						}}
+					/>
+				</div>
 			))}
 		</div>
 	);

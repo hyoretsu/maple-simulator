@@ -4,9 +4,18 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 
-    max-width: 14.5rem;
+    max-width: calc(14.5rem + 2px);
 
-    svg {
-        cursor: pointer;
+    div {
+        svg {
+            cursor: pointer;
+        }
+
+        &:nth-of-type(6),
+        &:nth-of-type(16) {
+            margin-left: -0.25rem;
+            padding-left: 0.25rem;
+            border-left: 2px solid #c2b6b6;
+        }
     }
 }
