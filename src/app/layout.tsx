@@ -48,8 +48,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
 				{process.env.NODE_ENV === "production" && (
 					<script
 						dangerouslySetInnerHTML={{
-							__html:
-								"(function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.head.getElementsByTagName('script')[0]);})('cwr','66929798-1869-4254-91d1-7d140580c028','1.0.0','us-east-1','/cwr.js',{sessionSampleRate: 1,guestRoleArn: 'arn:aws:iam::182273057205:role/RUM-Monitor-us-east-1-182273057205-1291522254071-Unauth',identityPoolId: 'us-east-1:b17d3531-e799-4caa-b853-e11016b14bd6',endpoint: 'https://dataplane.rum.us-east-1.amazonaws.com',telemetries: ['performance','errors','http'],allowCookies: true,enableXRay: true});",
+							__html: `(function(n,i,v,r,s,c,x,z){x=window.AwsRumClient={q:[],n:n,i:i,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.head.getElementsByTagName('script')[0]);})('cwr','9b27abd0-9a9f-4d0b-8828-bbc1e02a4d4b','1.0.0','us-east-2','https://client.rum.us-east-1.amazonaws.com/1.16.1/cwr.js',{sessionSampleRate:1,guestRoleArn:"arn:aws:iam::182273057205:role/RUM-Monitor-us-east-2-182273057205-2670020165071-Unauth",identityPoolId:"us-east-2:1f07c155-b68c-4ac5-8833-a4df8a837eb9",endpoint:"https://dataplane.rum.us-east-2.amazonaws.com",telemetries:["performance","errors","http"],allowCookies:true,enableXRay:true})`,
 						}}
 					/>
 				)}
