@@ -2,10 +2,13 @@
 import { useCharacters } from "@context/account";
 import classes from "@data/classes.json";
 import equips from "@data/items/equips.json";
-import { Equipment, EquipmentType } from "maple-simulator";
+import { CharacterEquip, Equipment, EquipmentType } from "maple-simulator";
 import { useMemo } from "react";
 import EquipDisplay from "./components/EquipDisplay";
+import Report from "./components/Report";
 import styles from "./styles.module.scss";
+
+export type CurrentEquips = [string, CharacterEquip | CharacterEquip[]][];
 
 export default function Equips() {
 	const { currentCharacter } = useCharacters();
@@ -13,9 +16,11 @@ export default function Equips() {
 		return;
 	}
 
-	const currentEquips = useMemo(() => {
+	const currentEquips = useMemo<CurrentEquips>(() => {
 		return Object.entries(currentCharacter.equips);
 	}, [currentCharacter]);
+
+	const characterClass = classes.find(givenClass => givenClass.name === currentCharacter.class)!;
 
 	const filteredEquips = useMemo(() => {
 		return currentEquips.reduce(
@@ -25,8 +30,6 @@ export default function Equips() {
 				Object.assign(obj, {
 					[type]: equips
 						.filter(equipData => {
-							const characterClass = classes.find(givenClass => givenClass.name === currentCharacter.class)!;
-
 							let sameType: boolean;
 							if (type === "Weapon") {
 								sameType = characterClass.weapons.includes(equipData.type!);
@@ -62,25 +65,31 @@ export default function Equips() {
 			},
 			{} as Record<EquipmentType, Equipment[]>,
 		);
-	}, [currentEquips, currentCharacter]);
+	}, [characterClass, currentEquips, currentCharacter]);
 
 	return (
-		<section className={styles.equipManager}>
-			{currentEquips.map(([type, equip]) => {
-				if (Array.isArray(equip)) {
-					return equip.map((subEquip, index) => (
-						<EquipDisplay
-							key={`${type}-${index}`}
-							index={index}
-							type={type as EquipmentType}
-							equip={subEquip}
-							equips={filteredEquips}
-						/>
-					));
-				}
+		<>
+			<Report characterClass={characterClass} equips={currentEquips} />
 
-				return <EquipDisplay key={type} type={type as EquipmentType} equip={equip} equips={filteredEquips} />;
-			})}
-		</section>
+			<section className={styles.equipManager}>
+				{currentEquips.map(([type, equip]) => {
+					if (Array.isArray(equip)) {
+						return equip.map((subEquip, index) => (
+							<EquipDisplay
+								key={`${type}-${index}`}
+								index={index}
+								type={type as EquipmentType}
+								equip={subEquip}
+								equips={filteredEquips}
+							/>
+						));
+					}
+
+					return (
+						<EquipDisplay key={type} type={type as EquipmentType} equip={equip} equips={filteredEquips} />
+					);
+				})}
+			</section>
+		</>
 	);
 }
