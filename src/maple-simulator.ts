@@ -91,10 +91,15 @@ export interface FlameStats {
 	luk?: number;
 	str?: number;
 }
+export type Potential = {
+	stat: string;
+	value: number | string;
+};
 export interface CharacterEquipment {
 	id: number;
 	stars?: number;
 	flames?: FlameStats;
+	potential?: (Potential | null)[];
 }
 export type CharacterEquip = CharacterEquipment | null;
 export interface CharacterEquips {

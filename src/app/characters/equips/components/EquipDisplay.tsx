@@ -3,6 +3,7 @@ import { useCharacters } from "@context/account";
 import { CharacterEquip, Equipment, EquipmentType } from "maple-simulator";
 import { HTMLAttributes } from "react";
 import Flames from "./Flames";
+import Potential from "./Potential";
 import Stars from "./Stars";
 import styles from "./styles.module.scss";
 
@@ -22,39 +23,39 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 	const currentEquipData = equips[type].find(equipData => equipData.id === equip?.id);
 
 	let isFlammable = true;
+	let isPottable = true;
 	let isStarrable = true;
 	switch (type) {
 		case "Android":
-		case "Emblem":
-		case "Heart":
 		case "Medal": {
+			isFlammable = false;
+			isPottable = false;
+			isStarrable = false;
+			break;
+		}
+		case "Emblem":
+		case "Heart": {
 			isFlammable = false;
 			isStarrable = false;
 			break;
 		}
+		case "Pocket": {
+			isPottable = false;
+			isStarrable = false;
+			break;
+		}
 		case "Badge": {
-			const name = currentEquipData?.name;
-
 			isFlammable = false;
 
-			const starWhitelist = ["Ghost Ship Exorcist", "Sengoku Hakase"];
-			if (!starWhitelist.find(equip => equip === name)) {
+			const starPotWhitelist = ["Ghost Ship Exorcist", "Sengoku Hakase"];
+			if (!starPotWhitelist.find(equip => equip === currentEquipData?.name)) {
+				isPottable = false;
 				isStarrable = false;
 			}
 
 			break;
 		}
-		case "Pocket": {
-			isStarrable = false;
-			break;
-		}
 		case "Ring": {
-			const name = currentEquipData?.name;
-
-			if (name !== "Ancient Slate Replica") {
-				isFlammable = false;
-			}
-
 			const starWhitelist = [
 				"Cracked Gollux Ring",
 				"Dawn Guardian Angel Ring",
@@ -67,7 +68,7 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 				"Solid Gollux Ring",
 				"Superior Gollux Ring",
 			];
-			if (!starWhitelist.find(equip => equip === name)) {
+			if (!starWhitelist.find(equip => equip === currentEquipData?.name)) {
 				isStarrable = false;
 			}
 
@@ -86,15 +87,16 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 			break;
 		}
 		case "Totem": {
+			isPottable = false;
+			isStarrable = false;
+
 			if (currentEquipData?.name !== "Ancient Slate Replica") {
 				isFlammable = false;
 			}
 
-			isStarrable = false;
-
 			break;
 		}
-		// Weapon
+		// Weapons
 		default:
 			break;
 	}
@@ -146,6 +148,9 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 						<Stars type={type} index={index} equipLevel={currentEquipData.requirements?.level} />
 					)}
 					{isFlammable && <Flames type={type} index={index} equip={currentEquipData} />}
+					{isPottable && (
+						<Potential type={type} index={index} equipLevel={currentEquipData.requirements?.level} />
+					)}
 				</>
 			)}
 		</div>
