@@ -245,13 +245,16 @@ export default function Potential({ equipLevel = 0, index, type }: PotentialProp
 							value={`${equip.potential?.[index + 1]?.stat}_${equip.potential?.[index + 1]?.value}`}
 							onChange={e => {
 								const [stat, value] = e.currentTarget.value.split("_");
-								handleChange(stat, value, index + 1);
+								handleChange(stat, numberOrString(value), index + 1);
 							}}
 						>
 							<option value="">N/A</option>
 							{[...lines.keys()].map(stat => {
 								const lineValues = values.get(stat)!;
-								const nonPrimeValues = lineValues.slice((tier || 1) - 1);
+								const nonPrimeValues = lineValues.slice(
+									(tier || 1) - 1,
+									!equip.potential?.[0] ? undefined : (tier || 1) + 1,
+								);
 
 								return nonPrimeValues.map(values =>
 									values[0] === null
