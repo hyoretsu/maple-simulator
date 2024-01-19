@@ -71,6 +71,9 @@ export interface Equipment {
 		str?: number;
 	};
 	flameAdvantage?: boolean;
+	flammable?: true;
+	pottable?: false;
+	starrable?: true;
 }
 export interface SymbolData {
 	level: number;

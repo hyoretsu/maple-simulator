@@ -2327,7 +2327,8 @@
 		"requirements": {
 			"job": "Warrior",
 			"level": 130
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1092088,
@@ -2336,7 +2337,8 @@
 		"requirements": {
 			"job": "Thief",
 			"level": 130
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1092089,
@@ -2345,7 +2347,8 @@
 		"requirements": {
 			"job": "Magician",
 			"level": 130
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1098000,
@@ -2918,12 +2921,31 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1112951,
+		"name": "Magnus's Rage",
+		"description": "This seething ring slowly fills you with a legendary rage...",
+		"type": "Ring",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1112952,
+		"name": "Hilla's Rage",
+		"description": "This seething ring slowly fills you with a legendary rage...",
+		"type": "Ring",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
 		"id": 1113055,
 		"name": "Meister Ring",
 		"type": "Ring",
 		"requirements": {
 			"level": 140
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1113069,
@@ -2940,7 +2962,8 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 120
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1113073,
@@ -2949,7 +2972,8 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 130
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1113074,
@@ -2958,7 +2982,8 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 140
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1113075,
@@ -2967,7 +2992,456 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 150
-		}
+		},
+		"starrable": true
+	},
+	{
+		"id": 1113098,
+		"name": "Ring of Restraint",
+		"h1": "#c[Special Skill Ring] Ring of Restraint Level 1#",
+		"h2": "#c[Special Skill Ring] Ring of Restraint Level 2#",
+		"h3": "#c[Special Skill Ring] Ring of Restraint Level 3#",
+		"h4": "#c[Special Skill Ring] Ring of Restraint Level 4#",
+		"h5": "#c[Special Skill Ring] Ring of Restraint Level 5#",
+		"description": "Grants a skill that creates a zone where your Attack Power and Magic Attack are enhanced for a period of time. The effect will end upon exiting the zone.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113099,
+		"name": "Ultimatum Ring",
+		"h1": "#c[Special Skill Ring] Ultimatum Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Ultimatum Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Ultimatum Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Ultimatum Ring Level 4#",
+		"description": "Temporarily sets your Max Damage Range to 2,000,000 when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113100,
+		"name": "Limit Ring",
+		"h1": "#c[Special Skill Ring] Limit Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Limit Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Limit Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Limit Ring Level 4#",
+		"description": "Temporarily fixes Max MP at 500 and increases Boss Damage when using skills.\n#c[Cannot be used by classes that do not use MP.]#",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113101,
+		"name": "Health Cut Ring",
+		"h1": "#c[Special Skill Ring] Health Cut Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Health Cut Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Health Cut Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Health Cut Ring Level 4#",
+		"description": "Decreases max HP and increases Boss ATT temporarily when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113102,
+		"name": "Mana Cut Ring",
+		"h1": "#c[Special Skill Ring] Mana Cut Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Mana Cut Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Mana Cut Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Mana Cut Ring Level 4#",
+		"description": "Temporarily decreases Max MP and ignores some of the Defense when using skills.\n#c[Cannot be used by classes that do not use MP.]#",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113103,
+		"name": "Durability Ring",
+		"h1": "#c[Special Skill Ring] Durability Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Durability Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Durability Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Durability Ring Level 4#",
+		"description": "Doubles max HP temporarily when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113104,
+		"name": "Critical Damage Ring",
+		"h1": "#c[Special Skill Ring] Critical Damage Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Critical Damage Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Critical Damage Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Critical Damage Ring Level 4#",
+		"h5": "#c[Special Skill Ring] Critical Damage Ring Level 5#",
+		"description": "Increases Critical Damage temporarily when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113105,
+		"name": "Critical Defense Ring",
+		"h1": "#c[Special Skill Ring] Critical Defense Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Critical Defense Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Critical Defense Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Critical Defense Ring Level 4#",
+		"description": "Temporarily lowers enemy Defense Rate by a percentage of your Critical Chance when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113106,
+		"name": "Critical Shift Ring",
+		"h1": "#c[Special Skill Ring] Critical Shift Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Critical Shift Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Critical Shift Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Critical Shift Ring Level 4#",
+		"description": "Replaces the Critical Chance with some of your main stat values temporarily when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113107,
+		"name": "Stance Shift Ring",
+		"h1": "#c[Special Skill Ring] Stance Shift Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Stance Shift Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Stance Shift Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Stance Shift Ring Level 4#",
+		"description": "Replaces Knockback Resistance with some of your main stat values temporarily when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113108,
+		"name": "Totalling Ring",
+		"h1": "#c[Special Skill Ring] Totalling Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Totalling Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Totalling Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Totalling Ring Level 4#",
+		"h5": "#c[Special Skill Ring] Totalling Ring Level 5#",
+		"description": "Temporarily increases your main stats by the sum of all your stats when using skills. For Demon Avenger, HP increases proportionately to the main stats' increase amount.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113109,
+		"name": "Level Jump S Ring",
+		"h1": "#c[Special Skill Ring] Jump S Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Jump S Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Jump S Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Jump S Ring Level 4#",
+		"description": "Tempoarily increases STR by the character's current level when using skills. For Demon Avenger, HP increases proportionately to the main stats' increase amount.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113110,
+		"name": "Level Jump D Ring",
+		"h1": "#c[Special Skill Ring] Jump D Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Jump D Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Jump D Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Jump D Ring Level 4#",
+		"description": "Increases DEX by the character's current level temporarily when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113111,
+		"name": "Level Jump I Ring",
+		"h1": "#c[Special Skill Ring] Jump I Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Jump I Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Jump I Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Jump I Ring Level 4#",
+		"description": "Increases INT by the character's current level temporarily when using skills.",
+		"type": "Ring",
+		"icon": 1113109,
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113112,
+		"name": "Level Jump L Ring",
+		"h1": "#c[Special Skill Ring] Jump L Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Jump L Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Jump L Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Jump L Ring Level 4#",
+		"description": "Increases LUK by the character's current level temporarily when using skills.",
+		"type": "Ring",
+		"icon": 1113110,
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113113,
+		"name": "Weapon Jump S Ring",
+		"h1": "#c[Special Skill Ring] Weapon Jump S Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Weapon Jump S Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Weapon Jump S Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Weapon Jump S Ring Level 4#",
+		"h5": "#c[Special Skill Ring] Weapon Jump S Ring Level 5#",
+		"description": "Temporarily increases STR by part of the main weapon's base ATT when using skills. (Apply the higher value of the main weapon's Attack Power and Magic ATT)\r\nFor Demon Avenger, HP increases proportionately to the main stats' increase amount.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113114,
+		"name": "Weapon Jump D Ring",
+		"h1": "#c[Special Skill Ring] Weapon Jump D Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Weapon Jump D Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Weapon Jump D Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Weapon Jump D Ring Level 4#",
+		"h5": "#c[Special Skill Ring] Weapon Jump D Ring Level 5#",
+		"description": "Temporarily increases DEX by part of the main weapon's base ATT when using skills. (Apply the higher value of the main weapon's Attack Power and Magic ATT)",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113115,
+		"name": "Weapon Jump I Ring",
+		"h1": "#c[Special Skill Ring] Weapon Jump I Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Weapon Jump I Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Weapon Jump I Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Weapon Jump I Ring Level 4#",
+		"h5": "#c[Special Skill Ring] Weapon Jump I Ring Level 5#",
+		"description": "Temporarily increases INT by part of the main weapon's base ATT when using skills. (Apply the higher value of the main weapon's Attack Power and Magic ATT)",
+		"type": "Ring",
+		"icon": 1113113,
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113116,
+		"name": "Weapon Jump L Ring",
+		"h1": "#c[Special Skill Ring] Weapon Jump L Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Weapon Jump L Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Weapon Jump L Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Weapon Jump L Ring Level 4#",
+		"h5": "#c[Special Skill Ring] Weapon Jump L Ring Level 5#",
+		"description": "Temporarily increases LUK by part of the main weapon's base ATT when using skills. (Apply the higher value of the main weapon's Attack Power and Magic ATT)",
+		"type": "Ring",
+		"icon": 1113114,
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113117,
+		"name": "Swift Ring",
+		"h1": "#c[Special Skill Ring] Swift Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Swift Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Swift Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Swift Ring Level 4#",
+		"description": "Increases Attack Speed temporarily when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113118,
+		"name": "Overdrive Ring",
+		"h1": "#c[Special Skill Ring] Overdrive Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Overdrive Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Overdrive Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Overdrive Ring Level 4#",
+		"description": "Allows you to temporarily attack enemies while ignoring their attacks and buffs like Damage Reflection when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113119,
+		"name": "Berserker Ring",
+		"h1": "#c[Special Skill Ring] Berserker Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Berserker Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Berserker Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Berserker Ring Level 4#",
+		"description": "Ignores a percentage of enemy Defense Rate but also decreases your Weapon Defense and Magic Defense temporarily during attacks.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113120,
+		"name": "Reflective Ring",
+		"h1": "#c[Special Skill Ring] Reflective Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Reflective Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Reflective Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Reflective Ring Level 4#",
+		"description": "Amplifies incoming damage and reflects it for a short time when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113121,
+		"name": "Cleansing Ring",
+		"h1": "#c[Special Skill Ring] Cleansing Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Cleansing Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Cleansing Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Cleansing Ring Level 4#",
+		"description": "Grants a chance to cancel all Abnormal Statuses when using skills.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113122,
+		"name": "Risk Taker Ring",
+		"h1": "#c[Special Skill Ring] Risk Taker Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Risk Taker Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Risk Taker Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Risk Taker Ring Level 4#",
+		"h5": "#c[Special Skill Ring] Risk Taker Ring Level 5#",
+		"description": "Temporarily increases Weapon ATT and Magic ATT when using skills. Buff is canceled when attacked (excluding attack reflection).",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113123,
+		"name": "Crisis H Ring",
+		"h1": "#c[Special Skill Ring] Crisis H Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Crisis H Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Crisis H Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Crisis H Ring Level 4#",
+		"description": "Activates when your HP gets low. Increases Defense temporarily.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113124,
+		"name": "Crisis M Ring",
+		"h1": "#c[Special Skill Ring] Crisis M Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Crisis M Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Crisis M Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Crisis M Ring Level 4#",
+		"description": "Activates when your MP gets low. Increases DEF temporarily.\n#c[Cannot be used by classes that do not use MP.]#",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113125,
+		"name": "Crisis HM Ring",
+		"h1": "#c[Special Skill Ring] Crisis HM Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Crisis HM Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Crisis HM Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Crisis HM Ring Level 4#",
+		"description": "Activates when your HP and MP get low. Increases Attack Power and Magic Attack temporarily.\n#c[Cannot be used by classes that do not use MP.]#",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113126,
+		"name": "Clean Stance Ring",
+		"h1": "#c[Special Skill Ring] Clean Stance Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Clean Stance Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Clean Stance Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Clean Stance Ring Level 4#",
+		"description": "Activates when you recover from an Abnormal Status. Increases Power Stance temporarily.",
+		"type": "Ring",
+		"icon": 1112951,
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113127,
+		"name": "Clean Defense Ring",
+		"h1": "#c[Special Skill Ring] Clean Defense Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Clean Defense Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Clean Defense Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Clean Defense Ring Level 4#",
+		"description": "Activates when you recover from an Abnormal Status. Increases Status Ailment Resistance temporarily.",
+		"type": "Ring",
+		"icon": 1112952,
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
+	},
+	{
+		"id": 1113128,
+		"name": "Tower Boost Ring",
+		"h1": "#c[Special Skill Ring] Tower Boost Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Tower Boost Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Tower Boost Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Tower Boost Ring Level 4#",
+		"description": "If you clear a boss map or a map under time limit in the Tower of Oz, you will obtain additional points. (Applies the passive effect when equipped.)",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
 	},
 	{
 		"id": 1113149,
@@ -2975,7 +3449,8 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 110
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1113155,
@@ -2983,7 +3458,8 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 140
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1113172,
@@ -3017,7 +3493,8 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 200
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1113313,
@@ -3026,7 +3503,8 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 160
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1113316,
@@ -3035,7 +3513,23 @@
 		"type": "Ring",
 		"requirements": {
 			"level": 160
-		}
+		},
+		"starrable": true
+	},
+	{
+		"id": 1113329,
+		"name": "Continuous Ring",
+		"h1": "#c[Special Skill Ring] Continuous Ring Level 1#",
+		"h2": "#c[Special Skill Ring] Continuous Ring Level 2#",
+		"h3": "#c[Special Skill Ring] Continuous Ring Level 3#",
+		"h4": "#c[Special Skill Ring] Continuous Ring Level 4#",
+		"h5": "#c[Special Skill Ring] Continuous Ring Level 5#",
+		"description": "You will have 120 seconds of preparation time upon equipping the Continuous Ring. Temporarily increases Boss Damage when preparation is done.",
+		"type": "Ring",
+		"requirements": {
+			"level": 110
+		},
+		"pottable": false
 	},
 	{
 		"id": 1114300,
@@ -3633,7 +4127,9 @@
 		"type": "Badge",
 		"requirements": {
 			"level": 150
-		}
+		},
+		"pottable": true,
+		"starrable": true
 	},
 	{
 		"id": 1182087,
@@ -3650,7 +4146,9 @@
 		"type": "Badge",
 		"requirements": {
 			"level": 160
-		}
+		},
+		"pottable": true,
+		"starrable": true
 	},
 	{
 		"id": 1182285,
@@ -4446,7 +4944,8 @@
 		"type": "Totem",
 		"requirements": {
 			"level": 200
-		}
+		},
+		"flammable": true
 	},
 	{
 		"id": 1202305,

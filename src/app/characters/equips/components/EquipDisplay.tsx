@@ -22,84 +22,53 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 
 	const currentEquipData = equips[type].find(equipData => equipData.id === equip?.id);
 
-	let isFlammable = true;
-	let isPottable = true;
-	let isStarrable = true;
+	let isFlammable: boolean | undefined = currentEquipData?.flammable;
+	let isPottable: boolean | undefined = currentEquipData?.pottable;
+	let isStarrable: boolean | undefined = currentEquipData?.starrable;
 	switch (type) {
 		case "Android":
-		case "Medal": {
-			isFlammable = false;
-			isPottable = false;
-			isStarrable = false;
+		case "Badge":
+		case "Medal":
+		case "Totem": {
+			isFlammable ??= false;
+			isPottable ??= false;
+			isStarrable ??= false;
 			break;
 		}
 		case "Emblem":
-		case "Heart": {
-			isFlammable = false;
-			isStarrable = false;
+		case "Heart":
+		case "Ring": {
+			isFlammable ??= false;
+			isPottable ??= true;
+			isStarrable ??= false;
 			break;
 		}
 		case "Pocket": {
-			isPottable = false;
-			isStarrable = false;
-			break;
-		}
-		case "Badge": {
-			isFlammable = false;
-
-			const starPotWhitelist = ["Ghost Ship Exorcist", "Sengoku Hakase"];
-			if (!starPotWhitelist.find(equip => equip === currentEquipData?.name)) {
-				isPottable = false;
-				isStarrable = false;
-			}
-
-			break;
-		}
-		case "Ring": {
-			isFlammable = false;
-
-			const starWhitelist = [
-				"Cracked Gollux Ring",
-				"Dawn Guardian Angel Ring",
-				"Endless Terror",
-				"Guardian Angel Ring",
-				"Kanna's Treasure",
-				"Meister Ring",
-				"Reinforced Gollux Ring",
-				"Silver Blossom Ring",
-				"Solid Gollux Ring",
-				"Superior Gollux Ring",
-			];
-			if (!starWhitelist.find(equip => equip === currentEquipData?.name)) {
-				isStarrable = false;
-			}
-
+			isFlammable ??= true;
+			isPottable ??= false;
+			isStarrable ??= false;
 			break;
 		}
 		case "Secondary Weapon": {
 			// Todo: implement
 			// if (currentCharacter.class !== "Kanna") {
-			isFlammable = false;
+			isFlammable ??= false;
 			// }
 
-			if (!currentEquipData?.name.startsWith("Deimos")) {
-				isStarrable = false;
-			}
-
+			isPottable ??= true;
+			isStarrable ??= false;
 			break;
 		}
 		case "Shoulder": {
-			isFlammable = false;
+			isFlammable ??= false;
+			isPottable ??= true;
+			isStarrable ??= true;
 			break;
 		}
-		case "Totem": {
-			isPottable = false;
-			isStarrable = false;
-
-			if (currentEquipData?.name !== "Ancient Slate Replica") {
-				isFlammable = false;
-			}
-
+		default: {
+			isFlammable ??= true;
+			isPottable ??= true;
+			isStarrable ??= true;
 			break;
 		}
 	}
