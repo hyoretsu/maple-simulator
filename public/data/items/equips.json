@@ -2321,6 +2321,272 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1092087,
+		"name": "Deimos Warrior Shield",
+		"type": "Shield",
+		"requirements": {
+			"job": "Warrior",
+			"level": 130
+		}
+	},
+	{
+		"id": 1092088,
+		"name": "Deimos Shadow Shield",
+		"type": "Shield",
+		"requirements": {
+			"job": "Thief",
+			"level": 130
+		}
+	},
+	{
+		"id": 1092089,
+		"name": "Deimos Sage Shield",
+		"type": "Shield",
+		"requirements": {
+			"job": "Magician",
+			"level": 130
+		}
+	},
+	{
+		"id": 1098000,
+		"name": "Soul Shield of Protection",
+		"type": "Soul Shield",
+		"requirements": {
+			"job": "Warrior",
+			"level": 10
+		}
+	},
+	{
+		"id": 1098001,
+		"name": "Soul Shield of Pride",
+		"type": "Soul Shield",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1098002,
+		"name": "Soul Shield of Courage",
+		"type": "Soul Shield",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1098003,
+		"name": "Soul Shield of Justice",
+		"type": "Soul Shield",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1098005,
+		"name": "Onyx Maple Soul Shield",
+		"type": "Soul Shield",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1098006,
+		"name": "Princess No's Soul Shield",
+		"type": "Soul Shield",
+		"icon": 1098003,
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1098007,
+		"name": "Frozen Soul Shield",
+		"type": "Soul Shield",
+		"icon": 1098005,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1098008,
+		"name": "Maple Treasure Soul Shield",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Soul Shield",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1098009,
+		"name": "Evolving Soul Shield of Justice",
+		"type": "Soul Shield",
+		"icon": 1098003,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1099000,
+		"name": "Force Shield of Patience",
+		"type": "Demon Aegis",
+		"requirements": {
+			"job": "Warrior",
+			"level": 10
+		}
+	},
+	{
+		"id": 1099002,
+		"name": "Force Shield of Will",
+		"type": "Demon Aegis",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1099003,
+		"name": "Force Shield of Authority",
+		"type": "Demon Aegis",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1099004,
+		"name": "Force Shield of Extremes",
+		"type": "Demon Aegis",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1099006,
+		"name": "Force Shield of Patience",
+		"type": "Demon Aegis",
+		"icon": 1099000,
+		"requirements": {
+			"job": "Warrior",
+			"level": 10
+		}
+	},
+	{
+		"id": 1099007,
+		"name": "Force Shield of Will",
+		"type": "Demon Aegis",
+		"icon": 1099002,
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1099008,
+		"name": "Force Shield of Authority",
+		"type": "Demon Aegis",
+		"icon": 1099003,
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1099009,
+		"name": "Force Shield of Extremes",
+		"type": "Demon Aegis",
+		"icon": 1099004,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1099010,
+		"name": "Onyx Maple Force Shield",
+		"type": "Demon Aegis",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1099011,
+		"name": "Princess No's Accursed Shield",
+		"type": "Demon Aegis",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1099012,
+		"name": "Princess No's Accursed Shield",
+		"type": "Demon Aegis",
+		"icon": 1099011,
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1099013,
+		"name": "Frozen Force Shield",
+		"type": "Demon Aegis",
+		"icon": 1099010,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1099014,
+		"name": "Maple Treasure Force Shield",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Demon Aegis",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1099015,
+		"name": "Ruin Force Shield",
+		"description": "A Demon Aegis containing the essence of a demon who sought only power and fell to ruin. Increases your Final damage by 10% but your damage taken is increased by 25% (including damage proportional to Max HP).",
+		"type": "Demon Aegis",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1099016,
+		"name": "Evolving Force Shield of Extremes",
+		"type": "Demon Aegis",
+		"icon": 1099004,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1099017,
+		"name": "Evolving Force Shield of Extremes",
+		"type": "Demon Aegis",
+		"icon": 1099004,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
 		"id": 1102262,
 		"name": "Marx Von Leon Cape",
 		"type": "Cape",
@@ -3385,10 +3651,311 @@
 		}
 	},
 	{
+		"id": 1190000,
+		"name": "Lesser Dragon Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190100,
+		"name": "Lesser Angel Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190200,
+		"name": "Silver Hybrid Heart",
+		"type": "Power Source",
+		"requirements": {
+			"job": "Xenon",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190300,
+		"name": "Silver Maple Leaf Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190301,
+		"name": "Gold Maple Leaf Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1190302,
+		"name": "Crystal Maple Leaf Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 140
+		}
+	},
+	{
+		"id": 1190400,
+		"name": "Boss Arena Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190401,
+		"name": "Boss Arena Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190402,
+		"name": "Boss Arena Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190403,
+		"name": "Boss Arena Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190404,
+		"name": "Boss Arena Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190405,
+		"name": "Boss Arena Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190406,
+		"name": "Boss Arena Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190500,
+		"name": "Tower of Oz Master Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 140
+		}
+	},
+	{
+		"id": 1190501,
+		"name": "Tower of Oz Expert Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 140
+		}
+	},
+	{
+		"id": 1190502,
+		"name": "Tower of Oz Legend Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 140
+		}
+	},
+	{
+		"id": 1190503,
+		"name": "Tower of Oz Legend Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 140
+		}
+	},
+	{
+		"id": 1190510,
+		"name": "Silver Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Bowman",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190511,
+		"name": "Gold Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190512,
+		"name": "Silver Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190513,
+		"name": "Gold Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190514,
+		"name": "Silver Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190515,
+		"name": "Gold Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190516,
+		"name": "Silver Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190517,
+		"name": "Gold Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190518,
+		"name": "Silver Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190519,
+		"name": "Gold Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190520,
+		"name": "Silver Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190521,
+		"name": "Gold Heroes Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
 		"id": 1190528,
 		"name": "Honor Roll Emblem",
 		"type": "Emblem",
 		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1190529,
+		"name": "Silver Agent Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190530,
+		"name": "Gold Agent Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190531,
+		"name": "Silver Crystal Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Illlium",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190532,
+		"name": "Gold Crystal Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Illlium",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190539,
+		"name": "Silver Abyssal Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190540,
+		"name": "Gold Abyssal Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Pirate",
 			"level": 100
 		}
 	},
@@ -3405,6 +3972,90 @@
 		"name": "MapleStory Fest 2019 Emblem",
 		"type": "Emblem",
 		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1190546,
+		"name": "Angel Emblem",
+		"type": "Emblem",
+		"icon": 1190101,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190547,
+		"name": "Dragon Emblem",
+		"type": "Emblem",
+		"icon": 1190001,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190548,
+		"name": "Hybrid Heart",
+		"type": "Power Source",
+		"icon": 1190201,
+		"requirements": {
+			"job": "Xenon",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190549,
+		"name": "Silver Three Paths Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190550,
+		"name": "Gold Three Paths Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190551,
+		"name": "Silver Knight's Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190552,
+		"name": "Gold Knight's Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190553,
+		"name": "Silver Hitman Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Bowman",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190554,
+		"name": "Gold Hitman Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Bowman",
 			"level": 100
 		}
 	},
@@ -3451,6 +4102,191 @@
 		"requirements": {
 			"job": "Pirate",
 			"level": 200
+		}
+	},
+	{
+		"id": 1190560,
+		"name": "Silver Earthseer Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190561,
+		"name": "Gold Earthseer Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190562,
+		"name": "Silver Chaser Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190563,
+		"name": "Gold Chaser Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190600,
+		"name": "Silver Resistance Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190601,
+		"name": "Gold Resistance Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1190700,
+		"name": "Silver Demon Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1190701,
+		"name": "Gold Demon Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1190800,
+		"name": "Silver Cygnus Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1190801,
+		"name": "Gold Cygnus Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1190900,
+		"name": "Eternal Time Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1191000,
+		"name": "Silver Kinesis Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1191001,
+		"name": "Gold Kinesis Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1191100,
+		"name": "Silver Crescent Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1191101,
+		"name": "Gold Crescent Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1191102,
+		"name": "Silver Blossom Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1191103,
+		"name": "Gold Blossom Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1191106,
+		"name": "Silver Astro Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1191107,
+		"name": "Gold Astro Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1191108,
+		"name": "Silver Forest Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1191109,
+		"name": "Gold Forest Emblem",
+		"type": "Emblem",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
 		}
 	},
 	{
@@ -4509,6 +5345,15 @@
 		}
 	},
 	{
+		"id": 1342095,
+		"name": "Princess No's Poisoned Sword",
+		"type": "Katara",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
 		"id": 1342100,
 		"name": "Utgard Katara",
 		"type": "Katara",
@@ -4533,6 +5378,3231 @@
 		"requirements": {
 			"job": "Thief",
 			"level": 200
+		}
+	},
+	{
+		"id": 1352000,
+		"name": "Magic Arrows",
+		"description": "Magic arrows blessed by the spirits. Equip them with the Dual Bowguns to gain infinite ammo. Potential can be added with a Potential Scroll.",
+		"type": "Magic Arrow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352001,
+		"name": "Sharp Magic Arrows",
+		"description": "Magic arrows blessed by the spirits. Equip them with the Dual Bowguns to gain infinite ammo. Potential can be added with a Potential Scroll.",
+		"type": "Magic Arrow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352002,
+		"name": "Eternal Magic Arrows",
+		"description": "Magic arrows blessed by the spirits. Equip them with the Dual Bowguns to gain infinite ammo. Potential can be added with a Potential Scroll.",
+		"type": "Magic Arrow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352003,
+		"name": "Infinite Magic Arrows",
+		"description": "Magic arrows blessed by the spirits. Equip them with the Dual Bowguns to gain infinite ammo. Potential can be added with a Potential Scroll.",
+		"type": "Magic Arrow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352008,
+		"name": "Onyx Maple Magic Arrows",
+		"description": "Magic arrows blessed by the spirits. Equip them with Dual Bowguns to gain infinite ammo. Potential can be added with a Potential Scroll.",
+		"type": "Magic Arrow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352009,
+		"name": "Princess No's Accursed Arrow",
+		"description": "Princess No's curse grips this arrow. Equip them with Dual Bowguns to gain infinite ammo. Potential can be added with a Potential Scroll.",
+		"type": "Magic Arrow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352010,
+		"name": "Frozen Magic Arrows",
+		"type": "Magic Arrow",
+		"icon": 1352008,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352011,
+		"name": "Maple Treasure Magic Arrows",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Magic Arrow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352012,
+		"name": "Evolving Infinite Magic Arrows",
+		"description": "Magic arrows blessed by the spirits. Equip them with Dual Bowguns to have infinite ammo. Potential can be added with a Potential Scroll.",
+		"icon": 1352003,
+		"type": "Magic Arrow",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352100,
+		"name": "Carte Magique",
+		"type": "Card",
+		"requirements": {
+			"job": "Thief",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352101,
+		"name": "Carte Fantasmatique",
+		"type": "Card",
+		"requirements": {
+			"job": "Thief",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352102,
+		"name": "Carte Magnifique",
+		"type": "Card",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352103,
+		"name": "Carte Finale",
+		"type": "Card",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352108,
+		"name": "Carte Onyx Maple",
+		"type": "Card",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352109,
+		"name": "Princess No's Carte",
+		"type": "Card",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352110,
+		"name": "Carte Frozen",
+		"type": "Card",
+		"icon": 1352108,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352111,
+		"name": "Carte Maple Treasure",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Card",
+		"requirements": {
+			"job": "Thief",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352112,
+		"name": "Evolving Carte Dernier",
+		"type": "Card",
+		"icon": 1352103,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352200,
+		"name": "Powers Medallion",
+		"type": "Medallions",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352201,
+		"name": "Orders Medallion",
+		"type": "Medallions",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352202,
+		"name": "Virtues Medallion",
+		"type": "Medallions",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352203,
+		"name": "Evolving Virtues Medal",
+		"type": "Medallions",
+		"icon": 1352202,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352204,
+		"name": "Reforged Powers Medal",
+		"type": "Medallions",
+		"icon": 1352200,
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352205,
+		"name": "Onyx Maple Medal",
+		"type": "Medallions",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352206,
+		"name": "Princess No's Medal",
+		"type": "Medallions",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352207,
+		"name": "Frozen Medal",
+		"type": "Medallions",
+		"icon": 1352205,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352208,
+		"name": "Maple Treasure Medal",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Medallions",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352210,
+		"name": "Holy Rosary",
+		"type": "Rosary",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352211,
+		"name": "Divine Rosary",
+		"type": "Rosary",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352212,
+		"name": "Sacred Rosary",
+		"type": "Rosary",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352213,
+		"name": "Evolving Sacred Rosary",
+		"type": "Rosary",
+		"icon": 1352212,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352214,
+		"name": "Reforged Holy Rosary",
+		"type": "Rosary",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352215,
+		"name": "Onyx Maple Rosary",
+		"type": "Rosary",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352216,
+		"name": "Princess No's Rosary",
+		"type": "Rosary",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352217,
+		"name": "Frozen Rosary",
+		"type": "Rosary",
+		"icon": 1352215,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352218,
+		"name": "Maple Treasure Rosary",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Rosary",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352220,
+		"name": "Stark Chain",
+		"type": "Iron Chain",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352221,
+		"name": "Dark Chain",
+		"type": "Iron Chain",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352222,
+		"name": "Berserk Chain",
+		"type": "Iron Chain",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352223,
+		"name": "Evolving Berserk Chain",
+		"type": "Iron Chain",
+		"icon": 1352222,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352224,
+		"name": "Reforged Stark Chain",
+		"type": "Iron Chain",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352225,
+		"name": "Onyx Maple Chain",
+		"type": "Iron Chain",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352226,
+		"name": "Princess No's Flower Chain",
+		"type": "Iron Chain",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352227,
+		"name": "Frozen Chain",
+		"type": "Iron Chain",
+		"icon": 1352225,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352228,
+		"name": "Maple Treasure Chain",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Iron Chain",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352230,
+		"name": "Rusty Book <Strophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352231,
+		"name": "Rusty Book <Antistrophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352232,
+		"name": "Rusty Book <Epode>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352233,
+		"name": "Evolving Rusty Book <Epode>",
+		"type": "Magic Book",
+		"icon": 1352232,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352234,
+		"name": "Reforged Rusty Book <Strophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352235,
+		"name": "Onyx Maple Rusty Book",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352236,
+		"name": "Princess No's Flaming Book",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352237,
+		"name": "Frozen Rusty Book",
+		"type": "Magic Book",
+		"icon": 1352235,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352238,
+		"name": "Maple Treasure Rusty Book",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352240,
+		"name": "Metallic Blue Book <Strophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352241,
+		"name": "Metallic Blue Book <Antistrophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352242,
+		"name": "Metallic Blue Book <Epode>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352243,
+		"name": "Evolving Metallic Blue Book <Epode>",
+		"type": "Magic Book",
+		"icon": 1352242,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352244,
+		"name": "Reforged Metallic Blue Book <Strophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352245,
+		"name": "Onyx Maple Metallic Book",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352246,
+		"name": "Princess No's Damp Book",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352247,
+		"name": "Frozen Metallic Book",
+		"type": "Magic Book",
+		"icon": 1352245,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352248,
+		"name": "Maple Treasure Metallic Book",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352250,
+		"name": "White Gold Book <Strophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352251,
+		"name": "White Gold Book <Antistrophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352252,
+		"name": "White Gold Book <Epode>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352253,
+		"name": "Evolving White Gold Book <Epode>",
+		"type": "Magic Book",
+		"icon": 1352252,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352254,
+		"name": "Reforged White Gold Book <Strophe>",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352255,
+		"name": "Onyx Maple White Gold Book",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352256,
+		"name": "Princess No's Golden Book",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352257,
+		"name": "Frozen White Gold Book",
+		"type": "Magic Book",
+		"icon": 1352255,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352258,
+		"name": "Maple Treasure White Gold Book",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Magic Book",
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352260,
+		"name": "Breezy Feather",
+		"type": "Arrow Fletching",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352261,
+		"name": "Gusty Feather",
+		"type": "Arrow Fletching",
+		"requirements": {
+			"job": "Bowman",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352262,
+		"name": "Blasted Feather",
+		"type": "Arrow Fletching",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352263,
+		"name": "Evolving Blasted Feather",
+		"type": "Arrow Fletching",
+		"icon": 1352262,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352264,
+		"name": "Reforged Breezy Feather",
+		"type": "Arrow Fletching",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352265,
+		"name": "Onyx Maple Feather",
+		"type": "Arrow Fletching",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352266,
+		"name": "Princess No's Feather",
+		"type": "Arrow Fletching",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352267,
+		"name": "Frozen Feather",
+		"type": "Arrow Fletching",
+		"icon": 1352265,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352268,
+		"name": "Maple Treasure Feather",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Arrow Fletching",
+		"requirements": {
+			"job": "Bowman",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352270,
+		"name": "One Shot",
+		"type": "Bow Thimble",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352271,
+		"name": "Sure Shot",
+		"type": "Bow Thimble",
+		"requirements": {
+			"job": "Bowman",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352272,
+		"name": "True Shot",
+		"type": "Bow Thimble",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352273,
+		"name": "Evolving True Shot",
+		"type": "Bow Thimble",
+		"icon": 1352272,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352274,
+		"name": "Reforged One Shot",
+		"type": "Bow Thimble",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352275,
+		"name": "Onyx Maple True Shot",
+		"type": "Bow Thimble",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352276,
+		"name": "Princess No's Wreath",
+		"type": "Bow Thimble",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352277,
+		"name": "Frozen True Shot",
+		"type": "Bow Thimble",
+		"icon": 1352275,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352278,
+		"name": "Maple Treasure True Shot",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Bow Thimble",
+		"requirements": {
+			"job": "Bowman",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352280,
+		"name": "Hidden Shadow",
+		"type": "Dagger Scabbard",
+		"requirements": {
+			"job": "Thief",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352281,
+		"name": "Vanishing Shadow",
+		"type": "Dagger Scabbard",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352282,
+		"name": "Slashing Shadow",
+		"type": "Dagger Scabbard",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352283,
+		"name": "Evolving Slashing Shadow",
+		"type": "Dagger Scabbard",
+		"icon": 1352282,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352284,
+		"name": "Reforged Hidden Shadow",
+		"type": "Dagger Scabbard",
+		"requirements": {
+			"job": "Thief",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352285,
+		"name": "Onyx Maple Shadow",
+		"type": "Dagger Scabbard",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352286,
+		"name": "Princess No's Purple Shadow",
+		"type": "Dagger Scabbard",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352287,
+		"name": "Frozen Shadow",
+		"type": "Dagger Scabbard",
+		"icon": 1352285,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352288,
+		"name": "Maple Treasure Shadow",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Dagger Scabbard",
+		"requirements": {
+			"job": "Thief",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352290,
+		"name": "All Souls Charm",
+		"type": "Charm",
+		"requirements": {
+			"job": "Thief",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352291,
+		"name": "Evil Ender Charm",
+		"type": "Charm",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352292,
+		"name": "Death Sender Charm",
+		"type": "Charm",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352293,
+		"name": "Evolving Death Sender Charm",
+		"type": "Charm",
+		"icon": 1352292,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352294,
+		"name": "Reforged All Souls Charm",
+		"type": "Charm",
+		"requirements": {
+			"job": "Thief",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352295,
+		"name": "Onyx Maple Death Sender Charm",
+		"type": "Charm",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352296,
+		"name": "Princess No's Charm",
+		"type": "Charm",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352297,
+		"name": "Frozen Death Sender Charm",
+		"type": "Charm",
+		"icon": 1352295,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352298,
+		"name": "Maple Treasure Death Sender Charm",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Charm",
+		"requirements": {
+			"job": "Thief",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352400,
+		"name": "Light Orb",
+		"type": "Orb",
+		"requirements": {
+			"job": "Magician",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352401,
+		"name": "Shining Orb",
+		"type": "Orb",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352402,
+		"name": "Twinkling Orb",
+		"type": "Orb",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352403,
+		"name": "Karma Orb",
+		"type": "Orb",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352405,
+		"name": "Onyx Maple Orb",
+		"type": "Orb",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352406,
+		"name": "Princess No's Soul Orb",
+		"type": "Orb",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352407,
+		"name": "Frozen Orb",
+		"type": "Orb",
+		"icon": 1352405,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352408,
+		"name": "Maple Treasure Orb",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Orb",
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352409,
+		"name": "Evolving Karma Orb",
+		"type": "Orb",
+		"icon": 1352403,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352500,
+		"name": "Nova's Essence",
+		"type": "Dragon Essence",
+		"requirements": {
+			"job": "Warrior",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352501,
+		"name": "Nova Guardian Essence",
+		"type": "Dragon Essence",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352502,
+		"name": "Nova Justice Essence",
+		"type": "Dragon Essence",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352503,
+		"name": "Nova Truth Essence",
+		"type": "Dragon Essence",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352506,
+		"name": "Princess No's Dragon Essence",
+		"type": "Dragon Essence",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352507,
+		"name": "Nova Frozen Essence",
+		"type": "Dragon Essence",
+		"icon": 1352505,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352508,
+		"name": "Maple Treasure Essence",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Dragon Essence",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352509,
+		"name": "Evolving Nova Truth Essence",
+		"type": "Dragon Essence",
+		"icon": 1352503,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352600,
+		"name": "Pink Soul Ring",
+		"type": "Soul Ring",
+		"requirements": {
+			"job": "Pirate",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352602,
+		"name": "Purple Soul Ring",
+		"type": "Soul Ring",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352603,
+		"name": "Blue Soul Ring",
+		"type": "Soul Ring",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352604,
+		"name": "Green Soul Ring",
+		"type": "Soul Ring",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352605,
+		"name": "Onyx Maple Soul Ring",
+		"type": "Soul Ring",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352606,
+		"name": "Princess No's Soul Ring",
+		"type": "Soul Ring",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352607,
+		"name": "Frozen Soul Ring",
+		"type": "Soul Ring",
+		"icon": 1352605,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352608,
+		"name": "Maple Treasure Soul Ring",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Soul Ring",
+		"requirements": {
+			"job": "Pirate",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352609,
+		"name": "Evolving Green Soul Ring",
+		"type": "Soul Ring",
+		"icon": 1352604,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352700,
+		"name": "Magnum",
+		"type": "Magnum",
+		"requirements": {
+			"job": "Warrior",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352701,
+		"name": "Split Magnum",
+		"type": "Magnum",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352702,
+		"name": "Vital Magnum",
+		"type": "Magnum",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352703,
+		"name": "Eternal Magnum",
+		"type": "Magnum",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352704,
+		"name": "Reforged Split Magnum",
+		"type": "Magnum",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352705,
+		"name": "Onyx Maple Magnum",
+		"type": "Magnum",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352707,
+		"name": "Princess No's Magnum",
+		"type": "Magnum",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352708,
+		"name": "Frozen Magnum",
+		"type": "Magnum",
+		"icon": 1352705,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352709,
+		"name": "Maple Treasure Magnum",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Magnum",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352710,
+		"name": "Evolving Eternal Magnum",
+		"type": "Magnum",
+		"icon": 1352703,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352800,
+		"name": "White Tiger Blade",
+		"type": "Kodachi",
+		"requirements": {
+			"job": "Warrior",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352801,
+		"name": "Blue Dragon Blade",
+		"type": "Kodachi",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352802,
+		"name": "Lake Monster Blade",
+		"type": "Kodachi",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352803,
+		"name": "Fire Phoenix Blade",
+		"type": "Kodachi",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352806,
+		"name": "Onyx Maple Tiger Blade",
+		"type": "Kodachi",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352807,
+		"name": "Princess No's Wakizashi",
+		"type": "Kodachi",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352809,
+		"name": "Frozen Tiger Blade",
+		"type": "Kodachi",
+		"icon": 1352806,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352810,
+		"name": "Tiny Whisper",
+		"type": "Whistle",
+		"requirements": {
+			"job": "Magician",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352811,
+		"name": "Friend's Whisper",
+		"type": "Whistle",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352812,
+		"name": "Tutelary Whisper",
+		"type": "Whistle",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352813,
+		"name": "Mother Nature Whisper",
+		"type": "Whistle",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352814,
+		"name": "Onyx Maple Whisper",
+		"type": "Whistle",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352815,
+		"name": "Princess No's Magical Whisper",
+		"type": "Whistle",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352817,
+		"name": "Frozen Whisper",
+		"type": "Whistle",
+		"icon": 1352814,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352818,
+		"name": "Maple Treasure Whistle",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Whistle",
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352820,
+		"name": "Basic Fist",
+		"type": "Fist",
+		"requirements": {
+			"job": "Pirate",
+			"level": 10
+		}
+	},
+	{
+		"id": 1352821,
+		"name": "Proxima Fist",
+		"type": "Fist",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352822,
+		"name": "Sirius Fist",
+		"type": "Fist",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352823,
+		"name": "Arcturus Fist",
+		"type": "Fist",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352824,
+		"name": "Princess No's Orion Fist",
+		"type": "Fist",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352825,
+		"name": "Onyx Maple Claw",
+		"type": "Fist",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352827,
+		"name": "Frozen Maple Claw",
+		"type": "Fist",
+		"icon": 1352825,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352828,
+		"name": "Maple Treasure Fist",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Fist",
+		"requirements": {
+			"job": "Pirate",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352830,
+		"name": "Maple Treasure Kodachi",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Kodachi",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352900,
+		"name": "Wrist Band",
+		"type": "Wrist Band",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352901,
+		"name": "Wrist Guard",
+		"type": "Wrist Band",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352902,
+		"name": "Wrist Armor",
+		"type": "Wrist Band",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352903,
+		"name": "Evolving Wrist Armor",
+		"type": "Wrist Band",
+		"icon": 1352902,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352904,
+		"name": "Reforged Wrist Band",
+		"type": "Wrist Band",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352905,
+		"name": "Onyx Maple Wrist Armor",
+		"type": "Wrist Band",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352906,
+		"name": "Princess No's Skull Armor",
+		"type": "Wrist Band",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352907,
+		"name": "Frozen Wrist Armor",
+		"type": "Wrist Band",
+		"icon": 1352905,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352908,
+		"name": "Maple Treasure Wrist Armor",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Wrist Band",
+		"requirements": {
+			"job": "Pirate",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352910,
+		"name": "Eagle Eye",
+		"type": "Far Sight",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352911,
+		"name": "Hawkeye",
+		"type": "Far Sight",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352912,
+		"name": "Falcon Eye",
+		"type": "Far Sight",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352913,
+		"name": "Evolving Falcon Eye",
+		"type": "Far Sight",
+		"icon": 1352912,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352914,
+		"name": "Reforged Eagle Eye",
+		"type": "Far Sight",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352915,
+		"name": "Onyx Maple Falcon Eye",
+		"type": "Far Sight",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352916,
+		"name": "Princess No's Falcon Eye",
+		"type": "Far Sight",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352917,
+		"name": "Frozen Falcon Eye",
+		"type": "Far Sight",
+		"icon": 1352915,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352918,
+		"name": "Maple Treasure Falcon Eye",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Far Sight",
+		"requirements": {
+			"job": "Pirate",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352920,
+		"name": "Pin Fire Bomb",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352921,
+		"name": "Rim Fire Bomb",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352922,
+		"name": "Center Fire Bomb",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352923,
+		"name": "Evolving Center Fire Bomb",
+		"type": "Powder Keg",
+		"icon": 1352922,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352924,
+		"name": "Reforged Pin Fire Bomb",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352925,
+		"name": "Reforged Rim Fire Bomb",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352926,
+		"name": "Reforged Center Fire Bomb",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352927,
+		"name": "Onyx Maple Center Fire Bomb",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352928,
+		"name": "Princess No's Fire Bomb",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352929,
+		"name": "Frozen Center Fire Bomb",
+		"type": "Powder Keg",
+		"icon": 1352927,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352930,
+		"name": "Silver Beast Mass",
+		"type": "Mass",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352931,
+		"name": "Phoenix Mass",
+		"type": "Mass",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352932,
+		"name": "Dragon Mass",
+		"type": "Mass",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352933,
+		"name": "Evolving Dragon Mass",
+		"type": "Mass",
+		"icon": 1352932,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352934,
+		"name": "Onyx Maple Dragon Mass",
+		"type": "Mass",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352935,
+		"name": "Princess No's Flower Ballast",
+		"type": "Mass",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352936,
+		"name": "Frozen Dragon Mass",
+		"type": "Mass",
+		"icon": 1352934,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352937,
+		"name": "Maple Treasure Dragon Mass",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Mass",
+		"requirements": {
+			"job": "Warrior",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352940,
+		"name": "Dragon Master's Records",
+		"type": "Document",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352941,
+		"name": "Dragon Master's Research",
+		"type": "Document",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352942,
+		"name": "Dragon Master's Legacy",
+		"type": "Document",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352943,
+		"name": "Evolving Dragon Master's Legacy",
+		"type": "Document",
+		"icon": 1352942,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352944,
+		"name": "Onyx Maple Dragon Master's Legacy",
+		"type": "Document",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352945,
+		"name": "Princess No's Dragon Legacy",
+		"type": "Document",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352946,
+		"name": "Frozen Dragon Master's Legacy",
+		"type": "Document",
+		"icon": 1352944,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352947,
+		"name": "Maple Treasure Legacy",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Document",
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352950,
+		"name": "Equalizer Ball",
+		"type": "Magic Marble",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352951,
+		"name": "Energizer Ball",
+		"type": "Magic Marble",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352952,
+		"name": "Maximizer Ball",
+		"type": "Magic Marble",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352953,
+		"name": "Evolving Maximizer Ball",
+		"type": "Magic Marble",
+		"icon": 1352952,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352954,
+		"name": "Reforged Equalizer Ball",
+		"type": "Magic Marble",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352955,
+		"name": "Onyx Maple Maximizer Ball",
+		"type": "Magic Marble",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352957,
+		"name": "Princess No's Accursed Marble",
+		"type": "Magic Marble",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352958,
+		"name": "Frozen Maximizer Ball",
+		"type": "Magic Marble",
+		"icon": 1352955,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352959,
+		"name": "Maple Treasure Equalizer Ball",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Magic Marble",
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352960,
+		"name": "Wild Beak",
+		"type": "Arrowhead",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352961,
+		"name": "Wild Crow",
+		"type": "Arrowhead",
+		"requirements": {
+			"job": "Bowman",
+			"level": 60
+		}
+	},
+	{
+		"id": 1352962,
+		"name": "Wild Heron",
+		"type": "Arrowhead",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352963,
+		"name": "Evolving Wild Heron",
+		"type": "Arrowhead",
+		"icon": 1352962,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352964,
+		"name": "Reforged Wild Beak",
+		"type": "Arrowhead",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1352965,
+		"name": "Onyx Maple Wild Heron",
+		"type": "Arrowhead",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352967,
+		"name": "Princess No's Arrowhead",
+		"type": "Arrowhead",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1352968,
+		"name": "Frozen Wild Heron",
+		"type": "Arrowhead",
+		"icon": 1352965,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1352969,
+		"name": "Maple Treasure Wild Beak",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Arrowhead",
+		"requirements": {
+			"job": "Bowman",
+			"level": 110
+		}
+	},
+	{
+		"id": 1352970,
+		"name": "Ereve Fragment",
+		"type": "Jewel",
+		"requirements": {
+			"level": 30
+		}
+	},
+	{
+		"id": 1352971,
+		"name": "Ereve Idea",
+		"type": "Jewel",
+		"requirements": {
+			"level": 60
+		}
+	},
+	{
+		"id": 1352972,
+		"name": "Ereve Brilliance",
+		"type": "Jewel",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1352973,
+		"name": "Evolving Ereve Brilliance",
+		"type": "Jewel",
+		"icon": 1352972,
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1352974,
+		"name": "Onyx Maple Ereve Brilliance",
+		"type": "Jewel",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1352975,
+		"name": "Princess No's Floral Jewel",
+		"type": "Jewel",
+		"requirements": {
+			"level": 140
+		}
+	},
+	{
+		"id": 1352976,
+		"name": "Frozen Ereve Brilliance",
+		"type": "Jewel",
+		"icon": 1352974,
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1352977,
+		"name": "Maple Treasure Ereve Brilliance",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Jewel",
+		"requirements": {
+			"level": 110
+		}
+	},
+	{
+		"id": 1352980,
+		"name": "Maple Treasure Center Fire Bomb",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Powder Keg",
+		"requirements": {
+			"job": "Pirate",
+			"level": 110
+		}
+	},
+	{
+		"id": 1353000,
+		"name": "Dual Core Controller",
+		"type": "Controller",
+		"requirements": {
+			"job": "Xenon",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353002,
+		"name": "Quad Core Controller",
+		"type": "Controller",
+		"requirements": {
+			"job": "Xenon",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353003,
+		"name": "Hexa Core Controller",
+		"type": "Controller",
+		"requirements": {
+			"job": "Xenon",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353004,
+		"name": "Octa Core Controller",
+		"type": "Controller",
+		"requirements": {
+			"job": "Xenon",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353005,
+		"name": "Onyx Maple Octo Core Controller",
+		"type": "Controller",
+		"requirements": {
+			"job": "Xenon",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353006,
+		"name": "Princess No's Controller",
+		"type": "Controller",
+		"requirements": {
+			"job": "Xenon",
+			"level": 140
+		}
+	},
+	{
+		"id": 1353007,
+		"name": "Frozen Octo Core Controller",
+		"type": "Controller",
+		"icon": 1353005,
+		"requirements": {
+			"job": "Xenon",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353008,
+		"name": "Maple Treasure Controller",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Controller",
+		"requirements": {
+			"job": "Xenon",
+			"level": 110
+		}
+	},
+	{
+		"id": 1353009,
+		"name": "Evolving Octo Core Controller",
+		"type": "Controller",
+		"icon": 1353004,
+		"requirements": {
+			"job": "Xenon",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353100,
+		"name": "Blue Fox Marble",
+		"type": "Fox Marble",
+		"requirements": {
+			"job": "Pirate",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353101,
+		"name": "Green Fox Marble",
+		"type": "Fox Marble",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353102,
+		"name": "Red Fox Marble",
+		"type": "Fox Marble",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353103,
+		"name": "Golden Fox Marble",
+		"type": "Fox Marble",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353104,
+		"name": "Onyx Maple Fox Marble",
+		"type": "Fox Marble",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353105,
+		"name": "Princess No's Fox Marble",
+		"type": "Fox Marble",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1353106,
+		"name": "Frozen Fox Marble",
+		"type": "Fox Marble",
+		"icon": 1353104,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353107,
+		"name": "Maple Treasure Fox Marble",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Fox Marble",
+		"requirements": {
+			"job": "Pirate",
+			"level": 110
+		}
+	},
+	{
+		"id": 1353108,
+		"name": "Evolving Golden Fox Marble",
+		"type": "Fox Marble",
+		"icon": 1353103,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353200,
+		"name": "Pawn Chess Piece",
+		"type": "Chess Piece",
+		"requirements": {
+			"job": "Magician",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353201,
+		"name": "Knight Chess Piece",
+		"type": "Chess Piece",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353202,
+		"name": "Rook Chess Piece",
+		"type": "Chess Piece",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353203,
+		"name": "Queen Chess Piece",
+		"type": "Chess Piece",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353204,
+		"name": "Frozen Queen Chess Piece",
+		"type": "Chess Piece",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353205,
+		"name": "Princess No's Oriental King Chess Piece",
+		"type": "Chess Piece",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1353206,
+		"name": "Maple Treasure Chess Piece",
+		"description": "A piece of commemorative Maple 11th Anniversary equipment.",
+		"type": "Chess Piece",
+		"requirements": {
+			"job": "Magician",
+			"level": 110
+		}
+	},
+	{
+		"id": 1353207,
+		"name": "Onyx Maple Queen Chess Piece",
+		"type": "Chess Piece",
+		"icon": 1353204,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353208,
+		"name": "Evolving Queen Chess Piece",
+		"type": "Chess Piece",
+		"icon": 1353203,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353300,
+		"name": "Transmitter Type-D",
+		"type": "Warp Forge",
+		"requirements": {
+			"job": "Thief",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353301,
+		"name": "Transmitter Type-C",
+		"type": "Warp Forge",
+		"requirements": {
+			"job": "Thief",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353302,
+		"name": "Transmitter Type-B",
+		"type": "Warp Forge",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353303,
+		"name": "Transmitter Type-A",
+		"type": "Warp Forge",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353304,
+		"name": "Frozen Transmitter",
+		"type": "Warp Forge",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353306,
+		"name": "Princess No's Transmitter",
+		"type": "Warp Forge",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1353307,
+		"name": "Onyx Maple Transmitter",
+		"type": "Warp Forge",
+		"icon": 1353304,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353308,
+		"name": "Evolving Transmitter Type-A",
+		"type": "Warp Forge",
+		"icon": 1353303,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353400,
+		"name": "Rudimentary Charges",
+		"type": "Charge",
+		"requirements": {
+			"job": "Warrior",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353401,
+		"name": "Standard Charges",
+		"type": "Charge",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353402,
+		"name": "High Powered Charges",
+		"type": "Charge",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353403,
+		"name": "Masterwork Charges",
+		"type": "Charge",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353404,
+		"name": "Frozen Charges",
+		"type": "Charge",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353405,
+		"name": "Princess No's Megaton Charges",
+		"type": "Charge",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1353407,
+		"name": "Evolving Masterwork Charges",
+		"type": "Charge",
+		"icon": 1353403,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353408,
+		"name": "Onyx Maple Charges",
+		"type": "Charge",
+		"icon": 1353404,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353500,
+		"name": "Basic Lucent Wings",
+		"type": "Lucent Wings",
+		"requirements": {
+			"job": "Magician",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353501,
+		"name": "Core Lucent Wings",
+		"type": "Lucent Wings",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353502,
+		"name": "Holy Lucent Wings",
+		"type": "Lucent Wings",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353503,
+		"name": "Glory Lucent Wings",
+		"type": "Lucent Wings",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353504,
+		"name": "Frozen Lucent Wings",
+		"type": "Lucent Wings",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353505,
+		"name": "Princess No's Lucent Wings",
+		"type": "Lucent Wings",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1353506,
+		"name": "Onyx Maple Lucent Wings",
+		"type": "Lucent Wings",
+		"icon": 1353504,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353507,
+		"name": "Evolving Glory Lucent Wings",
+		"type": "Lucent Wings",
+		"icon": 1353503,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353600,
+		"name": "Initial Path",
+		"type": "Abyssal Path",
+		"requirements": {
+			"job": "Pirate",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353601,
+		"name": "Secondary Path",
+		"type": "Abyssal Path",
+		"requirements": {
+			"job": "Pirate",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353602,
+		"name": "Advanced Path",
+		"type": "Abyssal Path",
+		"requirements": {
+			"job": "Pirate",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353603,
+		"name": "Ultimate Path",
+		"type": "Abyssal Path",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353604,
+		"name": "Frozen Path",
+		"type": "Abyssal Path",
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353605,
+		"name": "Onyx Maple Path",
+		"type": "Abyssal Path",
+		"icon": 1353604,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353606,
+		"name": "Princess No's Path",
+		"type": "Abyssal Path",
+		"requirements": {
+			"job": "Pirate",
+			"level": 140
+		}
+	},
+	{
+		"id": 1353607,
+		"name": "Evolving Ultimate Path",
+		"type": "Abyssal Path",
+		"icon": 1353603,
+		"requirements": {
+			"job": "Pirate",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353700,
+		"name": "Potential Relic",
+		"type": "Relic",
+		"requirements": {
+			"job": "Bowman",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353701,
+		"name": "Awakened Relic",
+		"type": "Relic",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353702,
+		"name": "Trine Relic",
+		"type": "Relic",
+		"requirements": {
+			"job": "Bowman",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353703,
+		"name": "Perfect Relic",
+		"type": "Relic",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353704,
+		"name": "Frozen Relic",
+		"type": "Relic",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353705,
+		"name": "Evolving Perfect Relic",
+		"type": "Relic",
+		"icon": 1353703,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353706,
+		"name": "Onyx Maple Relic",
+		"type": "Relic",
+		"icon": 1353704,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353707,
+		"name": "Princess No's Immortal Relic",
+		"type": "Relic",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1353800,
+		"name": "Mano Fan Tassel",
+		"type": "Fan Tassel",
+		"requirements": {
+			"job": "Thief",
+			"level": 10
+		}
+	},
+	{
+		"id": 1353801,
+		"name": "Lapis Lazuli Fan Tassel",
+		"type": "Fan Tassel",
+		"requirements": {
+			"job": "Thief",
+			"level": 30
+		}
+	},
+	{
+		"id": 1353802,
+		"name": "Corundum Fan Tassel",
+		"type": "Fan Tassel",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1353803,
+		"name": "Moonstone Fan Tassel",
+		"type": "Fan Tassel",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353804,
+		"name": "Frozen Fan Tassel",
+		"type": "Fan Tassel",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353805,
+		"name": "Onyx Maple Fan Tassel",
+		"type": "Fan Tassel",
+		"icon": 1353804,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353806,
+		"name": "Evolving Moonstone Fan Tassel",
+		"type": "Fan Tassel",
+		"icon": 1353803,
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1353807,
+		"name": "Princess No's Fan Tassel",
+		"type": "Fan Tassel",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
+		}
+	},
+	{
+		"id": 1354000,
+		"name": "Trace Bladebinder",
+		"type": "Bladebinder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 10
+		}
+	},
+	{
+		"id": 1354001,
+		"name": "Embark Bladebinder",
+		"type": "Bladebinder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 30
+		}
+	},
+	{
+		"id": 1354002,
+		"name": "Regular Bladebinder",
+		"type": "Bladebinder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 60
+		}
+	},
+	{
+		"id": 1354003,
+		"name": "Noble Bladebinder",
+		"type": "Bladebinder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354004,
+		"name": "Frozen Shiny Bladebinder",
+		"type": "Bladebinder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354005,
+		"name": "Frozen Shiny Bladebinder",
+		"type": "Bladebinder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354006,
+		"name": "Evolving Noble Bladebinder",
+		"type": "Bladebinder",
+		"icon": 1354003,
+		"requirements": {
+			"job": "Warrior",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354007,
+		"name": "Princess No's Immortal Bladebinder",
+		"type": "Bladebinder",
+		"requirements": {
+			"job": "Warrior",
+			"level": 140
+		}
+	},
+	{
+		"id": 1354010,
+		"name": "D Basic Weapon Belt",
+		"description": "A tool for carrying various weapons. Equip on the exclusive slot to use a Whispershot without consuming arrows.",
+		"type": "Weapon Belt",
+		"requirements": {
+			"job": "Bowman",
+			"level": 10
+		}
+	},
+	{
+		"id": 1354011,
+		"name": "D30A Weapon Belt",
+		"description": "A tool for carrying various weapons. Equip on the exclusive slot to use a Whispershot without consuming arrows.",
+		"type": "Weapon Belt",
+		"requirements": {
+			"job": "Bowman",
+			"level": 30
+		}
+	},
+	{
+		"id": 1354012,
+		"name": "D60 Advanced Weapon Belt",
+		"description": "A tool for carrying various weapons. Equip on the exclusive slot to use a Whispershot without consuming arrows.",
+		"type": "Weapon Belt",
+		"requirements": {
+			"job": "Bowman",
+			"level": 60
+		}
+	},
+	{
+		"id": 1354013,
+		"name": "D100 Custom Weapon Belt",
+		"description": "A tool for carrying various weapons. Equip on the exclusive slot to use a Whispershot without consuming arrows.",
+		"type": "Weapon Belt",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354014,
+		"name": "Frozen D100 Weapon Belt",
+		"description": "A tool for carrying various weapons. Equip on the exclusive slot to use a Whispershot without consuming arrows.",
+		"type": "Weapon Belt",
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354015,
+		"name": "Onyx Maple D100 Weapon Belt",
+		"description": "A tool for carrying various weapons. Equip on the exclusive slot to use a Whispershot without consuming arrows.",
+		"type": "Weapon Belt",
+		"icon": 1354014,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354016,
+		"name": "Evolving D100 Weapon Belt",
+		"description": "A tool for carrying various weapons. Equip on the exclusive slot to use a Whispershot without consuming arrows.",
+		"type": "Weapon Belt",
+		"icon": 1354013,
+		"requirements": {
+			"job": "Bowman",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354017,
+		"name": "Princess No's Immortal Weapon Belt",
+		"description": "A tool for carrying various weapons. Equip on the exclusive slot to use a Whispershot without consuming arrows.",
+		"type": "Weapon Belt",
+		"requirements": {
+			"job": "Bowman",
+			"level": 140
+		}
+	},
+	{
+		"id": 1354020,
+		"name": "Simple Four-Jade Ornament",
+		"description": "An ornament decorated with four colored jade stones, representing the powers of the mountain, river, wind, and sun.",
+		"type": "Ornament",
+		"requirements": {
+			"job": "Magician",
+			"level": 10
+		}
+	},
+	{
+		"id": 1354021,
+		"name": "Subtle Four-Jade Ornament",
+		"description": "An ornament decorated with four colored jade stones, representing the powers of the mountain, river, wind, and sun.",
+		"type": "Ornament",
+		"requirements": {
+			"job": "Magician",
+			"level": 30
+		}
+	},
+	{
+		"id": 1354022,
+		"name": "Flashy Four-Jade Ornament",
+		"description": "An ornament decorated with four colored jade stones, representing the powers of the mountain, river, wind, and sun.",
+		"type": "Ornament",
+		"requirements": {
+			"job": "Magician",
+			"level": 60
+		}
+	},
+	{
+		"id": 1354023,
+		"name": "Radiant Four-Jade Ornament",
+		"description": "An ornament decorated with four colored jade stones, representing the powers of the mountain, river, wind, and sun.",
+		"type": "Ornament",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354024,
+		"name": "Frozen Four-Jade Ornament",
+		"description": "An ornament decorated with four colored jade stones, representing the powers of the mountain, river, wind, and sun.",
+		"type": "Ornament",
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354025,
+		"name": "Onyx Maple Four-Jade Ornament",
+		"description": "An ornament decorated with four colored jade stones, representing the powers of the mountain, river, wind, and sun.",
+		"type": "Ornament",
+		"icon": 1354024,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354026,
+		"name": "Evolving Four-Jade Ornament",
+		"description": "An ornament decorated with four colored jade stones, representing the powers of the mountain, river, wind, and sun.",
+		"type": "Ornament",
+		"icon": 1354023,
+		"requirements": {
+			"job": "Magician",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354027,
+		"name": "Princess No's Immortal Four-Jade Ornament",
+		"description": "An ornament decorated with four colored jade stones, representing the powers of the mountain, river, wind, and sun.",
+		"type": "Ornament",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
+		"id": 1354030,
+		"name": "Plain Hex Seeker",
+		"type": "Hex Seeker",
+		"requirements": {
+			"job": "Thief",
+			"level": 10
+		}
+	},
+	{
+		"id": 1354031,
+		"name": "Bright Hex Seeker",
+		"type": "Hex Seeker",
+		"requirements": {
+			"job": "Thief",
+			"level": 30
+		}
+	},
+	{
+		"id": 1354032,
+		"name": "Brilliant Hex Seeker",
+		"type": "Hex Seeker",
+		"requirements": {
+			"job": "Thief",
+			"level": 60
+		}
+	},
+	{
+		"id": 1354033,
+		"name": "Infinite Hex Seeker",
+		"type": "Hex Seeker",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354034,
+		"name": "Frozen Infinite Hex Seeker",
+		"type": "Hex Seeker",
+		"requirements": {
+			"job": "Thief",
+			"level": 100
+		}
+	},
+	{
+		"id": 1354036,
+		"name": "Evolving Infinite Hex Seeker",
+		"type": "Hex Seeker",
+		"icon": 1354033,
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
+		"id": 1354037,
+		"name": "Princess No's Immortal Hex Seeker",
+		"type": "Hex Seeker",
+		"requirements": {
+			"job": "Thief",
+			"level": 140
 		}
 	},
 	{
@@ -5480,6 +9550,16 @@
 		}
 	},
 	{
+		"id": 1552084,
+		"name": "Princess No's Floral Fan",
+		"icon": 1552015,
+		"type": "Fan",
+		"requirements": {
+			"job": "Magician",
+			"level": 140
+		}
+	},
+	{
 		"id": 1552102,
 		"name": "Utgard Fan",
 		"type": "Fan",
@@ -5531,7 +9611,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 100
 		}
 	},
 	{
@@ -5540,7 +9620,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 100
 		}
 	},
 	{
@@ -5549,7 +9629,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 110
 		}
 	},
 	{
@@ -5558,7 +9638,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 120
 		}
 	},
 	{
@@ -5567,7 +9647,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 130
 		}
 	},
 	{
@@ -5576,7 +9656,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 140
 		}
 	},
 	{
@@ -5585,7 +9665,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 150
 		}
 	},
 	{
@@ -5594,7 +9674,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 170
 		}
 	},
 	{
@@ -5603,7 +9683,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 180
 		}
 	},
 	{
@@ -5612,7 +9692,7 @@
 		"type": "Heavy Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 200
 		}
 	},
 	{
@@ -5630,7 +9710,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 100
 		}
 	},
 	{
@@ -5639,7 +9719,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 100
 		}
 	},
 	{
@@ -5648,7 +9728,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 110
 		}
 	},
 	{
@@ -5657,7 +9737,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 120
 		}
 	},
 	{
@@ -5666,7 +9746,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 130
 		}
 	},
 	{
@@ -5675,7 +9755,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 140
 		}
 	},
 	{
@@ -5684,7 +9764,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 150
 		}
 	},
 	{
@@ -5693,7 +9773,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 170
 		}
 	},
 	{
@@ -5702,7 +9782,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 180
 		}
 	},
 	{
@@ -5711,7 +9791,7 @@
 		"type": "Long Sword",
 		"requirements": {
 			"job": "Warrior",
-			"level": 0
+			"level": 200
 		}
 	},
 	{

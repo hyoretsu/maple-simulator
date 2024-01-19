@@ -76,16 +76,20 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 
 			break;
 		}
-		case "Shoulder": {
-			isFlammable = false;
-			break;
-		}
 		case "Secondary Weapon": {
 			// Todo: implement
 			// if (currentCharacter.class !== "Kanna") {
 			isFlammable = false;
 			// }
 
+			if (!currentEquipData?.name.startsWith("Deimos")) {
+				isStarrable = false;
+			}
+
+			break;
+		}
+		case "Shoulder": {
+			isFlammable = false;
 			break;
 		}
 		case "Totem": {
@@ -98,9 +102,6 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 
 			break;
 		}
-		// Weapons
-		default:
-			break;
 	}
 
 	const changeEquip = (id: number) => {

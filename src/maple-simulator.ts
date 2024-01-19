@@ -38,6 +38,8 @@ export interface PlayableClass {
 	name: string;
 	branch: "Bowman" | "Magician" | "Pirate" | "Thief" | "Warrior" | "Xenon";
 	weapons: string[];
+	subWeapons: string[];
+	emblems: number[];
 	mainStat: [Stat | "HP"] | [Stat, Stat, Stat];
 	secondaryStat: [Stat] | [Stat, Stat] | null;
 	jobs: [number, number, number, number, number, number, number];

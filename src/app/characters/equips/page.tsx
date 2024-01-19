@@ -33,6 +33,50 @@ export default function Equips() {
 							let sameType: boolean;
 							if (type === "Weapon") {
 								sameType = characterClass.weapons.includes(equipData.type!);
+							} else if (type === "Secondary Weapon") {
+								sameType = characterClass.subWeapons.includes(equipData.type!);
+
+								// Avoid Warriors with two-handed weapons+shields and mismatched Explorer mage secondary weapons
+								if (
+									sameType &&
+									((characterClass.branch === "Warrior" &&
+										equipData.type === "Shield" &&
+										equips
+											.find(equip => equip.id === currentCharacter.equips.Weapon?.id)!
+											.type!.includes("Two-handed")) ||
+										(characterClass.name === "Bishop" && !equipData.name.includes("Gold")) ||
+										(characterClass.name === "Magician (Fire, Poison)" &&
+											!equipData.name.includes("Rusty") &&
+											!equipData.name.includes("Flaming")) ||
+										(characterClass.name === "Magician (Ice, Lightning)" &&
+											!equipData.name.includes("Metallic") &&
+											!equipData.name.includes("Damp")))
+								) {
+									sameType = false;
+								}
+							} else if (type === "Emblem") {
+								sameType = [
+									1190400,
+									1190401,
+									1190402,
+									1190403,
+									1190404,
+									1190405,
+									1190406,
+									1190500,
+									1190501,
+									1190502,
+									1190503,
+									1190528,
+									1190541,
+									1190545,
+									1190555,
+									1190556,
+									1190557,
+									1190558,
+									1190559,
+									...characterClass.emblems,
+								].includes(equipData.id);
 							} else {
 								sameType = (isTop && equipData.type === "Overall") || equipData.type === type;
 							}
