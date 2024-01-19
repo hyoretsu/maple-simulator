@@ -13,10 +13,12 @@ jobs:
             - name: 🏗 Checkout repo
               uses: actions/checkout@v3
 
-            - name: 🏗 Enable PNPM
-              uses: pnpm/action-setup@v2
+            - name: Set up AWS CLI
+              uses: aws-actions/configure-aws-credentials@v4
               with:
-                  version: "latest"
+                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                  aws-region: us-east-1
 
             - name: 🏗 Setup Bun environment
               uses: oven-sh/setup-bun@v1
@@ -35,13 +37,6 @@ jobs:
 
             - name: 🚀 Build the app
               run: bun run build
-
-            - name: Set up AWS CLI
-              uses: aws-actions/configure-aws-credentials@v4
-              with:
-                  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-                  aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-                  aws-region: us-east-1
 
             - name: Deploy to AWS S3
               run: aws s3 sync ./out s3://maple-sim
