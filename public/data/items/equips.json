@@ -10452,7 +10452,8 @@
 		"type": "Heart",
 		"requirements": {
 			"level": 50
-		}
+		},
+		"starrable": true
 	},
 	{
 		"id": 1672081,
@@ -10461,6 +10462,7 @@
 		"icon": 1672078,
 		"requirements": {
 			"level": 120
-		}
+		},
+		"starrable": true
 	}
 ]
