@@ -18,14 +18,16 @@ export default function Report({ characterClass, equips }: ReportProps) {
 						{equips.reduce((sum, [_, equipPre]) => {
 							function execute(equip: CharacterEquip) {
 								if (equip) {
-									if (equip.flames) {
+									if (equip.flames && stat !== "HP") {
 										sum += equip.flames.allStats || 0;
 									}
 
 									if (equip.potential) {
 										sum += equip.potential
 											?.filter(
-												potential => potential && (potential.stat === stat || potential.stat === "All Stats"),
+												potential =>
+													potential &&
+													(potential.stat === stat || (stat !== "HP" && potential.stat === "All Stats")),
 											)
 											.reduce((innerSum, potential) => {
 												if (potential && typeof potential.value === "string") {
