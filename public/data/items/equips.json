@@ -10431,6 +10431,15 @@
 		}
 	},
 	{
+		"id": 1662111,
+		"name": "Lucidroid",
+		"desc": "An android that looks like Lucid. It allows you access to General Store functions via the #cVisit Shop# button in its equipment window. Must have an #cAndroid Heart# equipped to operate.\nThe android rank must be the same or higher than the rank of the Android Heart.",
+		"type": "Android",
+		"requirements": {
+			"level": 10
+		}
+	},
+	{
 		"id": 1672073,
 		"name": "Fairy Heart",
 		"type": "Heart",

@@ -110,7 +110,12 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 
 			<div className={styles.equipIcon}>
 				{currentEquipData && (
-					<img src={`/images/assets/${currentEquipData.icon || currentEquipData.id}.png`} alt="" />
+					<img
+						src={`/images/assets/${currentEquipData.icon || currentEquipData.id}${
+							type === "Android" ? "_D" : ""
+						}.png`}
+						alt=""
+					/>
 				)}
 			</div>
 
