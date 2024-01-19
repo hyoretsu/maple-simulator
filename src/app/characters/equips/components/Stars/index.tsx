@@ -29,8 +29,8 @@ export default function Stars({ equipLevel = 0, index, type }: StarsProps) {
 	}
 
 	const stars = useMemo(() => {
-		return range(starCount.find(([level]) => equipLevel >= level)![1]);
-	}, [equipLevel]);
+		return range(type === "Badge" ? 22 : starCount.find(([level]) => equipLevel >= level)![1]);
+	}, [equipLevel, type]);
 
 	let equip = currentCharacter.equips[type] as CharacterEquipment;
 	if (Array.isArray(equip)) {

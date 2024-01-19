@@ -3627,11 +3627,29 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1182060,
+		"name": "Ghost Ship Exorcist",
+		"description": "Can only be equipped in the Badge slot. Cannot be enhanced with Spell Trace.",
+		"type": "Badge",
+		"requirements": {
+			"level": 150
+		}
+	},
+	{
 		"id": 1182087,
 		"name": "Crystal Ventus Badge",
 		"type": "Badge",
 		"requirements": {
 			"level": 130
+		}
+	},
+	{
+		"id": 1182273,
+		"name": "Sengoku Hakase Badge",
+		"description": "Can only be equipped in the Badge slot.",
+		"type": "Badge",
+		"requirements": {
+			"level": 160
 		}
 	},
 	{
