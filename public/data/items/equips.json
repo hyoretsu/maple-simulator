@@ -3910,6 +3910,31 @@
 		"flameAdvantage": true
 	},
 	{
+		"id": 1142666,
+		"name": "Beater",
+		"type": "Medal",
+		"requirements": {
+			"level": 1
+		}
+	},
+	{
+		"id": 1142667,
+		"name": "Black Swordsman",
+		"type": "Medal",
+		"requirements": {
+			"level": 1
+		}
+	},
+	{
+		"id": 1142922,
+		"name": "Seven Day Monster Parker",
+		"description": "Equipping this medal will let people around you know that you played Monster Park at least 539 times over 11 weeks.",
+		"type": "Medal",
+		"requirements": {
+			"level": 100
+		}
+	},
+	{
 		"id": 1152170,
 		"name": "Royal Black Metal Shoulder",
 		"type": "Shoulder",
