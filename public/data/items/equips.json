@@ -4614,7 +4614,7 @@
 		"name": "Mitra's Rage: Bowman",
 		"type": "Emblem",
 		"requirements": {
-			"job": "Magician",
+			"job": "Bowman",
 			"level": 200
 		}
 	},
@@ -4623,7 +4623,7 @@
 		"name": "Mitra's Rage: Magician",
 		"type": "Emblem",
 		"requirements": {
-			"job": "Bowman",
+			"job": "Magician",
 			"level": 200
 		}
 	},
