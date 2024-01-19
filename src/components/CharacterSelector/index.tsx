@@ -12,9 +12,6 @@ export default function CharacterSelector({
 	name = "character-selector",
 }: CharacterSelectorProps) {
 	const { characters, createCharacter, currentCharacter, setCurrentCharacterIndex } = useCharacters();
-	if (!currentCharacter) {
-		return;
-	}
 
 	return (
 		<select
