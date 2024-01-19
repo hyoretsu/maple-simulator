@@ -62,7 +62,8 @@ const extraLinesMap = new Map<string, Record<string, Map<number, any[]>>>([
 	["Weapon", weaponSecondaryLines],
 ]);
 
-const tiers = ["", "Rare", "Epic", "Unique", "Legendary"];
+// const tiers = ["Common", "Rare", "Epic", "Unique", "Legendary"];
+const tierColors = ["#777777", "#55aaff", "#cc66ff", "#ffcc00", "#00ff00"];
 
 export default function Potential({ equipLevel = 0, index, type }: PotentialProps) {
 	const { currentCharacter, updateCharacter } = useCharacters();
@@ -208,7 +209,12 @@ export default function Potential({ equipLevel = 0, index, type }: PotentialProp
 	};
 
 	return (
-		<section className={styles.equipSection}>
+		<section
+			className={styles.equipSection}
+			style={{
+				"--color": tierColors[tier],
+			}}
+		>
 			<button type="button" onClick={() => showPotential(old => !old)}>
 				Potential
 			</button>
