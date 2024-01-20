@@ -44,13 +44,14 @@ export default function Equips() {
 										equips
 											.find(equip => equip.id === currentCharacter.equips.Weapon?.id)!
 											.type!.includes("Two-handed")) ||
-										(characterClass.name === "Bishop" && !equipData.name.includes("Gold")) ||
-										(characterClass.name === "Magician (Fire, Poison)" &&
-											!equipData.name.includes("Rusty") &&
-											!equipData.name.includes("Flaming")) ||
-										(characterClass.name === "Magician (Ice, Lightning)" &&
-											!equipData.name.includes("Metallic") &&
-											!equipData.name.includes("Damp")))
+										(equipData.type !== "Shield" &&
+											((characterClass.name === "Bishop" && !equipData.name.includes("Gold")) ||
+												(characterClass.name === "Magician (Fire, Poison)" &&
+													!equipData.name.includes("Rusty") &&
+													!equipData.name.includes("Flaming")) ||
+												(characterClass.name === "Magician (Ice, Lightning)" &&
+													!equipData.name.includes("Metallic") &&
+													!equipData.name.includes("Damp")))))
 								) {
 									sameType = false;
 								}
