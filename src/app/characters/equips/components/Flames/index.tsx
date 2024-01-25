@@ -45,10 +45,10 @@ export default function Flames({ equip, index, type }: FlameProps) {
 			{flamesShown && (
 				<div>
 					<FlameEditor equip={equip} type={type} index={index} />
-
-					<span>Score: {Number(flameScore.toFixed(3))}</span>
 				</div>
 			)}
+
+			<span>Score: {Number(flameScore.toFixed(3))}</span>
 		</section>
 	);
 }
