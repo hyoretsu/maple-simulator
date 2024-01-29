@@ -48,7 +48,12 @@ export default function Flames({ equip, index, type }: FlameProps) {
 				</div>
 			)}
 
-			<span>Score: {Number(flameScore.toFixed(3))}</span>
+			<span
+				onClick={() => !flamesShown && showFlames(old => !old)}
+				style={{ cursor: !flamesShown ? "pointer" : "" }}
+			>
+				Score: {Number(flameScore.toFixed(3))}
+			</span>
 		</section>
 	);
 }
