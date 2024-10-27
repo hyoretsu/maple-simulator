@@ -2,7 +2,7 @@
 import { useCharacters } from "@context/account";
 import symbolInfo from "@data/symbols.json";
 import { Input } from "@hyoretsu/react-components";
-import { Equipment, SymbolData, SymbolType } from "maple-simulator";
+import type { Equipment, SymbolData, SymbolType } from "maple-simulator";
 import styles from "../styles.module.scss";
 
 interface SymbolManagerProps {

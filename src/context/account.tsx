@@ -1,8 +1,8 @@
 "use client";
 import copyObject from "@utils/copyObject";
-import { Account, BossingRoutine, Character, CharacterEquip, CharacterEquips } from "maple-simulator";
+import type { Account, BossingRoutine, Character, CharacterEquip, CharacterEquips } from "maple-simulator";
 import {
-	PropsWithChildren,
+	type PropsWithChildren,
 	createContext,
 	useCallback,
 	useContext,
@@ -215,26 +215,23 @@ export function AccountProvider({ children }: PropsWithChildren) {
 				Object.assign(storedAccount, { id: storedId });
 			}
 
-			const characters = parsedCharacters.reduce(
-				(arr, characterId) => {
-					let updated = false;
+			const characters = parsedCharacters.reduce((arr, characterId) => {
+				let updated = false;
 
-					const characterStr = localStorage.getItem(`@maple-simulator:character_${characterId}`);
-					if (characterStr) {
-						const character = JSON.parse(characterStr);
-						updated ||= bumpCharacter(character);
+				const characterStr = localStorage.getItem(`@maple-simulator:character_${characterId}`);
+				if (characterStr) {
+					const character = JSON.parse(characterStr);
+					updated ||= bumpCharacter(character);
 
-						if (updated) {
-							localStorage.setItem(`@maple-simulator:character_${characterId}`, JSON.stringify(character));
-						}
-
-						arr[arr.length] = character;
+					if (updated) {
+						localStorage.setItem(`@maple-simulator:character_${characterId}`, JSON.stringify(character));
 					}
 
-					return arr;
-				},
-				[] as Character[],
-			);
+					arr[arr.length] = character;
+				}
+
+				return arr;
+			}, [] as Character[]);
 
 			// Sort characters list alphabetically
 			parsedCharacters.sort((idA, idB) => {
@@ -285,13 +282,10 @@ export function AccountProvider({ children }: PropsWithChildren) {
 				localStorage.setItem(
 					"@maple-simulator:characters",
 					JSON.stringify(
-						newAccount.characters.reduce(
-							(arr, { id }) => {
-								arr[arr.length] = id;
-								return arr;
-							},
-							[] as string[],
-						),
+						newAccount.characters.reduce((arr, { id }) => {
+							arr[arr.length] = id;
+							return arr;
+						}, [] as string[]),
 					),
 				);
 
@@ -310,13 +304,10 @@ export function AccountProvider({ children }: PropsWithChildren) {
 		const { id, characters } = JSON.parse(accountStr) as Account;
 		localStorage.setItem("@maple-simulator:account_id", id);
 
-		const characterIds = characters.reduce(
-			(arr, { id }) => {
-				arr[arr.length] = id;
-				return arr;
-			},
-			[] as string[],
-		);
+		const characterIds = characters.reduce((arr, { id }) => {
+			arr[arr.length] = id;
+			return arr;
+		}, [] as string[]);
 		localStorage.setItem("@maple-simulator:characters", JSON.stringify(characterIds));
 		localStorage.setItem("@maple-simulator:current_character", characterIds[0]);
 

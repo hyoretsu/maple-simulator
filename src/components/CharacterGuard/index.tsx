@@ -1,7 +1,7 @@
 "use client";
 import { useCharacters } from "@context/account";
 import { Link } from "@hyoretsu/react-components";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import styles from "./styles.module.scss";
 
 export default function CharacterGuard({ children }: PropsWithChildren) {

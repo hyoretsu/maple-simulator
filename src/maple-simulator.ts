@@ -1,4 +1,4 @@
-import bosses from "@data/bosses.json";
+import type bosses from "@data/bosses.json";
 
 export interface Account {
 	id: string;

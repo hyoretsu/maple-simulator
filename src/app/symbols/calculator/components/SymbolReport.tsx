@@ -1,6 +1,6 @@
 import { useCharacters } from "@context/account";
 import symbolInfo from "@data/symbols.json";
-import { Equipment, SymbolType } from "maple-simulator";
+import type { Equipment, SymbolType } from "maple-simulator";
 import { cloneElement, useMemo } from "react";
 import styles from "../styles.module.scss";
 import { maxSymbolLevels } from "./SymbolManager";
@@ -64,7 +64,9 @@ export default function SymbolReport({ symbols, type = "" as SymbolType }: Symbo
 						// If all symbols are maxed
 
 						const {
-							props: { children: [symbolDiv, timeDiv, expDiv, costDiv] },
+							props: {
+								children: [symbolDiv, timeDiv, expDiv, costDiv],
+							},
 						} = element;
 						const regionName = name.split(": ")[1];
 						if (currentCharacter.level < symbolInfo[type].reqLevel[regionName]) {
@@ -120,8 +122,8 @@ export default function SymbolReport({ symbols, type = "" as SymbolType }: Symbo
 								}
 							}
 						}
-
 						return (
+							// biome-ignore lint/correctness/useJsxKeyInIterable:
 							<>
 								{cloneElement(symbolDiv, {
 									children: [

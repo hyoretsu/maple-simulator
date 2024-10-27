@@ -1,7 +1,7 @@
 "use client";
 import { useCharacters } from "@context/account";
-import { SymbolType } from "maple-simulator";
-import { CSSProperties, Dispatch, SetStateAction } from "react";
+import type { SymbolType } from "maple-simulator";
+import type { CSSProperties, Dispatch, SetStateAction } from "react";
 import styles from "../styles.module.scss";
 
 const selectedTypeStyles: CSSProperties = {

@@ -1,5 +1,5 @@
-import { CharacterEquip, PlayableClass } from "maple-simulator";
-import { CurrentEquips } from "../../page";
+import type { CharacterEquip, PlayableClass } from "maple-simulator";
+import type { CurrentEquips } from "../../page";
 import styles from "./styles.module.scss";
 
 export interface ReportProps {
@@ -13,7 +13,7 @@ export default function Report({ characterClass, equips }: ReportProps) {
 			<h3>Total Stat% from potentials and flames:</h3>
 			<div>
 				{[...characterClass.mainStat, ...(characterClass.secondaryStat || [])].map(stat => (
-					<p>
+					<p key={stat}>
 						{stat} +
 						{equips.reduce((sum, [_, equipPre]) => {
 							function execute(equip: CharacterEquip) {

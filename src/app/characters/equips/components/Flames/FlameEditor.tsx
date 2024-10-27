@@ -5,7 +5,7 @@ import classes from "@data/classes.json";
 import { Input } from "@hyoretsu/react-components";
 import { isEven } from "@hyoretsu/utils";
 import copyObject from "@utils/copyObject";
-import { CharacterEquipment, Equipment, EquipmentType, PlayableClass } from "maple-simulator";
+import type { CharacterEquipment, Equipment, EquipmentType, PlayableClass } from "maple-simulator";
 import { useState } from "react";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import styles from "./styles.module.scss";

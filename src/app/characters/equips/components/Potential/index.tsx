@@ -3,7 +3,7 @@ import { useCharacters } from "@context/account";
 import { range } from "@hyoretsu/utils";
 import copyObject from "@utils/copyObject";
 import { numberOrString } from "@utils/numberOrString";
-import { CharacterEquipment, EquipmentType, Potential as PotentialType } from "maple-simulator";
+import type { CharacterEquipment, EquipmentType, Potential as PotentialType } from "maple-simulator";
 import { useMemo, useState } from "react";
 import styles from "../styles.module.scss";
 import {
@@ -269,7 +269,7 @@ export default function Potential({ equipLevel = 0, index, type }: PotentialProp
 												<option key={`${stat}_${value}_${index}`} value={`${stat}_${value}`}>
 													{stat} +{value}
 												</option>
-										  )),
+											)),
 								);
 							})}
 						</select>

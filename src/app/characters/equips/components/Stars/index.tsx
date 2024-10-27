@@ -2,7 +2,7 @@
 import { useCharacters } from "@context/account";
 import { range } from "@hyoretsu/utils";
 import copyObject from "@utils/copyObject";
-import { CharacterEquipment, EquipmentType } from "maple-simulator";
+import type { CharacterEquipment, EquipmentType } from "maple-simulator";
 import { useMemo } from "react";
 import { IoStar } from "react-icons/io5";
 import styles from "./styles.module.scss";

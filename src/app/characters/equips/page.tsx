@@ -2,7 +2,7 @@
 import { useCharacters } from "@context/account";
 import classes from "@data/classes.json";
 import equips from "@data/items/equips.json";
-import { CharacterEquip, Equipment, EquipmentType } from "maple-simulator";
+import type { CharacterEquip, Equipment, EquipmentType } from "maple-simulator";
 import { useMemo } from "react";
 import EquipDisplay from "./components/EquipDisplay";
 import Report from "./components/Report";
@@ -42,8 +42,8 @@ export default function Equips() {
 									((characterClass.branch === "Warrior" &&
 										equipData.type === "Shield" &&
 										equips
-											.find(equip => equip.id === currentCharacter.equips.Weapon?.id)!
-											.type!.includes("Two-handed")) ||
+											.find(equip => equip.id === currentCharacter.equips.Weapon?.id)
+											?.type!.includes("Two-handed")) ||
 										(equipData.type !== "Shield" &&
 											((characterClass.name === "Bishop" && !equipData.name.includes("Gold")) ||
 												(characterClass.name === "Magician (Fire, Poison)" &&
@@ -121,6 +121,7 @@ export default function Equips() {
 					if (Array.isArray(equip)) {
 						return equip.map((subEquip, index) => (
 							<EquipDisplay
+								// biome-ignore lint/suspicious/noArrayIndexKey: Indexes won't change
 								key={`${type}-${index}`}
 								index={index}
 								type={type as EquipmentType}

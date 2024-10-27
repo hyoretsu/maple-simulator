@@ -5,7 +5,7 @@ import Footer from "@components/Footer";
 import { useCharacters } from "@context/account";
 import arcaneSymbols from "@data/equips/arcane_force.json";
 import sacredSymbols from "@data/equips/sacred_force.json";
-import { SymbolType } from "maple-simulator";
+import type { SymbolType } from "maple-simulator";
 import { useEffect, useMemo, useState } from "react";
 import SymbolManager from "./components/SymbolManager";
 import SymbolReport from "./components/SymbolReport";

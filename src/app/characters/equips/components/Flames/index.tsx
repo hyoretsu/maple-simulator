@@ -1,7 +1,7 @@
 "use client";
 import { useCharacters } from "@context/account";
 import classes from "@data/classes.json";
-import { Equipment, EquipmentType, PlayableClass } from "maple-simulator";
+import type { Equipment, EquipmentType, PlayableClass } from "maple-simulator";
 import { useState } from "react";
 import styles from "../styles.module.scss";
 import FlameEditor from "./FlameEditor";

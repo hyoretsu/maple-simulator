@@ -1,7 +1,7 @@
 "use client";
 import { useCharacters } from "@context/account";
-import { CharacterEquip, Equipment, EquipmentType } from "maple-simulator";
-import { HTMLAttributes } from "react";
+import type { CharacterEquip, Equipment, EquipmentType } from "maple-simulator";
+import type { HTMLAttributes } from "react";
 import Flames from "./Flames";
 import Potential from "./Potential";
 import Stars from "./Stars";
@@ -97,7 +97,12 @@ export default function EquipDisplay({ equip, equips, index, type, ...rest }: Eq
 	return (
 		<div className={styles.equipDisplay} {...rest}>
 			<label htmlFor="equip">{type}</label>
-			<select name="equip" value={equip?.id || ""} onChange={e => changeEquip(Number(e.currentTarget.value))}>
+			<select
+				id="equip"
+				name="equip"
+				value={equip?.id || ""}
+				onChange={e => changeEquip(Number(e.currentTarget.value))}
+			>
 				<option value={0}>N/A</option>
 				{equips[type].map(({ id, name }) => {
 					return (

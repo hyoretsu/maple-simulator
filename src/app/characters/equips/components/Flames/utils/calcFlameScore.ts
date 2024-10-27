@@ -1,4 +1,4 @@
-import { FlameStats, PlayableClass, Stat } from "maple-simulator";
+import type { FlameStats, PlayableClass, Stat } from "maple-simulator";
 
 export function calcFlameScore(
 	flames: FlameStats,

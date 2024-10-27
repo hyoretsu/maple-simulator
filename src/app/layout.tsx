@@ -1,6 +1,6 @@
 import Header from "@components/Header";
 import { AccountProvider } from "@context/account";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import "./_global.scss";
 import WebVitals from "./components/WebVitals";
 import "./fonts";

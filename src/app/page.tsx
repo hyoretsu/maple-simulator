@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 const description = "A project that aims to simulate various aspects of MapleStory in your browser.";
 
