@@ -4,7 +4,7 @@ import { useCharacters } from "@context/account";
 import bosses from "@data/bosses.json";
 import { Input } from "@hyoretsu/react-components";
 import copyObject from "@utils/copyObject";
-import { BossDifficulties, BossFrequency, BossRunInfo, Bosses } from "maple-simulator";
+import type { BossDifficulties, BossFrequency, BossRunInfo, Bosses } from "maple-simulator";
 import { useCallback, useMemo } from "react";
 import styles from "../styles.module.scss";
 
@@ -61,69 +61,43 @@ export default function BossTable() {
 		);
 	}, [currentCharacter]);
 
-	const bossAvailability = useMemo<Record<string, boolean>>(() => {
-		return parsedBosses.reduce((availableObj, [boss, difficulties]) => {
-			for (const [difficulty] of difficulties) {
-				const difficultyBoss = `${difficulty} ${boss}`;
-
-				Object.assign(availableObj, { [difficultyBoss]: true });
-
-				if (!Object.keys(currentCharacter.bossingRoutine).find(routineBoss => routineBoss.match(boss))) {
-					continue;
-				}
-
-				const sameBosses = Object.entries(availableObj).filter(([givenBoss]) => {
-					const [givenDifficulty, givenBossName] = givenBoss.split(/(?<=^\S+)\s/g);
-
-					return (
-						givenBossName === boss &&
-						// @ts-ignore
-						bosses[givenBossName][givenDifficulty].frequency === bosses[boss][difficulty].frequency
-					);
-				});
-
-				if (
-					sameBosses.length < 2 ||
-					!sameBosses.find(([givenBoss]) =>
-						Object.keys(currentCharacter.bossingRoutine).find(routineBoss => routineBoss === givenBoss),
-					)
-				) {
-					continue;
-				}
-
-				for (const [boss] of sameBosses) {
-					Object.assign(availableObj, { [boss]: !!currentCharacter.bossingRoutine[boss] });
-				}
+	const updateRoutine = useCallback(
+		(newBossData: Record<string, Record<string, number>>) => {
+			const newBossDataEntries = Object.entries(newBossData);
+			if (newBossDataEntries.length > 1) {
+				throw new Error("You must update bossing routines one by one.");
 			}
 
-			return availableObj;
-		}, {});
-	}, [currentCharacter, parsedBosses]);
+			const newRoutine = copyObject(currentCharacter.bossingRoutine);
+			const [difficultyBoss, newData] = newBossDataEntries[0];
 
-	const updateRoutine = (newBossData: Record<string, Record<string, number>>) => {
-		const newBossDataEntries = Object.entries(newBossData);
-		if (newBossDataEntries.length > 1) {
-			throw new Error("You must update bossing routines one by one.");
-		}
+			if (Object.entries(newData).length === 0) {
+				delete newRoutine[difficultyBoss];
+			} else {
+				const newBoss = difficultyBoss.split(" ").slice(1).join(" ");
 
-		const newRoutine = copyObject(currentCharacter.bossingRoutine);
-		const [difficultyBoss, newData] = newBossDataEntries[0];
+				for (const [diffBoss] of Object.entries(newRoutine)) {
+					const oldBoss = diffBoss.split(" ").slice(1).join(" ");
 
-		if (Object.entries(newData).length === 0) {
-			delete newRoutine[difficultyBoss];
-		} else {
-			Object.assign(newRoutine, {
-				[difficultyBoss]: {
-					...newRoutine[difficultyBoss],
-					...newData,
-				},
+					if (oldBoss === newBoss) {
+						delete newRoutine[diffBoss];
+					}
+				}
+
+				Object.assign(newRoutine, {
+					[difficultyBoss]: {
+						...newRoutine[difficultyBoss],
+						...newData,
+					},
+				});
+			}
+
+			updateCharacter(currentCharacter.id, {
+				bossingRoutine: newRoutine,
 			});
-		}
-
-		updateCharacter(currentCharacter.id, {
-			bossingRoutine: newRoutine,
-		});
-	};
+		},
+		[currentCharacter.bossingRoutine, currentCharacter.id, updateCharacter],
+	);
 
 	const report = useMemo<Report>(
 		() =>
@@ -225,12 +199,11 @@ export default function BossTable() {
 			const difficultyBoss = `${difficulty} ${boss}`;
 
 			if (
-				!bossAvailability[difficultyBoss] ||
-				(!currentCharacter.bossingRoutine[difficultyBoss] &&
-					report.crystals +
-						// @ts-ignore
-						(bosses[boss][difficulty].frequency === "daily" ? 7 : 1) >
-						maxAmount)
+				!currentCharacter.bossingRoutine[difficultyBoss] &&
+				report.crystals +
+					// @ts-ignore
+					(bosses[boss][difficulty].frequency === "daily" ? 7 : 1) >
+					maxAmount
 			) {
 				return;
 			}
@@ -242,10 +215,10 @@ export default function BossTable() {
 							partySize: 1,
 							timeTaken: 0,
 							...runInfo,
-					  },
+						},
 			});
 		},
-		[bossAvailability, currentCharacter, report, updateRoutine],
+		[currentCharacter, report, updateRoutine],
 	);
 
 	return (
@@ -263,7 +236,7 @@ export default function BossTable() {
 								}
 
 								return str;
-						  }, " in ")
+							}, " in ")
 						: ""}
 					<br />(
 					{`${
@@ -272,7 +245,7 @@ export default function BossTable() {
 									notation: "compact",
 									minimumFractionDigits: 2,
 									maximumFractionDigits: 2,
-							  })
+								})
 									.format(
 										Number(
 											Math.round(
@@ -290,7 +263,7 @@ export default function BossTable() {
 							? characterReport.notCounted
 								? `, ${characterReport.notCounted}/${
 										characterReport.notCounted + characterReport.counted
-								  } bosses not counted`
+									} bosses not counted`
 								: `, ${characterReport.counted} bosses total`
 							: `${characterReport.timedIncome ? ", " : ""}${characterReport.notCounted} bosses total`
 					}`}
@@ -320,7 +293,7 @@ export default function BossTable() {
 									{} as Record<BossFrequency, BossDifficulties[]>,
 								),
 							).map(([frequency, difficultyArr]) => (
-								<div>
+								<div key={`${boss}_${frequency}`}>
 									<span>{frequency.slice(0, 1).toUpperCase() + frequency.slice(1)}</span>
 
 									<div>
@@ -355,7 +328,7 @@ export default function BossTable() {
 																? { border }
 																: {
 																		padding: "calc(0.25rem + 2px) 2px",
-																  }),
+																	}),
 														}}
 													>
 														{difficulty}
@@ -439,8 +412,7 @@ export default function BossTable() {
 				</p>
 				<p>
 					You are making a total of {formatNumber(report.timedIncome)} mesos in {Math.round(report.time[0])}h
-					{Math.round(report.time[1])}m
-					{Math.round(report.time[2])}s among {report.timedBosses}{" "}
+					{Math.round(report.time[1])}m{Math.round(report.time[2])}s among {report.timedBosses}{" "}
 					{report.timedBosses > 1 ? "bosses" : "boss"}.
 					<br />
 					For comparison, that's equal to{" "}

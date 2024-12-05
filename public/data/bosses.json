@@ -61,58 +61,59 @@
 	},
 	"Lotus": {
 		"Normal": { "price": 32512500, "frequency": "weekly", "requiredLevel": 190 },
-		"Hard": { "price": 74112500, "frequency": "weekly", "requiredLevel": 190 }
+		"Hard": { "price": 88935000, "frequency": "weekly", "requiredLevel": 190 },
+		"Extreme": { "price": 279500000, "frequency": "weekly", "requiredLevel": 190 }
 	},
 	"Damien": {
 		"Normal": { "price": 33800000, "frequency": "weekly", "requiredLevel": 190 },
-		"Hard": { "price": 70312500, "frequency": "weekly", "requiredLevel": 190 }
+		"Hard": { "price": 84375000, "frequency": "weekly", "requiredLevel": 190 }
 	},
 	"Guardian Angel Slime": {
-		"Normal": { "price": 34322000, "frequency": "weekly", "requiredLevel": 210 },
-		"Chaos": { "price": 90312500, "frequency": "weekly", "requiredLevel": 210 }
+		"Normal": { "price": 46334700, "frequency": "weekly", "requiredLevel": 210 },
+		"Chaos": { "price": 120115625, "frequency": "weekly", "requiredLevel": 210 }
 	},
 	"Lucid": {
-		"Easy": { "price": 35112500, "frequency": "weekly", "requiredLevel": 220 },
-		"Normal": { "price": 40612500, "frequency": "weekly", "requiredLevel": 220 },
-		"Hard": { "price": 80000000, "frequency": "weekly", "requiredLevel": 220 }
+		"Easy": { "price": 47401875, "frequency": "weekly", "requiredLevel": 220 },
+		"Normal": { "price": 50765625, "frequency": "weekly", "requiredLevel": 220 },
+		"Hard": { "price": 100800000, "frequency": "weekly", "requiredLevel": 220 }
 	},
 	"Will": {
-		"Easy": { "price": 38255000, "frequency": "weekly", "requiredLevel": 235 },
-		"Normal": { "price": 46512500, "frequency": "weekly", "requiredLevel": 235 },
-		"Hard": { "price": 88200000, "frequency": "weekly", "requiredLevel": 235 }
+		"Easy": { "price": 49348950, "frequency": "weekly", "requiredLevel": 235 },
+		"Normal": { "price": 55815000, "frequency": "weekly", "requiredLevel": 235 },
+		"Hard": { "price": 124362000, "frequency": "weekly", "requiredLevel": 235 }
 	},
 	"Gloom": {
-		"Normal": { "price": 49612500, "frequency": "weekly", "requiredLevel": 245 },
-		"Chaos": { "price": 92450000, "frequency": "weekly", "requiredLevel": 245 }
+		"Normal": { "price": 59535000, "frequency": "weekly", "requiredLevel": 245 },
+		"Chaos": { "price": 112789000, "frequency": "weekly", "requiredLevel": 245 }
 	},
 	"Verus Hilla": {
-		"Normal": { "price": 89520000, "frequency": "weekly", "requiredLevel": 250 },
-		"Hard": { "price": 110450000, "frequency": "weekly", "requiredLevel": 250 }
+		"Normal": { "price": 116376000, "frequency": "weekly", "requiredLevel": 250 },
+		"Hard": { "price": 152421000, "frequency": "weekly", "requiredLevel": 250 }
 	},
 	"Darknell": {
-		"Normal": { "price": 52812500, "frequency": "weekly", "requiredLevel": 255 },
-		"Hard": { "price": 96800000, "frequency": "weekly", "requiredLevel": 255 }
+		"Normal": { "price": 63375000, "frequency": "weekly", "requiredLevel": 255 },
+		"Hard": { "price": 152421000, "frequency": "weekly", "requiredLevel": 255 }
 	},
 	"Black Mage": {
-		"Hard": { "price": 500000000, "frequency": "monthly", "requiredLevel": 255 },
-		"Extreme": { "price": 2000000000, "frequency": "monthly", "requiredLevel": 255 }
+		"Hard": { "price": 900000000, "frequency": "monthly", "requiredLevel": 255 },
+		"Extreme": { "price": 3600000000, "frequency": "monthly", "requiredLevel": 255 }
 	},
 	"Chosen Seren": {
-		"Normal": { "price": 133687500, "frequency": "weekly", "requiredLevel": 260 },
-		"Hard": { "price": 151250000, "frequency": "weekly", "requiredLevel": 260 },
-		"Extreme": { "price": 605000000, "frequency": "weekly", "requiredLevel": 260 }
+		"Normal": { "price": 177804375, "frequency": "weekly", "requiredLevel": 260 },
+		"Hard": { "price": 219312000, "frequency": "weekly", "requiredLevel": 260 },
+		"Extreme": { "price": 847000000, "frequency": "weekly", "requiredLevel": 260 }
 	},
 	"Kalos": {
-		"Easy": { "price": 150000000, "frequency": "weekly", "requiredLevel": 265 },
-		"Normal": { "price": 200000000, "frequency": "weekly", "requiredLevel": 265 },
-		"Chaos": { "price": 400000000, "frequency": "weekly", "requiredLevel": 265 },
-		"Extreme": { "price": 800000000, "frequency": "weekly", "requiredLevel": 265 }
+		"Easy": { "price": 187500000, "frequency": "weekly", "requiredLevel": 265 },
+		"Normal": { "price": 260000000, "frequency": "weekly", "requiredLevel": 265 },
+		"Chaos": { "price": 520000000, "frequency": "weekly", "requiredLevel": 265 },
+		"Extreme": { "price": 1040000000, "frequency": "weekly", "requiredLevel": 265 }
 	},
 	"Kaling": {
-		"Easy": { "price": 165000000, "frequency": "weekly", "requiredLevel": 275 },
-		"Normal": { "price": 230000000, "frequency": "weekly", "requiredLevel": 275 },
-		"Hard": { "price": 460000000, "frequency": "weekly", "requiredLevel": 275 },
-		"Extreme": { "price": 920000000, "frequency": "weekly", "requiredLevel": 275 }
+		"Easy": { "price": 206250000, "frequency": "weekly", "requiredLevel": 275 },
+		"Normal": { "price": 301300000, "frequency": "weekly", "requiredLevel": 275 },
+		"Hard": { "price": 598000000, "frequency": "weekly", "requiredLevel": 275 },
+		"Extreme": { "price": 1205200000, "frequency": "weekly", "requiredLevel": 275 }
 	},
 	"Ranmaru": {
 		"Normal": { "price": 840500, "frequency": "daily", "requiredLevel": 120 },

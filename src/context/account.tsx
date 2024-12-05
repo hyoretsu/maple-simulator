@@ -1,6 +1,14 @@
 "use client";
+import bosses from "@data/bosses.json";
 import copyObject from "@utils/copyObject";
-import type { Account, BossingRoutine, Character, CharacterEquip, CharacterEquips } from "maple-simulator";
+import type {
+	Account,
+	BossFrequency,
+	BossingRoutine,
+	Character,
+	CharacterEquip,
+	CharacterEquips,
+} from "maple-simulator";
 import {
 	type PropsWithChildren,
 	createContext,
@@ -81,10 +89,49 @@ const defaultSymbol = {
 const bumpCharacter = (character: Character): boolean => {
 	let changed = false;
 
+	const bossInfo: Record<string, { frequency: BossFrequency; price: number }> = {};
+
 	for (const [prop, value] of Object.entries(defaultCharacter)) {
-		if (prop === "bossingRoutine" && !character.bossingRoutine) {
-			character.bossingRoutine = copyObject(value) as BossingRoutine;
-			changed = true;
+		if (prop === "bossingRoutine") {
+			if (!character.bossingRoutine) {
+				character.bossingRoutine = copyObject(value) as BossingRoutine;
+				changed = true;
+			}
+
+			const bossingRoutine = Object.entries(character.bossingRoutine);
+
+			for (const [difficultyBoss] of bossingRoutine) {
+				if (bossInfo[difficultyBoss]) {
+					continue;
+				}
+
+				const [difficulty, boss] = difficultyBoss.split(/(?<=^\S+)\s/g);
+
+				// @ts-expect-error: JSON's are strongly typed
+				bossInfo[difficultyBoss] = bosses[boss][difficulty];
+			}
+
+			bossingRoutine.sort(([difficultyBossA, infoA], [difficultyBossB, infoB]) => {
+				return (
+					bossInfo[difficultyBossB].price / (infoB?.partySize || 1) -
+					bossInfo[difficultyBossA].price / (infoA?.partySize || 1)
+				);
+			});
+
+			let weeklyCounter = 0;
+			for (const [difficultyBoss] of bossingRoutine) {
+				if (bossInfo[difficultyBoss].frequency !== "weekly") {
+					continue;
+				}
+
+				if (weeklyCounter >= 14) {
+					delete character.bossingRoutine[difficultyBoss];
+					changed = true;
+					continue;
+				}
+
+				weeklyCounter += 1;
+			}
 		} else if (prop === "symbols") {
 			if (!character.symbols) {
 				character.symbols = copyObject(defaultCharacter.symbols);
@@ -334,7 +381,8 @@ export function AccountProvider({ children }: PropsWithChildren) {
 	const updateCharacter = useCallback<UpdateCharacter>((id, updatedCharacter) => {
 		setAccount(old => {
 			const newAccount = copyObject(old);
-			const character = newAccount.characters.find(({ id: characterId }) => characterId === id) as Character;
+			const characterIndex = newAccount.characters.findIndex(({ id: characterId }) => characterId === id);
+			const character = newAccount.characters[characterIndex];
 
 			if (updatedCharacter.equips) {
 				Object.values(updatedCharacter.equips).map(equipPre => {
@@ -366,7 +414,11 @@ export function AccountProvider({ children }: PropsWithChildren) {
 			}
 
 			Object.assign(character, updatedCharacter);
-			bumpCharacter(character);
+			const changed = bumpCharacter(character);
+			if (changed) {
+				newAccount.characters[characterIndex] = character;
+			}
+
 			localStorage.setItem(`@maple-simulator:character_${character.id}`, JSON.stringify(character));
 
 			return newAccount;
