@@ -349,6 +349,7 @@ export default function BossTable() {
 																max={6}
 																onChange={e => {
 																	const updatedInfo = {
+																		...runInfo,
 																		partySize: Number(e.currentTarget.value),
 																	};
 
@@ -376,6 +377,7 @@ export default function BossTable() {
 
 																	const [time, unit] = e.currentTarget.value.split(/(m|s)/g);
 																	const updatedInfo = {
+																		...runInfo,
 																		timeTaken: Number(time) * (unit === "m" ? 60 : 1),
 																	};
 
