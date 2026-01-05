@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname "$0")/_/husky.sh"
-
-aws s3 sync ./public/images s3://maple-sim/images

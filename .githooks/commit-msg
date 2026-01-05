@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+bun "./node_modules/commit-msg-linter/commit-msg-linter.js"
